@@ -4,9 +4,9 @@ TCC da equipe 3 da ETEC JORGE STREET
 
 # MEMBROS DA EQUIPE:
 
-Eduardo Corrêa
-Davi Alexandre
-Gabriel Rangel Daloco 
-Arthur Destro
-Gabriel Volpiani 
-Guilherme Mussi
+Eduardo Corrêa /n
+Davi Alexandre /n
+Gabriel Rangel Daloco /n 
+Arthur Destro /n
+Gabriel Volpiani /n 
+Guilherme Mussi /n
