@@ -9,11 +9,13 @@ CREATE TABLE escolas(
     acessibilidade bool,
     email_escola varchar(70),
     telefone_escola varchar(16),
-    imagem_escola varchar(60),
     uf_escola varchar(2),
     cep_escola varchar(30),
     cidade_escola varchar(50),
-    bairro_escola varchar(40)
+    bairro_escola varchar(40),
+    foto_perfil varchar(120),
+    foto_banner varchar(120),
+    foto_prop varchar(120)
 );
 
 CREATE TABLE comentarios(
@@ -43,10 +45,5 @@ CREATE TABLE if not exists tab_alunos
 	rua_aluno varchar(40),
 	bairro_aluno varchar(40),
 	cidade_aluno varchar(40),
-	uf_aluno varchar(2),
+	uf_aluno varchar(2)
 );
-
-SELECT * from tab_alunos;
-SELECT * from escolas;
-
-

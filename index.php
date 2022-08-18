@@ -27,13 +27,13 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="margin-left: 130px;">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Portal</a>
+          <a class="nav-link active" aria-current="page" href="index.php">Portal</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="consultaInst.php">Busca</a>
+          <a class="nav-link" href="#">Busca</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Mapa</a>
+          <a class="nav-link" href="uceae-aluno/brazil.php">Mapa</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -49,7 +49,8 @@
       <form class="d-flex">
       	<div style="margin-right: 20px;">
       		<button class="btn btn-outline-dark" type="button" style="margin-right: 10px;" data-bs-toggle="modal" data-bs-target="#ModalEntrar">Entrar</button>
-        	<a href="cadastro.php" class="btn btn-dark" tabindex="-1" role="button" aria-disabled="true">Cadastre-se!</a>
+        	<a href="#" class="btn btn-dark" tabindex="-1" style="margin-right: 10px;" role="button" aria-disabled="true">Cadastre-se!</a>
+          <a href="uceae-login/formularioInst.php" class="btn btn-warning" tabindex="-1" role="button" aria-disabled="true">Cadastrar sua instituição!</a>
     	  </div>
       </form>
     </div>

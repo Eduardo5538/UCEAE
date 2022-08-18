@@ -1,0 +1,123 @@
+@font-face{
+	font-family: sensei;
+	src: url(font/sensei.woff);
+}
+*{
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	font-family: arial, helvetica, sans-serif;	
+}
+
+body{
+	background-image:linear-gradient(to right , darkcyan, #06CDB8,cyan);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+}
+#titulo{
+	padding-left: 100px;
+	padding-top:20px;
+	padding-bottom:20px;
+	color: white;
+	font-size: 60px;
+	font-weight: 700;
+	transition: 0.5s;
+	font-family: sensei;
+}
+#titulo:hover{
+	font-size: 75px;
+	transition: 0.5s;
+	cursor: default;}
+a{
+	padding-left: 100px;
+	padding-top:20px;
+	padding-bottom:20px;
+	color: white;
+	font-size: 20px;
+	font-weight: 700;
+	transition: 0.5s;
+	font-family: sensei;
+}
+a:hover{
+	font-size: 30px;
+	transition: 0.5s;
+	cursor: default;
+	color: white;
+}
+.container{
+	width: 750px;
+	padding: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+.container .card{
+	position: relative;
+	padding: 10px;
+	width: 300px;
+	background-color: white;
+	margin: 25px;
+	border: 1px solid black;
+	border-radius: 20px;
+	overflow: hidden;
+	transition: 0.5s;
+	text-align: center;
+}
+.container .card img{
+	transition: 0.5s;
+	height: 200px;
+	width: 150px;
+}
+.container .card h1{
+	font-size: 2rem;
+	padding: 10px;
+	color: black;
+	font-weight: 700;
+}
+.container .card .content{
+	padding: 20px;
+	text-align: center;
+}
+.container .card .content p{
+	color:black;
+	font-weight: 700;
+	transition: 0.5s;
+}
+.container #card_aluno:hover{
+	background-color: #976DD0;
+	color: white;
+	margin-top: -30px;
+	box-shadow: 2px 20px 25px #034941;
+	border-color:#047C6F;
+	cursor: default; 
+}
+.container #card_aluno:hover img{
+	filter: invert(1);
+}
+.container #card_aluno:hover h1{
+	color: white;
+}
+.container #card_aluno:hover .content p{
+	color: white;
+}
+.container #card_instituicao:hover{
+	background-color: #FFBA5C;
+	color: white;
+	margin-top: -30px;
+	box-shadow: 2px 20px 25px #034941;
+	border-color:#047C6F;
+	cursor: default; 
+}
+.container #card_instituicao:hover img{
+	filter: invert(1);
+}
+.container #card_instituicao:hover h1{
+	color: white;
+}
+.container #card_instituicao:hover .content p{
+	color: white;
+}
+
