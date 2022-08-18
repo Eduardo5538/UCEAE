@@ -63,15 +63,34 @@
   <!-- --------------------- Banner da Instituição --------------------- -->
 
   <div id="banner">
-      <?php
+  <div class="image-upload">
+  <label for="file-input">
+    <form action="" method="post">
+    <?php
         echo "<img src='".  $Res[0]['foto_banner']  ."' id='foto_banner''>"
       ?>
+    
+  </label>
+
+  <input id="file-input" type="file" />
+  </form>
+</div>
+
+      
     <h2 id="texto3">Alterar Banner</h2>
   </div>
   <section id="foto">
-  <?php
+  <div class="image-upload">
+  <label for="file-input">
+    <?php
         echo "<img src='".  $Res[0]['foto_perfil']  ."' id='foto_perfil''>"
       ?>
+  </label>
+
+  <input id="file-input" type="file" />
+</div>
+
+  
     <h2 id="texto2">Alterar Foto</h2>
   </section>
   <!-- --------------------- Botao de adicionar Propagandas --------------------- -->
@@ -79,7 +98,7 @@
   <br><br>
   <center>
   <div id="adicionar">
-  <img src="img/add.png" id="inserir_img">
+  <img src="img/add.png" id="inserir_img" >
   <h2 id="texto">Adicionar Propaganda</h2>
   </div>
 </center>
