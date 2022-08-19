@@ -7,6 +7,8 @@
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="uceae-login/js/logar.js"></script>
   
 	<title>UCEAE</title>
 
@@ -183,13 +185,13 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body" style="margin: 0 25% 0 25%;">
-        <form action="" method="" name="">
-            <input class="form-control" type="text" placeholder="Login">
+        <form method="POST" name="loginform" id='loginform'>
+            <input class="form-control" type="text" placeholder="Login" name='login' id='login'>
             <br>
-            <input class="form-control" type="text" placeholder="Senha">
+            <input class="form-control" type="password" placeholder="Senha" name='senha' id='senha'>
       </div>
             <div class="modal-footer justify-content-center">
-              <button type="button" class="btn btn-secondary btn-block" style="width: 50%;">Entrar</button>
+              <button type="button" class="btn btn-secondary btn-block" style="width: 50%;" onclick='logar();'>Entrar</button>
             </div>
         </form>
     </div>

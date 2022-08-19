@@ -291,6 +291,7 @@
 ?>
 </div>
 </center>
+<input type='hidden'>
 </body>
 
 <!-- Script para animação em css e js -->
