@@ -68,6 +68,15 @@
 
 
         $inserir->execute();
+
+        $inserir = $conexao->prepare("insert into login(login, senha, cnpj, nome, imagem) values (?,?,?,?,?)");
+        $inserir->bindParam(1, $email);
+        $inserir->bindParam(2, $senha);
+        $inserir->bindParam(3,$cnpj);
+        $inserir->bindParam(4,$nome);
+        $inserir->bindParam(5,$caminho_img);
+        $inserir->execute();
+
         if($inserir->rowCount() > 0)
         {
             $nome = "";
