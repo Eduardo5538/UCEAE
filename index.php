@@ -51,7 +51,7 @@
       <form class="d-flex">
       	<div style="margin-right: 20px;">
       		<button class="btn btn-outline-dark" type="button" style="margin-right: 10px;" data-bs-toggle="modal" data-bs-target="#ModalEntrar">Entrar</button>
-        	<a href="#" class="btn btn-dark" tabindex="-1" style="margin-right: 10px;" role="button" aria-disabled="true">Cadastre-se!</a>
+        	<a href="uceae-login/cadastroAluno.php" class="btn btn-dark" tabindex="-1" style="margin-right: 10px;" role="button" aria-disabled="true">Cadastre-se!</a>
           <a href="uceae-login/formularioInst.php" class="btn btn-warning" tabindex="-1" role="button" aria-disabled="true">Cadastrar sua instituição!</a>
     	  </div>
       </form>

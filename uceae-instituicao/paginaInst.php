@@ -28,7 +28,7 @@
   <!-- --------------------- Barra de Navegação --------------------- -->
 
 	<nav class="navbar navbar-expand-lg navbar-light bg-light" style="height: 70px;">
-    <a class="navbar-brand" href="#">
+    <a class="navbar-brand" href="../index.php">
       <img src="img/UCEAE2.png" alt="" width="130" height="" id="logo1">
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

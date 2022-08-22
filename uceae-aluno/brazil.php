@@ -22,10 +22,10 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="margin-left: 130px;">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="index.php">Portal</a>
+          <a class="nav-link active" aria-current="page" href="../index.php">Portal</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Busca</a>
+          <a class="nav-link" href="brazil.php">Busca</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="brazil.php">Mapa</a>
@@ -44,7 +44,7 @@
       <form class="d-flex">
       	<div style="margin-right: 20px;">
       		<button class="btn btn-outline-dark" type="button" style="margin-right: 10px;" data-bs-toggle="modal" data-bs-target="#ModalEntrar">Entrar</button>
-        	<a href="#" class="btn btn-dark" tabindex="-1" style="margin-right: 10px;" role="button" aria-disabled="true">Cadastre-se!</a>
+        	<a href="../uceae-login/cadastroAluno.php" class="btn btn-dark" tabindex="-1" style="margin-right: 10px;" role="button" aria-disabled="true">Cadastre-se!</a>
           <a href="../uceae-login/formularioInst.php" class="btn btn-warning" tabindex="-1" role="button" aria-disabled="true">Cadastrar sua instituição!</a>
     	  </div>
       </form>
