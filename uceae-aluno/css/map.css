@@ -93,5 +93,8 @@ svg path:hover{
 	transition: 0.5s;
 }
 #card{
-	width: 80%;
+	width: 60%;
+}
+#img-card{
+	height: 400px;
 }
