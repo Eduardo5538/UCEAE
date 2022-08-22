@@ -1,9 +1,8 @@
 CREATE DATABASE BD_UCEAE;
 USE BD_UCEAE;
 
-CREATE TABLE escolas(
-	Cod_escola INT(5) NOT NULL AUTO_INCREMENT PRIMARY KEY,
-	CNPJ varchar(21),
+CREATE TABLE escolas( 
+	CNPJ varchar(21) PRIMARY KEY NOT NULL,
     nome_escola varchar(40),
     rua_escola varchar(50),
     acessibilidade bool,
@@ -27,10 +26,12 @@ CREATE TABLE comentarios(
 
 CREATE TABLE login(
 	cod_login int not null auto_increment primary key,
+    CNPJ varchar(21),
 	login varchar(20) not null,
     senha varchar(20) not null,
     nome varchar(40),
-    imagem varchar(100)
+    imagem varchar(100),
+    FOREIGN KEY (CPNJ) REFERENCES escolas(CNPJ)
 );
 
 CREATE TABLE if not exists tab_alunos
@@ -47,3 +48,4 @@ CREATE TABLE if not exists tab_alunos
 	cidade_aluno varchar(40),
 	uf_aluno varchar(2)
 );
+
