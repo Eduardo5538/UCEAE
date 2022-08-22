@@ -271,7 +271,7 @@
             {
                echo "
                   <div class='card mb-3' id='card' data-aos='fade-up'>
-                    <img class='card-img-top' src='". $Res[$i]['foto_banner'] ."' alt='Card image cap'>
+                    <img class='card-img-top' id='img-card' src='". $Res[$i]['foto_banner'] ."' alt='Card image cap'>
                     <div class='card-body'>
                       <h5 class='card-title'>".$Res[$i]['nome_escola']."</h5>
                       <p class='card-text'>".$Res[$i]['uf_escola']."</p>
