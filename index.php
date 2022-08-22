@@ -193,7 +193,6 @@
             <div class="modal-footer justify-content-center">
               <button type="button" class="btn btn-secondary btn-block" style="width: 50%;" onclick='logar();'>Entrar</button>
             </div>
-            <div id="pica2"></div>
         </form>
     </div>
   </div>
