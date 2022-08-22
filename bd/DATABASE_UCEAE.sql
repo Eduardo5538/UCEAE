@@ -5,7 +5,7 @@ CREATE TABLE escolas(
 	CNPJ varchar(21) PRIMARY KEY NOT NULL,
     nome_escola varchar(40),
     rua_escola varchar(50),
-    acessibilidade enum('M','F'),
+    acessibilidade enum('N','S'),
     acessibilidade_texto varchar(400),
     email_escola varchar(70),
     telefone_escola varchar(16),
