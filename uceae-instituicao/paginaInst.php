@@ -14,7 +14,7 @@
    include 'conection.php';
     try
       {
-         $Comando = $conexao->prepare("SELECT * from escolas WHERE cod_escola = 1");
+         $Comando = $conexao->prepare("SELECT * from escolas WHERE cnpj = 12345");
          $Comando->execute();
          $Res = $Comando->fetchAll();
          $RetornoJSON = json_encode($Res);
@@ -192,11 +192,9 @@
         <a href="cursosAdicionar.php" class="btn">Veja Mais</a>
       </div>
     </div>
-  </div>
-      <div id="teste"></div>
-  
+    </div>
   </center>
- 
+  
   <!-- --------------------- Vazio --------------------- -->
   <script>
     function teste(){

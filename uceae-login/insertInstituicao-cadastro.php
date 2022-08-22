@@ -93,7 +93,8 @@
             $ft_banner = "";
             $ft_prop = "";
 
-            $retorno = "passou";
+            $retorno = "<script>
+            location.href = '../uceae-instituicao/paginaInst.php'</script>";
 
         }
 // capturando um possível erro durando a realização do código
