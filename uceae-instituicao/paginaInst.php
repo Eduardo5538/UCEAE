@@ -14,7 +14,7 @@
    include 'conection.php';
     try
       {
-         $Comando = $conexao->prepare("SELECT * from escolas WHERE cnpj = 12345");
+         $Comando = $conexao->prepare("SELECT * from escolas WHERE cnpj = 123");
          $Comando->execute();
          $Res = $Comando->fetchAll();
          $RetornoJSON = json_encode($Res);
@@ -37,10 +37,10 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="margin-left: 130px;">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="uceae-index/index.php">Portal</a>
+          <a class="nav-link active" aria-current="page" href="../index.php">Portal</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Perfil</a>
+          <a class="nav-link" href="../uceae-aluno/brazil.php">Mapa</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Gráficos</a>
