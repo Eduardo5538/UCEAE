@@ -31,7 +31,7 @@ CREATE TABLE login(
     senha varchar(20) not null,
     nome varchar(40),
     imagem varchar(100),
-    FOREIGN KEY (CPNJ) REFERENCES escolas(CNPJ)
+    FOREIGN KEY (CNPJ) REFERENCES escolas(CNPJ)
 );
 
 CREATE TABLE if not exists tab_alunos
