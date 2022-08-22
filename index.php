@@ -111,7 +111,7 @@
             <img src="img/icones/log-in-branco.png" width="50px" height="50px">
             <div class="parte-2-text">
               <h5>Cadastre sua instituição!</h5>
-              <p>E te pessoas conhecerão!</p>
+              <p>E pessoas conhecerão!</p>
             </div>
           </div>
 
@@ -119,7 +119,7 @@
             <img src="img/icones/log-in-branco.png" width="50px" height="50px">
             <div class="parte-2-text">
               <h5>Cadastre-se em nosso site!</h5>
-              <p>E ache as melhores instituições!</p>
+              <p>Ache as melhores instituições!</p>
             </div>
           </div>
 
