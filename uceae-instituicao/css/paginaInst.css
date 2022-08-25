@@ -8,6 +8,26 @@
 	top: 4px;
 	left: 5px;
 }
+#banner-foto{
+  height: 450px;
+  width: 200%;
+  margin-top: -13%;
+  margin-left: -53%;
+}
+#alter_banner{
+  margin-top: 12.5%;
+  margin-left: -50%;
+  position: relative;
+  width: 200%;
+  height: 450px;
+}
+#foto_banner{
+  height: 450px;
+  width: 100%;
+}
+#alter_banner #file-input{
+  visibility: hidden;
+}
 #banner{
   background-color: #47525E;
   width: 100%;
@@ -32,6 +52,7 @@
   color: transparent;
   filter: invert(1);
 }
+
 #foto{
   border-radius: 150px;
   background-color: #47525E;
@@ -116,9 +137,14 @@
 	background-color: black;
 }
 #foto_perfil{
-	width: 138px;
-	height: 138px;
-	transition: .45s;
+	width: 250px;
+	height: 250px;
+  border-radius: 120px;
+  border: 2px black solid;
+  margin-left: -9px;
+  margin-top: -10px;
+  position: relative;
+  transition: .45s;
 }
 #foto_perfil:hover{
 	transition: .45s;

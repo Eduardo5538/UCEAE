@@ -14,7 +14,7 @@
    include 'conection.php';
     try
       {
-         $Comando = $conexao->prepare("SELECT * from escolas WHERE cnpj = 123");
+         $Comando = $conexao->prepare("SELECT * from escolas WHERE cnpj = 2971323767798");
          $Comando->execute();
          $Res = $Comando->fetchAll();
          $RetornoJSON = json_encode($Res);
@@ -63,35 +63,29 @@
   <!-- --------------------- Banner da Instituição --------------------- -->
 
   <div id="banner">
-  <div class="image-upload">
+  <div class="image-upload" id="banner-foto">
   <label for="file-input">
-    <form action="" method="post">
+    <form action="" method="post" id="alter_banner">
     <?php
         echo "<img src='".  $Res[0]['foto_banner']  ."' id='foto_banner''>"
       ?>
     
   </label>
 
-  <input id="file-input" type="file" />
+  <input id="file-input" type="file">
   </form>
-</div>
-
-      
-    <h2 id="texto3">Alterar Banner</h2>
+    </div>
   </div>
   <section id="foto">
   <div class="image-upload">
   <label for="file-input">
     <?php
-        echo "<img src='".  $Res[0]['foto_perfil']  ."' id='foto_perfil''>"
+        echo "<img src='".  $Res[0]['foto_perfil']  ."' id='foto_perfil'>"
       ?>
   </label>
 
   <input id="file-input" type="file" />
 </div>
-
-  
-    <h2 id="texto2">Alterar Foto</h2>
   </section>
   <!-- --------------------- Botao de adicionar Propagandas --------------------- -->
 
