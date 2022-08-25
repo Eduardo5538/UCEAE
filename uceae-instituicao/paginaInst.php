@@ -11,7 +11,18 @@
 <body>
 
 <?php
-  session_start();
+  include 'conection.php';
+  try
+    {
+       $Comando = $conexao->prepare("SELECT * from escolas WHERE cnpj = 851723813");
+       $Comando->execute();
+       $Res = $Comando->fetchAll();
+       $RetornoJSON = json_encode($Res);
+    }
+
+    //------------------- PARTE BUGADA DO EDUARDO BROXA ---------------------
+/*
+   session_start();
    include 'conection.php';
     try
       {
@@ -20,7 +31,7 @@
          $Res = $Comando->fetchAll();
          echo "<Script>alert('". $_SESSION['cnpj'] ."')</script>";
          $RetornoJSON = json_encode($Res);
-      }
+      }*/
     catch(PDOException $erro)
       {
         $RetornoJSON = "Erro: " . $erro->getMessage();

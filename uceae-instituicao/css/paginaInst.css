@@ -33,10 +33,7 @@
   visibility: hidden;
   width: 100%;
 }
-#banner{
-  
-}
-#banner:hover{
+#banner-foto:hover{
  opacity: .7;
  transition: .5s;
 }
