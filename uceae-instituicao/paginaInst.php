@@ -11,12 +11,12 @@
 <body>
 
 <?php
+  session_start();
    include 'conection.php';
     try
       {
-         $Comando = $conexao->prepare("SELECT * from escolas WHERE cnpj = ?");
-         $Comando->bindParam(1, $_SESSION['cnpj']);
-         $Comando->execute();
+         $Comando = $conexao->prepare("SELECT * from escolas WHERE cnpj = 123");
+         //$Comando->bindParam(1, $_SESSION['cnpj']);
          $Res = $Comando->fetchAll();
          echo "<Script>alert('". $_SESSION['cnpj'] ."')</script>";
          $RetornoJSON = json_encode($Res);
@@ -64,19 +64,15 @@
 
   <!-- --------------------- Banner da Instituição --------------------- -->
 
-  <div id="banner">
   <div class="image-upload" id="banner-foto">
-  <label for="file-input">
+  <label for="file-input" id="input-file">
     <form action="" method="post" id="alter_banner">
     <?php
         echo "<img src='".  $Res[0]['foto_banner']  ."' id='foto_banner''>"
       ?>
-    
+    </form>
   </label>
-
   <input id="file-input" type="file">
-  </form>
-    </div>
   </div>
   <section id="foto">
   <div class="image-upload">
@@ -181,7 +177,7 @@
       </div>
     </div>
      <div class="card">
-      <img src="img/adicionar.png">
+      <img src="img/adicionar-ficheiro.png">
       <div class="info">
         <h1>Adicionar Curso</h1>
         <p>Adicione cursos que estarão visíveis para seus visitantes!</p>
@@ -190,8 +186,15 @@
     </div>
     </div>
   </center>
-  
-  <!-- --------------------- Vazio --------------------- -->
+  <br><br><br>
+  <br><br><br>
+
+  <!-- --------------------- Conteudo --------------------- -->
+      
+  <hr width="50%" style="margin-left:25% ;">
+      <h1>Edição de Informações</h1>
+      <h3>Parte que os usuários terão Acesso</h3>
+   <!-- --------------------- Vazio --------------------- -->
   <script>
     function teste(){
       alert('passou')
