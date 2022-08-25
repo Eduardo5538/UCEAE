@@ -1,4 +1,5 @@
 <?php
+    session_start();
      include 'conection.php';
      $login = $_POST['login'];
      $senha = $_POST['senha'];
@@ -10,7 +11,8 @@
          $Res = $Comando->fetchAll();
          $RetornoJSON = json_encode($Res);
          if($Comando->rowCount() > 0){
-            echo $RetornoJSON;
+            $_SESSION['CNPJ'] = $Res[0]['CNPJ'];
+            echo (string) $_SESSION['CNPJ'];
          }
          else{
             echo "Registro Não Encontrado";

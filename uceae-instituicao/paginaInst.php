@@ -14,9 +14,11 @@
    include 'conection.php';
     try
       {
-         $Comando = $conexao->prepare("SELECT * from escolas WHERE cnpj = 2971323767798");
+         $Comando = $conexao->prepare("SELECT * from escolas WHERE cnpj = ?");
+         $Comando->bindParam(1, $_SESSION['cnpj']);
          $Comando->execute();
          $Res = $Comando->fetchAll();
+         echo "<Script>alert('". $_SESSION['cnpj'] ."')</script>";
          $RetornoJSON = json_encode($Res);
       }
     catch(PDOException $erro)
