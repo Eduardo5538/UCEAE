@@ -8,35 +8,33 @@
 	top: 4px;
 	left: 5px;
 }
-#banner-foto{
-  height: 450px;
-  width: 200%;
-  margin-top: -13%;
-  margin-left: -53%;
-}
-#alter_banner{
-  margin-top: 12.5%;
-  margin-left: -50%;
-  position: relative;
-  width: 200%;
-  height: 450px;
-}
-#foto_banner{
-  height: 450px;
+#input-file{
   width: 100%;
 }
-#alter_banner #file-input{
-  visibility: hidden;
-}
-#banner{
+#banner-foto{
   background-color: #47525E;
   width: 100%;
   height: 450px;
   text-align: center;
-  padding-top:120px ;
   transition: .5s;
   border-top:1px solid black;
   border-bottom:1px solid black;
+
+}
+#alter_banner{
+  width: 100%;
+  height: 450px;
+}
+#foto_banner{
+  height: 100%;
+  width: 100%;
+}
+#alter_banner #file-input{
+  visibility: hidden;
+  width: 100%;
+}
+#banner{
+  
 }
 #banner:hover{
  opacity: .7;
@@ -245,8 +243,7 @@ width: 100%;
 text-align: center;
 font-family: "Source Sans Pro", sans-serif;
 font-size: 16px;
-line-height: 1.43;
-background: #00A6FF;
+line-height: 1.43; 
 }
 .wrapper{
   display: flex;
@@ -329,5 +326,5 @@ background: #00A6FF;
 .image-upload > input {
   visibility:hidden;
   width:0;
-  height:0
+  height:0;
 }
