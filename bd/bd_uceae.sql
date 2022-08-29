@@ -27,6 +27,9 @@ SET time_zone = "+00:00";
 -- Estrutura da tabela `comentarios`
 --
 
+CREATE DATABASE BD_UCEAE;
+USE BD_UCEAE;
+
 CREATE TABLE `comentarios` (
   `titulo` varchar(45) DEFAULT NULL,
   `nome` varchar(30) DEFAULT NULL,
