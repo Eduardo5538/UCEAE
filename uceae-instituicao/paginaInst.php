@@ -52,18 +52,24 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="margin-left: 130px;">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="../index.php">Portal</a>
+          <a class="nav-link" aria-current="page" href="../index.php">Portal</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="../uceae-aluno/brazil.php">Mapa</a>
+          <a class="nav-link" href="../uceae-aluno/brazil.php">Busca</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Gráficos</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Avaliações</a>
+          <a class="nav-link" href="#">Mapa</a>
         </li>
         <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Instituições
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Públicas</a></li>
+            <li><a class="dropdown-item" href="#">Acessibilidade</a></li>
+            <li><a class="dropdown-item" href="#">Privadas</a></li>
+          </ul>
+        </li>
       </ul>
       <form class="d-flex">
       	<div style="margin-right: 20px;">

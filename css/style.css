@@ -76,13 +76,16 @@ footer{
 #uceae-bottom{
 	align-self: flex-end;
 	margin-right: 15vh;
-	white-space: nowrap;
+	white-space: wrap;
 }
 #rua-bottom{
-	white-space: nowrap;
+	white-space: wrap;
 }
 #botoes-bottom{
-	padding-right: 6%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
 }
 #parallax-center{
 	display: flex;
@@ -229,8 +232,7 @@ footer{
   	-webkit-text-fill-color: transparent;
 }
 .grande{
-	font-size: 64px;
-	margin-left: 15px;
+	font-size: 4.444444444444445vw;
 }
 .modal-open{
 	padding-right: 0 !important;
