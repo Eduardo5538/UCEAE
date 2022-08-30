@@ -15,6 +15,9 @@
   include 'conection.php';
   try
     {
+      if($_SESSION['CNPJ'] == null){
+        header('Location: ../index.php');
+      }
        $Comando = $conexao->prepare("SELECT * from escolas WHERE cnpj = ?");
        $Comando->bindParam(1, $_SESSION['CNPJ']);
        $Comando->execute();
