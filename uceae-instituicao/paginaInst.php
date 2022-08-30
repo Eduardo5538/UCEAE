@@ -11,10 +11,12 @@
 <body>
 
 <?php
+  session_start();
   include 'conection.php';
   try
     {
-       $Comando = $conexao->prepare("SELECT * from escolas WHERE cnpj = 851723813");
+       $Comando = $conexao->prepare("SELECT * from escolas WHERE cnpj = ?");
+       $Comando->bindParam(1, $_SESSION['CNPJ']);
        $Comando->execute();
        $Res = $Comando->fetchAll();
        $RetornoJSON = json_encode($Res);

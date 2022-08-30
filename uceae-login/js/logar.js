@@ -9,9 +9,7 @@ function logar(){
         alert(msg);
         var json = JSON.parse(msg);
        	alert("logado com sucesso!")
-        localStorage.setItem("cnpj", json[0].cnpj);
-
-        alert(localStorage.getItem('cnpj'));
+        window.location.href = "../uceae/uceae-instituicao/paginaInst.php"
     })
     .fail(function(){
         alert("Falha ao logar-se.")
