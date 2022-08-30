@@ -76,8 +76,8 @@
       </ul>
       <form class="d-flex">
       	<div style="margin-right: 20px;">
-          <strong><label id="nome_perfil">-----------</label></strong>
-        	<button id="btn_alterarFoto" onclick="teste()"><img src="img/user.png" id="ft_perfil"></button>
+          <strong><label id="nome_perfil"><?php echo $Res[0]['nome_escola']?></label></strong>
+        	<button id="btn_alterarFoto" onclick="teste()"> <?php echo "<img src='".  $Res[0]['foto_perfil']  ."' id='ft_perfil'>"?></button>
     	  </div>
       </form>
     </div>
@@ -211,11 +211,16 @@
   <br><br><br>
   <br><br><br>
 
-  <!-- --------------------- Conteudo --------------------- -->
+  <!-- --------------------- Informações da Instituição --------------------- -->
       
   <hr width="50%" style="margin-left:25% ;">
       <h1>Edição de Informações</h1>
-      <h3>Parte que os usuários terão Acesso</h3>
+      <h3>Escreva um pouco sobre a instituição!</h3>
+      <br><br><br>
+
+      <label for="descricao">Descrição</label><textarea name="descricao" id="txt_desc"></textarea>
+      <label for="link_siteOFC">Link do Site Oficial</label><textarea name="link_siteOFC" id="txt_link"></textarea>
+
    <!-- --------------------- Vazio --------------------- -->
   <script>
     function teste(){
