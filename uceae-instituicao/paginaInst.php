@@ -1,15 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-	<link rel="stylesheet" type="text/css" href="css/paginaInst.css">
-	<title>Sua Página</title>
-</head>
-<body>
-
 <?php
   session_start();
   include 'conection.php';
@@ -43,6 +34,16 @@
         echo $RetornoJSON;
       }
     ?>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="css/paginaInst.css">
+	<title><?php echo $Res[0]['nome_escola']; ?></title>
+</head>
+<body>
+
+
   <!-- --------------------- Barra de Navegação --------------------- -->
 
 	<nav class="navbar navbar-expand-lg navbar-light bg-light" style="height: 70px;">
@@ -88,22 +89,24 @@
 
   <div class="image-upload" id="banner-foto">
   <label for="file-input" id="input-file">
-    <form action="" method="post" id="alter_banner">
+  <form method="post" id="alter_banner">
     <?php
         echo "<img src='".  $Res[0]['foto_banner']  ."' id='foto_banner''>"
       ?>
-    </form>
+    
   </label>
   <input id="file-input" type="file">
+  </form>
   </div>
   <section id="foto">
   <div class="image-upload">
-  <label for="file-input">
-    <?php
-        echo "<img src='".  $Res[0]['foto_perfil']  ."' id='foto_perfil'>"
-      ?>
-  </label>
-
+  <form method='post' id='alter_perfil'>
+    <label for="file-input">
+      <?php
+          echo "<img src='".  $Res[0]['foto_perfil']  ."' id='foto_perfil'>"
+        ?>
+    </label>
+  </form>
   <input id="file-input" type="file" />
 </div>
   </section>
