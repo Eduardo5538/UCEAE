@@ -4,12 +4,64 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Cadastro de instituição</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 	<link rel="stylesheet" type="text/css" href="css/formularioInst.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="js/cadastro.js"></script>
 </head>
 <body>
-	<br><br>
+  <!-- navbar -->
+	<nav class="navbar navbar-expand-lg navbar-light bg-light" style="height: 70px;">
+    <a class="navbar-brand" href="../index.php">
+      <img src="img/UCEAE2.png" alt="" width="130" height="" id="logo1">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="margin-left: 130px;">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="../index.php">Portal</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Busca</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../uceae-aluno/brazil.php">Mapa</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Instituições
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Públicas</a></li>
+            <li><a class="dropdown-item" href="#">Acessibilidade</a></li>
+            <li><a class="dropdown-item" href="#">Privadas</a></li>
+          </ul>
+        </li>
+      </ul>
+      <form class="d-flex">
+      	<div style="margin-right: 20px;">
+      		<button class="btn btn-outline-dark" type="button" style="margin-right: 10px;" data-bs-toggle="modal" data-bs-target="#ModalEntrar">Entrar</button>
+        	<a href="cadastroAluno.php" class="btn btn-dark" tabindex="-1" style="margin-right: 10px;" role="button" aria-disabled="true">Cadastre-se!</a>
+          <a href="formularioInst.php" class="btn btn-warning" tabindex="-1" role="button" aria-disabled="true">Cadastrar sua instituição!</a>
+          <?php
+            session_start();
+            if(isset($_SESSION['CNPJ'])){
+              if($_SESSION['CNPJ'] != ''){
+                echo "<a href='uceae-instituicao/paginaInst.php' class='btn btn-warning' tabindex='-1' role='button' aria-disabled='true'>Sua página!</a>";
+              
+              }
+            }
+
+          ?>
+    	  </div>
+      </form>
+    </div>
+  </div>
+  </nav>
+
 <main class="sign-up">
       <div class="sign-up__content">
         <header class="sign-up__header">
@@ -139,7 +191,7 @@
           
           <div class="form__row">
             <div class="component component--primary form__button">
-            <input type='submit' class="btn btn--regular" id="sign-up-button" tabindex="0" value='Cadastrar'><br><br>
+            <input type='submit' class="botao btn--regular" id="sign-up-button" tabindex="0" value='Cadastrar'><br><br>
               <a href="#" id="btn_criarConta">Já Possui uma conta? Entrar</a>
             </div>
           </div>
