@@ -50,11 +50,16 @@
       </ul>
       <form class="d-flex">
       	<div style="margin-right: 20px;">
-      		<button class="btn btn-outline-dark" type="button" style="margin-right: 10px;" data-bs-toggle="modal" data-bs-target="#ModalEntrar">Entrar</button>
-        	<a href="uceae-login/cadastroAluno.php" class="btn btn-dark" tabindex="-1" style="margin-right: 10px;" role="button" aria-disabled="true">Cadastre-se!</a>
-          <a href="uceae-login/formularioInst.php" class="btn btn-warning" tabindex="-1" role="button" aria-disabled="true">Cadastrar sua instituição!</a>
+        <?php
+          session_start();
+          if(!isset($_SESSION['CNPJ'])){
+              echo "<button class='btn btn-outline-dark' type='button' style='margin-right: 10px;' data-bs-toggle='modal' data-bs-target='#ModalEntrar'>Entrar</button>";
+              echo "<a href='uceae-login/cadastroAluno.php' class='btn btn-dark' tabindex='-1' style='margin-right: 10px;' role='button' aria-disabled='true'>Cadastre-se!</a>";
+              echo "<a href='uceae-login/formularioInst.php' class='btn btn-warning' tabindex='-1' role='button' aria-disabled='true'>Cadastrar sua instituição!</a>";
+          }
+        ?>
           <?php
-            session_start();
+            
             if(isset($_SESSION['CNPJ'])){
               if($_SESSION['CNPJ'] != ''){
                 echo "<a href='uceae-instituicao/paginaInst.php' class='btn btn-warning' tabindex='-1' role='button' style='margin-right: 10px;' aria-disabled='true'>Sua página!</a>";
