@@ -36,9 +36,11 @@
     ?>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-	<link rel="stylesheet" type="text/css" href="css/paginaInst.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+	
+  <link rel="stylesheet" type="text/css" href="css/paginaInst.css">
 	<title><?php echo $Res[0]['nome_escola']; ?></title>
 </head>
 <body>
@@ -78,7 +80,7 @@
       <form class="d-flex">
       	<div style="margin-right: 20px;">
           <strong><label id="nome_perfil"><?php echo $Res[0]['nome_escola']?></label></strong>
-        	<button id="btn_alterarFoto" onclick="teste()"> <?php echo "<img src='".  $Res[0]['foto_perfil']  ."' id='ft_perfil'>"?></button>
+        	<button type="button" id="btn_alterarFoto" data-bs-toggle="modal" data-bs-target="#ModalSair"> <?php echo "<img src='".  $Res[0]['foto_perfil']  ."' id='ft_perfil'>"?></button>
     	  </div>
       </form>
     </div>
@@ -223,6 +225,28 @@
 
       <label for="descricao">Descrição</label><textarea name="descricao" id="txt_desc"></textarea>
       <label for="link_siteOFC">Link do Site Oficial</label><textarea name="link_siteOFC" id="txt_link"></textarea>
+
+   <!-- Modal -->
+
+  <div class="modal fade" id="ModalSair" tabindex="-1" aria-labelledby="ModalLabelSair" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header text-center">
+          <h5 class="modal-title entrar-titulo w-100" id="ModalLabelSair"><?php echo $Res[0]['nome_escola']; ?></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" style="margin: 0 25% 0 25%;">
+           <?php echo "<img src='".  $Res[0]['foto_perfil']  ."' id='ft_perfil_modal'>"?><br><br>
+           <h2><?php echo $Res[0]['nome_escola']; ?></h2><br>
+           <label><?php echo $Res[0]['email_escola']; ?></label>
+        </div>
+              <div class="modal-footer justify-content-center">
+              <a href='../uceae-login/unlogin.php' class='btn btn-danger' tabindex='-1' role='button' aria-disabled='true'>Sair</a>
+              <a href='../uceae-instituicao/paginaInst.php' class='btn btn-warning' tabindex='-1' role='button' style='margin-right: 10px;' aria-disabled='true'>Sua página!</a>
+              </div>
+      </div>
+    </div>
+  </div>
 
    <!-- --------------------- Vazio --------------------- -->
   <script>
