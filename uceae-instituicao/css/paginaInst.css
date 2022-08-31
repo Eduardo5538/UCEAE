@@ -29,6 +29,12 @@
   height: 100%;
   width: 100%;
 }
+#ft_perfil_modal{
+  border: 2px black solid;
+	border-radius: 100px;
+	width: 200px;
+	height: 200px;
+}
 #alter_banner #file-input{
   visibility: hidden;
   width: 100%;
@@ -323,4 +329,6 @@ line-height: 1.43;
   visibility:hidden;
   width:0;
   height:0;
+}
+#ModalSair{
 }
