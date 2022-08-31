@@ -6,8 +6,6 @@ function logar(){
         data: dados,
     })
     .done(function(msg){
-        alert(msg);
-        var json = JSON.parse(msg);
        	alert("logado com sucesso!")
         window.location.href = "../uceae/uceae-instituicao/paginaInst.php"
     })

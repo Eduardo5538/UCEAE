@@ -37,8 +37,10 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 	<link rel="stylesheet" type="text/css" href="css/paginaInst.css">
+  <script src="js/alt.js"></script>
 	<title><?php echo $Res[0]['nome_escola']; ?></title>
 </head>
 <body>
@@ -89,13 +91,13 @@
 
   <div class="image-upload" id="banner-foto">
   <label for="file-input" id="input-file">
-  <form method="post" id="alter_banner">
+  <form method="post" id="alter_banner" enctype="multipart/form-data">
     <?php
         echo "<img src='".  $Res[0]['foto_banner']  ."' id='foto_banner''>"
       ?>
     
   </label>
-  <input id="file-input" type="file">
+  <input id="file-input" name='foto-banner' type="file" onchange='alterar_foto()'>
   </form>
   </div>
   <section id="foto">
