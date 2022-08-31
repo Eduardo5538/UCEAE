@@ -222,10 +222,20 @@
       <h1>Edição de Informações</h1>
       <h3>Escreva um pouco sobre a instituição!</h3>
       <br><br><br>
-
-      <label for="descricao">Descrição</label><textarea name="descricao" id="txt_desc"></textarea>
-      <label for="link_siteOFC">Link do Site Oficial</label><textarea name="link_siteOFC" id="txt_link"></textarea>
-
+      <div id="area_texto">
+        <div id="area_desc" class="esquerda">
+          <label for="descricao">Descrição</label>
+          <br>
+          <textarea name="descricao" id="txt_desc" rows="4" cols="50" maxlength="209"></textarea>
+          <br><br>
+        </div>
+        <div id="area_link" class="direita">
+          <label for="link_siteOFC">Link do Site Oficial</label>
+          <br>
+          <textarea name="link_siteOFC" id="txt_link" maxlength="60"></textarea>
+          <br><br>
+        </div>
+      </div>
    <!-- Modal -->
 
   <div class="modal fade" id="ModalSair" tabindex="-1" aria-labelledby="ModalLabelSair" aria-hidden="true">
@@ -237,7 +247,7 @@
         </div>
         <div class="modal-body" style="margin: 0 25% 0 25%;">
            <?php echo "<img src='".  $Res[0]['foto_perfil']  ."' id='ft_perfil_modal'>"?><br><br>
-           <h2><?php echo $Res[0]['nome_escola']; ?></h2><br>
+           <h3><?php echo $Res[0]['nome_escola']; ?></h3><br>
            <label><?php echo $Res[0]['email_escola']; ?></label>
         </div>
               <div class="modal-footer justify-content-center">
@@ -249,7 +259,7 @@
   </div>
 
    <!-- --------------------- Vazio --------------------- -->
-  <script>
+  <script>  
     function teste(){
       alert('passou')
     }

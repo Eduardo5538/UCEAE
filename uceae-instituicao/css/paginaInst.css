@@ -330,5 +330,34 @@ line-height: 1.43;
   width:0;
   height:0;
 }
-#ModalSair{
+textarea{
+  background-color: #54616e;
+  border: 2px solid #47525E;
+  border-radius: 10px;
+  resize: none;
+  outline: none;
+  overflow: auto;
+  color: white;
+  font-family: arial;
+  padding: 10px;
+}
+#txt_desc{
+  width: 500px;
+  height: 125px;
+  text-indent: 30px;
+}
+#txt_link{
+  width: 250px;
+  height: 50px;
+}
+#area_texto{
+  width: 100%;
+}
+.esquerda{
+  text-align: left;
+  padding-left: 100px;
+}
+.direita{
+  text-align: right;
+  padding-right: 100px;
 }
