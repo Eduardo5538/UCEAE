@@ -29,6 +29,12 @@
   height: 100%;
   width: 100%;
 }
+#ft_perfil_modal{
+  border: 2px black solid;
+	border-radius: 100px;
+	width: 200px;
+	height: 200px;
+}
 #alter_banner #file-input{
   visibility: hidden;
   width: 100%;
@@ -323,4 +329,35 @@ line-height: 1.43;
   visibility:hidden;
   width:0;
   height:0;
+}
+textarea{
+  background-color: #54616e;
+  border: 2px solid #47525E;
+  border-radius: 10px;
+  resize: none;
+  outline: none;
+  overflow: auto;
+  color: white;
+  font-family: arial;
+  padding: 10px;
+}
+#txt_desc{
+  width: 500px;
+  height: 125px;
+  text-indent: 30px;
+}
+#txt_link{
+  width: 250px;
+  height: 50px;
+}
+#area_texto{
+  width: 100%;
+}
+.esquerda{
+  text-align: left;
+  padding-left: 100px;
+}
+.direita{
+  text-align: right;
+  padding-right: 100px;
 }

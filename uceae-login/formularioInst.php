@@ -6,9 +6,9 @@
 	<title>Cadastro de instituição</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-	<link rel="stylesheet" type="text/css" href="css/formularioInst.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="js/cadastro.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/formularioInst.css">
 </head>
 <body>
   <!-- navbar -->
@@ -43,14 +43,20 @@
       </ul>
       <form class="d-flex">
       	<div style="margin-right: 20px;">
-      		<button class="btn btn-outline-dark" type="button" style="margin-right: 10px;" data-bs-toggle="modal" data-bs-target="#ModalEntrar">Entrar</button>
-        	<a href="cadastroAluno.php" class="btn btn-dark" tabindex="-1" style="margin-right: 10px;" role="button" aria-disabled="true">Cadastre-se!</a>
-          <a href="formularioInst.php" class="btn btn-warning" tabindex="-1" role="button" aria-disabled="true">Cadastrar sua instituição!</a>
+        <?php
+          session_start();
+          if(!isset($_SESSION['CNPJ'])){
+              echo "<button class='btn btn-outline-dark' type='button' style='margin-right: 10px;' data-bs-toggle='modal' data-bs-target='#ModalEntrar'>Entrar</button>";
+              echo "<a href='uceae-login/cadastroAluno.php' class='btn btn-dark' tabindex='-1' style='margin-right: 10px;' role='button' aria-disabled='true'>Cadastre-se!</a>";
+              echo "<a href='uceae-login/formularioInst.php' class='btn btn-warning' tabindex='-1' role='button' aria-disabled='true'>Cadastrar sua instituição!</a>";
+          }
+        ?>
           <?php
-            session_start();
+            
             if(isset($_SESSION['CNPJ'])){
               if($_SESSION['CNPJ'] != ''){
-                echo "<a href='uceae-instituicao/paginaInst.php' class='btn btn-warning' tabindex='-1' role='button' aria-disabled='true'>Sua página!</a>";
+                echo "<a href='uceae-instituicao/paginaInst.php' class='btn btn-warning' tabindex='-1' role='button' style='margin-right: 10px;' aria-disabled='true'>Sua página!</a>";
+                echo "<a href='uceae-login/unlogin.php' class='btn btn-danger' tabindex='-1' role='button' aria-disabled='true'>Deslogar</a>";
               
               }
             }
@@ -198,7 +204,30 @@
         </form>
       </div>
     </div>
-    <br><br>
+
   </main>
+
+  <!-- Modal -->
+  <div class="modal fade" id="ModalEntrar" tabindex="-1" aria-labelledby="ModalLabelEntrar" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header text-center">
+          <h5 class="modal-title entrar-titulo w-100" id="ModalLabelEntrar">Entrar</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" style="margin: 0 25% 0 25%;">
+          <form method="POST" name="loginform" id='loginform'>
+              <input class="form-control" type="text" placeholder="Login" name='login' id='login'>
+              <br>
+              <input class="form-control" type="password" placeholder="Senha" name='senha' id='senha'>
+        </div>
+              <div class="modal-footer justify-content-center">
+                <button type="button" class="btn btn-secondary btn-block" style="width: 50%;" onclick='logar();'>Entrar</button>
+              </div>
+          </form>
+      </div>
+    </div>
+  </div>
+
 </body>
 </html>
