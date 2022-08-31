@@ -1,7 +1,14 @@
+@font-face {
+	font-family: 'sensei';
+	src: url(font/sensei.woff);
+}
 body,html{
-background: linear-gradient(to right bottom, #976DD0 50%, #7652A7 50%);
-text-align: center;
-line-height: 1.43;
+  background: linear-gradient(to right bottom, #976DD0 50%, #7652A7 50%);
+  text-align: center;
+  line-height: 1.43;
+}
+html{
+	overflow-y: scroll !important;
 }
 *, *::before, *::after {
   box-sizing: border-box;
@@ -377,4 +384,18 @@ rgba(0, 0, 0, 0.25)
 }
 #meio{
   padding: 1000px;
+}
+.modal-footer{
+	float: center;
+}
+.modal-open{
+	padding-right: 0 !important;
+}
+.entrar-titulo{
+	font-family: sensei;
+	font-size: 40px;
+	color: #77D353;
+}
+.btn-secondary{
+	background-color: #47525E;
 }
