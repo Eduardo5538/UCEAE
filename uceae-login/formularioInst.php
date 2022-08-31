@@ -13,7 +13,7 @@
 <body>
   <!-- navbar -->
 	<nav class="navbar navbar-expand-lg navbar-light bg-light" style="height: 70px;">
-    <a class="navbar-brand" href="../index.php">
+    <a class="navbar-brand" href="#">
       <img src="img/UCEAE2.png" alt="" width="130" height="" id="logo1">
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -22,13 +22,13 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="margin-left: 130px;">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="../index.php">Portal</a>
+          <a class="nav-link active" aria-current="page" href="index.php">Portal</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Busca</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="../uceae-aluno/brazil.php">Mapa</a>
+          <a class="nav-link" href="uceae-aluno/brazil.php">Mapa</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -43,14 +43,20 @@
       </ul>
       <form class="d-flex">
       	<div style="margin-right: 20px;">
-      		<button class="btn btn-outline-dark" type="button" style="margin-right: 10px;" data-bs-toggle="modal" data-bs-target="#ModalEntrar">Entrar</button>
-        	<a href="cadastroAluno.php" class="btn btn-dark" tabindex="-1" style="margin-right: 10px;" role="button" aria-disabled="true">Cadastre-se!</a>
-          <a href="formularioInst.php" class="btn btn-warning" tabindex="-1" role="button" aria-disabled="true">Cadastrar sua instituição!</a>
+        <?php
+          session_start();
+          if(!isset($_SESSION['CNPJ'])){
+              echo "<button class='btn btn-outline-dark' type='button' style='margin-right: 10px;' data-bs-toggle='modal' data-bs-target='#ModalEntrar'>Entrar</button>";
+              echo "<a href='uceae-login/cadastroAluno.php' class='btn btn-dark' tabindex='-1' style='margin-right: 10px;' role='button' aria-disabled='true'>Cadastre-se!</a>";
+              echo "<a href='uceae-login/formularioInst.php' class='btn btn-warning' tabindex='-1' role='button' aria-disabled='true'>Cadastrar sua instituição!</a>";
+          }
+        ?>
           <?php
-            session_start();
+            
             if(isset($_SESSION['CNPJ'])){
               if($_SESSION['CNPJ'] != ''){
-                echo "<a href='uceae-instituicao/paginaInst.php' class='btn btn-warning' tabindex='-1' role='button' aria-disabled='true'>Sua página!</a>";
+                echo "<a href='uceae-instituicao/paginaInst.php' class='btn btn-warning' tabindex='-1' role='button' style='margin-right: 10px;' aria-disabled='true'>Sua página!</a>";
+                echo "<a href='uceae-login/unlogin.php' class='btn btn-danger' tabindex='-1' role='button' aria-disabled='true'>Deslogar</a>";
               
               }
             }
