@@ -1,9 +1,9 @@
 <?php
     include "conection.php";
     session_start();
-    if(isset($_FILES["foto-banner"])){
-        echo "cheguei ";
-        $ft_perfil = $_FILES["foto-banner"];
+    if(isset($_FILES["foto_banner"])){
+        echo "<script>alert('cheguei')</script> ";
+        $ft_perfil = $_FILES["foto_banner"];
         if (!empty($ft_perfil["name"])){
             if (!preg_match("/^image\/(jpeg|jpg|png|gif|bmp|ico)$/", $ft_perfil["type"]))
             {
@@ -27,12 +27,12 @@
             $Comando->execute();
             
           
-            /*if($Comando->rowCount() > 0){
-                echo "amo a josi";
+            if($Comando->rowCount() > 0){
+                echo $caminho_img;
             }
             else{
                 echo $caminho_img;
-            }*/
+            }
         }
 
         catch(PDOException $erro){

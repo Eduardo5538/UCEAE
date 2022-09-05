@@ -2,7 +2,7 @@ function alterar_foto(){
     var dados = $('#alter_banner').serialize();
     $.ajax({
         method:'POST',
-        url:'../uceae-instituicao/alterarImg.php',
+        url:'alterarImg.php',
         data: dados,
     })
     .done(function(msg){
