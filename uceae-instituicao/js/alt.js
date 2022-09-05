@@ -1,5 +1,5 @@
-function alterar_foto(result){
-    var dados = result.value;
+function alterar_foto(){
+    var dados = $("#alter-foto");
     $.ajax({
         method:'POST',
         url:'../uceae-instituicao/alterarImg.php',
