@@ -1,9 +1,10 @@
 <?php
     include "conection.php";
     session_start();
-    if(isset($_FILES["foto_banner"])){
+    $ft_perfil = $_FILES["foto-banner"];
+    if(isset($_FILES["foto-banner"])){
         echo "<script>alert('cheguei')</script> ";
-        $ft_perfil = $_FILES["foto_banner"];
+
         if (!empty($ft_perfil["name"])){
             if (!preg_match("/^image\/(jpeg|jpg|png|gif|bmp|ico)$/", $ft_perfil["type"]))
             {

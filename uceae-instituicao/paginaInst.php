@@ -93,13 +93,14 @@
 
   <div class="image-upload" id="banner-foto">
   <label for="file-input" id="input-file">
-  <form method="post" id="alter_banner" enctype="multipart/form-data">
+  <form method="post" id="alter_banner" action='alterarImg.php' enctype="multipart/form-data">
     <?php
         echo "<img src='".  $Res[0]['foto_banner']  ."' id='foto_banner' name='foto_banner'>"
       ?>
     
   </label>
-  <input id="file-input" name='foto-banner' type="file" onchange='alterar_foto()'>
+  <input id="file-input" name='foto-banner' type="file" onchange='alterar_foto(this)'>
+  <input type="submit" value="pau">
   </form>
   </div>
   <section id="foto">
