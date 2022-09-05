@@ -8,7 +8,7 @@
       <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
       <link rel="stylesheet" href='css/map.css' type='text/css'>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-      <script src="../uceae-login/js/logar.js"></script>
+      <script src="js/logar.js"></script>
    </head>
    <body>
 
@@ -49,15 +49,15 @@
           session_start();
           if(!isset($_SESSION['CNPJ'])){
               echo "<button class='btn btn-outline-dark' type='button' style='margin-right: 10px;' data-bs-toggle='modal' data-bs-target='#ModalEntrar'>Entrar</button>";
-              echo "<a href='uceae-login/cadastroAluno.php' class='btn btn-dark' tabindex='-1' style='margin-right: 10px;' role='button' aria-disabled='true'>Cadastre-se!</a>";
-              echo "<a href='uceae-login/formularioInst.php' class='btn btn-warning' tabindex='-1' role='button' aria-disabled='true'>Cadastrar sua instituição!</a>";
+              echo "<a href='../uceae-login/cadastroAluno.php' class='btn btn-dark' tabindex='-1' style='margin-right: 10px;' role='button' aria-disabled='true'>Cadastre-se!</a>";
+              echo "<a href='../uceae-login/formularioInst.php' class='btn btn-warning' tabindex='-1' role='button' aria-disabled='true'>Cadastrar sua instituição!</a>";
           }
         ?>
           <?php
             
             if(isset($_SESSION['CNPJ'])){
               if($_SESSION['CNPJ'] != ''){
-                echo "<a href='uceae-instituicao/paginaInst.php' class='btn btn-warning' tabindex='-1' role='button' style='margin-right: 10px;' aria-disabled='true'>Sua página!</a>";
+                echo "<a href='../uceae-instituicao/paginaInst.php' class='btn btn-warning' tabindex='-1' role='button' style='margin-right: 10px;' aria-disabled='true'>Sua página!</a>";
                 echo "<a href='../uceae-login/unlogin.php' class='btn btn-danger' tabindex='-1' role='button' aria-disabled='true'>Deslogar</a>";
               
               }
