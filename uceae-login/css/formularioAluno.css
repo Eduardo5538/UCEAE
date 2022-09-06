@@ -20,6 +20,7 @@ body{
 label{
 	display: block;
 	margin-bottom:0.5rem;
+
 }
 
 input{
@@ -36,4 +37,8 @@ input{
 	border: 1px solid #ccc;
 	border-radius: 0.35rem;
 	padding: 1.5rem;
+}
+
+.input-group{
+	margin: 2rem 0;
 }
