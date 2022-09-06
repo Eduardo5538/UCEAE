@@ -294,6 +294,7 @@
                       <h5 class='card-title'>".$Res[$i]['nome_escola']."</h5>
                       <p class='card-text'>".$Res[$i]['uf_escola']."</p>
                       <p class='card-text'><small class='text-muted'>".$Res[$i]['email_escola']." ------------------ ".$Res[$i]['cidade_escola']."</small></p>
+                      <a href='showInst.php?cnpj=". $Res[$i]['CNPJ'] ."' class='btn btn-dark' tabindex='-1' style='margin-right: 10px;' role='button' aria-disabled='true'>Quero ver!</a>
                     </div>
                   </div>
                   <br>";
