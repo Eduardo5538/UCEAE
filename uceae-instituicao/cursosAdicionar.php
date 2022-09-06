@@ -6,7 +6,9 @@
 	<title>Adicionar Cursos</title>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-	<link rel="stylesheet" type="text/css" href="css/cursosAdicionar.css">
+  <link rel="stylesheet" type="text/css" href="css/cursosAdicionar.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="js/addCurso.js"></script>
 </head>
 <body>
 
@@ -48,23 +50,25 @@
 
    <!-- --------------------- Label --------------------- -->
 
-   <h1 id="titulo">Seus Cursos</h1>
+   <h1 id="titulo">Adicionar Cursos</h1>
    <br><br><br>
-   <br><br><br>
-   <h2 id="texto">Nenhum Curso Adicionado</h2>
 
-   <!-- --------------------- Card de Adicionar --------------------- -->
+   <!-- --------------------- Form de Adicionar --------------------- -->
 
-   <div id="resposta">
-     <div id="card">
-       <div id="card-image">
-         <img src="img/adicionar-botao.png">
-       </div>
-       <div id="card-conteudo">
-         <h1>Adicionar Curso</h1>
-       </div>
-     </div>
-   </div>
-
+   <form action="" method="post">
+      <div class="container">
+        <label for="name">Inserir Curso</label>
+        <div class="input-file-upload">
+          <div class="upload-btn">
+            <button class="btn">
+              Selecionar o Arquivo
+            </button>
+            <input type="file" id="upfile" onchange="readUrl(this);">
+          </div>
+          <img class="upload-img" id="file-upload">
+        </div>
+        <button>Enviar</button>
+      </div>
+   </form>
 </body>
 </html>
