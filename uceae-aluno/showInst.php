@@ -89,6 +89,18 @@
   </section>
   <!-- --------------------- Botao de adicionar Propagandas --------------------- -->
 
-  <br><br>
+  <br><br><br><br>
+
+  <?php
+   
+   echo "<h1>" . $Res[0]['nome_escola']  . "</h1><br><br>";
+   echo "<h3>" . $Res[0]['email_escola']  . "</h3><br><br>";
+   echo "<h4>" . $Res[0]['cidade_escola']  . "</h4><br><br>";
+   echo "<h5>" . $Res[0]['nome_escola']  . "</h5><br><br>";
+   echo "<h5>" . $Res[0]['rua_escola']  . "</h5><br><br>";
+   echo "<h5>" . $Res[0]['uf_escola']  . "</h5><br><br>";
+
+
+?>
 </body>
 </html>
