@@ -53,7 +53,7 @@
   	}
     try
     {
-        $inserir = $conexao->prepare("insert into escolas (nome_escola, cnpj, rua_escola, email_escola, cep_escola, cidade_escola, bairro_escola, uf_escola, foto_perfil, foto_banner, foto_prop) values (?,?,?,?,?,?,?,?,?,?,?)");
+        $inserir = $conexao->prepare("insert into escolas (nome_escola, cnpj, rua_escola, email_escola, cep_escola, cidade_escola, bairro_escola, uf_escola, foto_perfil, foto_banner, foto_prop, telefone_escola) values (?,?,?,?,?,?,?,?,?,?,?,?)");
         $inserir->bindParam(1,$nome);
         $inserir->bindParam(2,$cnpj);
         $inserir->bindParam(3,$rua_inst);
@@ -65,6 +65,7 @@
         $inserir->bindParam(9,$caminho_img);
         $inserir->bindParam(10,$caminho_img2);
         $inserir->bindParam(11,$caminho_img3);
+        $inserir->bindParam(12,$telefone);
 
 
         $inserir->execute();
