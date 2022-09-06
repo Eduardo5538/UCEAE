@@ -12,6 +12,13 @@
 <body>
     <form action="" method="POST" class="form" id="frm_aluno">
         <h1 class="text-center">Formulário de Cadastro</h1>
+        <div class="progressbar">
+            <div class="progress-step"></div>
+            <div class="progress-step"></div>
+            <div class="progress-step"></div>
+            <div class="progress-step"></div>
+            <div class="progress-step"></div>
+        </div>
         <div class="form-step form-step-active">
             <div class="input-group">
                 <label for="nome">Nome</label>
