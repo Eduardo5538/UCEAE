@@ -3,6 +3,10 @@
 	src: url(font/sensei.woff);
 }
 
+:root{
+	--primary-color:rgb(11,78,179);
+}
+
 *,
 *::before,
 *::after{
@@ -31,6 +35,22 @@ input{
 	border-radius: 0.25rem;
 }
 
+.estado{
+	display: block;
+	width: 100%;
+	padding: 0.75rem;
+	border:1px solid #ccc;
+	border-radius: 0.25rem;
+}
+
+.width-50{
+	width: 50%;
+}
+
+.ml-auto{
+	margin-left: auto;
+}
+
 .form{
 	width: clamp(320px,30%,430px);
 	margin:0 auto;
@@ -39,6 +59,42 @@ input{
 	padding: 1.5rem;
 }
 
+.form-step{
+	display: none;
+}
+
+.form-step-active{
+	display: block;
+}
+
+.text-center{
+	text-align: center;
+}
+
 .input-group{
 	margin: 2rem 0;
+}
+
+.btn{
+	padding: .75rem;
+	display: block;
+	text-decoration: none;
+	background-color: var(--primary-color);
+	color: #f3f3f3;
+	text-align: center;
+	border-radius: .25rem;
+	cursor: pointer;
+	transition: .25s;
+}
+
+.btn:hover{
+	box-shadow: 0 0 0 2px #fff, 0 0 0 3px var(--primary-color);
+	transition: .25s;
+}
+
+.btns-group{
+	display: grid;
+	grid-template-columns: repeat(2,1fr);
+	gap: 1.5rem;
+
 }
