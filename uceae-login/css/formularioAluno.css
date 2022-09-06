@@ -1,0 +1,39 @@
+@font-face{
+	font-family: sensei;
+	src: url(font/sensei.woff);
+}
+
+*,
+*::before,
+*::after{
+	box-sizing: border-box;
+}
+
+body{
+	font-family: Montserrat, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	margin: 0;
+	display: grid;
+	place-items: center;
+	min-height: 100vh;
+}
+
+label{
+	display: block;
+	margin-bottom:0.5rem;
+}
+
+input{
+	display: block;
+	width: 100%;
+	padding: 0.75rem;
+	border:1px solid #ccc;
+	border-radius: 0.25rem;
+}
+
+.form{
+	width: clamp(320px,30%,430px);
+	margin:0 auto;
+	border: 1px solid #ccc;
+	border-radius: 0.35rem;
+	padding: 1.5rem;
+}
