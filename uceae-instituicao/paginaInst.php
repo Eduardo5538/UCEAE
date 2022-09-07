@@ -93,27 +93,36 @@
 
   <div class="image-upload" id="banner-foto">
   <label for="file-input" id="input-file">
-  <form method="post" id="alter_banner" action='alterarImg.php' enctype="multipart/form-data">
+  <form method="post" id="alter_banner" action='alterarBanner.php' enctype="multipart/form-data">
     <?php
         echo "<img src='".  $Res[0]['foto_banner']  ."' id='foto_banner' name='foto_banner'>"
       ?>
     
   </label>
-  <input id="file-input" name='foto-banner' type="file" onchange='alterar_foto(this)'>
-  <input type="submit" value="pau">
+  <input id="file-input" name='foto-banner' type="file" onchange='alterar_foto()'>
+  <div id='resp1'></div>
+  
   </form>
+
   </div>
+  <br><br><br>
   <section id="foto">
-  <div class="image-upload">
-  <form method='post' id='alter_perfil'>
-    <label for="file-input">
+  <div class="image-upload2">
+  <label for="file-input2" id="input-file">
+  <form method='post' id='alter_perfil' action='alterarFoto.php' enctype="multipart/form-data">
+    <label for="file-input2">
       <?php
           echo "<img src='".  $Res[0]['foto_perfil']  ."' id='foto_perfil'>"
         ?>
     </label>
+    <div id='resp2'></div>
+    
+    <input id="file-input2" name='foto_perfil' type="file" / onchange='alterar_foto2()'>
+  
   </form>
-  <input id="file-input" type="file" />
+  
 </div>
+<br><br><br>
   </section>
   <!-- --------------------- Botao de adicionar Propagandas --------------------- -->
 
@@ -185,6 +194,7 @@
     <button id="btn_salvar"><img src="img/salvar.png" id="salvar-icon"><label id="lbl_salvar">Salvar</label></button>
   </div>
 </form>
+
 <br><br><br>
 
   <!-- --------------------- Cards Personalizados --------------------- -->

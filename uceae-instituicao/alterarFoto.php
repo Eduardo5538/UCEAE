@@ -1,8 +1,8 @@
 <?php
     include "conection.php";
     session_start();
-    $ft_perfil = $_FILES["foto-banner"];
-    if(isset($_FILES["foto-banner"])){
+    $ft_perfil = $_FILES["foto_perfil"];
+    if(isset($_FILES["foto_perfil"])){
         echo "<script>alert('cheguei')</script> ";
 
         if (!empty($ft_perfil["name"])){
