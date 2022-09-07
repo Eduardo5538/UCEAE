@@ -43,9 +43,10 @@
 	<link rel="stylesheet" type="text/css" href="css/paginaInst.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="js/alt.js"></script>
+  <script src="js/paginaInst.js"></script>
 	<title><?php echo $Res[0]['nome_escola']; ?></title>
 </head>
-<body>
+<body onload='consulta()'>
 
 
   <!-- --------------------- Barra de Navegação --------------------- -->
@@ -149,45 +150,45 @@
   <div class="row">
     <div class="col">
       <label>CNPJ</label><br>
-      <input type="text" class="form-control" id="txt_nomeInst" placeholder="">
+      <input type="text" class="form-control" id="txt_cnpj" placeholder="">
     </div>
     <div class="col">
       <label>Cep</label><br>
-      <input type="text" class="form-control" id="txt_nomeInst" placeholder="">
+      <input type="text" class="form-control" id="txt_cep" placeholder="">
     </div>
     <div class="col">
       <label>Mensalidade</label><br>
-      <input type="text" class="form-control" id="txt_nomeInst" placeholder="">
+      <input type="text" class="form-control" id="txt_mensalidade" placeholder="">
     </div>
   </div>
   <br>
   <div class="row">
     <div class="col">
       <label>Email</label><br>
-      <input type="text" class="form-control" id="txt_nomeInst" placeholder="">
+      <input type="text" class="form-control" id="txt_email" placeholder="">
     </div>
     <div class="col">
       <label>Telefone</label><br>
-      <input type="text" class="form-control" id="txt_nomeInst" placeholder="">
+      <input type="text" class="form-control" id="txt_telefone" placeholder="">
     </div>
   </div>
   <br>
   <div class="row">
     <div class="col">
       <label>Rua</label><br>
-      <input type="text" class="form-control" id="txt_nomeInst" placeholder="">
+      <input type="text" class="form-control" id="txt_rua" placeholder="">
     </div>
     <div class="col">
       <label>Bairro</label><br>
-      <input type="text" class="form-control" id="txt_nomeInst" placeholder="">
+      <input type="text" class="form-control" id="txt_bairro" placeholder="">
     </div>
     <div class="col">
       <label>Cidade</label><br>
-      <input type="text" class="form-control" id="txt_nomeInst" placeholder="">
+      <input type="text" class="form-control" id="txt_cidade" placeholder="">
     </div>
       <div class="col">
       <label>UF</label><br>
-      <input type="text" class="form-control" id="txt_nomeInst" placeholder="">
+      <input type="text" class="form-control" id="txt_uf" placeholder="">
     </div>
   </div>
   <div id="nav-alterar">
