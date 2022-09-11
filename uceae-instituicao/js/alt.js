@@ -1,16 +1,14 @@
 function alterar_foto(){
-    var dados = $("#alter-foto");
-    $.ajax({
-        method:'POST',
-        url:'../uceae-instituicao/alterarImg.php',
-        data: dados,
-    })
-    .done(function(msg){
-       	alert(msg)
-
-    })
-    .fail(function(){
-        alert("Falha ao mudar a foto.")
-    })
-   	return false;
+    var bloco = "<input type='submit' value='pau'>";
+    let input = document.createElement("button")
+    input.innerHTML = "Alterar foto";
+    var div = document.getElementById("resp1")
+    div.append(input);
+}
+function alterar_foto2(){
+    var bloco = "<input type='submit' value='pau'>";
+    let input = document.createElement("button")
+    input.innerHTML = "Alterar foto";
+    var div = document.getElementById("resp2")
+    div.append(input);
 }
