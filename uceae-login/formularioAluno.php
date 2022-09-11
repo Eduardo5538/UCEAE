@@ -13,11 +13,13 @@
     <form action="" method="POST" class="form" id="frm_aluno">
         <h1 class="text-center">Formulário de Cadastro</h1>
         <div class="progressbar">
-            <div class="progress-step"></div>
-            <div class="progress-step"></div>
-            <div class="progress-step"></div>
-            <div class="progress-step"></div>
-            <div class="progress-step"></div>
+            <div class="progress" id="progress"></div>
+            <div
+             class="progress-step progress-step-active" data-title="Nome"></div>
+            <div class="progress-step" data-title="Contato"></div>
+            <div class="progress-step" data-title="Info"></div>
+            <div class="progress-step" data-title="Local"></div>
+            <div class="progress-step" data-title="Senha"></div>
         </div>
         <div class="form-step form-step-active">
             <div class="input-group">
@@ -54,6 +56,19 @@
             <div class="input-group">
                 <label for="cpf">CPF</label>
                 <input type="text" name="cpf" id="txt_cpfAluno">
+            </div>
+            <div class="input-group">
+                <label for="def">Possui Deficiência?</label>
+                <select class="def" id="txt_defAluno">
+                  <option value="Sim" id="s">Sim</option><option value="Nao" id="n">Não</option>
+            </div>
+            <div class="input-group">
+                <label for="nomeDefAluno">Nome da Deficiência</label>
+                <input type="text" name="nomeDefAluno" id="txt_nomeDefAluno">
+            </div>
+            <div class="input-group">
+                <label for="descDefAluno">Descrição da Deficiência</label>
+                <texarea name="descDefAluno" id="txt_descDefAluno">
             </div>
             <div class="btns-group">
                 <a href="#" class="btn btn-prev">Anterior</a>
