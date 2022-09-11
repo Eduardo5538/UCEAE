@@ -9,7 +9,7 @@
     <script src='js/formularioAluno.js'></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
-<body>
+<body onload="passar()">
     <form action="" method="POST" class="form" id="frm_aluno">
         <h1 class="text-center">Formulário de Cadastro</h1>
         <div class="progressbar">
@@ -59,8 +59,10 @@
             </div>
             <div class="input-group">
                 <label for="def">Possui Deficiência?</label>
-                <select class="def" id="txt_defAluno">
-                  <option value="Sim" id="s">Sim</option><option value="Nao" id="n">Não</option>
+                <input type="radio" id="sim" name="op_def" value="S">
+                <label for="html">Sim</label><br>
+                <input type="radio" id="nao" name="op_def" value="N">
+                <label for="css">Não</label><br>
             </div>
             <div class="input-group">
                 <label for="nomeDefAluno">Nome da Deficiência</label>

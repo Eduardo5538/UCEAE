@@ -1,8 +1,12 @@
+function passar(){
+
+
+
 const prevBtns = document.querySelectorAll(".btn-prev");
 const nextBtns = document.querySelectorAll(".btn-next");
-const progress = document.getElementById(" progress");
+const progress = document.getElementById("progress");
 const formSteps = document.querySelectorAll(".form-step");
-const progressStep = document.querySelectorAll(".progress-step")
+const progressStep = document.querySelectorAll(".progress-step");
 
 let formStepsNums = 0;
 
@@ -25,7 +29,7 @@ prevBtns.forEach((btn) => {
 function updateFormSteps(){
 
     formSteps.forEach(formStep => {
-        formStep.classList.contains("form-step-active") == true
+        formStep.classList.contains("form-step-active") &&
         formStep.classList.remove("form-step-active");
     });
     formSteps[formStepsNums].classList.add("form-step-active");
@@ -44,4 +48,5 @@ function updateProgressBar(){
     const progressActive = document.querySelectorAll(".progress-step-active"); 
 
     progress.style.width = ((progressActive.length - 1) / (progressStep.length - 1)) * 100 + "%"; 
+}
 }

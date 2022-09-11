@@ -72,6 +72,7 @@ input{
 }
 
 /* Barra de Progresso*/
+
 .progressbar{
 	position: relative;
 	display: flex;
@@ -125,7 +126,13 @@ input{
 	color: #f3f3f3;
 
 }
-/* Formulário */
+
+#sim, #nao{
+	
+}
+
+/* Botoes */
+
 .input-group{
 	margin: 2rem 0;
 }
@@ -153,3 +160,4 @@ input{
 	gap: 1.5rem;
 
 }
+
