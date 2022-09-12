@@ -6,7 +6,13 @@ function logar(){
         data: dados,
     })
     .done(function(msg){
-       	alert("logado com sucesso!")
+        if(msg != "Registro Não Encontrado"){
+            alert("logado com sucesso!")
+        }
+        else{
+            alert("erro ao efetuar o login")
+        }
+       	
         window.location.href = "../uceae/uceae-instituicao/paginaInst.php"
     })
     .fail(function(){
