@@ -94,13 +94,12 @@
   margin-top: 10%;
 }
 #btn_salvar{
-	height: 30px;
-  border-radius: 10px;
+	height: 70%;
 	width: 125px;
 	margin-top: 10px;
-	border: white 2px solid;
-	background-color: #77D353;
-  color: black;
+	border:none;
+	background-color: rgb(74, 0, 134);
+  color: white;
   font-weight: bold;
 }
 #lbl_salvar{
@@ -126,6 +125,7 @@
 	cursor: pointer;
 	border: none;
 	padding-right: 50px;
+  background-color: transparent;
 }
 #nome_perfil{
 	padding-right: 15px;
@@ -375,4 +375,52 @@ textarea{
 .direita{
   text-align: right;
   padding-right: 100px;
+}
+
+/* botao resposta */
+
+#resp1{
+  text-align: right;
+  width: 100%;
+}
+#resp1 button{
+  width: 200px;
+  height: 40px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+  border: 2px solid purple;
+  color:purple;
+  background-color: transparent;
+  transition: .5s;
+  margin-right: 5rem;
+}
+
+#resp1 button:hover{
+  background-color: purple;
+  color: white;
+  transition: .5s;
+}
+
+#resp1{
+  text-align: right;
+  width: 100%;
+}
+#resp2 button{
+  width: 200px;
+  height: 40px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+  border: 2px solid purple;
+  color:purple;
+  background-color: transparent;
+  transition: .5s;
+  margin-right: 5rem;
+}
+
+#resp2 button:hover{
+  background-color: purple;
+  color: white;
+  transition: .5s;
 }

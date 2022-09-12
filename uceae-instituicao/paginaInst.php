@@ -101,7 +101,7 @@
     
   </label>
   <input id="file-input" name='foto-banner' type="file" onchange='alterar_foto()'>
-  <div id='resp1'></div>
+  <div id='resp1' class="btn btn-resp1"></div>
   
   </form>
 
@@ -116,8 +116,8 @@
           echo "<img src='".  $Res[0]['foto_perfil']  ."' id='foto_perfil'>"
         ?>
     </label>
-    <div id='resp2'></div>
-    
+    <div id='resp2' class="btn btn-resp2"></div>
+      
     <input id="file-input2" name='foto_perfil' type="file" / onchange='alterar_foto2()'>
   
   </form>
