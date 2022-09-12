@@ -65,9 +65,9 @@ CREATE TABLE `escolas` (
 --
 
 INSERT INTO `escolas` (`CNPJ`, `nome_escola`, `rua_escola`, `acessibilidade`, `acessibilidade_texto`, `email_escola`, `telefone_escola`, `uf_escola`, `cep_escola`, `cidade_escola`, `bairro_escola`, `foto_perfil`, `foto_banner`, `foto_prop`) VALUES
-('123', 'Colégio Batista Daniel de La Touche', 'Av. Inácio Mourão Rangel', NULL, NULL, 'Batista@gmail.com', NULL, 'MA', '65076-830', 'São Luís', 'Jardim Renascença', '../uceae-login/img/2f32608a9243bb3cdf4e99263811987e.jfif', '../uceae-login/img/ec35bcfa798c917e59cbcc9e8d63e026.jfif', '../uceae-login/img/5589249f166da08d5bb36ca75d732c4d.jfif'),
-('765767', 'Col', 'Av. João Pessoa', NULL, NULL, 'Vicente@gmail.com', NULL, 'MA', '65040-000', 'São Luís ', 'João Paulo', '../uceae-login/img/36afdedb58002d0b50234c7289a96928.png', '../uceae-login/img/ba25ea39c696359043ba215d475c8bb5.jfif', '../uceae-login/img/9d1046b63b1c4876dfadd582b9c1914c.jfif'),
-('466765', 'Colégio Teresina', 'Av. Miguel Rosa', NULL, NULL, 'Teresina@gmail.com', NULL, 'PI', '64018-560', 'Teresina', 'Centro (Sul)', '../uceae-login/img/acba2a2c45c55e3201bbaa9addf626ae.jpeg', '../uceae-login/img/31833a02eaccd957ddf73eff9c84b7c4.jpeg', '../uceae-login/img/5747b6f5f7d7026e6c49c0b9cad50019.jpeg'),
+('123222121980890', 'Colégio Batista Daniel de La Touche', 'Av. Inácio Mourão Rangel', NULL, NULL, 'Batista2111@gmail.com', NULL, 'MA', '65076-830', 'São Luís', 'Jardim Renascença', '../uceae-login/img/2f32608a9243bb3cdf4e99263811987e.jfif', '../uceae-login/img/ec35bcfa798c917e59cbcc9e8d63e026.jfif', '../uceae-login/img/5589249f166da08d5bb36ca75d732c4d.jfif'),
+('765767111', 'Col', 'Av. João Pessoa', NULL, NULL, 'Vicente@gmail.com', NULL, 'MA', '65040-000', 'São Luís ', 'João Paulo', '../uceae-login/img/36afdedb58002d0b50234c7289a96928.png', '../uceae-login/img/ba25ea39c696359043ba215d475c8bb5.jfif', '../uceae-login/img/9d1046b63b1c4876dfadd582b9c1914c.jfif'),
+('466765', 'Colégio Teresina', 'Av. Miguel Rosa', NULL, NULL, 'Teresina23232@gmail.com', NULL, 'PI', '64018-560', 'Teresina', 'Centro (Sul)', '../uceae-login/img/acba2a2c45c55e3201bbaa9addf626ae.jpeg', '../uceae-login/img/31833a02eaccd957ddf73eff9c84b7c4.jpeg', '../uceae-login/img/5747b6f5f7d7026e6c49c0b9cad50019.jpeg'),
 ('112223', 'Criança Escola', 'R. Joaquim Nabuco', NULL, NULL, 'Criança@gmail.com', NULL, 'CE', '60125-121', 'Fortaleza', 'Dionísio Torres', '../uceae-login/img/5d4b5a08fee4bf17066b6f990a484b84.jfif', '../uceae-login/img/c662f3a76797265d105b4838f8e733f3.jfif', '../uceae-login/img/54d3d59a215928498655125a8874528a.jfif'),
 ('5454577', 'Colégio Medalha Milagrosa', 'Rua Padre João Piamarta', NULL, NULL, 'Medalha@gmail.com', NULL, 'CE', '60410-315', 'Fortaleza', 'Bom Futuro', '../uceae-login/img/ecbe31ebe8055106338201b4d1ac2f09.jfif', '../uceae-login/img/13dd6a1a06b4f5315c094b7b1e41426b.jfif', '../uceae-login/img/ffb06bf3167a13627d6079cb52f81ea2.jfif'),
 ('242345', 'Cidade Viva', 'R. Profa. Luzia Simões Bartolini', NULL, NULL, 'Viva@gmail.com', NULL, 'PB', '58036-630', 'João Pessoa', 'Aeroclube', '../uceae-login/img/387b2526062a4bca971faa8a3c687021.jfif', '../uceae-login/img/25eda7162e34c3117b5fdeebf3dcf11e.jfif', '../uceae-login/img/688fb30c48bd93ddf378e037aff6b35b.jfif'),
@@ -96,7 +96,7 @@ INSERT INTO `escolas` (`CNPJ`, `nome_escola`, `rua_escola`, `acessibilidade`, `a
 ('851723813', 'Escola Favo de Mel', 'Av. Ranulpho Barbosa dos Santos, 725', NULL, NULL, 'favo@gmail.com', NULL, 'ES', '29090-120', 'Vitória', 'Jardim Camburi', '../uceae-login/img/1652ebc210748ce5ecbf97252ca5943d.png', '../uceae-login/img/adf23316d335818efc33f7919f24385d.png', '../uceae-login/img/f621e1cd9982ce8a2cada759a8c81949.png'),
 ('12318749550', 'Escola Castelo Branco', 'Av. Jurema Barroso, 130', NULL, NULL, 'castelo@gmail.com', NULL, 'ES', '29020-430', 'Vitória', 'Ilha do Principe', '../uceae-login/img/f3aa28d0dd731c840f748a25d7792591.jpg', '../uceae-login/img/55cdef375d70c53f8e9ce3d385b80686.jpg', '../uceae-login/img/db8bbaea74fb4d1cb256c3d9ad3ed3af.jpg'),
 ('223827837238', 'CENTRO MUNICIPAL DE EDUCACAO INFANTIL JO', 'RUA CAMPINAS, S/N', NULL, NULL, 'cmefp@gmail.com', NULL, 'GO', '75345-000 ', ' Abadia de Goiás', 'QD. 01 LT. 16. CENTRO', '../uceae-login/img/261998f950dde169d566680341be90fb.png', '../uceae-login/img/7e0521c65b7b4efdbf08e6a678561ad0.png', '../uceae-login/img/af62697a376433fdd4542da0e0d19ca8.png'),
-('2324423212', 'Creche Municipal Arco Iris', ' AV MOISES DORNELES MONTIEL, 02', NULL, NULL, 'cemls@gmail.com', NULL, 'MT', '75345-000 ', 'Alto Boa Vista', 'SETOR BANEIRANTES', '../uceae-login/img/99c4fc273e1010b2f74a6338a767dc79.png', '../uceae-login/img/b0b6192d8b7e378867b2ef504fec2323.png', '../uceae-login/img/5c60a3d2058d4a1084a5d446ee8fa2de.png'),
+('2324423212', 'Creche Municipal Arco Iris', ' AV MOISES DORNELES MONTIEL, 02', NULL, NULL, 'cemls2@gmail.com', NULL, 'MT', '75345-000 ', 'Alto Boa Vista', 'SETOR BANEIRANTES', '../uceae-login/img/99c4fc273e1010b2f74a6338a767dc79.png', '../uceae-login/img/b0b6192d8b7e378867b2ef504fec2323.png', '../uceae-login/img/5c60a3d2058d4a1084a5d446ee8fa2de.png'),
 ('293898999', 'EE JOAO REZENDE DE AZEVEDO', 'AVENIDA BRASIL, 700 ', NULL, NULL, 'eejrd@gmail.com', NULL, 'MT', '78665-000', 'Alto Boa Vista', 'CENTRO', '../uceae-login/img/ed7c3776c9ada5a57588876472ce70ae.png', '../uceae-login/img/329a951c1bfb9126bf18d8abba302c87.png', '../uceae-login/img/f26ae68abc912a0b9afb51e5b7acc212.png'),
 ('29389899953', 'EE BRAZ SINIGAGLIA', 'RUA ARLINDO RAMOS, 1811', NULL, NULL, 'braz@gmail.com', NULL, 'MS', '79760-000', 'Batayporã', 'CENTRO', '../uceae-login/img/389715a5491384a5acc40ce3c35e92bb.png', '../uceae-login/img/8570664b38f21f113855d3741d9f4a4e.png', '../uceae-login/img/12ad61bd6b6215543ce2e923138686a0.png'),
 ('3231243232', 'EE JAN ANTONIN BATA', 'RUA JONAS PEDRO NUNES, 1260 ', NULL, NULL, 'jan@gmail.com', NULL, 'DF', '79760-000 ', 'Batayporã', 'CENTRO', '../uceae-login/img/158fb364607fcf48929875db75389ebe.png', '../uceae-login/img/a7571dcbb0bf853b9684affb9c3c0952.png', '../uceae-login/img/3776a7729f780c71d72cd9461a79ae1d.png'),
@@ -135,8 +135,8 @@ CREATE TABLE `login` (
 --
 
 INSERT INTO `login` (`cod_login`, `CNPJ`, `login`, `senha`, `nome`, `imagem`) VALUES
-(2, '123', 'Batista@gmail.com', '123', 'Colégio Batista Daniel de La Touche', '../uceae-login/img/2f32608a9243bb3cdf4e99263811987e.jfif'),
-(3, '765767', 'Vicente@gmail.com', '555', 'Col', '../uceae-login/img/36afdedb58002d0b50234c7289a96928.png'),
+(2, '12333', 'Batista76764522@gmail.com', '123', 'Colégio Batista Daniel de La Touche', '../uceae-login/img/2f32608a9243bb3cdf4e99263811987e.jfif'),
+(3, '765767', 'Vicente23232@gmail.com', '555', 'Col', '../uceae-login/img/36afdedb58002d0b50234c7289a96928.png'),
 (4, '466765', 'Teresina@gmail.com', '545', 'Colégio Teresina', '../uceae-login/img/acba2a2c45c55e3201bbaa9addf626ae.jpeg'),
 (5, '545455', 'Marista@gmail.com', '434', 'Colégio Marista', '../uceae-login/img/ddb201c94aa648132711e86794dbf7ee.jfif'),
 (6, '112223', 'Criança@gmail.com', '555', 'Criança Escola', '../uceae-login/img/5d4b5a08fee4bf17066b6f990a484b84.jfif'),
@@ -167,14 +167,14 @@ INSERT INTO `login` (`cod_login`, `CNPJ`, `login`, `senha`, `nome`, `imagem`) VA
 (36, '851723813', 'favo@gmail.com', '1234', 'Escola Favo de Mel', '../uceae-login/img/1652ebc210748ce5ecbf97252ca5943d.png'),
 (37, '12318749550', 'castelo@gmail.com', '1234', 'Escola Castelo Branco', '../uceae-login/img/f3aa28d0dd731c840f748a25d7792591.jpg'),
 (38, '223827837238', 'cmefp@gmail.com', '123', 'CENTRO MUNICIPAL DE EDUCACAO INFANTIL JO', '../uceae-login/img/261998f950dde169d566680341be90fb.png'),
-(39, '223382932999', 'cemls@gmail.com', '123', 'COLEGIO ESTADUAL MANOEL LIBANIO DA SILVA', '../uceae-login/img/92e3edb70854f202d05c27bcf35c6e86.png'),
+(39, '223382932999', 'cemls2323@gmail.com', '123', 'COLEGIO ESTADUAL MANOEL LIBANIO DA SILVA', '../uceae-login/img/92e3edb70854f202d05c27bcf35c6e86.png'),
 (40, '2324423212', 'cemls@gmail.com', '123', 'Creche Municipal Arco Iris', '../uceae-login/img/99c4fc273e1010b2f74a6338a767dc79.png'),
 (41, '293898999', 'eejrd@gmail.com', '123', 'EE JOAO REZENDE DE AZEVEDO', '../uceae-login/img/ed7c3776c9ada5a57588876472ce70ae.png'),
 (42, '29389899953', 'braz@gmail.com', '123', 'EE BRAZ SINIGAGLIA', '../uceae-login/img/389715a5491384a5acc40ce3c35e92bb.png'),
 (43, '3423444953', 'jan@gmail.com', '123', 'EE JAN ANTONIN BATA', '../uceae-login/img/467bec7c47d00a4935457c602b0e5b6d.png'),
-(44, '3231243232', 'jan@gmail.com', '123', 'EE JAN ANTONIN BATA', '../uceae-login/img/158fb364607fcf48929875db75389ebe.png'),
+(44, '3231243232', 'jan23@gmail.com', '123', 'EE JAN ANTONIN BATA', '../uceae-login/img/158fb364607fcf48929875db75389ebe.png'),
 (45, '323124323239', 'afma@gmail.com', '123', 'AFMA C DE EDUC INF - UNIDADE AGUAS CLARA', '../uceae-login/img/7b95aedadfe7c7af27e8ff670dae73c0.png'),
-(46, '29737237677', 'caic@gmail.com', '123', 'Caic Prof Walter Jose De Moura', '../uceae-login/img/15c93a344418c6a266889181da32dc87.png'),
+(46, '29737237677', 'caic2323@gmail.com', '123', 'Caic Prof Walter Jose De Moura', '../uceae-login/img/15c93a344418c6a266889181da32dc87.png'),
 (47, '29713937237677', 'caic@gmail.com', '123', 'ESC BOM JESUS', '../uceae-login/img/fde3df25cdf4d6892b8d1ab2980869b5.png'),
 (48, '29713237677', 'branca@gmail.com', '123', 'ESC BRANCA DE NEVE', '../uceae-login/img/990364e051a472e4e244ca78e9cf0b43.png'),
 (49, '2971323767798', 'convivencia@gmail.co', '123', 'CENTRO DE CONVIVENCIA E FORTALECIMENTO D', '../uceae-login/img/b6adb12e9218445a0ebae3fc880a3bba.png'),
