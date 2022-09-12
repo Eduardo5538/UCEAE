@@ -12,10 +12,11 @@
     $bairro_aluno = $_POST['bairro'];
     $cidade_aluno = $_POST['cidade'];
     $uf_aluno = $_POST['UF'];
+    $telefone_aluno = $_POST['tel'];
 
     try
     {
-        $inserir = $conexao->prepare("insert into tab_alunos (cpf_aluno, nome_aluno, sexo_aluno, email, datanasc_aluno, cep_aluno, rua_aluno, bairro_aluno, cidade_aluno, uf_aluno) values (?,?,?,?,?,?,?,?,?,?)");
+        $inserir = $conexao->prepare("insert into tab_alunos (cpf_aluno, nome_aluno, sexo_aluno, email, datanasc_aluno, cep_aluno, rua_aluno, bairro_aluno, cidade_aluno, uf_aluno, telefone_aluno) values (?,?,?,?,?,?,?,?,?,?,?)");
         $inserir->bindParam(1,$cpf_aluno);
         $inserir->bindParam(2,$nome_aluno);
         $inserir->bindParam(3,$sexo_aluno);
@@ -26,6 +27,7 @@
         $inserir->bindParam(8,$bairro_aluno);
         $inserir->bindParam(9,$cidade_aluno);
         $inserir->bindParam(10,$uf_aluno);
+        $inserir->bindParam(11,$telefone_aluno);
 
 
         $inserir->execute();

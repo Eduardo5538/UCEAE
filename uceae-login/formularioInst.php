@@ -78,7 +78,7 @@
             Bem-vindo, por favor crie sua conta.
           </p>
         </header>
-        <form class="sign-up__form form" id='form_inst' name='form_inst' method='post' action='insertInstituicao-cadastro.php' enctype="multipart/form-data">
+        <form class="sign-up__form form" id='form_inst' name='form_inst' method='post' action='insertAluno.php' enctype="multipart/form-data">
           <div class="form__row form__row--two">
             <div class="input form__inline-input">
               <div class="input__container">
