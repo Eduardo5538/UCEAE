@@ -29,10 +29,10 @@
             
           
             if($Comando->rowCount() > 0){
-                echo $caminho_img;
+                echo "<script>window.location.href = '../uceae-instituicao/paginaInst.php'</script>";
             }
             else{
-                echo $caminho_img;
+                echo "<script>window.location.href = '../uceae-instituicao/paginaInst.php'</script>";
             }
         }
 
