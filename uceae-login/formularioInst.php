@@ -78,7 +78,7 @@
             Bem-vindo, por favor crie sua conta.
           </p>
         </header>
-        <form class="sign-up__form form" id='form_inst' name='form_inst' method='post' action='insertAluno.php' enctype="multipart/form-data">
+        <form class="sign-up__form form" id='form_inst' name='form_inst' method='post' action='insertInstituicao-cadastro.php' enctype="multipart/form-data">
           <div class="form__row form__row--two">
             <div class="input form__inline-input">
               <div class="input__container">
@@ -174,16 +174,19 @@
           </div>
           <div class="form__row">
             <div class="component component--primary form__button">
+            <label for="foto_banner" id='label_banner'>Foto do Banner</label>
             <input type="file" name="foto_banner" id='foto_banner'><br><br>
             </div>
           </div>
           <div class="form__row">
             <div class="component component--primary form__button">
+            <label for="foto_perfil" id='label_perfil'>Foto de Perfil</label>
             <input type="file" name="foto_perfil" id='foto_perfil'><br><br>
             </div>
           </div>
           <div class="form__row">
             <div class="component component--primary form__button">
+            <label for="foto_propaganda" id='label_propaganda'>Propaganda</label>
             <input type="file" name="foto_propaganda" id='foto_propaganda'><br><br>
             </div>
           </div>

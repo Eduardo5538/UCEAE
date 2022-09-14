@@ -399,3 +399,51 @@ rgba(0, 0, 0, 0.25)
 .btn-secondary{
 	background-color: #47525E;
 }
+#foto_perfil{
+  display:none;
+  margin-left: 15%;
+}
+#foto_banner{
+  display:none;
+  margin-left: 15%;
+}
+#foto_propaganda{
+  display:none;
+  margin-left: 15%;
+}
+
+
+#label_banner{
+  padding: 20px 10px;
+  width: 200px;
+  background: #47525E;
+  text-transform: uppercase;
+  display: block;
+  margin-top: 10px;
+  text-align: center;
+  color: white;
+  cursor: pointer;
+}
+#label_perfil{
+  padding: 20px 10px;
+  width: 200px;
+  background: #47525E;
+  text-transform: uppercase;
+  display: block;
+  margin-top: 10px;
+  text-align: center;
+  color: white;
+  cursor: pointer;
+}
+#label_propaganda{
+  padding: 20px 10px;
+  width: 200px;
+  background: #47525E;
+  text-transform: uppercase;
+  display: block;
+  margin-top: 10px;
+  text-align: center;
+  color: white;
+  cursor: pointer;
+  
+}
