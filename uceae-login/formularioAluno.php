@@ -10,7 +10,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body onload="passar()">
-    <form action="" method="POST" class="form" id="frm_aluno">
+    <form action="insertAluno.php" method="POST" class="form" id="frm_aluno">
         <h1 class="text-center">Formulário de Cadastro</h1>
         <div class="progressbar">
             <div class="progress" id="progress"></div>

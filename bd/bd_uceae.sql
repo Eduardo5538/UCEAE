@@ -123,7 +123,8 @@ INSERT INTO `escolas` (`CNPJ`, `nome_escola`, `rua_escola`, `acessibilidade`, `a
 
 CREATE TABLE `login` (
   `cod_login` int(11) NOT NULL,
-  `CNPJ` varchar(21) DEFAULT NULL,
+  `CNPJ` varchar(21),
+  `CPF`  varchar(21),
   `login` varchar(20) NOT NULL UNIQUE,
   `senha` varchar(20) NOT NULL,
   `nome` varchar(40) DEFAULT NULL,
@@ -197,7 +198,7 @@ INSERT INTO `login` (`cod_login`, `CNPJ`, `login`, `senha`, `nome`, `imagem`) VA
 
 CREATE TABLE `tab_alunos` (
   `cod_aluno` int(11) NOT NULL,
-  `cpf_aluno` int(11) DEFAULT NULL,
+  `CPF_aluno` varchar(21) NOT NULL UNIQUE,
   `nome_aluno` varchar(50) DEFAULT NULL,
   `sexo_aluno` enum('f','m') DEFAULT NULL,
   `email` varchar(50) DEFAULT NULL,
@@ -224,7 +225,8 @@ ALTER TABLE `escolas`
 --
 ALTER TABLE `login`
   ADD PRIMARY KEY (`cod_login`),
-  ADD KEY `CNPJ` (`CNPJ`);
+  ADD KEY `CNPJ` (`CNPJ`),
+  ADD KEY  `CPF` (`cpf_aluno`);
 
 --
 -- Índices para tabela `tab_alunos`
