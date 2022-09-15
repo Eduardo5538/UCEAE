@@ -158,7 +158,7 @@
     </div>
     <div class="col">
       <label>Mensalidade</label><br>
-      <input type="text" class="form-control" id="txt_mensalidade" placeholder="<?php echo $Res[0]['mensalidade']; ?>">
+      <input type="text" class="form-control" id="txt_mensalidade" placeholder="Não Definida">
     </div>
   </div>
   <br>

@@ -63,8 +63,8 @@
         $inserir->bindParam(7,$bairro_inst);
         $inserir->bindParam(8,$uf);
         $inserir->bindParam(9,$caminho_img);
-        $inserir->bindParam(10,$caminho_img2);
-        $inserir->bindParam(11,$caminho_img3);
+        $inserir->bindParam(10,$caminho_img3);
+        $inserir->bindParam(11,$caminho_img2);
         $inserir->bindParam(12,$telefone);
 
 
