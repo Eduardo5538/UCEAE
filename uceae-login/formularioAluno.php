@@ -95,8 +95,8 @@
                 <input type="text" name="cidade" id="txt_cidadeAluno">
             </div>
             <div class="input-group">
-                <label for="cidade">Unidade Federativa</label>
-                <select class="estado" id="txt_ufAluno">
+                <label for="uf">Unidade Federativa</label>
+                <select class="estado" name='UF' id="txt_ufAluno">
                   <option value="AC" id="AC">AC</option><option value="AL" id="AL">AL</option>
                   <option value="AP" id="AP">AP</option><option value="AM" id="AM">AM</option>
                   <option value="BA" id="BA">BA</option><option value="CE" id="CE">CE</option>

@@ -7,6 +7,7 @@
 -- Versão do servidor: 10.4.24-MariaDB
 -- versão do PHP: 8.1.4
 
+
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
@@ -201,13 +202,15 @@ CREATE TABLE `tab_alunos` (
   `CPF_aluno` varchar(21) NOT NULL UNIQUE,
   `nome_aluno` varchar(50) DEFAULT NULL,
   `sexo_aluno` enum('f','m') DEFAULT NULL,
-  `email` varchar(50) DEFAULT NULL,
+  `deficiencia`  varchar(90),
+  `email` varchar(50) DEFAULT NULL unique,
   `datanasc_aluno` date DEFAULT NULL,
   `cep_aluno` int(8) DEFAULT NULL,
   `rua_aluno` varchar(40) DEFAULT NULL,
   `bairro_aluno` varchar(40) DEFAULT NULL,
   `cidade_aluno` varchar(40) DEFAULT NULL,
-  `uf_aluno` varchar(2) DEFAULT NULL
+  `uf_aluno` varchar(2) DEFAULT NULL,
+  `telefone_aluno` varchar(30)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
@@ -226,7 +229,7 @@ ALTER TABLE `escolas`
 ALTER TABLE `login`
   ADD PRIMARY KEY (`cod_login`),
   ADD KEY `CNPJ` (`CNPJ`),
-  ADD KEY  `CPF` (`cpf_aluno`);
+  ADD KEY  `cpf_aluno` (`CPF`);
 
 --
 -- Índices para tabela `tab_alunos`
@@ -254,3 +257,6 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+SELECT * FROM LOGIN;
+SELECT * FROM tab_alunos;
