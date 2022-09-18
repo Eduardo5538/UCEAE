@@ -36,7 +36,7 @@
 
         $inserir->execute();
 
-        $inserir = $conexao->prepare("insert into login(login, senha, cnpj, nome) values (?,?,?,?)");
+        $inserir = $conexao->prepare("insert into login(login, senha, CPF, nome) values (?,?,?,?)");
         $inserir->bindParam(1, $email_aluno);
         $inserir->bindParam(2, $senha);
         $inserir->bindParam(3,$cpf_aluno);
