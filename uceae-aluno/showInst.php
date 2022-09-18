@@ -18,10 +18,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 	<link rel="stylesheet" type="text/css" href="css/showInst.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 	<title><?php echo $Res[0]['nome_escola']; ?></title>
 </head>
 <body>
@@ -88,23 +88,31 @@
 </div>
   </section>
   <!-- --------------------- Botao de adicionar Propagandas --------------------- -->
-
-  <br><br><br><br>
-
-  <?php
-   
-   echo "<h1>" . $Res[0]['nome_escola']  . "</h1><br><br>";
-   echo "<h3>" . $Res[0]['email_escola']  . "</h3><br><br>";
-   echo "<h4>" . $Res[0]['cidade_escola']  . "</h4><br><br>";
-   echo "<h5>" . $Res[0]['nome_escola']  . "</h5><br><br>";
-   echo "<h5>" . $Res[0]['rua_escola']  . "</h5><br><br>";
-   echo "<h5>" . $Res[0]['uf_escola']  . "</h5><br><br>";
-   echo "<a href='tel://". $Res[0]['telefone_escola'] ."'>" . $Res[0]['telefone_escola']  . "</a><br><br>";
-
-   echo "<iframe src='https://www.google.com.br/maps?q=" . $Res[0]['cep_escola'] . ",%20Brasil&output=embed' width='80%' height='750' style='border:0;' allowfullscreen='true' loading='lazy' referrerpolicy='no-referrer-when-downgrade'></iframe>";
-
-?>
-
-
+  <br>
+  
+  <div id="informacoes">
+    <div id="informacoes-header">
+      <?php
+        echo "<h1>" . $Res[0]['nome_escola']  . "</h1> ";
+        echo "<p>" . $Res[0]['email_escola']  . "</p>";
+      ?>
+    </div>
+    <br>
+    <div id="informacoes-main">
+      <?php
+        echo "<h5>" . $Res[0]['rua_escola']  . "</h5> - ";
+        echo "<h5>" . $Res[0]['bairro_escola']  . "</h5>, ";
+        echo "<h5>" . $Res[0]['cidade_escola']  . "</h5> - ";
+        echo "<h5>" . $Res[0]['uf_escola']  . "</h5>";
+        echo "<a href='tel://". $Res[0]['telefone_escola'] ."'>" . $Res[0]['telefone_escola']  . "</a><br><br>";
+      ?>
+    </div>
+  </div><br>
+  <div style="text-align: center;">
+  <h1>MAPA</h1>
+    <?php
+      echo "<iframe src='https://www.google.com.br/maps?q=" . $Res[0]['cep_escola'] . ",%20Brasil&output=embed' width='80%' height='750' style='border:0;' allowfullscreen='true' loading='lazy' referrerpolicy='no-referrer-when-downgrade'></iframe>";
+    ?>
+  </div>
 </body>
 </html>
