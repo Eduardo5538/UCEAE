@@ -117,6 +117,8 @@
   <hr>
 
   <h1>Comentários Recentes</h1>
-  <a href="cadastroComentario.php"><button>Ver Comentários</button></a>
+  <a href="cadastroComentarios.php"><button>Ver Comentários</button></a>
+
+ 
 </body>
 </html>
