@@ -11,9 +11,6 @@
     catch(PDOException $error){
         echo $error;
     }
-
-
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -87,24 +84,27 @@
   </form>
 </div>
   </section>
-  <!-- --------------------- Botao de adicionar Propagandas --------------------- -->
 
   <br><br><br><br>
 
   <?php
-   
-   echo "<h1>" . $Res[0]['nome_escola']  . "</h1><br><br>";
-   echo "<h3>" . $Res[0]['email_escola']  . "</h3><br><br>";
-   echo "<h4>" . $Res[0]['cidade_escola']  . "</h4><br><br>";
-   echo "<h5>" . $Res[0]['nome_escola']  . "</h5><br><br>";
-   echo "<h5>" . $Res[0]['rua_escola']  . "</h5><br><br>";
-   echo "<h5>" . $Res[0]['uf_escola']  . "</h5><br><br>";
-   echo "<a href='tel://". $Res[0]['telefone_escola'] ."'>" . $Res[0]['telefone_escola']  . "</a><br><br>";
+      echo "<h1>" . $Res[0]['nome_escola']  . "</h1><br><br>";
+      echo "<h3>" . $Res[0]['email_escola']  . "</h3><br><br>";
+      echo "<h4>" . $Res[0]['cidade_escola']  . "</h4><br><br>";
+      echo "<h5>" . $Res[0]['nome_escola']  . "</h5><br><br>";
+      echo "<h5>" . $Res[0]['rua_escola']  . "</h5><br><br>";
+      echo "<h5>" . $Res[0]['uf_escola']  . "</h5><br><br>";
+      echo "<a href='tel://". $Res[0]['telefone_escola'] ."'>" . $Res[0]['telefone_escola']  . "</a><br><br>";
 
-   echo "<iframe src='https://www.google.com.br/maps?q=" . $Res[0]['cep_escola'] . ",%20Brasil&output=embed' width='80%' height='750' style='border:0;' allowfullscreen='true' loading='lazy' referrerpolicy='no-referrer-when-downgrade'></iframe>";
+      echo "<iframe src='https://www.google.com.br/maps?q=" . $Res[0]['cep_escola'] . ",%20Brasil&output=embed' width='80%' height='750' style='border:0;' allowfullscreen='true' loading='lazy' referrerpolicy='no-referrer-when-downgrade'></iframe>";
+  ?>
+  <br><br><br>
 
-?>
+  <!-- ---------- Comentários ---------- -->
 
+  <hr>
 
+  <h1>Comentários Recentes</h1>
+  <a href="cadastroComentario.php"><button>Ver Comentários</button></a>
 </body>
 </html>
