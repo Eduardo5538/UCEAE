@@ -47,4 +47,24 @@ function updateProgressBar(){
 
     progress.style.width = ((progressActive.length - 1) / (progressStep.length - 1)) * 100 + "%"; 
 }
+
+// --------------------- Máscara de Cpf ------------------------
+
+const cpf = document.querySelector('.cpf');
+
+cpf.addEventListener('keypress', () => {
+    let cpflength = cpf.value.length;
+
+    if (cpflength === 3 || cpflength === 7)
+    {
+        cpf.value += '.'
+    }
+    else if(cpflength === 11)
+    {
+        cpf.value += '-'
+    }
+    const cpfCompleto = cpf.value;
+})
 }
+
+

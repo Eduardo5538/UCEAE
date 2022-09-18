@@ -10,7 +10,7 @@
   <script src="js/cadastro.js"></script>
   <link rel="stylesheet" type="text/css" href="css/formularioInst.css">
 </head>
-<body>
+<body onload="mostrar()">
   <!-- navbar -->
 	<nav class="navbar navbar-expand-lg navbar-light bg-light" style="height: 70px;">
     <a class="navbar-brand" href="../index.php">
@@ -87,7 +87,7 @@
             </div>
             <div class="input form__inline-input">
               <div class="input__container">
-                <input class="input__field" id="cnpj" name="cnpj" placeholder="CNPJ" required="" type="text" /><label class="input__label" for="cnpj">CNPJ</label>
+                <input class="input__field " id="cnpj" autocomplete="off" maxlength="18" name="cnpj" placeholder="CNPJ" required="" type="text" /><label class="input__label" for="cnpj">CNPJ</label>
               </div>
             </div>
           </div>

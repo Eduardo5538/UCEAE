@@ -34,3 +34,28 @@ function cadastroInst(){
     })
    	return false;
 }
+
+function mostrar()
+{
+// --------------------- Máscara de Cnpj ------------------------
+
+const cnpj = document.querySelector('#cnpj');
+
+cnpj.addEventListener('keypress', () => {
+    let cnpjlength = cnpj.value.length;
+
+    if (cnpjlength === 2 || cnpjlength === 6)
+    {
+        cnpj.value += '.'
+    }
+    else if(cnpjlength === 10)
+    {
+        cnpj.value += '/'
+    }
+    else if(cnpjlength === 15)
+    {
+        cnpj.value += '-'
+    }
+    const cnpjCompleto = cnpj.value;
+})
+}

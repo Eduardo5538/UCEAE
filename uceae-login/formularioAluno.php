@@ -55,7 +55,7 @@
             </div>
             <div class="input-group">
                 <label for="cpf">CPF</label>
-                <input type="text" name="cpf" id="txt_cpfAluno">
+                <input type="text" autocomplete="off" maxlength="14" name="cpf" id="txt_cpfAluno" class="cpf" onchange="TestaCPF()">
             </div>
             <div class="input-group">
                 <label for="def">Possui Deficiência?</label>
