@@ -7,7 +7,7 @@ function logar(){
     })
     .done(function(msg){
         if(msg != "Registro Não Encontrado"){
-            alert("logado com sucesso!")
+            alert(msg)
             window.location.href = "../uceae/uceae-instituicao/paginaInst.php" 
         }
         else{
