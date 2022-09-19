@@ -84,6 +84,27 @@
     </div>
    </div>
 
+   
+    <!-- Inserir Comentário -->
+    <?php
+    if(!isset($_SESSION['CNPJ']) && isset($_SESSION['CPF'])){
+      if($_SESSION['CPF'] != ''){
+        echo "<h1>Inserir Comentário</h1>
+          <label for='Titulo' class='titulo-comentario'>Título</label>
+              <input type='text' name='titulo' id='txt_titulo' class='input-text titulo'><br>
+           <label for='Comentário' class='texto-comentario'>Comentário</label><br>
+              <input type='text' name='comentario' id='txt_comentario' class='input-text comentario'><br>
+          ";
+      
+      }
+    }
+    else{
+      echo "<h1 id='mensagem'>Logue-se para comentar</h1>";
+    }
+
+
+
+    ?>
     <!-- Área de Comentários -->
 
    <div class="comentarios">
@@ -95,13 +116,6 @@
         </select>
     </div>
    </div>
-
-    <!-- Inserir Comentário -->
-
-     <label for="Titulo" class="titulo-comentario">Título</label>
-        <input type="text" name="titulo" id="txt_titulo" class="input-text">
-     <label for="Comentário" class="texto-comentario"></label> 
-        <input type="text" name="comentario" id="txt_comentario" class="input-text">
 
    <!-- Modal -->
 
