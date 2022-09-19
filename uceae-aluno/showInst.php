@@ -21,6 +21,76 @@
 	<link rel="stylesheet" type="text/css" href="css/showInst.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 	<title><?php echo $Res[0]['nome_escola']; ?></title>
+
+  <!-- Definindo Gráfico Horizontal -->
+  
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      
+      // grafico barra 
+
+      google.charts.load('current', {'packages':['bar']});
+      google.charts.setOnLoadCallback(drawStuff);
+
+      function drawStuff() {
+        var data = new google.visualization.arrayToDataTable([
+          ['Notas', 'Porcentagem'],
+          ["1 estrela", 12],
+          ["2 estrelas", 3],
+          ["3 estrelas", 12],
+          ["4 estrelas", 24],
+          ['5 estrelas', 45]
+        ]);
+
+        var options = {
+          title: 'Gráfico de Avaliações',
+          width: 800,
+          height: 350,
+          legend: { position: 'none' },
+          chart: { title: 'Quantidade de Notas',
+                   subtitle: 'Análise por Porcentagem' },
+          bars: 'horizontal', // Required for Material Bar Charts.
+          axes: {
+            x: {
+              0: { side: 'top', label: 'Quantidade'} // Top x-axis.
+            }
+          },
+          bar: { groupWidth: "90%" },
+          colors:['#F08008']
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('div-graficos-barra'));
+        chart.draw(data, options);
+      };
+
+      // grafico rosca
+
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+      
+
+      function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Aprovação', 'Total'],
+          ['Aprovação',     100],
+        ]);
+
+        var options = {
+          pieHole: 0.5,
+          pieSliceTextStyle: {
+            color: 'black',
+          },
+          legend: 'none',
+          title: 'Taxa de Aprovação',
+          colors:['#8400DA']
+          
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('div-graficos-rosca'));
+        chart.draw(data, options);
+      }
+    </script>
 </head>
 <body>
     
@@ -123,9 +193,9 @@
     <h1 class="h1">Comentários e Avaliações</h1>
     <h3 class="h3">Veja o que outros usuários acharam sobre essa Instituição</h3>
     <div class="conteudo">
-        <div class="info">
+        <div class="info" id = "div-graficos-rosca">
         </div>
-        <div class="grafico">
+        <div class="grafico" id="div-graficos-barra">
         </div>
     </div>
    </div>
