@@ -70,6 +70,7 @@
 
             if(!isset($_SESSION['CNPJ']) && isset($_SESSION['CPF'])){
               if($_SESSION['CPF'] != ''){
+                
                 echo "<a href='uceae-aluno/paginaAluno.php' class='btn btn-warning' tabindex='-1' role='button' style='margin-right: 10px;' aria-disabled='true'>Sua página!</a>";
                 echo "<a href='uceae-login/unlogin.php' class='btn btn-danger' tabindex='-1' role='button' aria-disabled='true'>Deslogar</a>";
               
