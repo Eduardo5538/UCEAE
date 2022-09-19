@@ -275,8 +275,8 @@ background-color: #f5f5f5;
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
-.titulo{
-    margin-top: 15%;
+.titulo2{
+    margin-top: 20%;
     text-align: center;
 }
 .comentarios{
