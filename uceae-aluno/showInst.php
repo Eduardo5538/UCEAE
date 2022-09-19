@@ -221,7 +221,6 @@
     }
     else{
       echo "<h1 id='mensagem'>Logue-se para comentar</h1>";
-      echo $_SESSION['CPF'];
     }
 
 
