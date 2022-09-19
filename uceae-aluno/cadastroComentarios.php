@@ -89,11 +89,10 @@
     <?php
     if(!isset($_SESSION['CNPJ']) && isset($_SESSION['CPF'])){
       if($_SESSION['CPF'] != ''){
-        echo "<h1>Inserir Comentário</h1>
-          <label for='Titulo' class='titulo-comentario'>Título</label>
-              <input type='text' name='titulo' id='txt_titulo' class='input-text titulo'><br>
-           <label for='Comentário' class='texto-comentario'>Comentário</label><br>
-              <input type='text' name='comentario' id='txt_comentario' class='input-text comentario'><br>
+        echo "<h1 id='h1'>Inserir Comentário</h1>
+              <input type='text' name='titulo' id='txt_titulo' class='input-text titulo' placeholder='Título'><br>
+              <br>
+              <input type='text' name='comentario' id='txt_comentario' class='input-text comentario' placeholder='Comentário'><br>
           ";
       
       }
