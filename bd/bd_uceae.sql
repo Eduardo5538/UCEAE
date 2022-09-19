@@ -35,7 +35,9 @@ CREATE TABLE `comentarios` (
   `titulo` varchar(45) DEFAULT NULL,
   `nome` varchar(30) DEFAULT NULL,
   `conteudo` varchar(100) DEFAULT NULL,
+  `cnpj` varchar(100) DEFAULT NULL,
   `imagem_comentario` varchar(100) DEFAULT NULL
+  
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -245,7 +247,8 @@ ALTER TABLE `tab_alunos`
 -- AUTO_INCREMENT de tabela `login`
 --
 ALTER TABLE `login`
-  MODIFY `cod_login` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
+  MODIFY `cod_login` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46,
+  ADD KEY `CPNJ` (`CNPJ`);
 
 --
 -- AUTO_INCREMENT de tabela `tab_alunos`
