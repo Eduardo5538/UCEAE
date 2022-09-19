@@ -18,6 +18,7 @@
             }
             else{
                 $_SESSION['CPF'] = $Res[0]['CPF'];
+                $_SESSION['Nome'] = $Res[0]['nome'];
                 echo (string) $_SESSION['CPF'];
             }
          }
