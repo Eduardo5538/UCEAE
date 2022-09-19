@@ -252,9 +252,8 @@ background-color: #f5f5f5;
 
 .info{
     width: 30%;
-    height: 50%;
+    height: 55%;
     background-color: #fff;
-    
     border-radius: .4rem;
     position: absolute;
     margin-left: 1%;
@@ -263,7 +262,7 @@ background-color: #f5f5f5;
 }
 .grafico{
     width: 64%;
-    height: 50%;
+    height: 55%;
     background-color: #fff;
     border-radius: .4rem;
     position: absolute;
