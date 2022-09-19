@@ -14,8 +14,9 @@ html{
 	overflow-y: scroll !important;
 }
 body{
-	display: flex;
-	flex-direction: column;
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
 }
 html,body{
     width: 100%;
@@ -70,6 +71,9 @@ footer{
 }
 #toogle{
     margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: #976DD0;
     text-align: center;
     font-size: 20px;

@@ -8,14 +8,25 @@
     <link rel="stylesheet" type="text/css" href="css/busca.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
   
 	<title>UCEAE</title>
 
     <script type="text/javascript">
 		$(document).ready(function(){
 			$("#toogle").click(function(){
-				$("#filtros").slideToggle('slow');
-			});
+        $("#filtros").slideToggle('slow', function(){
+          if($('#filtros').css('display') == 'none'){
+            $(".material-symbols-outlined").remove();
+            $("#toogle").append('<span class="material-symbols-outlined">arrow_drop_down</span>');
+          }
+          if($('#filtros').css('display') == 'block'){
+            $(".material-symbols-outlined").remove();
+            $("#toogle").append('<span class="material-symbols-outlined">arrow_drop_up</span>');
+          }
+        });
+        }
+			);
 		});
 	</script>
 
@@ -96,8 +107,10 @@
     </div>
     <br>
 
-    <p id="toogle">Filtros para ajudar sua pesquisa!</p>
-
+    <p id="toogle">Filtros para ajudar sua pesquisa!
+        <span class="material-symbols-outlined" style="color: #976DD0;">arrow_drop_down</span>
+    </p>
+    
     <div id="filtros">
         <div id="inputs">
             <select>
