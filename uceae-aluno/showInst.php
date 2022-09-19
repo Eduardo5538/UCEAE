@@ -1,4 +1,5 @@
 <?php
+  session_start();
     include "conection.php";
     $cnpj = $_GET['cnpj'];
     try{
@@ -115,10 +116,54 @@
   <!-- ---------- Comentários ---------- -->
 
   <hr>
+  
+   <!-- Área de Gráficos -->
 
-  <h1>Comentários Recentes</h1>
-  <a href="cadastroComentarios.php"><button>Ver Comentários</button></a>
+   <div class="topo">
+    <h1 class="h1">Comentários e Avaliações</h1>
+    <h3 class="h3">Veja o que outros usuários acharam sobre essa Instituição</h3>
+    <div class="conteudo">
+        <div class="info">
+        </div>
+        <div class="grafico">
+        </div>
+    </div>
+   </div>
 
+   
+    <!-- Inserir Comentário -->
+    <?php
+    
+    if(!isset($_SESSION['CNPJ']) && isset($_SESSION['CPF'])){
+      if($_SESSION['CPF'] != ''){
+        echo "<h1 id='h1'>Inserir Comentário</h1>
+              <input type='text' name='titulo' id='txt_titulo' class='input-text titulo' placeholder='Título'><br>
+              <br>
+              <input type='text' name='comentario' id='txt_comentario' class='input-text comentario' placeholder='Comentário'><br>
+          ";
+      
+      }
+    }
+    else{
+      echo "<h1 id='mensagem'>Logue-se para comentar</h1>";
+      echo $_SESSION['CPF'];
+    }
+
+
+
+    ?>
+    <!-- Área de Comentários -->
+
+   <div class="comentarios">
+    <h1 class="titulo">Comentários</h1>
+    <div class="barra-filtro">
+        <select name="filtro" id="filtro_tempo" class="tipo">
+            <option value="todos">Todos</option>
+            <option value="recentes">Mais Recentes Primeiro</option>
+        </select>
+    </div>
+   </div>
+  
  
 </body>
 </html>
