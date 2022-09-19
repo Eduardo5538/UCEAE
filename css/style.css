@@ -72,17 +72,18 @@ footer{
 }
 #sociais-bottom{
 	white-space: nowrap;
-	font-size: 2.642007926023778vh;
+	font-size: 1.5vw;
 }
 #uceae-bottom{
 	align-self: flex-end;
 	margin-right: 15vh;
 	white-space: wrap;
-	font-size: 2.642007926023778vh;
+	font-size: 1.5vw;
 }
 #rua-bottom{
 	white-space: wrap;
-	font-size: 2.642007926023778vh;
+	width: fit-content;
+	font-size: 1.5vw;
 }
 #botoes-bottom{
 	display: flex;
