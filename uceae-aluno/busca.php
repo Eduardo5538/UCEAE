@@ -100,7 +100,7 @@
 
     <div id="filtros">
         <div id="inputs">
-            <select id="pinto">
+            <select>
                 <option>Estado</option>
                 <option>Estado1</option>
                 <option>Estado2</option>
@@ -147,6 +147,21 @@
         <input type="button" id="pesquisar">
     </div>
 </main>
+            
+<footer>
+  <p id="rua-bottom">Rua Paçoca 131 - Prédio do Grande Soldador</p>
+
+  <p id="uceae-bottom">UCEAE - Todos direitos reservados®.</p>
+
+  <div id="sociais-bottom">
+    <p>Siga a gente nas redes sociais!</p>
+    <div id="botoes-bottom">
+      <a href="#"><i class="bi bi-twitter green grande"></i></a>
+      <a href="#"><i class="bi bi-instagram insta grande"></i></a>
+      <a href="#"><i class="bi bi-facebook blue grande"></i></a>
+    </div>
+  </div>
+</footer>
 
 </body>
 <!-- Script para animação em css e js -->
