@@ -1,9 +1,19 @@
+/* Main */
+
 body, html{
     margin: 0;
     padding: 0;
     height: 100%;
     width: 100%;
     box-sizing: border-box;
+}
+
+#logo1{
+	position: absolute;
+	margin: 0 auto;
+	margin-bottom: 15px;
+	top: 4px;
+	left: 5px;
 }
 
 h1{
@@ -22,6 +32,7 @@ h3{
     height: 500px;
     color: white;
     text-align: center;
+    margin-top: -3.5%;
 }
 
 .info{
@@ -62,7 +73,6 @@ h3{
 /* Barra de Filtro */
 
 .barra-filtro{
-    background-color: rgba(0, 0, 0, .07);
     width: 100%;
     height: 150px;
     text-align: left;
@@ -75,14 +85,21 @@ h3{
 
 .tipo{
     padding: 10px;
-    width: 40%;
-    font-size: 30px;
-    height:100px;
-    text-align: center;
+    width: 15%;
+    font-size: 15px;
+    height:50px;
+    text-align: left;
 }
 
 .h2{
     font-size: 40px;
     text-align: right;
     width: 30%;
+}
+
+.titulo-comentario{
+    font-size: 60px;
+    text-align: left;
+    font-weight: 700;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
