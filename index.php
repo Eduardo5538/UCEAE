@@ -32,7 +32,7 @@
           <a class="nav-link active" aria-current="page" href="index.php">Portal</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Busca</a>
+          <a class="nav-link" href="uceae-aluno/busca.php">Busca</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="uceae-aluno/brazil.php">Mapa</a>

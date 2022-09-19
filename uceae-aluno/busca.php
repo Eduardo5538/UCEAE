@@ -35,7 +35,7 @@
 
 <!-- navbar -->
 	<nav class="navbar navbar-expand-lg navbar-light bg-light" style="height: 70px;">
-    <a class="navbar-brand" href="#">
+    <a class="navbar-brand" href="../index.php">
       <img src="img/UCEAE2.png" alt="" width="130" height="" id="logo1">
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -44,13 +44,13 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="margin-left: 130px;">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="index.php">Portal</a>
+          <a class="nav-link" aria-current="page" href="../index.php">Portal</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Busca</a>
+          <a class="nav-link active" href="#">Busca</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="uceae-aluno/brazil.php">Mapa</a>
+          <a class="nav-link" href="brazil.php">Mapa</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -175,6 +175,28 @@
     </div>
   </div>
 </footer>
+
+<!-- Modal -->
+<div class="modal fade" id="ModalEntrar" tabindex="-1" aria-labelledby="ModalLabelEntrar" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h5 class="modal-title entrar-titulo w-100" id="ModalLabelEntrar">Entrar</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" style="margin: 0 25% 0 25%;">
+        <form method="POST" name="loginform" id='loginform'>
+            <input class="form-control" type="text" placeholder="Login" name='login' id='login'>
+            <br>
+            <input class="form-control" type="password" placeholder="Senha" name='senha' id='senha'>
+      </div>
+            <div class="modal-footer justify-content-center">
+              <button type="button" class="btn btn-secondary btn-block" style="width: 50%;" onclick='logar();'>Entrar</button>
+            </div>
+        </form>
+    </div>
+  </div>
+</div>
 
 </body>
 <!-- Script para animação em css e js -->
