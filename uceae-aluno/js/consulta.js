@@ -1,22 +1,15 @@
 function consulta(){
-
+    var dados = new FormData($('#formBusca')[0]);
     $.ajax({
+        method: 'POST',
         url: 'consultaInstBackEnd.php',
+        data: dados,
+        processData: false,
+        contentType: false
     })
     .done(function(msg){
-        var Res = JSON.parse(msg);
-        alert(Res[2].email_escola);
-        var bloco = "";
-        h = Res.length;
-        for(var j=0; j < h; j++){
-            document.writeln(Res[j].nome_escola + " ")
-            document.writeln(Res[j].imagem + " ")
-            document.writeln(Res[j].email_escola + " ")
-            document.writeln( Res[j].uf_escola + "" )
-            document.writeln(Res[j].cidade_escola + "<br>")
-        }
-        $("tab_inst").append(bloco);
-
+        var desempacotado = JSON.parse(msg);
+        alert(desempacotado);
     })
     .fail(function(){
         alert("Falha na busca")

@@ -1,22 +1,23 @@
 <?php
     include "conection.php";
-    $searchNome = $_POST['searchNome'];
-    $searchCidade = $_POST['searchCidade'];
-    $searchUF = $_POST['searchUF'];
-    $acessibilidade = $_POST['acessibilidade'];
+    $search = $_POST['busca'];
 
-        try
-        {
-                $Comando = $conexao->prepare("SELECT * from escolas WHERE nome_escola LIKE '%" . $searchNome . "%'");
-                $Comando->execute();
-                $Res = $Comando->fetchAll();
-                $RetornoJSON = json_encode($Res);
-                echo $RetornoJSON;
-
+    try
+    {
+        $Comando = $conexao->prepare("SELECT * from escolas WHERE nome_escola LIKE '%" . '?' . "%'");
+        $Comando->bindParam(1,$search);
+        $Comando->execute();
+        
+        if($select->rowCount()>0){
+            $resultado = json_encode($Comando->fetchAll());
+         }
+        else{
+            $resultado = "deu ruim";
         }
 
-        catch(PDOException $erro){
-            $RetornoJSON = "Erro: " . $erro->getMessage();
-            echo $RetornoJSON;
-        }
+    }
+    catch(PDOException $erro){
+        $RetornoJSON = "Erro: " . $erro->getMessage();
+        echo $RetornoJSON;
+    }
 ?>

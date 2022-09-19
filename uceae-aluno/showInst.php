@@ -201,7 +201,7 @@
     </div>
    </div>
 
-   
+ 
     <!-- Inserir Comentário -->
     <?php
     
@@ -209,11 +209,16 @@
       if($_SESSION['CPF'] != ''){
         echo "<h1 id='h1'>Inserir Comentário</h1>
           <form id='form_comentario' method='post'> 
-              <input type='text' name='titulo' id='txt_titulo' class='input-text titulo' placeholder='Título'><br>
+              <input type='text' name='titulo' id='txt_titulo' class='input-text titulo' placeholder='Título'>
+              <div class='estrelas' id='div-estrelas'>
+
+              </div>
+              <br><br>
+              <input type='text' name='comentario' id='txt_comentario' class='input-text comentario' placeholder='Comentário'>
               <br>
-              <input type='text' name='comentario' id='txt_comentario' class='input-text comentario' placeholder='Comentário'><br>
               <input type='hidden' value='". $cnpj ."' name='cnpj' id='cnpj'>
               <input type='button' value='Comentar' onclick='inserir()' id='btn_comentario'>
+              
           </form>
           ";
       
@@ -238,6 +243,13 @@
        
     </div>
    </div>
+   <div class='star_rating' id='div-estrelas'>
+       <button class='star'>&#9734;</button>
+       <button class='star'>&#9734;</button>
+       <button class='star'>&#9734;</button>       
+       <button class='star'>&#9734;</button>
+       <button class='star'>&#9734;</button>
+    </div>
    <?php
             $cnpj = $_GET['cnpj'];
             try{

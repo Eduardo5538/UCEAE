@@ -97,9 +97,9 @@
 
     <div id="pesquisa">
 
-        <form action="#" method="POST" name="formBusca" id="formBusca">
+        <form action="" method="POST" name="formBusca" id="formBusca">
             <input type="search" name="busca" id="busca" placeholder="Buscar">
-            <button type="submit" id="search-button">
+            <button type="button" id="search-button" onclick="consulta()">
                 <img src="img/icones/search.png">
             </button>
         </form>
@@ -204,5 +204,7 @@
 <script>
   AOS.init();
 </script>
+
+<script src="js/consulta.js"></script>
 
 </html>
