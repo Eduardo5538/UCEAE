@@ -3,10 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 30-Ago-2022 às 06:07
+-- Tempo de geração: 23-Ago-2022 às 06:07
 -- Versão do servidor: 10.4.24-MariaDB
 -- versão do PHP: 8.1.4
-
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -36,6 +35,8 @@ CREATE TABLE `comentarios` (
   `nome` varchar(30) DEFAULT NULL,
   `conteudo` varchar(100) DEFAULT NULL,
   `cnpj` varchar(100) DEFAULT NULL,
+  `data` date DEFAULT NULL,
+  `nota` int(1) DEFAULT NULL,
   `imagem_comentario` varchar(100) DEFAULT NULL
   
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
@@ -263,3 +264,4 @@ COMMIT;
 
 SELECT * FROM LOGIN;
 SELECT * FROM tab_alunos;
+SELECT * FROM comentarios;

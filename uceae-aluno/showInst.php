@@ -166,7 +166,10 @@
             <option value="todos">Todos</option>
             <option value="recentes">Mais Recentes Primeiro</option>
         </select>
-        <?php
+       
+    </div>
+   </div>
+   <?php
             $cnpj = $_GET['cnpj'];
             try{
                 $Comando = $conexao->prepare("SELECT * from comentarios WHERE cnpj = ?");
@@ -188,21 +191,14 @@
                 for($i = 0; $i <= sizeof($Res1) - 1; $i++)
                 {
                   echo "
-                      <div class='card mb-3' id='card' data-aos='fade-up'>
-                        <div class='card-body'>
                           <h5 class='card-title'>".$Res1[$i]['titulo']."</h5>
                           <p class='card-text'>".$Res1[$i]['nome']."</p>
-                          <p class='card-text'><small class='text-muted'>".$Res1[$i]['conteudo']." ------------------ ".$Res1[$i]['imagem_comentario']."</small></p>
-                        </div>
-                      </div>
-                      <br>";
+                          <h6'>".$Res1[$i]['conteudo']."</h6>
+                      <br><br><br>";
                 }
                 
             }
         ?>
-    </div>
-   </div>
-  
  
 </body>
 </html>
