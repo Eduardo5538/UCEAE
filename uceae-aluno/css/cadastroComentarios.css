@@ -1,0 +1,88 @@
+body, html{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+h1{
+    font-size: 80px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-bottom: 3%;
+    padding-top: 100px;
+}
+h3{
+    font-size: 30px;
+    font-family: arial;
+}
+
+.topo{
+    background-color: rgb(80, 80, 255);
+    height: 500px;
+    color: white;
+    text-align: center;
+}
+
+.info{
+    width: 30%;
+    height: 50%;
+    background-color: #fff;
+    
+    border-radius: .4rem;
+    position: absolute;
+    margin-left: 1%;
+    margin-top: 4%;
+    box-shadow: 20px 20px 18px rgba(1, 90, 192, 0.171);
+}
+.grafico{
+    width: 64%;
+    height: 50%;
+    background-color: #fff;
+    border-radius: .4rem;
+    position: absolute;
+    margin-left: 34%;
+    margin-top: 4%;
+    box-shadow: 20px 20px 18px rgba(1, 90, 192, 0.171);
+}
+.conteudo{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.titulo{
+    margin-top: 15%;
+    text-align: center;
+}
+.comentarios{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+/* Barra de Filtro */
+
+.barra-filtro{
+    background-color: rgba(0, 0, 0, .07);
+    width: 100%;
+    height: 150px;
+    text-align: left;
+    margin: 0 auto;
+    padding-left: 5%;
+    padding-top: 5%;
+    display: flex;
+    gap: 20%;
+}
+
+.tipo{
+    padding: 10px;
+    width: 40%;
+    font-size: 30px;
+    height:100px;
+    text-align: center;
+}
+
+.h2{
+    font-size: 40px;
+    text-align: right;
+    width: 30%;
+}
