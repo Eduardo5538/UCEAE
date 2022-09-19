@@ -160,7 +160,7 @@
     <!-- Área de Comentários -->
 
    <div class="comentarios">
-    <h1 class="titulo">Comentários</h1>
+    <h1 class="titulo2">Comentários</h1>
     <div class="barra-filtro">
         <select name="filtro" id="filtro_tempo" class="tipo">
             <option value="todos">Todos</option>
