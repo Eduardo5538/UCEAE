@@ -179,6 +179,7 @@
     </div>
   </div><br>
   <div style="text-align: center;">
+  <BR><BR>
   <h1>MAPA</h1>
     <?php
       echo "<iframe src='https://www.google.com.br/maps?q=" . $Res[0]['cep_escola'] . ",%20Brasil&output=embed' width='80%' height='750' style='border:0;' allowfullscreen='true' loading='lazy' referrerpolicy='no-referrer-when-downgrade'></iframe>";
@@ -211,8 +212,12 @@
         echo "<h1 id='h1'>Inserir Comentário</h1>
           <form id='form_comentario' method='post'> 
               <input type='text' name='titulo' id='txt_titulo' class='input-text titulo' placeholder='Título'>
-              <div class='estrelas' id='div-estrelas'>
-
+              <div class='star_rating' id='div-estrelas'>
+                <button class='star'>&#9734;</button>
+                <button class='star'>&#9734;</button>
+                <button class='star'>&#9734;</button>       
+                <button class='star'>&#9734;</button>
+                <button class='star'>&#9734;</button>
               </div>
               <br><br>
               <input type='text' name='comentario' id='txt_comentario' class='input-text comentario' placeholder='Comentário'>
@@ -244,17 +249,11 @@
        
     </div>
    </div>
-   <div class='star_rating' id='div-estrelas'>
-       <button class='star'>&#9734;</button>
-       <button class='star'>&#9734;</button>
-       <button class='star'>&#9734;</button>       
-       <button class='star'>&#9734;</button>
-       <button class='star'>&#9734;</button>
-    </div>
+   
    <?php
             $cnpj = $_GET['cnpj'];
             try{
-                $Comando = $conexao->prepare("SELECT * from comentarios WHERE cnpj = ?");
+                $Comando = $conexao->prepare("SELECT * from comentarios WHERE CNPJ = ?");
                 $Comando->bindParam(1, $cnpj);
                 $Comando->execute();
                 $Res1 = $Comando->fetchAll();
