@@ -11,8 +11,15 @@
          $Res = $Comando->fetchAll();
          $RetornoJSON = json_encode($Res);
          if($Comando->rowCount() > 0){
-            $_SESSION['CNPJ'] = $Res[0]['CNPJ'];
-            echo (string) $_SESSION['CNPJ'];
+            echo $Res[0]['CNPJ'];
+            if($Res[0]['CNPJ'] != null){
+                $_SESSION['CNPJ'] = $Res[0]['CNPJ'];
+                echo (string) $_SESSION['CNPJ'];
+            }
+            else{
+                $_SESSION['CPF'] = $Res[0]['CPF'];
+                echo (string) $_SESSION['CPF'];
+            }
          }
          else{
             echo "Registro Não Encontrado";
