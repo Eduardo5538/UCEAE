@@ -69,7 +69,6 @@ cpf.addEventListener('keypress', () => {
 
 function cpfVerify(){
     cpf = document.getElementById('txt_cpfAluno').value
-    alert(cpf)
     cpf = cpf.replace(/\D/g, '');
     if(cpf.toString().length != 11 || /^(\d)\1{10}$/.test(cpf)) return false;
     
