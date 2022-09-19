@@ -20,6 +20,14 @@
   	
         try
         {
+            $Consulta = $conexao->prepare("SELECT * FROM escolas WHERE cnpj = ?");
+            $Consulta->bindParam(1, $_SESSION['CNPJ']);
+            $Consulta->execute();
+            $Res = $Consulta->fetchAll();
+
+            unlink($Res[0]['foto_banner']);
+
+
             $Comando = $conexao->prepare("UPDATE escolas
             SET foto_banner = ?
             WHERE cnpj = ?");
