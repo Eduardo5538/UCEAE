@@ -20,6 +20,7 @@
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 	<link rel="stylesheet" type="text/css" href="css/showInst.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="js/comentario.js"></script>
 	<title><?php echo $Res[0]['nome_escola']; ?></title>
 
   <!-- Definindo Gráfico Horizontal -->
@@ -207,9 +208,13 @@
     if(!isset($_SESSION['CNPJ']) && isset($_SESSION['CPF'])){
       if($_SESSION['CPF'] != ''){
         echo "<h1 id='h1'>Inserir Comentário</h1>
+          <form id='form_comentario' method='post'> 
               <input type='text' name='titulo' id='txt_titulo' class='input-text titulo' placeholder='Título'><br>
               <br>
               <input type='text' name='comentario' id='txt_comentario' class='input-text comentario' placeholder='Comentário'><br>
+              <input type='hidden' value='". $cnpj ."' name='cnpj' id='cnpj'>
+              <input type='button' value='Comentar' onclick='inserir()' id='btn_comentario'>
+          </form>
           ";
       
       }
@@ -231,9 +236,39 @@
             <option value="todos">Todos</option>
             <option value="recentes">Mais Recentes Primeiro</option>
         </select>
+       
     </div>
    </div>
-  
+   <?php
+            $cnpj = $_GET['cnpj'];
+            try{
+                $Comando = $conexao->prepare("SELECT * from comentarios WHERE cnpj = ?");
+                $Comando->bindParam(1, $cnpj);
+                $Comando->execute();
+                $Res1 = $Comando->fetchAll();
+                $RetornoJSON = json_encode($Res1);
+                
+            }
+            catch(PDOException $error){
+                echo $error;
+            }
+            if($RetornoJSON  == "[]")
+            {
+                echo "<h1 id='retorno'>Nenhum comentário ainda</h1><br><br>";
+            }
+            else
+            {
+                for($i = 0; $i <= sizeof($Res1) - 1; $i++)
+                {
+                  echo "
+                          <h5 class='card-title'>".$Res1[$i]['titulo']."</h5>
+                          <p class='card-text'>".$Res1[$i]['nome']."</p>
+                          <h6'>".$Res1[$i]['conteudo']."</h6>
+                      <br><br><br>";
+                }
+                
+            }
+        ?>
  
 </body>
 </html>

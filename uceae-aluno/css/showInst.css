@@ -49,11 +49,13 @@
 }
 
 #foto{
-  border-radius: 150px;
+  border-radius: 50%;
   background-color: #47525E;
   border:10px solid black; 
   width: 17.8699070764832vw;
-  height: 31.645569620253166vh;
+  height: 17.8699070764832vw;
+  min-width: 150px;
+  min-height: 150px;
   text-align: center;
   position: absolute;
   margin-top: -100px;
@@ -124,8 +126,10 @@
 }
 #foto_perfil{
 	width:  17.8699070764832vw;
-	height: 31.645569620253166vh;
-  border-radius: 120px;
+	height: 17.8699070764832vw;
+  min-width: 150px;
+  min-height: 150px;
+  border-radius: 50%;
   border: 2px black solid;
   margin-left: -9px;
   margin-top: -10px;
