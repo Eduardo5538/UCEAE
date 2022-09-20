@@ -174,7 +174,7 @@
       }
     </script>
 </head>
-<body>
+<body onload='CarregaPagina()'>
     
 	<nav class="navbar navbar-expand-lg navbar-light bg-light" style="height: 70px;">
     <a class="navbar-brand" href="../index.php">
@@ -318,18 +318,12 @@
         echo "<h1 id='h1'>Inserir Comentário</h1>
           <form id='form_comentario' method='post'> 
               <input type='text' name='titulo' id='txt_titulo' class='input-text titulo' placeholder='Título'>
-              <div class='star_rating' id='div-estrelas'>
-                <button class='star'>&#9734;</button>
-                <button class='star'>&#9734;</button>
-                <button class='star'>&#9734;</button>       
-                <button class='star'>&#9734;</button>
-                <button class='star'>&#9734;</button>
-              </div>
+              
               <br><br>
               <input type='text' name='comentario' id='txt_comentario' onclick='setStar()' class='input-text comentario' placeholder='Comentário'>
               <br>
               <input type='hidden' value='". $cnpj ."' name='cnpj' id='cnpj'>
-              <input type='number' placeholder='nota de 1 a 5' name='nota' id='nota'>
+              <input type='hidden' name='nota' id='nota'>
               <input type='button' value='Comentar' onclick='inserir()' id='btn_comentario'>
               
           </form>
@@ -345,7 +339,13 @@
 
     ?>
     <!-- Área de Comentários -->
-
+    <div class='star_rating' id='div-estrelas'>
+                <button class='star'>&#9734;</button>
+                <button class='star'>&#9734;</button>
+                <button class='star'>&#9734;</button>       
+                <button class='star'>&#9734;</button>
+                <button class='star'>&#9734;</button>
+              </div>
    <div class="comentarios">
     <h1 class="titulo2">Comentários</h1>
     <div class="barra-filtro">
