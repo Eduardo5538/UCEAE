@@ -310,13 +310,20 @@
               <input type='text' name='titulo' id='txt_titulo' class='input-text titulo' placeholder='Título'>
               
               <br><br>
-              <input type='text' name='comentario' id='txt_comentario' onclick='setStar()' class='input-text comentario' placeholder='Comentário'>
+              <input type='text'  name='comentario' id='txt_comentario' class='input-text comentario' placeholder='Comentário'>
               <br>
               <input type='hidden' value='". $cnpj ."' name='cnpj' id='cnpj'>
               <input type='hidden' name='nota' id='nota'>
-              <input type='button' value='Comentar' onclick='inserir()' id='btn_comentario'>
+              <input type='button' value='Comentar' onclick='inserir()' id='btn_comentario' class='btn btn-enviar'>
               
           </form>
+          <div class='star_rating' id='div-estrelas'>
+                <button class='star'>&#9734;</button>
+                <button class='star'>&#9734;</button>
+                <button class='star'>&#9734;</button>       
+                <button class='star'>&#9734;</button>
+                <button class='star'>&#9734;</button>
+              </div>
           ";
       
       }
@@ -329,14 +336,9 @@
 
     ?>
     <!-- Área de Comentários -->
-    <div class='star_rating' id='div-estrelas'>
-                <button class='star'>&#9734;</button>
-                <button class='star'>&#9734;</button>
-                <button class='star'>&#9734;</button>       
-                <button class='star'>&#9734;</button>
-                <button class='star'>&#9734;</button>
-              </div>
+    
    <div class="comentarios">
+    <br><br><br><br>
     <h1 class="titulo2">Comentários</h1>
     <div class="barra-filtro">
         <select name="filtro" id="filtro_tempo" class="tipo">
@@ -359,7 +361,7 @@
                 {
                   echo "
                           <h5 class='card-title'>".$Res1[$i]['titulo']."   Nota: " . $Res1[$i]['nota'] . " </h5>
-                          <h4>Data: ". $Res1[$i]['data'] ."</h4>
+                          <h4 class='data'>".$Res1[$i]['data']."</h4>
                           <p class='card-text'>".$Res1[$i]['nome']."</p>
                           <h6'>".$Res1[$i]['conteudo']."</h6>
                       <br><br><br>";
