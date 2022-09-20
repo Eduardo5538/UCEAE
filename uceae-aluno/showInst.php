@@ -57,23 +57,6 @@
       }
     }
 
-   
-    if($nota1 > 0){
-      $media1 = $tamanho / $nota1;
-    }
-    elseif($nota2 > 0){
-      $media2 = $tamanho / $nota2;
-    }
-    elseif($nota3 > 0){
-      $media3 = $tamanho / $nota3;
-    }
-    elseif($nota4 > 0){
-      $media4 = $tamanho / $nota4;
-    }
-    elseif($nota5 > 0){
-      $media5 = $tamanho / $nota5;
-    }
-
     
     echo "<input type='hidden' id='nota1' name='nota1' value='".$nota1."'>";
     echo "<input type='hidden' id='nota2' name='nota2' value='".$nota2."'>";
@@ -81,7 +64,6 @@
     echo "<input type='hidden' id='nota4' name='nota4' value='".$nota4."'>";
     echo "<input type='hidden' id='nota5' name='nota5' value='".$nota5."'>";
     echo "<input type='hidden' id='tamanho' name='nota5' value='".$tamanho."'>";
-
 
 ?>
 
@@ -102,12 +84,19 @@
     <script type="text/javascript">
       
       // grafico barra 
-      const nota1 = document.getElementById("nota1").value;
-      const nota2 = document.getElementById("nota2").value;
-      const nota3 = document.getElementById("nota3").value;
-      const nota4 = document.getElementById("nota4").value;
-      const nota5 = document.getElementById("nota5").value;
-      const tamanho = document.getElementById("tamanho").value;
+      let nota1 = document.getElementById("nota1").value;
+      let nota2 = document.getElementById("nota2").value;
+      let nota3 = document.getElementById("nota3").value;
+      let nota4 = document.getElementById("nota4").value;
+      let nota5 = document.getElementById("nota5").value;
+      let tamanho = document.getElementById("tamanho").value;
+
+      let aprov = parseInt(nota5) + parseInt(nota4) + parseInt(nota3);
+      let desaprov = tamanho - aprov;
+
+      if(desaprov < 0){
+        desaprov = desaprov * -1;
+      }
 
     
 
@@ -117,11 +106,11 @@
       function drawStuff() {
         var data = new google.visualization.arrayToDataTable([
           ['Notas', 'Porcentagem'],
-          ["1 estrela", nota1],
-          ["2 estrelas", nota2],
-          ["3 estrelas", nota3],
-          ["4 estrelas", nota4],
-          ['5 estrelas', nota5]
+          ["1 estrela", parseInt(nota1)],
+          ["2 estrelas", parseInt(nota2)],
+          ["3 estrelas", parseInt(nota3)],
+          ["4 estrelas", parseInt(nota4)],
+          ['5 estrelas', parseInt(nota5)]
         ]);
 
         var options = {
@@ -155,7 +144,8 @@
 
         var data = google.visualization.arrayToDataTable([
           ['Aprovação', 'Total'],
-          ['Aprovação',     100],
+          ['Aprovação',  parseInt(aprov)],
+          ['Desaprovação', parseInt(desaprov)],
         ]);
 
         var options = {
