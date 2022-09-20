@@ -56,7 +56,7 @@
             $bairro_aluno = "";
             $rua_aluno = "";
 
-            $retorno = "passou";
+            $retorno = "<script>location.href='../index.php'</script>";
 
         }
 // capturando um possível erro durando a realização do código

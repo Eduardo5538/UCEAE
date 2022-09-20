@@ -182,7 +182,7 @@
           <a class="nav-link" href="../uceae-aluno/brazil.php">Busca</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Mapa</a>
+          <a class="nav-link" href="brazil.php">Mapa</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -197,7 +197,32 @@
       </ul>
       <form class="d-flex">
       	<div style="margin-right: 20px;">
-          <strong><label id="nome_perfil"><?php echo $Res[0]['nome_escola']?></label></strong>
+     
+          <?php
+          if(!isset($_SESSION['CNPJ']) && !isset($_SESSION['CPF'])){
+              echo "<button class='btn btn-outline-dark' type='button' style='margin-right: 10px;' data-bs-toggle='modal' data-bs-target='#ModalEntrar'>Entrar</button>";
+              echo "<a href='uceae-login/formularioAluno.php' class='btn btn-dark' tabindex='-1' style='margin-right: 10px;' role='button' aria-disabled='true'>Cadastre-se!</a>";
+              echo "<a href='uceae-login/formularioInst.php' class='btn btn-warning' tabindex='-1' role='button' aria-disabled='true'>Cadastrar sua instituição!</a>";
+          }
+            
+            if(isset($_SESSION['CNPJ']) && !isset($_SESSION['CPF'])){
+              if($_SESSION['CNPJ'] != ''){
+                echo "<a href='uceae-instituicao/paginaInst.php' class='btn btn-warning' tabindex='-1' role='button' style='margin-right: 10px;' aria-disabled='true'>Sua página!</a>";
+                echo "<a href='uceae-login/unlogin.php' class='btn btn-danger' tabindex='-1' role='button' aria-disabled='true'>Deslogar</a>";
+              
+              }
+            }
+
+            if(!isset($_SESSION['CNPJ']) && isset($_SESSION['CPF'])){
+              if($_SESSION['CPF'] != ''){
+                
+                echo "<a href='uceae-aluno/paginaAluno.php' class='btn btn-warning' tabindex='-1' role='button' style='margin-right: 10px;' aria-disabled='true'>Sua página!</a>";
+                echo "<a href='uceae-login/unlogin.php' class='btn btn-danger' tabindex='-1' role='button' aria-disabled='true'>Deslogar</a>";
+              
+              }
+            }
+
+          ?>
     	  </div>
       </form>
     </div>
