@@ -307,10 +307,10 @@
         echo "<br><br><br>";
         echo "<h1 id='h1'>Inserir Comentário</h1>
           <form id='form_comentario' method='post'> 
-              <input type='text' required name='titulo' id='txt_titulo' class='input-text titulo' placeholder='Título'>
+              <input type='text' name='titulo' id='txt_titulo' class='input-text titulo' placeholder='Título'>
               
               <br><br>
-              <input type='text' required name='comentario' id='txt_comentario' class='input-text comentario' placeholder='Comentário'>
+              <input type='text'  name='comentario' id='txt_comentario' class='input-text comentario' placeholder='Comentário'>
               <br>
               <input type='hidden' value='". $cnpj ."' name='cnpj' id='cnpj'>
               <input type='hidden' name='nota' id='nota'>
@@ -361,7 +361,7 @@
                 {
                   echo "
                           <h5 class='card-title'>".$Res1[$i]['titulo']."   Nota: " . $Res1[$i]['nota'] . " </h5>
-                          <h4>Data: ". $Res1[$i]['data'] ."</h4>
+                          <h4 class='data'>".$Res1[$i]['data']."</h4>
                           <p class='card-text'>".$Res1[$i]['nome']."</p>
                           <h6'>".$Res1[$i]['conteudo']."</h6>
                       <br><br><br>";

@@ -2,7 +2,7 @@
     session_start();
     include '../conection.php';
 
-    if(!isset($_POST['comentario']) && !isset($_POST['titulo']))
+    if(isset($_POST['comentario']) && isset($_POST['titulo']))
     {
         $comentario = $_POST['comentario'];
         $titulo = $_POST['titulo'];
