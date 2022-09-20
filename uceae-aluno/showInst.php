@@ -41,26 +41,23 @@
     for($i = 0; $i <= sizeof($Res1) - 1; $i++)
     {
       if($Res1[$i]['nota'] == 1){
-        $nota1++;
-        echo $nota1;
+        $nota1 += 1;
       }
       elseif($Res1[$i]['nota'] == 2){
-        $nota2++;
-        echo $nota2;
+        $nota2+= 1;
       }
       elseif($Res1[$i]['nota'] == 3){
-        $nota3++;
-        echo $nota3;
+        $nota3+= 1;
       }
       elseif($Res1[$i]['nota'] == 4){
-        $nota4++;
-        echo $nota4;
+        $nota4+= 1;
       }
       else{
-        $nota5++;
-        echo $nota5;
+        $nota5+= 1;
       }
     }
+
+   
     if($nota1 > 0){
       $media1 = $tamanho / $nota1;
     }
@@ -76,12 +73,14 @@
     elseif($nota5 > 0){
       $media5 = $tamanho / $nota5;
     }
+
     
-    echo "<input type='hidden' id='nota1' name='nota1' value='".$media1."'>";
-    echo "<input type='hidden' id='nota2' name='nota2' value='".$media2."'>";
-    echo "<input type='hidden' id='nota3' name='nota3' value='".$media3."'>";
-    echo "<input type='hidden' id='nota4' name='nota4' value='".$media4."'>";
-    echo "<input type='hidden' id='nota5' name='nota5' value='".$media5."'>";
+    echo "<input type='hidden' id='nota1' name='nota1' value='".$nota1."'>";
+    echo "<input type='hidden' id='nota2' name='nota2' value='".$nota2."'>";
+    echo "<input type='hidden' id='nota3' name='nota3' value='".$nota3."'>";
+    echo "<input type='hidden' id='nota4' name='nota4' value='".$nota4."'>";
+    echo "<input type='hidden' id='nota5' name='nota5' value='".$nota5."'>";
+    echo "<input type='hidden' id='tamanho' name='nota5' value='".$tamanho."'>";
 
 
 ?>
@@ -103,13 +102,14 @@
     <script type="text/javascript">
       
       // grafico barra 
-      let nota1 = document.getElementById("nota1").value;
-      let nota2 = document.getElementById("nota2").value;
-      let nota3 = document.getElementById("nota3").value;
-      let nota4 = document.getElementById("nota4").value;
-      let nota5 = document.getElementById("nota5").value;
+      const nota1 = document.getElementById("nota1").value;
+      const nota2 = document.getElementById("nota2").value;
+      const nota3 = document.getElementById("nota3").value;
+      const nota4 = document.getElementById("nota4").value;
+      const nota5 = document.getElementById("nota5").value;
+      const tamanho = document.getElementById("tamanho").value;
 
-      alert(nota1 + nota3 + nota3 + nota4 + nota5)
+    
 
       google.charts.load('current', {'packages':['bar']});
       google.charts.setOnLoadCallback(drawStuff);
