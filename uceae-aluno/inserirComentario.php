@@ -21,10 +21,10 @@
         $comando->execute();
 
         if($comando->rowCount() > 0){
-            echo "funfou";
+            echo "Comentário inserido";
         }
         else{
-            echo "fomos de berço";
+            echo "Erro ao inserir o comentário";
         }
     }
     catch(PDOException $pdo){

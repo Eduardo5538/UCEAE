@@ -7,6 +7,7 @@ function inserir(){
     })
     .done(function(msg){
        	alert(msg)
+        location.reload()
     })
     .fail(function(){
         alert("Falha ao inserir registro!")
