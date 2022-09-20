@@ -48,7 +48,9 @@ function updateProgressBar(){
     progress.style.width = ((progressActive.length - 1) / (progressStep.length - 1)) * 100 + "%"; 
 }
 
-// --------------------- Máscara de Cpf ------------------------
+// --------------------- Máscaras ------------------------
+
+// mascara de cpf
 
 const cpf = document.querySelector('.cpf');
 
@@ -64,6 +66,37 @@ cpf.addEventListener('keypress', () => {
         cpf.value += '-'
     }
     const cpfCompleto = cpf.value;
+})
+
+// mascara de cep
+
+const cep = document.querySelector('.cep');
+cep.addEventListener('keypress', () => {
+    let ceplength = cep.value.length;
+
+    if(ceplength === 5)
+    {
+        cep.value += '-'
+    }
+})
+
+// mascara de telefone
+
+const tel = document.querySelector('.tel');
+tel.addEventListener('keypress', () => {
+    let tellength = tel.value.length;
+    if (tellength === 0)
+    {
+        tel.value += '('
+    }
+    else if(tellength === 3)
+    {
+        tel.value += ') '
+    }
+    else if(tellength === 9)
+    {
+        tel.value += '-'
+    }
 })
 }
 

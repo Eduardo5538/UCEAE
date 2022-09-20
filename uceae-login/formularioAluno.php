@@ -37,7 +37,7 @@
         <div class="form-step">
             <div class="input-group">
                 <label for="tel">Telefone</label>
-                <input type="text" name="tel" id="txt_telAluno">
+                <input type="text" name="tel" id="txt_telAluno" class="tel" maxlength="14">
             </div>
             <div class="input-group">
                 <label for="email">Email</label>
@@ -73,6 +73,10 @@
                 <label for="descDefAluno">Descrição da Deficiência</label>
                 <texarea name="descDefAluno" id="txt_descDefAluno">
             </div>
+            <div class="input-group">
+                <label for="foto">Foto de Perfil</label>
+                <input type="file" name="icon" id="icon">
+            </div>
             <div class="btns-group">
                 <a href="#" class="btn btn-prev">Anterior</a>
                 <a href="#" class="btn btn-next">Próximo</a>
@@ -81,7 +85,7 @@
         <div class="form-step">
             <div class="input-group">
                 <label for="cep">CEP</label>
-                <input type="number" name="cep" id="txt_cepAluno">
+                <input type="text" name="cep" id="txt_cepAluno" class="cep" maxlength="9">
             </div>
             <div class="input-group">
                 <label for="rua">Rua</label>
