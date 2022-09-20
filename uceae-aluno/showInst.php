@@ -127,7 +127,7 @@
             }
           },
           bar: { groupWidth: "90%" },
-          colors:['red', "orange", "yellow", "green", "blue"]
+          colors:["#0181E5"]
         };
 
         var chart = new google.charts.Bar(document.getElementById('div-graficos-barra'));
