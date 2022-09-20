@@ -127,7 +127,7 @@
             }
           },
           bar: { groupWidth: "90%" },
-          colors:['#F08008']
+          colors:['red', "orange", "yellow", "green", "blue"]
         };
 
         var chart = new google.charts.Bar(document.getElementById('div-graficos-barra'));
@@ -155,8 +155,8 @@
           },
           legend: 'none',
           title: 'Taxa de Aprovação',
-          colors:['#8400DA']
-          
+          colors:['#49b675', "#cd5c5c"]
+
         };
 
         var chart = new google.visualization.PieChart(document.getElementById('div-graficos-rosca'));
