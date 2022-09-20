@@ -361,6 +361,7 @@
                 {
                   echo "
                           <div id='card' class='cards'>
+                            <img src='https://cdn-icons-png.flaticon.com/512/17/17004.png' height='120' width='120'>
                             <h5 class='card-title'>".$Res1[$i]['titulo']."   Nota: " . $Res1[$i]['nota'] . " </h5>
                             <h4 class='data'>".$Res1[$i]['data']."</h4>
                             <p class='card-text'>".$Res1[$i]['nome']."</p>
