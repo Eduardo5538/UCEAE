@@ -209,6 +209,7 @@
     
     if(!isset($_SESSION['CNPJ']) && isset($_SESSION['CPF'])){
       if($_SESSION['CPF'] != ''){
+        echo "<br><br><br>";
         echo "<h1 id='h1'>Inserir Comentário</h1>
           <form id='form_comentario' method='post'> 
               <input type='text' name='titulo' id='txt_titulo' class='input-text titulo' placeholder='Título'>
@@ -220,9 +221,10 @@
                 <button class='star'>&#9734;</button>
               </div>
               <br><br>
-              <input type='text' name='comentario' id='txt_comentario' class='input-text comentario' placeholder='Comentário'>
+              <input type='text' name='comentario' id='txt_comentario' onclick='setStar()' class='input-text comentario' placeholder='Comentário'>
               <br>
               <input type='hidden' value='". $cnpj ."' name='cnpj' id='cnpj'>
+              <input type='number' placeholder='nota de 1 a 5' name='nota' id='nota'>
               <input type='button' value='Comentar' onclick='inserir()' id='btn_comentario'>
               
           </form>
@@ -272,7 +274,8 @@
                 for($i = 0; $i <= sizeof($Res1) - 1; $i++)
                 {
                   echo "
-                          <h5 class='card-title'>".$Res1[$i]['titulo']."</h5>
+                          <h5 class='card-title'>".$Res1[$i]['titulo']."   Nota: " . $Res1[$i]['nota'] . " </h5>
+                          <h4>Data: ". $Res1[$i]['data'] ."</h4>
                           <p class='card-text'>".$Res1[$i]['nome']."</p>
                           <h6'>".$Res1[$i]['conteudo']."</h6>
                       <br><br><br>";
