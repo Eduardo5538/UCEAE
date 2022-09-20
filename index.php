@@ -57,8 +57,6 @@
               echo "<a href='uceae-login/formularioAluno.php' class='btn btn-dark' tabindex='-1' style='margin-right: 10px;' role='button' aria-disabled='true'>Cadastre-se!</a>";
               echo "<a href='uceae-login/formularioInst.php' class='btn btn-warning' tabindex='-1' role='button' aria-disabled='true'>Cadastrar sua instituição!</a>";
           }
-        ?>
-          <?php
             
             if(isset($_SESSION['CNPJ']) && !isset($_SESSION['CPF'])){
               if($_SESSION['CNPJ'] != ''){

@@ -57,23 +57,6 @@
       }
     }
 
-   
-    if($nota1 > 0){
-      $media1 = $tamanho / $nota1;
-    }
-    elseif($nota2 > 0){
-      $media2 = $tamanho / $nota2;
-    }
-    elseif($nota3 > 0){
-      $media3 = $tamanho / $nota3;
-    }
-    elseif($nota4 > 0){
-      $media4 = $tamanho / $nota4;
-    }
-    elseif($nota5 > 0){
-      $media5 = $tamanho / $nota5;
-    }
-
     
     echo "<input type='hidden' id='nota1' name='nota1' value='".$nota1."'>";
     echo "<input type='hidden' id='nota2' name='nota2' value='".$nota2."'>";
@@ -81,7 +64,6 @@
     echo "<input type='hidden' id='nota4' name='nota4' value='".$nota4."'>";
     echo "<input type='hidden' id='nota5' name='nota5' value='".$nota5."'>";
     echo "<input type='hidden' id='tamanho' name='nota5' value='".$tamanho."'>";
-
 
 ?>
 
@@ -102,12 +84,19 @@
     <script type="text/javascript">
       
       // grafico barra 
-      const nota1 = document.getElementById("nota1").value;
-      const nota2 = document.getElementById("nota2").value;
-      const nota3 = document.getElementById("nota3").value;
-      const nota4 = document.getElementById("nota4").value;
-      const nota5 = document.getElementById("nota5").value;
-      const tamanho = document.getElementById("tamanho").value;
+      let nota1 = document.getElementById("nota1").value;
+      let nota2 = document.getElementById("nota2").value;
+      let nota3 = document.getElementById("nota3").value;
+      let nota4 = document.getElementById("nota4").value;
+      let nota5 = document.getElementById("nota5").value;
+      let tamanho = document.getElementById("tamanho").value;
+
+      let aprov = parseInt(nota5) + parseInt(nota4) + parseInt(nota3);
+      let desaprov = tamanho - aprov;
+
+      if(desaprov < 0){
+        desaprov = desaprov * -1;
+      }
 
     
 
@@ -117,11 +106,11 @@
       function drawStuff() {
         var data = new google.visualization.arrayToDataTable([
           ['Notas', 'Porcentagem'],
-          ["1 estrela", nota1],
-          ["2 estrelas", nota2],
-          ["3 estrelas", nota3],
-          ["4 estrelas", nota4],
-          ['5 estrelas', nota5]
+          ["1 estrela", parseInt(nota1)],
+          ["2 estrelas", parseInt(nota2)],
+          ["3 estrelas", parseInt(nota3)],
+          ["4 estrelas", parseInt(nota4)],
+          ['5 estrelas', parseInt(nota5)]
         ]);
 
         var options = {
@@ -138,7 +127,7 @@
             }
           },
           bar: { groupWidth: "90%" },
-          colors:['#F08008']
+          colors:["#0181E5"]
         };
 
         var chart = new google.charts.Bar(document.getElementById('div-graficos-barra'));
@@ -155,7 +144,8 @@
 
         var data = google.visualization.arrayToDataTable([
           ['Aprovação', 'Total'],
-          ['Aprovação',     100],
+          ['Aprovação',  parseInt(aprov)],
+          ['Desaprovação', parseInt(desaprov)],
         ]);
 
         var options = {
@@ -165,8 +155,8 @@
           },
           legend: 'none',
           title: 'Taxa de Aprovação',
-          colors:['#8400DA']
-          
+          colors:['#49b675', "#cd5c5c"]
+
         };
 
         var chart = new google.visualization.PieChart(document.getElementById('div-graficos-rosca'));
@@ -174,7 +164,7 @@
       }
     </script>
 </head>
-<body>
+<body onload='CarregaPagina()'>
     
 	<nav class="navbar navbar-expand-lg navbar-light bg-light" style="height: 70px;">
     <a class="navbar-brand" href="../index.php">
@@ -192,7 +182,7 @@
           <a class="nav-link" href="../uceae-aluno/brazil.php">Busca</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Mapa</a>
+          <a class="nav-link" href="brazil.php">Mapa</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -207,7 +197,32 @@
       </ul>
       <form class="d-flex">
       	<div style="margin-right: 20px;">
-          <strong><label id="nome_perfil"><?php echo $Res[0]['nome_escola']?></label></strong>
+     
+          <?php
+          if(!isset($_SESSION['CNPJ']) && !isset($_SESSION['CPF'])){
+              echo "<button class='btn btn-outline-dark' type='button' style='margin-right: 10px;' data-bs-toggle='modal' data-bs-target='#ModalEntrar'>Entrar</button>";
+              echo "<a href='uceae-login/formularioAluno.php' class='btn btn-dark' tabindex='-1' style='margin-right: 10px;' role='button' aria-disabled='true'>Cadastre-se!</a>";
+              echo "<a href='uceae-login/formularioInst.php' class='btn btn-warning' tabindex='-1' role='button' aria-disabled='true'>Cadastrar sua instituição!</a>";
+          }
+            
+            if(isset($_SESSION['CNPJ']) && !isset($_SESSION['CPF'])){
+              if($_SESSION['CNPJ'] != ''){
+                echo "<a href='uceae-instituicao/paginaInst.php' class='btn btn-warning' tabindex='-1' role='button' style='margin-right: 10px;' aria-disabled='true'>Sua página!</a>";
+                echo "<a href='uceae-login/unlogin.php' class='btn btn-danger' tabindex='-1' role='button' aria-disabled='true'>Deslogar</a>";
+              
+              }
+            }
+
+            if(!isset($_SESSION['CNPJ']) && isset($_SESSION['CPF'])){
+              if($_SESSION['CPF'] != ''){
+                
+                echo "<a href='uceae-aluno/paginaAluno.php' class='btn btn-warning' tabindex='-1' role='button' style='margin-right: 10px;' aria-disabled='true'>Sua página!</a>";
+                echo "<a href='uceae-login/unlogin.php' class='btn btn-danger' tabindex='-1' role='button' aria-disabled='true'>Deslogar</a>";
+              
+              }
+            }
+
+          ?>
     	  </div>
       </form>
     </div>
@@ -293,21 +308,22 @@
         echo "<h1 id='h1'>Inserir Comentário</h1>
           <form id='form_comentario' method='post'> 
               <input type='text' name='titulo' id='txt_titulo' class='input-text titulo' placeholder='Título'>
-              <div class='star_rating' id='div-estrelas'>
+              
+              <br><br>
+              <input type='text'  name='comentario' id='txt_comentario' class='input-text comentario' placeholder='Comentário'>
+              <br>
+              <input type='hidden' value='". $cnpj ."' name='cnpj' id='cnpj'>
+              <input type='hidden' name='nota' id='nota'>
+              <input type='button' value='Comentar' onclick='inserir()' id='btn_comentario' class='btn btn-enviar'>
+              
+          </form>
+          <div class='star_rating' id='div-estrelas'>
                 <button class='star'>&#9734;</button>
                 <button class='star'>&#9734;</button>
                 <button class='star'>&#9734;</button>       
                 <button class='star'>&#9734;</button>
                 <button class='star'>&#9734;</button>
               </div>
-              <br><br>
-              <input type='text' name='comentario' id='txt_comentario' onclick='setStar()' class='input-text comentario' placeholder='Comentário'>
-              <br>
-              <input type='hidden' value='". $cnpj ."' name='cnpj' id='cnpj'>
-              <input type='number' placeholder='nota de 1 a 5' name='nota' id='nota'>
-              <input type='button' value='Comentar' onclick='inserir()' id='btn_comentario'>
-              
-          </form>
           ";
       
       }
@@ -320,8 +336,9 @@
 
     ?>
     <!-- Área de Comentários -->
-
+    
    <div class="comentarios">
+    <br><br><br><br>
     <h1 class="titulo2">Comentários</h1>
     <div class="barra-filtro">
         <select name="filtro" id="filtro_tempo" class="tipo">
@@ -344,7 +361,7 @@
                 {
                   echo "
                           <h5 class='card-title'>".$Res1[$i]['titulo']."   Nota: " . $Res1[$i]['nota'] . " </h5>
-                          <h4>Data: ". $Res1[$i]['data'] ."</h4>
+                          <h4 class='data'>".$Res1[$i]['data']."</h4>
                           <p class='card-text'>".$Res1[$i]['nome']."</p>
                           <h6'>".$Res1[$i]['conteudo']."</h6>
                       <br><br><br>";
