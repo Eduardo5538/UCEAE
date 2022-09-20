@@ -360,10 +360,12 @@
                 for($i = 0; $i <= sizeof($Res1) - 1; $i++)
                 {
                   echo "
-                          <h5 class='card-title'>".$Res1[$i]['titulo']."   Nota: " . $Res1[$i]['nota'] . " </h5>
-                          <h4 class='data'>".$Res1[$i]['data']."</h4>
-                          <p class='card-text'>".$Res1[$i]['nome']."</p>
-                          <h6'>".$Res1[$i]['conteudo']."</h6>
+                          <div id='card' class='cards'>
+                            <h5 class='card-title'>".$Res1[$i]['titulo']."   Nota: " . $Res1[$i]['nota'] . " </h5>
+                            <h4 class='data'>".$Res1[$i]['data']."</h4>
+                            <p class='card-text'>".$Res1[$i]['nome']."</p>
+                            <h6'>".$Res1[$i]['conteudo']."</h6>
+                          </div>
                       <br><br><br>";
                 }
                 
