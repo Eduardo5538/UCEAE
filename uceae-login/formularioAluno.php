@@ -10,7 +10,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body onload="passar()">
-    <form action="insertAluno.php" method="POST" class="form" id="frm_aluno">
+    <form action="insertAluno.php" method="POST" class="form" id="frm_aluno" enctype="multipart/form-data">
         <h1 class="text-center">Formulário de Cadastro</h1>
         <div class="progressbar">
             <div class="progress" id="progress"></div>
@@ -24,11 +24,11 @@
         <div class="form-step form-step-active">
             <div class="input-group">
                 <label for="nome">Nome</label>
-                <input type="text" name="nome" id="txt_nomeAluno">
+                <input type="text" required name="nome" id="txt_nomeAluno">
             </div>
             <div class="input-group">
                 <label for="Sobrenome">Sobrenome</label>
-                <input type="text" name="sobrenome" id="txt_sobrenomeAluno">
+                <input type="text" required  name="sobrenome" id="txt_sobrenomeAluno">
             </div>
             <div class="">
                 <a href="#" class="btn btn-next width-50 ml-auto">Próximo</a>
@@ -37,11 +37,11 @@
         <div class="form-step">
             <div class="input-group">
                 <label for="tel">Telefone</label>
-                <input type="text" name="tel" id="txt_telAluno" class="tel" maxlength="14">
+                <input type="text" required name="tel" id="txt_telAluno" class="tel" maxlength="14">
             </div>
             <div class="input-group">
                 <label for="email">Email</label>
-                <input type="email" name="email" id="txt_emailAluno">
+                <input type="email" required  name="email" id="txt_emailAluno">
             </div>
             <div class="btns-group">
                 <a href="#" class="btn btn-prev">Anterior</a>
@@ -59,7 +59,7 @@
                 <div id='penis'></div>
             </div>
             <div class="input-group">
-                <label for="def">Possui Deficiência?</label>
+                <label for="def" required>Possui Deficiência?</label>
                 <input type="radio" id="sim" name="op_def" value="S">
                 <label for="html">Sim</label><br>
                 <input type="radio" id="nao" name="op_def" value="N">
@@ -75,7 +75,7 @@
             </div>
             <div class="input-group">
                 <label for="foto">Foto de Perfil</label>
-                <input type="file" name="icon" id="icon">
+                <input type="file" required name="icon" id="icon">
             </div>
             <div class="btns-group">
                 <a href="#" class="btn btn-prev">Anterior</a>
@@ -85,23 +85,23 @@
         <div class="form-step">
             <div class="input-group">
                 <label for="cep">CEP</label>
-                <input type="text" name="cep" id="txt_cepAluno" class="cep" maxlength="9">
+                <input type="text" required name="cep" id="txt_cepAluno" class="cep" maxlength="9">
             </div>
             <div class="input-group">
                 <label for="rua">Rua</label>
-                <input type="text" name="rua" id="txt_ruaAluno">
+                <input type="text" required name="rua" id="txt_ruaAluno">
             </div>
             <div class="input-group">
                 <label for="bairro">Bairro</label>
-                <input type="text" name="bairro" id="txt_bairroAluno">
+                <input type="text" required name="bairro" id="txt_bairroAluno">
             </div>
             <div class="input-group">
                 <label for="cidade">Cidade</label>
-                <input type="text" name="cidade" id="txt_cidadeAluno">
+                <input type="text" required name="cidade" id="txt_cidadeAluno">
             </div>
             <div class="input-group">
                 <label for="uf">Unidade Federativa</label>
-                <select class="estado" name='UF' id="txt_ufAluno">
+                <select class="estado" name='UF' id="txt_ufAluno" required>
                   <option value="AC" id="AC">AC</option><option value="AL" id="AL">AL</option>
                   <option value="AP" id="AP">AP</option><option value="AM" id="AM">AM</option>
                   <option value="BA" id="BA">BA</option><option value="CE" id="CE">CE</option>
@@ -126,15 +126,15 @@
         <div class="form-step">
             <div class="input-group">
                 <label for="senha">Senha</label>
-                <input type="password" name="senha" id="txt_senhaAluno">
+                <input type="password" name="senha" id="txt_senhaAluno" required >
             </div>
             <div class="input-group">
                 <label for="confSenha">Confirmar Senha</label>
-                <input type="password" name="confSenha" id="txt_confSenhaAluno">
+                <input type="password" name="confSenha" id="txt_confSenhaAluno" required >
             </div>
             <div class="btns-group">
                 <a href="#" class="btn btn-prev">Anterior</a>
-                <input type="submit" value="Confirmar" class="btn">
+                <input type="submit" value="Confirmar" class="btn" required >
             </div>
         </div>
     </form>
