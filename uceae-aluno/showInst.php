@@ -12,7 +12,80 @@
     catch(PDOException $error){
         echo $error;
     }
+    try{
+      $Comando = $conexao->prepare("SELECT * from comentarios WHERE CNPJ = ?");
+      $Comando->bindParam(1, $cnpj);
+      $Comando->execute();
+      $Res1 = $Comando->fetchAll();
+      $RetornoJSON1 = json_encode($Res1);
+                
+    }
+    catch(PDOException $error){
+      echo $error;
+    }
+
+    $tamanho = sizeof($Res1);
+    $nota1 = 0;
+    $nota2 = 0;
+    $nota3 = 0;
+    $nota4 = 0;
+    $nota5 = 0;
+    $media1 = 0;
+    $media2 = 0;
+    $media3 = 0;
+    $media4 = 0;
+    $media5 = 0;
+
+
+
+    for($i = 0; $i <= sizeof($Res1) - 1; $i++)
+    {
+      if($Res1[$i]['nota'] == 1){
+        $nota1++;
+        echo $nota1;
+      }
+      elseif($Res1[$i]['nota'] == 2){
+        $nota2++;
+        echo $nota2;
+      }
+      elseif($Res1[$i]['nota'] == 3){
+        $nota3++;
+        echo $nota3;
+      }
+      elseif($Res1[$i]['nota'] == 4){
+        $nota4++;
+        echo $nota4;
+      }
+      else{
+        $nota5++;
+        echo $nota5;
+      }
+    }
+    if($nota1 > 0){
+      $media1 = $tamanho / $nota1;
+    }
+    elseif($nota2 > 0){
+      $media2 = $tamanho / $nota2;
+    }
+    elseif($nota3 > 0){
+      $media3 = $tamanho / $nota3;
+    }
+    elseif($nota4 > 0){
+      $media4 = $tamanho / $nota4;
+    }
+    elseif($nota5 > 0){
+      $media5 = $tamanho / $nota5;
+    }
+    
+    echo "<input type='hidden' id='nota1' name='nota1' value='".$media1."'>";
+    echo "<input type='hidden' id='nota2' name='nota2' value='".$media2."'>";
+    echo "<input type='hidden' id='nota3' name='nota3' value='".$media3."'>";
+    echo "<input type='hidden' id='nota4' name='nota4' value='".$media4."'>";
+    echo "<input type='hidden' id='nota5' name='nota5' value='".$media5."'>";
+
+
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,6 +103,13 @@
     <script type="text/javascript">
       
       // grafico barra 
+      let nota1 = document.getElementById("nota1").value;
+      let nota2 = document.getElementById("nota2").value;
+      let nota3 = document.getElementById("nota3").value;
+      let nota4 = document.getElementById("nota4").value;
+      let nota5 = document.getElementById("nota5").value;
+
+      alert(nota1 + nota3 + nota3 + nota4 + nota5)
 
       google.charts.load('current', {'packages':['bar']});
       google.charts.setOnLoadCallback(drawStuff);
@@ -37,11 +117,11 @@
       function drawStuff() {
         var data = new google.visualization.arrayToDataTable([
           ['Notas', 'Porcentagem'],
-          ["1 estrela", 12],
-          ["2 estrelas", 3],
-          ["3 estrelas", 12],
-          ["4 estrelas", 24],
-          ['5 estrelas', 45]
+          ["1 estrela", nota1],
+          ["2 estrelas", nota2],
+          ["3 estrelas", nota3],
+          ["4 estrelas", nota4],
+          ['5 estrelas', nota5]
         ]);
 
         var options = {
@@ -253,19 +333,8 @@
    </div>
    
    <?php
-            $cnpj = $_GET['cnpj'];
-            try{
-                $Comando = $conexao->prepare("SELECT * from comentarios WHERE CNPJ = ?");
-                $Comando->bindParam(1, $cnpj);
-                $Comando->execute();
-                $Res1 = $Comando->fetchAll();
-                $RetornoJSON = json_encode($Res1);
-                
-            }
-            catch(PDOException $error){
-                echo $error;
-            }
-            if($RetornoJSON  == "[]")
+            
+            if($RetornoJSON1  == "[]")
             {
                 echo "<h1 id='retorno'>Nenhum comentário ainda</h1><br><br>";
             }
