@@ -307,16 +307,23 @@
         echo "<br><br><br>";
         echo "<h1 id='h1'>Inserir Comentário</h1>
           <form id='form_comentario' method='post'> 
-              <input type='text' name='titulo' id='txt_titulo' class='input-text titulo' placeholder='Título'>
+              <input type='text' required name='titulo' id='txt_titulo' class='input-text titulo' placeholder='Título'>
               
               <br><br>
-              <input type='text' name='comentario' id='txt_comentario' onclick='setStar()' class='input-text comentario' placeholder='Comentário'>
+              <input type='text' required name='comentario' id='txt_comentario' class='input-text comentario' placeholder='Comentário'>
               <br>
               <input type='hidden' value='". $cnpj ."' name='cnpj' id='cnpj'>
               <input type='hidden' name='nota' id='nota'>
-              <input type='button' value='Comentar' onclick='inserir()' id='btn_comentario'>
+              <input type='button' value='Comentar' onclick='inserir()' id='btn_comentario' class='btn btn-enviar'>
               
           </form>
+          <div class='star_rating' id='div-estrelas'>
+                <button class='star'>&#9734;</button>
+                <button class='star'>&#9734;</button>
+                <button class='star'>&#9734;</button>       
+                <button class='star'>&#9734;</button>
+                <button class='star'>&#9734;</button>
+              </div>
           ";
       
       }
@@ -329,14 +336,9 @@
 
     ?>
     <!-- Área de Comentários -->
-    <div class='star_rating' id='div-estrelas'>
-                <button class='star'>&#9734;</button>
-                <button class='star'>&#9734;</button>
-                <button class='star'>&#9734;</button>       
-                <button class='star'>&#9734;</button>
-                <button class='star'>&#9734;</button>
-              </div>
+    
    <div class="comentarios">
+    <br><br><br><br>
     <h1 class="titulo2">Comentários</h1>
     <div class="barra-filtro">
         <select name="filtro" id="filtro_tempo" class="tipo">
