@@ -117,17 +117,17 @@ footer{
 }
 #sociais-bottom{
 	white-space: nowrap;
-	font-size: 1.5vw;
+	font-size: 1.3vw;
 }
 #uceae-bottom{
 	align-self: flex-end;
 	margin-right: 15vh;
 	white-space: wrap;
-	font-size: 1.5vw;
+	font-size: 1.3vw;
 }
 #rua-bottom{
 	white-space: wrap;
-	font-size: 1.5vw;
+	font-size: 1.3vw;
 }
 #botoes-bottom{
 	display: flex;
@@ -198,13 +198,82 @@ input[type=range]::-moz-range-thumb {
 .modal-footer{
 	float: center;
 }
-.btn-secondary{
-	background-color: #47525E;
+#conteudo{
+	text-align: center;
+}
+#retorno{
+	text-align: center;
+	font-size: 40px;
+	font-weight: bold;
+}
+#parallax-text{
+	font-family: 'Montserrat', sans-serif;
+	color: white;
+	font-size: 10vw;
+	letter-spacing: 5vh;
+}
+.container{
+	width: 750px;
+	padding: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+.container .card{
+	position: relative;
+	padding: 10px;
+	width: 300px;
+	background-color: #00394f;
+	margin: 25px;
+	border: 1px solid black;
+	border-radius: 20px;
+	overflow: hidden;
+	transition: 0.5s;
+	text-align: center;
+	box-shadow: 7px 10px 7px 3px #696969;
+}
+.container .card:hover{
+	background-color:  #006284;
+	margin-top: -20px;
+}
+.container .card img{
+	transition: 0.5s;
+	height: 200px;
+	width: 150px;
+	filter:invert(1);
+}
+.container .card h1{
+	font-size: 2rem;
+	padding: 10px;
+	color: #fff;
+	font-weight: 700;
+}
+.container .card .content{
+	padding: 20px;
+	text-align: center;
+}
+.container .card .content p{
+	color:#fff;
+	font-weight: 700;
+	transition: 0.5s;
+}
+#card{
+	width: 60%;
+}
+#img-card{
+	height: 400px;
 }
 .entrar-titulo{
 	font-family: sensei;
 	font-size: 40px;
 	color: #77D353;
+}
+.modal-footer{
+	float: center;
+}
+.btn-secondary{
+	background-color: #47525E;
 }
 
 /* clears the ‘X’ from Internet Explorer */

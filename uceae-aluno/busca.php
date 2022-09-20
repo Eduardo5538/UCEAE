@@ -28,7 +28,11 @@
         });
         }
 			);
+
+      $('#formBusca').attr('action', 'javascript:void(0);');
 		});
+    
+    
 	</script>
 
 </head>
@@ -99,8 +103,8 @@
     <div id="pesquisa">
 
         <form action="" method="POST" name="formBusca" id="formBusca">
-            <input type="search" name="busca" id="busca" placeholder="Buscar">
-            <button type="button" id="search-button" onclick="consulta()">
+            <input type="text" name="busca" id="busca" placeholder="Buscar"> 
+            <button type="button" id="search-button" onclick="consulta()" required>
                 <img src="img/icones/search.png">
             </button>
         </form>
@@ -160,6 +164,8 @@
 
         <input type="button" id="pesquisar">
     </div>
+
+    <div id="penis"></div>
 </main>
             
 <footer>
