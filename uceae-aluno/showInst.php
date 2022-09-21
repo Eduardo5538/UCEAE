@@ -115,7 +115,7 @@
 
         var options = {
           title: 'Gráfico de Avaliações',
-          width: 800,
+          width: 700,
           height: 350,
           legend: { position: 'none' },
           chart: { title: 'Quantidade de Notas',
@@ -377,7 +377,7 @@
                       <div class='card-content'>";
                         for($j = 0; $j < $Res1[$i]['nota']; $j++){
                           echo "<label class='star2'>&#9733;</label>";
-                          if($Res1[$j]['nota'] == null){
+                          if($Res1[$i]['nota'] == null){
                             exit;
                           }
                         }
