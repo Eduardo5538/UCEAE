@@ -210,7 +210,7 @@ CREATE TABLE `tab_alunos` (
   `deficiencia`  varchar(90),
   `email` varchar(50) DEFAULT NULL unique,
   `datanasc_aluno` date DEFAULT NULL,
-  `cep_aluno` int(8) DEFAULT NULL,
+  `cep_aluno` varchar(25) DEFAULT NULL,
   `rua_aluno` varchar(40) DEFAULT NULL,
   `bairro_aluno` varchar(40) DEFAULT NULL,
   `cidade_aluno` varchar(40) DEFAULT NULL,
