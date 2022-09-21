@@ -23,6 +23,8 @@
     catch(PDOException $error){
       echo $error;
     }
+    
+
 
     $tamanho = sizeof($Res1);
     $nota1 = 0;
@@ -369,7 +371,7 @@
                   echo "
                     <div id='card-coment' class='cards-coments'>
                       <div class='card-header'>
-                        <img src='https://cdn-icons-png.flaticon.com/512/17/17004.png' class='card-foto'>
+                        <img src='". $Res1[$i]['imagem_comentario'] ."' class='card-foto'>
                         <p class='card-nome'>".$Res1[$i]['nome']."</p>
                         
                         <h4 class='data'>".$NovaData."</h4>
