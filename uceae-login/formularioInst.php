@@ -14,7 +14,7 @@
   <!-- navbar -->
 	<nav class="navbar navbar-expand-lg navbar-light bg-light" style="height: 70px;">
     <a class="navbar-brand" href="../index.php">
-      <img src="img/UCEAE2.png" alt="" width="130" height="" id="logo1">
+      <img src="img/UCEAE2.png" alt width="130" height id="logo1">
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -82,33 +82,33 @@
           <div class="form__row form__row--two">
             <div class="input form__inline-input">
               <div class="input__container">
-                <input class="input__field" id="nome_inst" name="nome_inst" placeholder="Nome da instituição" required="" type="text" /><label class="input__label" for="nome_inst">Nome da Instituição</label>
+                <input class="input__field" id="nome_inst" name="nome_inst" placeholder="Nome da instituição" required type="text" /><label class="input__label" for="nome_inst">Nome da Instituição</label>
               </div>
             </div>
             <div class="input form__inline-input">
               <div class="input__container">
-                <input class="input__field " id="cnpj" autocomplete="off" maxlength="18" name="cnpj" placeholder="CNPJ" required="" type="text" /><label class="input__label" for="cnpj">CNPJ</label>
+                <input class="input__field " id="cnpj" autocomplete="off" maxlength="18" name="cnpj" placeholder="CNPJ" required type="text" /><label class="input__label" for="cnpj">CNPJ</label>
               </div>
             </div>
           </div>
           <div class="form__row">
             <div class="input">
               <div class="input__container">
-                <input class="input__field" id="email" name="email" placeholder="Email" required="" type="text" /><label class="input__label" for="email">Email</label>
+                <input class="input__field" id="email" name="email" placeholder="Email" required type="text" /><label class="input__label" for="email">Email</label>
               </div>
             </div>
           </div>
           <div class="form__row">
             <div class="input">
               <div class="input__container">
-                <input class="input__field" id="senha" name="senha" placeholder="Senha" required="" type="password" /><label class="input__label" for="senha">Senha</label>
+                <input class="input__field" id="senha" name="senha" placeholder="Senha" required type="password" /><label class="input__label" for="senha">Senha</label>
               </div>
             </div>
           </div>
           <div class="form__row">
             <div class="input">
               <div class="input__container">
-                <input class="input__field" id="confirm_senha" name="confirm_senha" placeholder="Confirmar Senha" required="" type="password" /><label class="input__label" for="confirm_senha">Confirmar Senha</label>
+                <input class="input__field" id="confirm_senha" name="confirm_senha" placeholder="Confirmar Senha" required type="password" /><label class="input__label" for="confirm_senha">Confirmar Senha</label>
               </div>
             </div>
           </div>
@@ -117,21 +117,21 @@
           <div class="form__row">
             <div class="input">
               <div class="input__container">
-                <input class="input__field" id="tel" name="tel" placeholder="Telefone" required="" type="text" /><label class="input__label" for="tel">Telefone</label>
+                <input class="input__field" id="tel" name="tel" placeholder="Telefone" required type="text" /><label class="input__label" for="tel">Telefone</label>
               </div>
             </div>
           </div>
           <div class="form__row">
             <div class="input">
               <div class="input__container">
-                <input class="input__field" id="cep" name="cep" placeholder="CEP" required="" type="text" /><label class="input__label" for="cep">CEP</label>
+                <input class="input__field" id="cep" name="cep" placeholder="CEP" required type="text" /><label class="input__label" for="cep">CEP</label>
               </div>
             </div>
           </div>
           <div class="form__row">
             <div class="input">
               <div class="input__container">
-                <select class="input__field" id="unid_fed" name="unid_fed"placeholder="Unidade Federativa" required="">
+                <select class="input__field" id="unid_fed" name="unid_fed"placeholder="Unidade Federativa" required>
                   <option value="AC" id="AC">AC</option><option value="AL" id="AL">AL</option>
                   <option value="AP" id="AP">AP</option><option value="AM" id="AM">AM</option>
                   <option value="BA" id="BA">BA</option><option value="CE" id="CE">CE</option>
@@ -154,21 +154,28 @@
           <div class="form__row">
             <div class="input">
               <div class="input__container">
-                <input class="input__field" id="rua"  name="rua" placeholder="Rua" required="" type="text" /><label class="input__label" for="rua">Rua</label>
+                <input class="input__field" id="rua"  name="rua" placeholder="Rua" required type="text" /><label class="input__label" for="rua">Rua</label>
               </div>
             </div>
           </div>
           <div class="form__row">
             <div class="input">
               <div class="input__container">
-                <input class="input__field" id="bairro" name="bairro"placeholder="Bairro" required="" type="text" /><label class="input__label" for="bairro">Bairro</label>
+                <input class="input__field" id="bairro" name="bairro"placeholder="Bairro" required type="text" /><label class="input__label" for="bairro">Bairro</label>
               </div>
             </div>
           </div>
           <div class="form__row">
             <div class="input">
               <div class="input__container">
-                <input class="input__field" id="cidade" name="cidade" placeholder="Cidade" required="" type="text" /><label class="input__label" for="cidade">Cidade</label>
+                <input class="input__field" id="cidade" name="cidade" placeholder="Cidade" required type="text" /><label class="input__label" for="cidade">Cidade</label>
+              </div>
+            </div>
+          </div>
+          <div class="form__row">
+            <div class="input">
+              <div class="input__container">
+                <input class="input__field" id="mensalidade" name="mensalidade" placeholder="mensalidade" required type="number" /><label class="input__label" for="mensalidade">Mensalidade</label>
               </div>
             </div>
           </div>
@@ -199,7 +206,7 @@
           <div class="form__row">
             <div class="input-checkbox">
               <div class="input-checkbox__container">
-                <input checked="" class="input-checkbox__field" id="agree" required="" tabindex="0" type="checkbox" /><span class="input-checkbox__square"></span><label class="input-checkbox__label" for="agree">Manter-me logado</label>
+                <input checked class="input-checkbox__field" id="agree" required tabindex="0" type="checkbox" /><span class="input-checkbox__square"></span><label class="input-checkbox__label" for="agree">Manter-me logado</label>
               </div>
             </div>
           </div>

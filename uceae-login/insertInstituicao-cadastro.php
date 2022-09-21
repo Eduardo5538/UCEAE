@@ -15,6 +15,7 @@
     $ft_banner = $_FILES["foto_banner"];
     $ft_prop = $_FILES["foto_propaganda"];
     $comprovante = $_FILES["comprovante"];
+    $mensalidade = $_POST['mensalidade'];
 
   	if (!empty($ft_perfil["name"]))
   	{
@@ -65,7 +66,7 @@
 
     try
     {
-        $inserir = $conexao->prepare("insert into escolas (nome_escola, cnpj, rua_escola, email_escola, cep_escola, cidade_escola, bairro_escola, uf_escola, foto_perfil, foto_banner, foto_prop, telefone_escola, comprovante) values (?,?,?,?,?,?,?,?,?,?,?,?,?)");
+        $inserir = $conexao->prepare("insert into escolas (nome_escola, cnpj, rua_escola, email_escola, cep_escola, cidade_escola, bairro_escola, uf_escola, foto_perfil, foto_banner, foto_prop, telefone_escola, comprovante, mensalidade) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
         $inserir->bindParam(1,$nome);
         $inserir->bindParam(2,$cnpj);
         $inserir->bindParam(3,$rua_inst);
@@ -79,6 +80,7 @@
         $inserir->bindParam(11,$caminho_img2);
         $inserir->bindParam(12,$telefone);
         $inserir->bindParam(13,$caminho_arq);
+        $inserir->bindParam(14,$mensalidade);
 
 
         $inserir->execute();
