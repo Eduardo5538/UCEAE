@@ -57,7 +57,7 @@
   	{   
   		preg_match("/\.(pdf|docx|pptx|jpg|png|webp){1}$/i", $comprovante["name"],$ext);
   		$nome_img = md5(uniqid(time())).".".$ext[1];
-  		$caminho_arq = "../uceae-login/img/".$nome_img;
+  		$caminho_arq = "../uceae-login/docs/".$nome_img;
   		move_uploaded_file($comprovante["tmp_name"], $caminho_arq);
   	}
 
