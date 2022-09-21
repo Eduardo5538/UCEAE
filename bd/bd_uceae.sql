@@ -131,7 +131,7 @@ CREATE TABLE `login` (
   `cod_login` int(11) NOT NULL,
   `CNPJ` varchar(21),
   `CPF`  varchar(21),
-  `login` varchar(20) NOT NULL UNIQUE,
+  `login` varchar(100) NOT NULL UNIQUE,
   `senha` varchar(20) NOT NULL,
   `nome` varchar(40) DEFAULT NULL,
   `imagem` varchar(100) DEFAULT NULL
@@ -208,13 +208,14 @@ CREATE TABLE `tab_alunos` (
   `nome_aluno` varchar(50) DEFAULT NULL,
   `sexo_aluno` enum('f','m') DEFAULT NULL,
   `deficiencia`  varchar(90),
-  `email` varchar(50) DEFAULT NULL unique,
+  `email` varchar(100) DEFAULT NULL unique,
   `datanasc_aluno` date DEFAULT NULL,
   `cep_aluno` varchar(25) DEFAULT NULL,
   `rua_aluno` varchar(40) DEFAULT NULL,
   `bairro_aluno` varchar(40) DEFAULT NULL,
   `cidade_aluno` varchar(40) DEFAULT NULL,
   `uf_aluno` varchar(2) DEFAULT NULL,
+  `foto_aluno` varchar(120) DEFAULT NULL,
   `telefone_aluno` varchar(30)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
