@@ -361,17 +361,26 @@
             }
             else
             {
+              
                 for($i = 0; $i <= sizeof($Res1) - 1; $i++)
                 {
+                      $Data = $Res1[$i]['data'];  
+                      $NovaData = date("d/m/Y", strtotime($Data));   
                   echo "
-                          <div id='card' class='cards'>
-                            <img src='https://cdn-icons-png.flaticon.com/512/17/17004.png' height='120' width='120'>
-                            <h5 class='card-title'>".$Res1[$i]['titulo']."   Nota: " . $Res1[$i]['nota'] . " </h5>
-                            <h4 class='data'>".$Res1[$i]['data']."</h4>
-                            <p class='card-text'>".$Res1[$i]['nome']."</p>
-                            <h6'>".$Res1[$i]['conteudo']."</h6>
-                          </div>
-                      <br><br><br>";
+                    <div id='card-coment' class='cards-coments'>
+                      <div class='card-header'>
+                        <img src='https://cdn-icons-png.flaticon.com/512/17/17004.png' class='card-foto'>
+                        <p class='card-nome'>".$Res1[$i]['nome']."</p>
+                        
+                        <h4 class='data'>".$NovaData."</h4>
+                      </div>
+                      <div class='card-content'>
+                        <label class='nota2' value='". $Res1[$i]['nota'] ."'>" . $Res1[$i]['nota'] ."</label> 
+                        <h5 class='card-title'>".$Res1[$i]['titulo']."</h5>
+                        <h6 class='card-msg'>".$Res1[$i]['conteudo']."</h6>
+                      </div>
+                    </div>
+                    <br><br><br>";
                 }
                 
             }

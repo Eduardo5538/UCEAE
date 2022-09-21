@@ -33,4 +33,17 @@ function CarregaPagina() {
             })
         }
     })
+    
+    const estrelas = document.querySelectorAll('.starComent');
+    let nota = document.querySelector('.nota2').value;
+    estrelas.forEach((estrela, e) => {
+        if(nota >= e + 1)
+        {
+            estrela.innerHTML = '&#9733';
+        }
+        else
+        {
+            estrela.innerHTML = '&#9734';
+        }
+    })
 }

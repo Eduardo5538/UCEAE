@@ -417,6 +417,7 @@ html {
     flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
+    margin-left: 2rem;
 }
 
 .star {
@@ -466,4 +467,48 @@ html {
 .btn-enviar:hover {
     background-color: rgba(231, 131, 0, 0.966);
     color: #fff;
+}
+
+/* Cards de Comentários */
+
+.cards-coments{
+    width: 70%;
+    margin-left: 5rem;
+}
+.card-header{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: center;
+    background-color: transparent;
+}
+.card-header .card-nome{
+    font-size: 30px;
+    margin-left: -35%;
+    font-weight: 100;
+}
+.card-header .data{
+    font-size: 20px;
+    margin-left: -70%;
+    font-weight: 100;
+    color: gray;
+    font-weight: bold;
+}
+.card-content{
+    font-family: arial;
+    padding-top: 1rem;
+    margin-left: 2rem;
+    margin-top: .5rem;
+}
+
+.card-content .card-title{
+    font-size: 30px;
+    padding-bottom: .4rem;
+}
+.card-content .card-msg{
+    font-size: 20px;
+}
+.card-foto{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
 }
