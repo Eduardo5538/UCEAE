@@ -300,41 +300,45 @@
 
  
     <!-- Inserir Comentário -->
-    <?php
-    
-    if(!isset($_SESSION['CNPJ']) && isset($_SESSION['CPF'])){
-      if($_SESSION['CPF'] != ''){
-        echo "<br><br><br>";
-        echo "<h1 id='h1'>Inserir Comentário</h1>
-          <form id='form_comentario' method='post'> 
-              <input type='text' name='titulo' id='txt_titulo' class='input-text titulo' placeholder='Título'>
-              
-              <br><br>
-              <input type='text'  name='comentario' id='txt_comentario' class='input-text comentario' placeholder='Comentário'>
-              <br>
-              <input type='hidden' value='". $cnpj ."' name='cnpj' id='cnpj'>
-              <input type='hidden' name='nota' id='nota'>
-              <input type='button' value='Comentar' onclick='inserir()' id='btn_comentario' class='btn btn-enviar'>
-              
-          </form>
-          <div class='star_rating' id='div-estrelas'>
-                <button class='star'>&#9734;</button>
-                <button class='star'>&#9734;</button>
-                <button class='star'>&#9734;</button>       
-                <button class='star'>&#9734;</button>
-                <button class='star'>&#9734;</button>
-              </div>
-          ";
-      
-      }
-    }
-    else{
-      echo "<h1 id='mensagem'>Logue-se para comentar</h1>";
-    }
 
+    <div class="area-comentario" id="div-comentario">
+      <?php
+        if(!isset($_SESSION['CNPJ']) && isset($_SESSION['CPF'])){
+          if($_SESSION['CPF'] != ''){
+            echo "<br><br><br>";
+            echo "<h1 id='h1' class='h1-titulo'>Inserir Comentário</h1>
+            <div class ='formulario'>
+              <form id='form_comentario' method='post'> 
+                <div class ='div-titulo-coment'>
+                  <input type='text' name='titulo' id='txt_titulo' class='input-text titulo' placeholder='Título'>
+                  <div class='star_rating' id='div-estrelas'>
+                  <label class='star'>&#9734;</label>
+                  <label class='star'>&#9734;</label>
+                  <label class='star'>&#9734;</label>       
+                  <label class='star'>&#9734;</label>
+                  <label class='star'>&#9734;</label>
+                </div>
+                </div> 
+                  <br><br>
+                <div class ='div-texto-coment'>
+                  <input type='text'  name='comentario' id='txt_comentario' class='input-text comentario' placeholder='Comentário'>
+                </div>
+                <br>
+                <input type='hidden' value='". $cnpj ."' name='cnpj' id='cnpj'>
+                <input type='hidden' name='nota' id='nota'>
+                <input type='button' value='Comentar' onclick='inserir()' id='btn_comentario' class='btn btn-enviar'>
+              </form>
+            </div>
+              ";
+          
+          }
+        }
+        else{
+          echo "<h1 id='mensagem'>Logue-se para comentar</h1>";
+        }
+      ?>
+    </div>
 
-
-    ?>
     <!-- Área de Comentários -->
     
    <div class="comentarios">
