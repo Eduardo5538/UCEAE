@@ -374,9 +374,14 @@
                         
                         <h4 class='data'>".$NovaData."</h4>
                       </div>
-                      <div class='card-content'>
-                        <label class='nota2' value='". $Res1[$i]['nota'] ."'>" . $Res1[$i]['nota'] ."</label> 
-                        <h5 class='card-title'>".$Res1[$i]['titulo']."</h5>
+                      <div class='card-content'>";
+                        for($j = 0; $j < $Res1[$i]['nota']; $j++){
+                          echo "<label class='star2'>&#9733;</label>";
+                          if($Res1[$j]['nota'] == null){
+                            exit;
+                          }
+                        }
+                        echo "<h5 class='card-title'>".$Res1[$i]['titulo']."</h5>
                         <h6 class='card-msg'>".$Res1[$i]['conteudo']."</h6>
                       </div>
                     </div>

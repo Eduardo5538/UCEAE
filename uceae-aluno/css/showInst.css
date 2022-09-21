@@ -426,6 +426,12 @@ html {
     background-color: unset;
     border: none;
 }
+.star2 {
+    font-size: 3rem;
+    color: #ff9800;
+    background-color: unset;
+    border: none;
+}
 
 .star:hover {
     cursor: pointer;
