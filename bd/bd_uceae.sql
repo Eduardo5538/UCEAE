@@ -62,6 +62,7 @@ CREATE TABLE `escolas` (
   `foto_perfil` varchar(120) DEFAULT NULL,
   `foto_banner` varchar(120) DEFAULT NULL,
   `comprovante` varchar(120) DEFAULT NULL,
+  `mensalidade` decimal(7,2) DEFAULT NULL,
   `foto_prop` varchar(120) DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
