@@ -18,8 +18,29 @@
 
     $nome = $nome_aluno . " " . $sobrenome_aluno;
 
+    $ft_perfil = $_FILES['icon'];
+
+    echo $ft_perfil['name'];
+
+    if (!empty($ft_perfil["name"]))
+  	{
+  		if (!preg_match("/^image\/(jpeg|jpg|png|gif|bmp|ico)$/", $ft_perfil["type"]))
+  		{
+  			echo "Formato de Arquivo Inválido, Selecione uma Imagem!";
+  			exit;
+  		}
+  		preg_match("/\.(jpeg|jpg|png|gif|jfif|bmp|ico){1}$/i", $ft_perfil["name"],$ext);
+  		$nome_img = md5(uniqid(time())).".".$ext[1];
+  		$caminho_img = "../uceae-login/img/".$nome_img;
+  		move_uploaded_file($ft_perfil["tmp_name"], $caminho_img);
+  	}
+
+    echo $caminho_img;
+
     try
     {
+
+
         $inserir = $conexao->prepare("insert into tab_alunos (cpf_aluno, nome_aluno,  email, datanasc_aluno, cep_aluno, rua_aluno, bairro_aluno, cidade_aluno, uf_aluno, telefone_aluno, deficiencia) values (?,?,?,?,?,?,?,?,?,?,?)");
         $inserir->bindParam(1,$cpf_aluno);
         $inserir->bindParam(2,$nome);
@@ -36,11 +57,12 @@
 
         $inserir->execute();
 
-        $inserir = $conexao->prepare("insert into login(login, senha, CPF, nome) values (?,?,?,?)");
+        $inserir = $conexao->prepare("insert into login(login, senha, CPF, nome, imagem) values (?,?,?,?,?)");
         $inserir->bindParam(1, $email_aluno);
         $inserir->bindParam(2, $senha);
         $inserir->bindParam(3,$cpf_aluno);
         $inserir->bindParam(4,$nome);
+        $inserir->bindParam(5,$caminho_img);
         $inserir->execute();
 
         if($inserir->rowCount() > 0)
