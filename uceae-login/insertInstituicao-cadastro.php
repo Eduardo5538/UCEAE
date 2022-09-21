@@ -14,46 +14,58 @@
     $ft_perfil = $_FILES["foto_perfil"];
     $ft_banner = $_FILES["foto_banner"];
     $ft_prop = $_FILES["foto_propaganda"];
+    $comprovante = $_FILES["comprovante"];
 
   	if (!empty($ft_perfil["name"]))
   	{
-  		if (!preg_match("/^image\/(jpeg|jpg|png|gif|bmp|ico)$/", $ft_perfil["type"]))
+  		if (!preg_match("/^image\/(jpeg|jpg|png|gif|bmp|ico|webp)$/", $ft_perfil["type"]))
   		{
   			echo "Formato de Arquivo Inválido, Selecione uma Imagem!";
   			exit;
   		}
-  		preg_match("/\.(jpeg|jpg|png|gif|jfif|bmp|ico){1}$/i", $ft_perfil["name"],$ext);
+  		preg_match("/\.(jpeg|jpg|png|gif|jfif|bmp|ico|webp){1}$/i", $ft_perfil["name"],$ext);
   		$nome_img = md5(uniqid(time())).".".$ext[1];
   		$caminho_img = "../uceae-login/img/".$nome_img;
   		move_uploaded_file($ft_perfil["tmp_name"], $caminho_img);
   	}
       if (!empty($ft_prop["name"]))
   	{
-  		if (!preg_match("/^image\/(jpeg|jpg|png|gif|bmp|ico)$/", $ft_prop["type"]))
+  		if (!preg_match("/^image\/(jpeg|jpg|png|gif|bmp|ico|webp)$/", $ft_prop["type"]))
   		{
   			echo "Formato de Arquivo Inválido, Selecione uma Imagem!";
   			exit;
   		}
-  		preg_match("/\.(jpeg|jpg|png|gif|jfif|bmp|ico){1}$/i", $ft_prop["name"],$ext);
+  		preg_match("/\.(jpeg|jpg|png|gif|jfif|bmp|ico|webp){1}$/i", $ft_prop["name"],$ext);
   		$nome_img = md5(uniqid(time())).".".$ext[1];
   		$caminho_img2 = "../uceae-login/img/".$nome_img;
   		move_uploaded_file($ft_prop["tmp_name"], $caminho_img2);
   	}
       if (!empty($ft_banner["name"]))
   	{
-  		if (!preg_match("/^image\/(jpeg|jpg|png|gif|bmp|ico)$/", $ft_banner["type"]))
+  		if (!preg_match("/^image\/(jpeg|jpg|png|gif|bmp|ico|webp)$/", $ft_banner["type"]))
   		{
   			echo "Formato de Arquivo Inválido, Selecione uma Imagem!";
   			exit;
   		}
-  		preg_match("/\.(jpeg|jpg|png|gif|jfif|bmp|ico){1}$/i", $ft_banner["name"],$ext);
+  		preg_match("/\.(jpeg|jpg|png|gif|jfif|bmp|ico|webp){1}$/i", $ft_banner["name"],$ext);
   		$nome_img = md5(uniqid(time())).".".$ext[1];
   		$caminho_img3 = "../uceae-login/img/".$nome_img;
   		move_uploaded_file($ft_banner["tmp_name"], $caminho_img3);
   	}
+
+      if (!empty($comprovante["name"]))
+  	{   
+  		preg_match("/\.(pdf|docx|pptx|jpg|png|webp){1}$/i", $comprovante["name"],$ext);
+  		$nome_img = md5(uniqid(time())).".".$ext[1];
+  		$caminho_arq = "../uceae-login/img/".$nome_img;
+  		move_uploaded_file($comprovante["tmp_name"], $caminho_arq);
+  	}
+
+
+
     try
     {
-        $inserir = $conexao->prepare("insert into escolas (nome_escola, cnpj, rua_escola, email_escola, cep_escola, cidade_escola, bairro_escola, uf_escola, foto_perfil, foto_banner, foto_prop, telefone_escola) values (?,?,?,?,?,?,?,?,?,?,?,?)");
+        $inserir = $conexao->prepare("insert into escolas (nome_escola, cnpj, rua_escola, email_escola, cep_escola, cidade_escola, bairro_escola, uf_escola, foto_perfil, foto_banner, foto_prop, telefone_escola, comprovante) values (?,?,?,?,?,?,?,?,?,?,?,?,?)");
         $inserir->bindParam(1,$nome);
         $inserir->bindParam(2,$cnpj);
         $inserir->bindParam(3,$rua_inst);
@@ -66,6 +78,7 @@
         $inserir->bindParam(10,$caminho_img3);
         $inserir->bindParam(11,$caminho_img2);
         $inserir->bindParam(12,$telefone);
+        $inserir->bindParam(13,$caminho_arq);
 
 
         $inserir->execute();

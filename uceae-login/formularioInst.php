@@ -191,6 +191,12 @@
             </div>
           </div>
           <div class="form__row">
+            <div class="component component--primary form__button">
+            <label for="comprovante" id='label_comprovante'>Comprovante de Acessibilidade</label>
+            <input type="file" name="comprovante" id='comprovante'><br><br>
+            </div>
+          </div>
+          <div class="form__row">
             <div class="input-checkbox">
               <div class="input-checkbox__container">
                 <input checked="" class="input-checkbox__field" id="agree" required="" tabindex="0" type="checkbox" /><span class="input-checkbox__square"></span><label class="input-checkbox__label" for="agree">Manter-me logado</label>
