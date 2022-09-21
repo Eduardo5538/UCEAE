@@ -61,6 +61,7 @@ CREATE TABLE `escolas` (
   `bairro_escola` varchar(40) DEFAULT NULL,
   `foto_perfil` varchar(120) DEFAULT NULL,
   `foto_banner` varchar(120) DEFAULT NULL,
+  `comprovante` varchar(120) DEFAULT NULL,
   `foto_prop` varchar(120) DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
@@ -265,3 +266,4 @@ COMMIT;
 SELECT * FROM LOGIN;
 SELECT * FROM tab_alunos;
 SELECT * FROM comentarios;
+SELECT * FROM escolas;
