@@ -107,7 +107,7 @@ footer{
     background-size: 30px 30px;
     background-position: center;
 }
-#modalidade{
+#radio{
     display: flex;
     gap: 1.4295925661186561vw;
     margin: 0 auto;
@@ -148,49 +148,6 @@ footer{
 }
 .grande{
 	font-size: 4.444444444444445vw;
-}
-input[type=range] {
-    -webkit-appearance: none;
-    margin: 18px 0;
-    width: 80%;
-}
-input[type=range]:focus {
-    outline: none;
-}
-input[type=range]::-webkit-slider-runnable-track {
-    width: 80%;
-    height: 8.4px;
-    cursor: pointer;
-    background: #47525E;
-    border-radius: 1.3px;
-}
-input[type=range]::-webkit-slider-thumb {
-    border: 1px solid #8492A6;
-    height: 33px;
-    width: 33px;
-    border-radius: 150px;
-    background: #ffffff;
-    cursor: pointer;
-    -webkit-appearance: none;
-    margin-top: -14px;
-}
-input[type=range]:focus::-webkit-slider-runnable-track {
-    background: #47525E;
-}
-input[type=range]::-moz-range-track {
-    width: 80%;
-    height: 8.4px;
-    cursor: pointer;
-    background: #47525E;
-    border-radius: 1.3px;
-}
-input[type=range]::-moz-range-thumb {
-    border: 1px solid #8492A6;
-    height: 33px;
-    width: 33px;
-    border-radius: 150px;
-    background: #ffffff;
-    cursor: pointer;
 }
 .modal-open{
 	padding-right: 0 !important;
@@ -261,6 +218,10 @@ input[type=range]::-moz-range-thumb {
 #card{
 	width: 60%;
 }
+#cards{
+    display: block;
+    text-align: -webkit-center;
+}
 #img-card{
 	height: 400px;
 }
@@ -274,6 +235,9 @@ input[type=range]::-moz-range-thumb {
 }
 .btn-secondary{
 	background-color: #47525E;
+}
+#amount{
+    text-align: center;
 }
 
 /* clears the ‘X’ from Internet Explorer */
