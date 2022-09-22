@@ -46,24 +46,24 @@
         if($search != null && $estado != null && $cidade != null && $modalidade == null
         && $acessibilidade == null && $preco[0] != null && $preco[1] != null){
             $Comando = $conexao->prepare("SELECT * from escolas WHERE nome_escola LIKE :pesquisa
-            AND mensalidade BETWEEN :valor1 AND :valor2 AND cidade_escola = :cidade AND uf_escola = :uf");
+             AND cidade_escola LIKE :cidade AND uf_escola = :uf AND mensalidade BETWEEN :valor1 AND :valor2");
             $Comando->bindValue(':pesquisa', '%' . $search . '%');
+            $Comando->bindValue(':cidade', '%' . $cidade . '%');
+            $Comando->bindParam(':uf', $estado);
             $Comando->bindParam(':valor1', $preco[0]);
             $Comando->bindParam(':valor2', $preco[1]);
-            $Comando->bindParam(':cidade', $cidade);
-            $Comando->bindParam(':uf', $estado);
         }
 
         //busca com barra de busca, cidade, estado, modalidade e mensalidade
         if($search != null && $estado != null && $cidade != null && $modalidade != null
         && $acessibilidade == null && $preco[0] != null && $preco[1] != null){
             $Comando = $conexao->prepare("SELECT * from escolas WHERE nome_escola LIKE :pesquisa
-            AND mensalidade BETWEEN :valor1 AND :valor2 AND cidade_escola = :cidade AND uf_escola = :uf
+            AND mensalidade BETWEEN :valor1 AND :valor2 AND cidade_escola LIKE :cidade AND uf_escola = :uf
             AND modalidade = :modalidade");
             $Comando->bindValue(':pesquisa', '%' . $search . '%');
             $Comando->bindParam(':valor1', $preco[0]);
             $Comando->bindParam(':valor2', $preco[1]);
-            $Comando->bindParam(':cidade', $cidade);
+            $Comando->bindValue(':cidade', '%' . $cidade . '%');
             $Comando->bindParam(':uf', $estado);
             $Comando->bindParam(':modalidade', $modalidade);
         }
@@ -72,12 +72,12 @@
         if($search != null && $estado != null && $cidade != null && $modalidade != null
         && $acessibilidade != null && $preco[0] != null && $preco[1] != null){
             $Comando = $conexao->prepare("SELECT * from escolas WHERE nome_escola LIKE :pesquisa
-            AND mensalidade BETWEEN :valor1 AND :valor2 AND cidade_escola = :cidade AND uf_escola = :uf
+            AND mensalidade BETWEEN :valor1 AND :valor2 AND cidade_escola LIKE :cidade AND uf_escola = :uf
             AND modalidade = :modalidade AND acessibilidade = :acessibilidade");
             $Comando->bindValue(':pesquisa', '%' . $search . '%');
             $Comando->bindParam(':valor1', $preco[0]);
             $Comando->bindParam(':valor2', $preco[1]);
-            $Comando->bindParam(':cidade', $cidade);
+            $Comando->bindValue(':cidade', '%' . $cidade . '%');
             $Comando->bindParam(':uf', $estado);
             $Comando->bindParam(':modalidade', $modalidade);
             $Comando->bindParam(':acessibilidade', $acessibilidade);
@@ -85,18 +85,18 @@
 
         //só cidade e estado
         if($search == null && $estado != null && $cidade != null && $modalidade == null
-        && $acessibilidade == null && $preco[0] == 0 && $preco[1] == 10000){
+        && $acessibilidade == null && $preco[0] != null && $preco[1] != null){
             $Comando = $conexao->prepare("SELECT * from escolas WHERE mensalidade BETWEEN :valor1 AND :valor2
-            AND cidade_escola = :cidade AND uf_escola = :uf");
+            AND cidade_escola LIKE :cidade AND uf_escola = :uf");
             $Comando->bindParam(':valor1', $preco[0]);
             $Comando->bindParam(':valor2', $preco[1]);
-            $Comando->bindParam(':cidade', $cidade);
+            $Comando->bindValue(':cidade', '%' . $cidade . '%');
             $Comando->bindParam(':uf', $estado);
         }
 
         //só modalidade
         if($search == null && $estado == 'AC' && $cidade == null && $modalidade != null
-        && $acessibilidade == null && $preco[0] == 0 && $preco[1] == 10000){
+        && $acessibilidade == null && $preco[0] != null && $preco[1] != null){
             $Comando = $conexao->prepare("SELECT * from escolas WHERE mensalidade BETWEEN :valor1 AND :valor2
             AND modalidade = :modalidade");
             $Comando->bindParam(':valor1', $preco[0]);
@@ -125,25 +125,25 @@
 
         //só estado e cidade com modalidade
         if($search == null && $estado != null && $cidade != null && $modalidade != null
-        && $acessibilidade == null && $preco[0] == 0 && $preco[1] == 10000){
+        && $acessibilidade == null && $preco[0] != null && $preco[1] != null){
             $Comando = $conexao->prepare("SELECT * from escolas WHERE mensalidade BETWEEN :valor1 
-            AND :valor2 AND cidade_escola = :cidade AND uf_escola = :uf
+            AND :valor2 AND cidade_escola LIKE :cidade AND uf_escola = :uf
             AND modalidade = :modalidade");
             $Comando->bindParam(':valor1', $preco[0]);
             $Comando->bindParam(':valor2', $preco[1]);
-            $Comando->bindParam(':cidade', $cidade);
+            $Comando->bindValue(':cidade', '%' . $cidade . '%');
             $Comando->bindParam(':uf', $estado);
             $Comando->bindParam(':modalidade', $modalidade);
         }
 
         //só estado e cidade com acessibilidade
         if($search == null && $estado != null && $cidade != null && $modalidade == null
-        && $acessibilidade != null && $preco[0] == 0 && $preco[1] == 10000){
+        && $acessibilidade != null && $preco[0] != null && $preco[1] != null){
             $Comando = $conexao->prepare("SELECT * from escolas WHERE mensalidade BETWEEN :valor1 
-            AND :valor2 AND cidade_escola = :cidade AND uf_escola = :uf AND acessibilidade = :acessibilidade");
+            AND :valor2 AND cidade_escola LIKE :cidade AND uf_escola = :uf AND acessibilidade = :acessibilidade");
             $Comando->bindParam(':valor1', $preco[0]);
             $Comando->bindParam(':valor2', $preco[1]);
-            $Comando->bindParam(':cidade', $cidade);
+            $Comando->bindValue(':cidade', '%' . $cidade . '%');
             $Comando->bindParam(':uf', $estado);
             $Comando->bindParam(':acessibilidade', $acessibilidade);
         }
@@ -152,16 +152,16 @@
         if($search == null && $estado != null && $cidade != null && $modalidade == null
         && $acessibilidade == null && $preco[0] != null && $preco[1] != null){
             $Comando = $conexao->prepare("SELECT * from escolas WHERE mensalidade BETWEEN :valor1 
-            AND :valor2 AND cidade_escola = :cidade AND uf_escola = :uf");
+            AND :valor2 AND cidade_escola LIKE :cidade AND uf_escola = :uf");
             $Comando->bindParam(':valor1', $preco[0]);
             $Comando->bindParam(':valor2', $preco[1]);
-            $Comando->bindParam(':cidade', $cidade);
+            $Comando->bindValue(':cidade', '%' . $cidade . '%');
             $Comando->bindParam(':uf', $estado);
         }
 
         //só modalidade com busca
         if($search != null && $estado == 'AC' && $cidade == null && $modalidade != null
-        && $acessibilidade == null && $preco[0] == 0 && $preco[1] == 10000){
+        && $acessibilidade == null && $preco[0] != null && $preco[1] != null){
             $Comando = $conexao->prepare("SELECT * from escolas WHERE nome_escola LIKE :pesquisa
             AND mensalidade BETWEEN :valor1 AND :valor2 AND modalidade = :modalidade");
             $Comando->bindValue(':pesquisa', '%' . $search . '%');
@@ -172,7 +172,7 @@
 
         //só modalidade com acessibilidade
         if($search == null && $estado == 'AC' && $cidade == null && $modalidade != null
-        && $acessibilidade != null && $preco[0] == 0 && $preco[1] == 10000){
+        && $acessibilidade != null && $preco[0] != null && $preco[1] != null){
             $Comando = $conexao->prepare("SELECT * from escolas WHERE mensalidade BETWEEN :valor1 AND :valor2 
             AND modalidade = :modalidade AND acessibilidade = :acessibilidade");
             $Comando->bindParam(':valor1', $preco[0]);
@@ -193,7 +193,7 @@
 
         //só acessibilidade com buscar
         if($search != null && $estado == 'AC' && $cidade == null && $modalidade == null
-        && $acessibilidade != null && $preco[0] == 0 && $preco[1] == 10000){
+        && $acessibilidade != null && $preco[0] != null && $preco[1] != null){
             $Comando = $conexao->prepare("SELECT * from escolas WHERE nome_escola LIKE :pesquisa
             AND mensalidade BETWEEN :valor1 AND :valor2 AND acessibilidade = :acessibilidade");
             $Comando->bindValue(':pesquisa', '%' . $search . '%');
@@ -216,29 +216,79 @@
         if($search == null && $estado != null && $cidade != null && $modalidade != null
         && $acessibilidade != null && $preco[0] != null && $preco[1] != null){
             $Comando = $conexao->prepare("SELECT * from escolas WHERE mensalidade BETWEEN :valor1 AND :valor2 
-            AND cidade_escola = :cidade AND uf_escola = :uf
+            AND cidade_escola LIKE :cidade AND uf_escola = :uf
             AND modalidade = :modalidade AND acessibilidade = :acessibilidade");
             $Comando->bindParam(':valor1', $preco[0]);
             $Comando->bindParam(':valor2', $preco[1]);
-            $Comando->bindParam(':cidade', $cidade);
+            $Comando->bindValue(':cidade', '%' . $cidade . '%');
             $Comando->bindParam(':uf', $estado);
             $Comando->bindParam(':modalidade', $modalidade);
             $Comando->bindParam(':acessibilidade', $acessibilidade);
         }
 
+        //busca com cidade, estado, modalidade e mensalidade
+        if($search == null && $estado != null && $cidade != null && $modalidade != null
+        && $acessibilidade == null && $preco[0] != null && $preco[1] != null){
+            $Comando = $conexao->prepare("SELECT * from escolas WHERE mensalidade BETWEEN :valor1 AND :valor2 
+            AND cidade_escola LIKE :cidade AND uf_escola = :uf AND modalidade = :modalidade");
+            $Comando->bindParam(':valor1', $preco[0]);
+            $Comando->bindParam(':valor2', $preco[1]);
+            $Comando->bindValue(':cidade', '%' . $cidade . '%');
+            $Comando->bindParam(':uf', $estado);
+            $Comando->bindParam(':modalidade', $modalidade);
+        }
+
+        //modalidade, acessibilidade e mensalidade
+        if($search == null && $estado == "AC" && $cidade == null && $modalidade != null
+        && $acessibilidade != null && $preco[0] != null && $preco[1] != null){
+            $Comando = $conexao->prepare("SELECT * from escolas WHERE mensalidade BETWEEN :valor1 AND :valor2 
+            AND modalidade = :modalidade AND acessibilidade = :acessibilidade");
+            $Comando->bindParam(':valor1', $preco[0]);
+            $Comando->bindParam(':valor2', $preco[1]);
+            $Comando->bindParam(':modalidade', $modalidade);
+            $Comando->bindParam(':acessibilidade', $acessibilidade);
+        }
+
+        //busca com barra de busca, modalidade, acessibilidade e mensalidade
+        if($search != null && $estado == "AC" && $cidade == null && $modalidade != null
+        && $acessibilidade != null && $preco[0] != null && $preco[1] != null){
+            $Comando = $conexao->prepare("SELECT * from escolas WHERE nome_escola LIKE :pesquisa
+            AND mensalidade BETWEEN :valor1 AND :valor2 AND modalidade = :modalidade 
+            AND acessibilidade = :acessibilidade");
+            $Comando->bindValue(':pesquisa', '%' . $search . '%');
+            $Comando->bindParam(':valor1', $preco[0]);
+            $Comando->bindParam(':valor2', $preco[1]);
+            $Comando->bindParam(':modalidade', $modalidade);
+            $Comando->bindParam(':acessibilidade', $acessibilidade);
+        }
+
+        //busca com barra de busca, cidade, estado, acessibilidade e mensalidade
+        if($search != null && $estado != null && $cidade != null && $modalidade == null
+        && $acessibilidade != null && $preco[0] != null && $preco[1] != null){
+            $Comando = $conexao->prepare("SELECT * from escolas WHERE nome_escola LIKE :pesquisa
+            AND mensalidade BETWEEN :valor1 AND :valor2 AND cidade_escola LIKE :cidade AND uf_escola = :uf
+            AND acessibilidade = :acessibilidade");
+            $Comando->bindValue(':pesquisa', '%' . $search . '%');
+            $Comando->bindParam(':valor1', $preco[0]);
+            $Comando->bindParam(':valor2', $preco[1]);
+            $Comando->bindValue(':cidade', '%' . $cidade . '%');
+            $Comando->bindParam(':uf', $estado);
+            $Comando->bindParam(':acessibilidade', $acessibilidade);
+        }
+
         if($Retorno != 'vazio'){
             $Comando->execute();
-            $resultado = $Comando->fetchAll();
 
             if($Comando->rowCount() > 0){
-                $Retorno = 'funcionou';
+                $resultado = json_encode($Comando->fetchAll());
+                $Retorno = $resultado;
             }
             else{
-                $Retorno = 'nao encontrado';
+                $Retorno = 'Não Foi encontrado';
             }
         }
         else{
-            $Retorno = 'vazio';
+            $Retorno = 'Não há filtros';
         }
         echo $Retorno;
 }
