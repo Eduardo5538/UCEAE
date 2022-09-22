@@ -490,3 +490,71 @@ textarea{
   color: white;
   transition: .5s;
 }
+
+.imagens-input{
+  display:none;
+}
+
+.label-imagens-input{
+  border: 2px solid #976DD0;
+  display: inline-block;
+  background-color: transparent;
+  padding: 10px;
+  font-size: 25px;
+  color: #976DD0;
+  cursor: pointer;
+  margin-bottom: 2rem;
+  transition: .5s;
+}
+
+.label-imagens-input:hover{
+  color: white;
+  background-color: #976DD0;
+}
+.btn-apagaImg{
+  text-decoration: none;
+  background-color: transparent;
+  color: rgb(1, 52, 192);
+  border: 2px solid rgb(1, 52, 192);
+  padding: 15px;
+  transition: .5s;
+  border-radius: .5rem;
+
+}
+
+.btn-apagaImg:hover{
+  transition: .5s;
+  color: #fff;
+  background-color: rgb(1, 52, 192);
+}
+
+.btn-enviar-img{
+  border: 2px solid #976DD0;
+  display: inline-block;
+  background-color: transparent;
+  padding: 10px;
+  font-size: 25px;
+  color: #976DD0;
+  cursor: pointer;
+  margin-bottom: 2rem;
+  transition: .5s;  
+}
+
+.btn-enviar-img:hover{
+  color: white;
+  background-color: #976DD0;
+}
+/* imagens inst */
+
+#imagens_inst{
+  text-align: center;
+  margin: 0 auto;
+  width: 70%;
+  height: 350px;
+  border: 2px solid black;
+}
+.card-imagens-inst{
+  width: 100%;
+  height: 350px;
+}
+

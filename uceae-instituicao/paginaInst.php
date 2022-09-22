@@ -272,8 +272,12 @@
         </div>
         <div class="meio div-imagens">
           <form action="inserirImg.php" method="post" name="cadastroImg" id="frm_cadImg" enctype="multipart/form-data">
-          <input type="file" name="imagensF[]" id='imagens[]'>
-          <input type="button" id='btn_img' value="Enviar Imagem" onclick="insertImg()">
+          <label for="imagens[]" class="label-imagens-input">
+            <input type="file" name="imagensF[]" id='imagens[]' class="imagens-input" >
+            Inserir Imagens
+          </label>
+
+          <input type="button" id='btn_img' value="Enviar Imagem" class='btn-enviar-img' onclick="insertImg()">
         </form>
           <div id="imagens_inst"></div>
         </div>

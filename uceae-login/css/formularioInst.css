@@ -464,3 +464,19 @@ rgba(0, 0, 0, 0.25)
   color: white;
   cursor: pointer;
 }
+
+/* Seção Imagens Inst */
+
+#imagens_inst{
+  text-align: center;
+  width: 70%;
+  margin: 0 auto;
+}
+#imagens_inst img{
+  width: 100%;
+  height: 400px;
+}
+#imagens_inst a{
+  text-decoration: none;
+  font-size: 30px;
+}

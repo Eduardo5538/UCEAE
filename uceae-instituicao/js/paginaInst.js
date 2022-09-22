@@ -68,8 +68,8 @@ function consultaImg(){
         var bloco = "";
         h = Res.length;
         for(var j=0; j < h; j++){
-            bloco += "<img src='" + Res[j]['imagem'] + "'>"
-            bloco += "<a href='deletarImg.php?cod_imagem="+ Res[j]['cod_imagem'] +"'>Apagar imagem</a><br>"
+            bloco += "<img src='" + Res[j]['imagem'] + "' class='card-imagens-inst'><br><br>"
+            bloco += "<a href='deletarImg.php?cod_imagem="+ Res[j]['cod_imagem'] +"' class='btn-apagaImg'>Apagar imagem</a><br>"
         }
         
         $('#imagens_inst').append(bloco)
