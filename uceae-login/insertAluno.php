@@ -41,7 +41,7 @@
     {
 
 
-        $inserir = $conexao->prepare("insert into tab_alunos (cpf_aluno, nome_aluno,  email, datanasc_aluno, cep_aluno, rua_aluno, bairro_aluno, cidade_aluno, uf_aluno, telefone_aluno, deficiencia) values (?,?,?,?,?,?,?,?,?,?,?)");
+        $inserir = $conexao->prepare("insert into tab_alunos (cpf_aluno, nome_aluno,  email, datanasc_aluno, cep_aluno, rua_aluno, bairro_aluno, cidade_aluno, uf_aluno, telefone_aluno, deficiencia, foto_aluno) values (?,?,?,?,?,?,?,?,?,?,?,?)");
         $inserir->bindParam(1,$cpf_aluno);
         $inserir->bindParam(2,$nome);
         $inserir->bindParam(3,$email_aluno);
@@ -53,6 +53,7 @@
         $inserir->bindParam(9,$uf_aluno);
         $inserir->bindParam(10,$telefone_aluno);
         $inserir->bindParam(11,$deficiencia);
+        $inserir->bindParam(12,$caminho_img);
 
 
         $inserir->execute();
