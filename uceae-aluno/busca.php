@@ -10,7 +10,10 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-  
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+
 	<title>UCEAE</title>
 
     <script type="text/javascript">
@@ -125,35 +128,33 @@
     </p>
     
     <div id="filtros">
+      <form action="" method="POST" id="formPesquisa" name="formPesquisa">
         <div id="inputs">
-            <select>
-                <option>Estado</option>
-                <option>Estado1</option>
-                <option>Estado2</option>
+            <select onchange="trocacidade()" id="estado">
+              <option value="AC" id="AC">AC</option><option value="AL" id="AL">AL</option>
+              <option value="AP" id="AP">AP</option><option value="AM" id="AM">AM</option>
+              <option value="BA" id="BA">BA</option><option value="CE" id="CE">CE</option>
+              <option value="DF" id="DF">DF</option><option value="ES" id="ES">ES</option>
+              <option value="GO" id="GO">GO</option><option value="MA" id="MA">MA</option>
+              <option value="MT" id="MT">MT</option><option value="MS" id="MS">MS</option>
+              <option value="MG" id="MG">MG</option><option value="PA" id="PA">PA</option>
+              <option value="PB" id="PB">PB</option><option value="PR" id="PR">PR</option>
+              <option value="PE" id="PE">PE</option><option value="PI" id="PI">PI</option>
+              <option value="RJ" id="RJ">RJ</option><option value="RN" id="RN">RN</option>
+              <option value="RS" id="RS">RS</option><option value="RO" id="RO">RO</option>
+              <option value="RR" id="RR">RR</option><option value="SC" id="SC">SC</option>
+              <option value="SP" id="SP">SP</option><option value="SE" id="SE">SE</option>
+              <option value="TO" id="TO">TO</option>
             </select>
 
-            <select>
+            <select id="cidade"  disabled>
                 <option>Cidade</option>
-                <option>Cidade1</option>
-                <option>Cidade2</option>
-            </select>
-
-            <select>
-                <option>Curso</option>
-                <option>Curso1</option>
-                <option>Curso2</option>
-            </select>
-
-            <select>
-                <option>Grade</option>
-                <option>Grade1</option>
-                <option>Grade2</option>
             </select>
         </div>
         
         <br><br>
 
-        <div id="modalidade">
+        <div id="radio">
             <label>Modalidade: </label>
             <input type="radio" id="Presencial" name="modalidade" value="Presencial">
             <label for="Presencial">Presencial</label><br>
@@ -161,19 +162,30 @@
             <label for="Online">Online</label><br>
             <input type="radio" id="Hibrido" name="modalidade" value="Hibrido">
             <label for=" Hibrido"> Híbrido</label><br>
+        </div><br><br>
+
+        <div id="radio">
+            <label>Acessibilidade: </label>
+            <input type="radio" id="SIM" name="Acessibilidade" value="SIM">
+            <label for="SIM">SIM</label><br>
+            <input type="radio" id="NAO" name="Acessibilidade" value="NAO"> 
+            <label for="NAO">NÃO</label><br>
         </div>
 
         <br>
 
-        <label style="margin-top: 30px;">Preço</label><br>
-        <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+        <label style="margin-top: 30px;">Preço da Mensalidade:</label><br>
+        <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold; margin-bottom: 10px;">
+        <div id="slider-range"></div>
 
         <br><br>
 
         <input type="button" id="pesquisar">
+      </form>
     </div>
-
-    <div id="penis"></div>
+    
+    <br>
+    <div id="cards"></div>
 </main>
             
 <footer>
