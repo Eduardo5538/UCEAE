@@ -271,7 +271,7 @@ cod_imagem int(10) auto_increment primary key,
 cnpj varchar(21),
 imagem varchar(120),
 foreign key (cnpj)
-references escola(CNPJ)
+references escolas(CNPJ)
 );
 SELECT * FROM LOGIN;
 SELECT * FROM tab_alunos;
