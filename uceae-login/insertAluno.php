@@ -31,7 +31,7 @@
   		}
   		preg_match("/\.(jpeg|jpg|png|gif|jfif|bmp|ico){1}$/i", $ft_perfil["name"],$ext);
   		$nome_img = md5(uniqid(time())).".".$ext[1];
-  		$caminho_img = "../uceae-login/img/".$nome_img;
+  		$caminho_img = "img/".$nome_img;
   		move_uploaded_file($ft_perfil["tmp_name"], $caminho_img);
   	}
 
