@@ -271,8 +271,11 @@
         </ul>
         </div>
         <div class="meio div-imagens">
-          <input type="file">
-          <img src="<?php ?>" alt="" srcset="" class="imagens-escola">
+          <form action="" method="post" name="cadastroImg" id="frm_cadImg">
+          <input type="file" name="imagens">
+          <input type="button" value="Enviar Imagem" onclick="cadastroImg()">
+          </form>
+          <div id="imagens_inst"></div>
         </div>
       </div>
       </div>

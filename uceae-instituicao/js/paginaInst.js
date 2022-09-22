@@ -39,3 +39,41 @@ function alterar(){
     })
     return false;
 }
+
+function cadastroImg(){
+    let formImg = $("#frm_cadImg").serialize();
+    $.ajax({
+        url: 'inserirImg.php',
+        data: formImg,
+        method: 'POST',
+    })
+    .done(function(msg){
+        alert('Imagem Inserida')
+    })
+    .fail(function(){
+        alert("Falha ao inserir imagem")
+    })
+    return false;
+}
+
+function consultaImg(){
+    $.ajax({
+        url: 'consultImg.php',
+    })
+    .done(function(msg){
+       
+        var Res = JSON.parse(msg);
+        h = Res.length;
+        for(var j=0; j < h; j++){
+            bloco = ""
+            bloco += "<img src='" + Res[j]['imagem'] + "'>"
+            bloco += "<button>Apagar</button>"
+        }
+        $('#imagens_inst').append(bloco)
+
+    })
+    .fail(function(){
+        alert("Falha na busca")
+    })
+    return false;
+}
