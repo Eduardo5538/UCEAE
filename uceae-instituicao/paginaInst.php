@@ -262,15 +262,19 @@
           <input type="text" name="link" id="txt_link" rows="4" cols="50" maxlength="245"></textarea>
           <br><br>
         </div>
-        <div class="esquerda div-objetivos">
+        <div class="meio div-objetivos">
         <label for="lista-objetivos" class="titulo_objetivos">Objetivos</label>
         <ul name="lista-objetivos">
-          <li><input type="text" id="txt_objt1" class="objetivos"></li><br>
-          <li><input type="text" id="txt_objt2" class="objetivos"></li><br>
-          <li><input type="text" id="txt_objt3" class="objetivos"></li>
+          <li class="li-objt"><input type="text" id="txt_objt1" class="objetivos"></li><br>
+          <li class="li-objt"><input type="text" id="txt_objt2" class="objetivos"></li><br>
+          <li class="li-objt"><input type="text" id="txt_objt3" class="objetivos"></li>
         </ul>
         </div>
+        <div class="meio div-imagens">
+          <input type="file">
+          <img src="<?php ?>" alt="" srcset="" class="imagens-escola">
         </div>
+      </div>
       </div>
 
    <!-- Modal -->
