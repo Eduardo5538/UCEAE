@@ -375,7 +375,7 @@
                   echo "
                     <div id='card-coment' class='cards-coments'>
                       <div class='card-header'>
-                        <img src='". $Res1[$i]['imagem_comentario'] ."' class='card-foto'>
+                        <img src='../uceae-login/". $Res1[$i]['imagem_comentario'] ."' class='card-foto'>
                         <p class='card-nome'>".$Res1[$i]['nome']."</p>
                         
                         <h4 class='data'>".$NovaData."</h4>

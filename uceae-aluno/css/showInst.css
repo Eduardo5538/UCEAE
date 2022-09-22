@@ -514,3 +514,49 @@ html {
     height: 50px;
     border-radius: 50%;
 }
+
+#resp1{
+    text-align: right;
+    width: 100%;
+  }
+  #resp1 button{
+    width: 200px;
+    height: 40px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    border: 2px solid purple;
+    color:purple;
+    background-color: transparent;
+    transition: .5s;
+    margin-right: 5rem;
+  }
+  
+  #resp1 button:hover{
+    background-color: purple;
+    color: white;
+    transition: .5s;
+  }
+  
+  #resp1{
+    text-align: right;
+    width: 100%;
+  }
+  #resp2 button{
+    width: 200px;
+    height: 40px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    border: 2px solid purple;
+    color:purple;
+    background-color: transparent;
+    transition: .5s;
+    margin-right: 5rem;
+  }
+  
+  #resp2 button:hover{
+    background-color: purple;
+    color: white;
+    transition: .5s;
+  }
