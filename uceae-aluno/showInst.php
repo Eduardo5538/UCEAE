@@ -1,6 +1,9 @@
 <?php
   session_start();
     include "conection.php";
+    if(!isset($_GET['cnpj'])){
+      header('Location: brazil.php');
+    }
     $cnpj = $_GET['cnpj'];
     try{
         $Comando = $conexao->prepare("SELECT * from escolas WHERE cnpj = ?");
@@ -209,8 +212,8 @@
             
             if(isset($_SESSION['CNPJ']) && !isset($_SESSION['CPF'])){
               if($_SESSION['CNPJ'] != ''){
-                echo "<a href='uceae-instituicao/paginaInst.php' class='btn btn-warning' tabindex='-1' role='button' style='margin-right: 10px;' aria-disabled='true'>Sua página!</a>";
-                echo "<a href='uceae-login/unlogin.php' class='btn btn-danger' tabindex='-1' role='button' aria-disabled='true'>Deslogar</a>";
+                echo "<a href='../uceae-instituicao/paginaInst.php' class='btn btn-warning' tabindex='-1' role='button' style='margin-right: 10px;' aria-disabled='true'>Sua página!</a>";
+                echo "<a href='../uceae-login/unlogin.php' class='btn btn-danger' tabindex='-1' role='button' aria-disabled='true'>Deslogar</a>";
               
               }
             }
@@ -219,7 +222,7 @@
               if($_SESSION['CPF'] != ''){
                 
                 echo "<a href='uceae-aluno/paginaAluno.php' class='btn btn-warning' tabindex='-1' role='button' style='margin-right: 10px;' aria-disabled='true'>Sua página!</a>";
-                echo "<a href='uceae-login/unlogin.php' class='btn btn-danger' tabindex='-1' role='button' aria-disabled='true'>Deslogar</a>";
+                echo "<a href='../uceae-login/unlogin.php' class='btn btn-danger' tabindex='-1' role='button' aria-disabled='true'>Deslogar</a>";
               
               }
             }
@@ -261,7 +264,8 @@
     <div id="informacoes-header">
       <?php
         echo "<h1>" . $Res[0]['nome_escola']  . "</h1> ";
-        echo "<p>" . $Res[0]['email_escola']  . "</p>";
+        echo "<p>" . $Res[0]['email_escola']  . "</p><br>";
+        echo "<a href='file:///C:/xampp/htdocs/uceae/". $Res[0]['comprovante'] ."' class='btn btn-warning' tabindex='-1' role='button' style='margin-right: 10px;' aria-disabled='true'>Verificar Acessibilidade</a><br>"
       ?>
     </div>
     <br>
