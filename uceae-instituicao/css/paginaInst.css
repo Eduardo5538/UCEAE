@@ -364,37 +364,80 @@ line-height: 1.43;
   height:0;
 }
 textarea{
-  background-color: #54616e;
-  border: 2px solid #47525E;
   border-radius: 10px;
   resize: none;
   outline: none;
   overflow: auto;
-  color: white;
+  color: black;
   font-family: arial;
   padding: 10px;
 }
-#txt_desc{
-  width: 500px;
+#txt_desc_origem{
+  width: 800px;
   height: 125px;
-  text-indent: 30px;
+  border: 3px solid green;
+}
+#txt_desc_acessibilidade{
+  width: 800px;
+  height: 125px;
+  border: 3px solid orange;
+}
+#txt_info_extra{
+  width: 800px;
+  height: 125px;
+  border: 3px solid purple;
 }
 #txt_link{
-  width: 250px;
+  width: 800px;
   height: 50px;
+  border: 3px solid rgb(192, 15, 15);
 }
 #area_texto{
   width: 100%;
+  text-align: center;
 }
 .esquerda{
   text-align: left;
   padding-left: 100px;
 }
+.meio{
+  text-align:center;
+}
 .direita{
   text-align: right;
   padding-right: 100px;
 }
+.div-objetivos{
+  margin: 0 auto;
+  padding: 3rem;
+  border-radius: .5rem;
+  width: 30%;
+  height: 20%;
+}
+.objetivos{
+  border: 5px dotted rgb(0, 73, 184);
+  border-radius: .5rem;
+  padding: 10px;
+  width: 25rem;
+  height: 5rem;
+}
 
+.lbl_textos{
+  font-size: 30px;
+  margin-bottom: 2rem;
+}
+
+.titulo_objetivos{
+  color: black;
+  margin-bottom: 2rem;
+  font-size: 50px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+li{
+  list-style: upper-roman;
+  font-weight: 500;
+  font-size: 30px;
+}
 /* botao resposta */
 
 #resp1{

@@ -158,7 +158,7 @@
     </div>
     <div class="col">
       <label>Mensalidade</label><br>
-      <input type="text" class="form-control" id="txt_mensalidade" placeholder="Não Definida">
+      <input type="text" class="form-control" id="txt_mensalidade" placeholder="<?php echo $Res[0]['mensalidade']; ?>">
     </div>
   </div>
   <br>
@@ -233,23 +233,46 @@
   <!-- --------------------- Informações da Instituição --------------------- -->
       
   <hr width="50%" style="margin-left:25% ;">
+      
+      <div id="area_texto">
       <h1>Edição de Informações</h1>
       <h3>Escreva um pouco sobre a instituição!</h3>
       <br><br><br>
-      <div id="area_texto">
-        <div id="area_desc" class="esquerda">
-          <label for="descricao">Descrição</label>
+        <div id="area_desc_origem" class="meio">
+          <label for="origem" class="lbl_textos">Origem</label>
           <br>
-          <textarea name="descricao" id="txt_desc" rows="4" cols="50" maxlength="209"></textarea>
+          <textarea name="origem" id="txt_desc_origem" rows="4" cols="50" maxlength="245"></textarea>
           <br><br>
         </div>
-        <div id="area_link" class="direita">
-          <label for="link_siteOFC">Link do Site Oficial</label>
+        <div id="area_desc_acess" class="meio">
+          <label for="descricao" class="lbl_textos">Descrição da Acessibilidade</label>
           <br>
-          <textarea name="link_siteOFC" id="txt_link" maxlength="60"></textarea>
+          <textarea name="descricao" id="txt_desc_acessibilidade" rows="4" cols="50" maxlength="245"></textarea>
           <br><br>
+        </div>
+        <div id="area_info_extra" class="meio">
+        <label for="extra" class="lbl_textos">Informações Extras</label>
+          <br>
+          <textarea name="extra" id="txt_info_extra" rows="4" cols="50" maxlength="245"></textarea>
+          <br><br>
+        </div>
+        <div id="area_link" class="meio">
+        <label for="link" class="lbl_textos">Link do Site Oficial</label>
+          <br>
+          <input type="text" name="link" id="txt_link" rows="4" cols="50" maxlength="245"></textarea>
+          <br><br>
+        </div>
+        <div class="esquerda div-objetivos">
+        <label for="lista-objetivos" class="titulo_objetivos">Objetivos</label>
+        <ul name="lista-objetivos">
+          <li><input type="text" id="txt_objt1" class="objetivos"></li><br>
+          <li><input type="text" id="txt_objt2" class="objetivos"></li><br>
+          <li><input type="text" id="txt_objt3" class="objetivos"></li>
+        </ul>
+        </div>
         </div>
       </div>
+
    <!-- Modal -->
 
   <div class="modal fade" id="ModalSair" tabindex="-1" aria-labelledby="ModalLabelSair" aria-hidden="true">
