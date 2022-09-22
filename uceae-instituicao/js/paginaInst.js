@@ -65,7 +65,7 @@ function consultaImg(){
     })
     .done(function(msg){
         var Res = JSON.parse(msg);
-        var bloco = "<div id='carouselExampleControls' class='carousel slide' data-bs-ride='carousel' height='400'>"
+        var bloco = "<div id='carouselExampleControls' class='carousel slide' data-bs-ride='carousel' style='height:20%'>"
         bloco += "<div class='carousel-inner'>"
         h = Res.length;
         for(var j=0; j < h; j++){
