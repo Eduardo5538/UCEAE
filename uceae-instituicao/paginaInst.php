@@ -280,6 +280,54 @@
       </div>
       </div>
 
+      <?php
+            try{
+              $Comando = $conexao->prepare("SELECT * from comentarios WHERE CNPJ = ?");
+              $Comando->bindParam(1, $_SESSION['CNPJ']);
+              $Comando->execute();
+              $Res1 = $Comando->fetchAll();
+              $RetornoJSON1 = json_encode($Res1);
+                        
+            }
+            catch(PDOException $error){
+              echo $error;
+            }
+            if($RetornoJSON1  == "[]")
+            {
+                echo "<h1 id='retorno'>Nenhum comentário ainda</h1><br><br>";
+            }
+            else
+            {
+              
+                for($i = 0; $i <= sizeof($Res1) - 1; $i++)
+                {
+                      $Data = $Res1[$i]['data'];  
+                      $NovaData = date("d/m/Y", strtotime($Data));   
+                  echo "
+                    <div id='card-coment' class='cards-coments'>
+                      <div class='card-header'>
+                        <img src='../uceae-login/". $Res1[$i]['imagem_comentario'] ."' class='card-foto'>
+                        <p class='card-nome'>".$Res1[$i]['nome']."</p>
+                        
+                        <h4 class='data'>".$NovaData."</h4>
+                      </div>
+                      <div class='card-content'>";
+                        for($j = 0; $j < $Res1[$i]['nota']; $j++){
+                          echo "<label class='star2'>&#9733;</label>";
+                          if($Res1[$i]['nota'] == null){
+                            exit;
+                          }
+                        }
+                        echo "<h5 class='card-title'>".$Res1[$i]['titulo']."</h5>
+                        <h6 class='card-msg'>".$Res1[$i]['conteudo']."</h6>
+                      </div>
+                    </div>
+                    <br><br><br>";
+                }
+                
+            }
+        ?>
+
    <!-- Modal -->
 
   <div class="modal fade" id="ModalSair" tabindex="-1" aria-labelledby="ModalLabelSair" aria-hidden="true">

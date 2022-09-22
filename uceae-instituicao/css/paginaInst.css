@@ -490,3 +490,180 @@ textarea{
   color: white;
   transition: .5s;
 }
+
+.titulo-comentario {
+  font-size: 40px;
+  text-align: left;
+  font-weight: 700;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  padding-left: 5rem;
+}
+
+.texto-comentario {
+  font-size: 30px;
+  text-align: left;
+  font-family: arial;
+  padding: 5rem;
+}
+
+.input-text {
+  margin-top: 1%;
+  border-radius: .5rem;
+  background-color: transparent;
+  margin-left: 5rem;
+  text-align: left;
+  padding-left: .5rem;
+}
+
+.comentario {
+  width: 40%;
+  height: 80px;
+  margin-bottom: 2%;
+}
+
+.titulo {
+  height: 60px;
+  width: 80%;
+}
+
+.star2 {
+  font-size: 3rem;
+  color: #ff9800;
+  background-color: unset;
+  border: none;
+}
+
+.conteudo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.titulo2 {
+  margin-top: 20%;
+  text-align: center;
+}
+
+.area-comentario{
+  position: relative;
+  width: 100%;
+  align-items: center;
+  margin-top: 3%;
+  
+}
+
+.div-titulo-coment{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 40% 60%;
+  grid-gap: 2%;
+  margin-bottom: -3%;
+}
+/* Botões */
+
+.btn-enviar {
+  background-color: transparent;
+  border: rgba(231, 131, 0, 0.966) 2px solid;
+  padding: 10px;
+  width: 20%;
+  margin-left: 5rem;
+  border-radius: .5rem;
+  color: rgba(172, 97, 0, 0.966);
+  font-weight: 700;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.btn-enviar:hover {
+  background-color: rgba(231, 131, 0, 0.966);
+  color: #fff;
+}
+
+/* Cards de Comentários */
+
+.cards-coments{
+  width: 70%;
+  margin-left: 5rem;
+}
+.card-header{
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  align-items: center;
+  background-color: transparent;
+}
+.card-header .card-nome{
+  font-size: 30px;
+  margin-left: -35%;
+  font-weight: 100;
+}
+.card-header .data{
+  font-size: 20px;
+  margin-left: -70%;
+  font-weight: 100;
+  color: gray;
+  font-weight: bold;
+}
+.card-content{
+  font-family: arial;
+  padding-top: 1rem;
+  margin-left: 2rem;
+  margin-top: .5rem;
+}
+
+.card-content .card-title{
+  font-size: 30px;
+  padding-bottom: .4rem;
+}
+.card-content .card-msg{
+  font-size: 20px;
+}
+.card-foto{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+#resp1{
+  text-align: right;
+  width: 100%;
+}
+#resp1 button{
+  width: 200px;
+  height: 40px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+  border: 2px solid purple;
+  color:purple;
+  background-color: transparent;
+  transition: .5s;
+  margin-right: 5rem;
+}
+
+#resp1 button:hover{
+  background-color: purple;
+  color: white;
+  transition: .5s;
+}
+
+#resp1{
+  text-align: right;
+  width: 100%;
+}
+#resp2 button{
+  width: 200px;
+  height: 40px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+  border: 2px solid purple;
+  color:purple;
+  background-color: transparent;
+  transition: .5s;
+  margin-right: 5rem;
+}
+
+#resp2 button:hover{
+  background-color: purple;
+  color: white;
+  transition: .5s;
+}
