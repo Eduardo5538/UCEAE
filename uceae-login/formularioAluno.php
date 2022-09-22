@@ -134,7 +134,7 @@
             </div>
             <div class="btns-group">
                 <a href="#" class="btn btn-prev">Anterior</a>
-                <input type="submit" value="Confirmar" class="btn" required >
+                <input type="submit" value="Confirmar" class="btn" >
             </div>
         </div>
     </form>
