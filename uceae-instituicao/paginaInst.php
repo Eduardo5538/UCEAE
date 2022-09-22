@@ -64,10 +64,10 @@
           <a class="nav-link" aria-current="page" href="../index.php">Portal</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="../uceae-aluno/brazil.php">Busca</a>
+          <a class="nav-link" href="../uceae-aluno/busca.php">Busca</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Mapa</a>
+          <a class="nav-link" href="../uceae-aluno/brazil.php">Mapa</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
