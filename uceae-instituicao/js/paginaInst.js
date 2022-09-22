@@ -65,13 +65,29 @@ function consultaImg(){
     })
     .done(function(msg){
         var Res = JSON.parse(msg);
-        var bloco = "";
+        var bloco = "<div id='carouselExampleControls' class='carousel slide' data-bs-ride='carousel' style='height:20%'>"
+        bloco += "<div class='carousel-inner'>"
         h = Res.length;
         for(var j=0; j < h; j++){
-            bloco += "<img src='" + Res[j]['imagem'] + "' class='card-imagens-inst'><br><br>"
-            bloco += "<a href='deletarImg.php?cod_imagem="+ Res[j]['cod_imagem'] +"' class='btn-apagaImg'>Apagar imagem</a><br>"
+            if(j == 0){
+                bloco += "<div class='carousel-item active'>"
+            }
+            else{
+                bloco += "<div class='carousel-item'>"
+            }
+            bloco += "<img src='" + Res[j]['imagem'] + "' class='d-block w-100' alt='...''>"
+            bloco += "</div>"
+            //bloco += "<a href='deletarImg.php?cod_imagem="+ Res[j]['cod_imagem'] +"' class='btn-apagaImg'>Apagar imagem</a><br>"
         }
-        
+        bloco += "<button class='carousel-control-prev' type='button' data-bs-target='#carouselExampleControls' data-bs-slide='prev'>"
+        bloco += "<span class='carousel-control-prev-icon' aria-hidden='true'></span>"
+        bloco += "<span class='visually-hidden'>Previous</span>"
+        bloco += "</button>"
+        bloco += "<button class='carousel-control-next' type='button' data-bs-target='#carouselExampleControls' data-bs-slide='next'>"
+        bloco += "<span class='carousel-control-next-icon' aria-hidden='true'></span>"
+        bloco += "<span class='visually-hidden'>Next</span>"
+        bloco += "</button>"
+        bloco += "</div>"
         $('#imagens_inst').append(bloco)
 
     })
