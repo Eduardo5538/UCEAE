@@ -7,6 +7,8 @@
 -- Versão do servidor: 10.4.24-MariaDB
 -- versão do PHP: 8.1.4
 
+
+
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
@@ -219,6 +221,15 @@ CREATE TABLE `tab_alunos` (
   `telefone_aluno` varchar(30)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
+
+create table `imagens_instituicao`
+(
+`cod_imagem` int(10) auto_increment primary key,
+`cnpj` varchar(21),
+`imagem` varchar(120),
+
+);
+
 --
 -- Índices para tabelas despejadas
 --
@@ -246,7 +257,8 @@ ALTER TABLE `tab_alunos`
 --
 -- AUTO_INCREMENT de tabelas despejadas
 --
-
+ALTER TABLE `imagens_instituicao`
+	ADD KEY `cnpj` (`CNPJ`);
 --
 -- AUTO_INCREMENT de tabela `login`
 --
@@ -265,14 +277,7 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 
-create table imagens_instituicao
-(
-cod_imagem int(10) auto_increment primary key,
-cnpj varchar(21),
-imagem varchar(120),
-foreign key (cnpj)
-references escolas(CNPJ)
-);
+
 SELECT * FROM LOGIN;
 SELECT * FROM tab_alunos;
 SELECT * FROM comentarios;
