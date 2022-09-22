@@ -206,8 +206,8 @@
           <?php
           if(!isset($_SESSION['CNPJ']) && !isset($_SESSION['CPF'])){
               echo "<button class='btn btn-outline-dark' type='button' style='margin-right: 10px;' data-bs-toggle='modal' data-bs-target='#ModalEntrar'>Entrar</button>";
-              echo "<a href='uceae-login/formularioAluno.php' class='btn btn-dark' tabindex='-1' style='margin-right: 10px;' role='button' aria-disabled='true'>Cadastre-se!</a>";
-              echo "<a href='uceae-login/formularioInst.php' class='btn btn-warning' tabindex='-1' role='button' aria-disabled='true'>Cadastrar sua instituição!</a>";
+              echo "<a href='../uceae-login/formularioAluno.php' class='btn btn-dark' tabindex='-1' style='margin-right: 10px;' role='button' aria-disabled='true'>Cadastre-se!</a>";
+              echo "<a href='../uceae-login/formularioInst.php' class='btn btn-warning' tabindex='-1' role='button' aria-disabled='true'>Cadastrar sua instituição!</a>";
           }
             
             if(isset($_SESSION['CNPJ']) && !isset($_SESSION['CPF'])){
@@ -265,7 +265,7 @@
       <?php
         echo "<h1>" . $Res[0]['nome_escola']  . "</h1> ";
         echo "<p>" . $Res[0]['email_escola']  . "</p><br>";
-        echo "<a href='file:///C:/xampp/htdocs/uceae/". $Res[0]['comprovante'] ."' class='btn btn-warning' tabindex='-1' role='button' style='margin-right: 10px;' aria-disabled='true'>Verificar Acessibilidade</a><br>"
+        echo "<a href='../uceae-login/". $Res[0]['comprovante'] ."' class='btn btn-warning' tabindex='-1' role='button' style='margin-right: 10px;' aria-disabled='true'>Verificar Acessibilidade</a><br>"
       ?>
     </div>
     <br>
