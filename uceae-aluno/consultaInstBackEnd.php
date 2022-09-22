@@ -12,11 +12,11 @@
                 $resultado = json_encode($Comando->fetchAll());
              }
             else{
-                $resultado = "deu ruim";
+                $resultado = "Não Foi Encontado";
             }
         }
         else{
-            $resultado = "NULO";
+            $resultado = "vazio";
         }
     echo $resultado;
     }
