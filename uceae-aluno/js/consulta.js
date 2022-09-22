@@ -40,6 +40,26 @@ function consulta(){
     })
     return false;
 }
+//var selection = $( "#slider-range" ).slider( "values" );
+function consultaFiltro(){
+    var dados = new FormData($('#formBuscaFiltro')[0]);
+    dados.append('busca', $('#busca').val());
+    dados.append('preco', $( "#slider-range" ).slider( "values" ));
+    $.ajax({
+        method: 'POST',
+        url: 'consultaInstBackEnd2.php',
+        data: dados,
+        processData: false,
+        contentType: false
+    })
+    .done(function(msg){
+        alert(msg);
+    })
+    .fail(function(){
+        alert("Falha na busca")
+    })
+    return false;
+}
 
 function trocacidade(){
     var dados = $('#estado').val();

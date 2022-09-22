@@ -28,7 +28,6 @@ SET time_zone = "+00:00";
 --
 -- Estrutura da tabela `comentarios`
 --
-
 CREATE DATABASE BD_UCEAE;
 USE BD_UCEAE;
 
@@ -65,6 +64,7 @@ CREATE TABLE `escolas` (
   `foto_banner` varchar(120) DEFAULT NULL,
   `comprovante` varchar(120) DEFAULT NULL,
   `mensalidade` decimal(7,2) DEFAULT NULL,
+  `modalidade` varchar(10) DEFAULT NULL,
   `foto_prop` varchar(120) DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
@@ -226,8 +226,7 @@ create table `imagens_instituicao`
 (
 `cod_imagem` int(10) auto_increment primary key,
 `cnpj` varchar(21),
-`imagem` varchar(120),
-
+`imagem` varchar(120)
 );
 
 --
@@ -282,3 +281,5 @@ SELECT * FROM LOGIN;
 SELECT * FROM tab_alunos;
 SELECT * FROM comentarios;
 SELECT * FROM escolas;
+
+SELECT * from escolas WHERE nome_escola LIKE 'porra' AND mensalidade BETWEEN 123 AND 1323 and cidade_escola = 'SP' and uf_escola = 'São Paulo';

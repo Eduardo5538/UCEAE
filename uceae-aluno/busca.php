@@ -128,9 +128,9 @@
     </p>
     
     <div id="filtros">
-      <form action="" method="POST" id="formPesquisa" name="formPesquisa">
+      <form action="" method="POST" id="formBuscaFiltro" name="formBuscaFiltro">
         <div id="inputs">
-            <select onchange="trocacidade()" id="estado">
+            <select onchange="trocacidade()" id="estado" name="estado">
               <option value="AC" id="AC">AC</option><option value="AL" id="AL">AL</option>
               <option value="AP" id="AP">AP</option><option value="AM" id="AM">AM</option>
               <option value="BA" id="BA">BA</option><option value="CE" id="CE">CE</option>
@@ -147,7 +147,7 @@
               <option value="TO" id="TO">TO</option>
             </select>
 
-            <select id="cidade"  disabled>
+            <select id="cidade" name="cidade" disabled>
                 <option>Cidade</option>
             </select>
         </div>
@@ -161,14 +161,14 @@
             <input type="radio" id="Online" name="modalidade" value="Online"> 
             <label for="Online">Online</label><br>
             <input type="radio" id="Hibrido" name="modalidade" value="Hibrido">
-            <label for=" Hibrido"> Híbrido</label><br>
+            <label for=" Hibrido">Híbrido</label><br>
         </div><br><br>
 
         <div id="radio">
             <label>Acessibilidade: </label>
-            <input type="radio" id="SIM" name="Acessibilidade" value="SIM">
+            <input type="radio" id="SIM" name="acessibilidade" value="SIM">
             <label for="SIM">SIM</label><br>
-            <input type="radio" id="NAO" name="Acessibilidade" value="NAO"> 
+            <input type="radio" id="NAO" name="acessibilidade" value="NAO"> 
             <label for="NAO">NÃO</label><br>
         </div>
 
@@ -176,11 +176,11 @@
 
         <label style="margin-top: 30px;">Preço da Mensalidade:</label><br>
         <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold; margin-bottom: 10px;">
-        <div id="slider-range"></div>
+        <div id="slider-range" class="peniszudo"></div>
 
         <br><br>
 
-        <input type="button" id="pesquisar">
+        <input type="button" id="pesquisar" onclick="consultaFiltro()">
       </form>
     </div>
     
