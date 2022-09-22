@@ -4,7 +4,7 @@
         try
         {
             $Comando = $conexao->prepare("SELECT * from imagens_instituicao WHERE cnpj = ?");
-            $Comando->bindParam(1, $SESSION['CNPJ']);
+            $Comando->bindParam(1, $_SESSION['CNPJ']);
             $Comando->execute();
             $Res = $Comando->fetchAll();
             $RetornoJSON = json_encode($Res);

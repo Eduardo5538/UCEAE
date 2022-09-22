@@ -46,7 +46,7 @@
   <script src="js/paginaInst.js"></script>
 	<title><?php echo $Res[0]['nome_escola']; ?></title>
 </head>
-<body onload='consulta()'>
+<body onload='consultaImg()'>
 
 
   <!-- --------------------- Barra de Navegação --------------------- -->
@@ -271,10 +271,10 @@
         </ul>
         </div>
         <div class="meio div-imagens">
-          <form action="" method="post" name="cadastroImg" id="frm_cadImg">
-          <input type="file" name="imagens">
-          <input type="button" value="Enviar Imagem" onclick="cadastroImg()">
-          </form>
+          <form action="inserirImg.php" method="post" name="cadastroImg" id="frm_cadImg" enctype="multipart/form-data">
+          <input type="file" name="imagensF[]" id='imagens[]'>
+          <input type="button" id='btn_img' value="Enviar Imagem" onclick="insertImg()">
+        </form>
           <div id="imagens_inst"></div>
         </div>
       </div>

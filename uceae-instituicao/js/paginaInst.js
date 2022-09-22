@@ -40,15 +40,18 @@ function alterar(){
     return false;
 }
 
-function cadastroImg(){
-    let formImg = $("#frm_cadImg").serialize();
+function insertImg(){
+    let formImg = $("#frm_cadImg")[0];
+    let formData = new FormData(formImg);
     $.ajax({
         url: 'inserirImg.php',
-        data: formImg,
+        data: formData,
         method: 'POST',
+        processData: false,
+        contentType: false,
     })
     .done(function(msg){
-        alert('Imagem Inserida')
+        alert("imagem inserida");
     })
     .fail(function(){
         alert("Falha ao inserir imagem")
@@ -61,14 +64,14 @@ function consultaImg(){
         url: 'consultImg.php',
     })
     .done(function(msg){
-       
         var Res = JSON.parse(msg);
+        var bloco = "";
         h = Res.length;
         for(var j=0; j < h; j++){
-            bloco = ""
             bloco += "<img src='" + Res[j]['imagem'] + "'>"
-            bloco += "<button>Apagar</button>"
+            bloco += "<a href='deletarImg.php?cod_imagem="+ Res[j]['cod_imagem'] +"'>Apagar imagem</a><br>"
         }
+        
         $('#imagens_inst').append(bloco)
 
     })
