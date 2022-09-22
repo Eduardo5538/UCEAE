@@ -68,7 +68,7 @@
       <form class="d-flex">
       	<div style="margin-right: 20px;">
           <strong><label id="nome_perfil"><?php echo $Res[0]['nome_aluno']?></label></strong>
-        	<button type="button" id="btn_alterarFoto" data-bs-toggle="modal" data-bs-target="#ModalSair"> <?php echo "<img src='".  $Res[0]['foto_aluno']  ."' id='ft_perfil'>"?></button>
+        	<button type="button" id="btn_alterarFoto" data-bs-toggle="modal" data-bs-target="#ModalSair"> <?php echo "<img src='../uceae-login/".  $Res[0]['foto_aluno']  ."' id='ft_perfil'>"?></button>
     	  </div>
       </form>
     </div>
@@ -81,7 +81,7 @@
   <label for="file-input" id="input-file">
   <form method="post" id="alter_banner" action='alterarBanner.php' enctype="multipart/form-data">
     <?php
-        echo "<img src='".  $Res[0]['foto_aluno']  ."' id='foto_banner' name='foto_banner'>"
+        echo "<img src='../uceae-login/".  $Res[0]['foto_aluno']  ."' id='foto_banner' name='foto_banner'>"
       ?>
     
   </label>
@@ -98,7 +98,7 @@
   <form method='post' id='alter_perfil' action='alterarFoto.php' enctype="multipart/form-data">
     <label for="file-input2">
       <?php
-          echo "<img src='".  $Res[0]['foto_aluno']  ."' id='foto_perfil'>"
+          echo "<img src='../uceae-login/".  $Res[0]['foto_aluno']  ."' id='foto_perfil'>"
         ?>
     </label>
     <div id='resp2' class="btn btn-resp2"></div>
