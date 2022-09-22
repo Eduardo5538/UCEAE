@@ -267,7 +267,7 @@ COMMIT;
 
 create table imagens_instituicao
 (
-cod_imagem int(2) auto_increment primary key,
+cod_imagem int(10) auto_increment primary key,
 cnpj varchar(21),
 imagem varchar(120),
 foreign key (cnpj)
