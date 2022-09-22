@@ -265,6 +265,14 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 
+create table imagens_instituicao
+(
+cod_imagem int(2) auto_increment primary key,
+cnpj varchar(21),
+imagem varchar(120),
+foreign key (cnpj)
+references escola(CNPJ)
+);
 SELECT * FROM LOGIN;
 SELECT * FROM tab_alunos;
 SELECT * FROM comentarios;
