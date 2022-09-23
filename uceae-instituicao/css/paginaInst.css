@@ -12,7 +12,9 @@
   font-family: 'sensei';
 }
 .titulos-paginaInst{
+  color: #976DD0;
   font-size: 60px;
+  padding-bottom: 10px;
 }
 #resp1 button{
   align-items:right;
@@ -753,4 +755,18 @@ textarea{
 
 #img-carousel{
   height: 400px;
+}
+
+.h2{
+  color: rgb(43, 126, 250);
+}
+
+/* Formulario de Inserir Curso */
+
+.inserirCurso{
+  background-color: #05b36a;
+  padding: 4rem;
+  width: 500px;
+  height: 600px;
+  margin: 0 auto;
 }

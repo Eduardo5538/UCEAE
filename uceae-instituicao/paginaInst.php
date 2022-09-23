@@ -263,7 +263,7 @@
           <br><br>
         </div>
         <div class="meio div-objetivos">
-        <label for="lista-objetivos" class="titulo_objetivos">Objetivos</label>
+        <label for="lista-objetivos" class="titulos-paginaInst fonte-sensei">Objetivos</label>
         <ul name="lista-objetivos">
           <li class="li-objt"><input type="text" id="txt_objt1" class="objetivos"></li><br>
           <li class="li-objt"><input type="text" id="txt_objt2" class="objetivos"></li><br>
@@ -286,6 +286,16 @@
       </div>
       <br><br><br>
       <br><br><br>
+  <!-- --------------------- Inserir Cursos --------------------- -->
+
+      <div class="div-inserirCurso" id="link-form-curso">
+        <form action="" method="post" id="frm_inserirCurso" class="inserirCurso">
+          <input type="button" value="Cadastrar" class="btn-inserirCurso">
+        </form>
+      </div>
+      <br><br><br>
+      
+  <!-- --------------------- Comentários --------------------- -->
       <div id="link-interno"></div>
       <h1 class="titulos-paginaInst fonte-sensei">Comentários</h1>
       <?php
@@ -302,7 +312,7 @@
             }
             if($RetornoJSON1  == "[]")
             {
-                echo "<h2 id='retorno' class='fonte-sensei'>Nenhum comentário ainda</h2><br><br>";
+                echo "<h2 id='retorno' class='h2 fonte-sensei'>Nenhum comentário ainda</h2><br><br>";
             }
             else
             {
