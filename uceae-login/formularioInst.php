@@ -8,6 +8,7 @@
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="js/cadastro.js"></script>
+  <script src='js/formInst.js'></script>
   <link rel="stylesheet" type="text/css" href="css/formularioInst.css">
 </head>
 <body onload="mostrar()">
@@ -87,7 +88,8 @@
             </div>
             <div class="input form__inline-input">
               <div class="input__container">
-                <input class="input__field " id="cnpj" autocomplete="off" maxlength="18" name="cnpj" placeholder="CNPJ" required type="text" /><label class="input__label" for="cnpj">CNPJ</label>
+                <input class="input__field " id="cnpj" autocomplete="off" maxlength="18" name="cnpj" placeholder="CNPJ" required type="text" onchange='validarCNPJ()' /><label class="input__label" for="cnpj">CNPJ</label>
+                <div id='cnpj_peniano'></div>
               </div>
             </div>
           </div>

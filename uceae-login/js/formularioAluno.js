@@ -119,6 +119,7 @@ function cpfVerify(){
     document.getElementById('penis').innerHTML = "";
     if(result == false){
         $("#penis").append("Cpf invalido");
+        document.getElementById('txt_cpfAluno').value = "";
     }
     else{
         $("#penis").append("CPF válido");
