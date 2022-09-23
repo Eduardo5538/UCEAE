@@ -1,5 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+@font-face {
+	font-family: 'sensei';
+	src: url(font/sensei.woff);
+}
+
 *{
   box-sizing: border-box;
+}
+
+.fonte-sensei{
+  font-family: 'sensei';
+}
+.titulos-paginaInst{
+  color: #976DD0;
+  font-size: 60px;
+  padding-bottom: 10px;
 }
 #resp1 button{
   align-items:right;
@@ -425,13 +440,14 @@ textarea{
 .lbl_textos{
   font-size: 30px;
   margin-bottom: 2rem;
+  font-family: 'sensei';
 }
 
 .titulo_objetivos{
   color: black;
   margin-bottom: 2rem;
-  font-size: 50px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-size: 60px;
+  font-family: 'sensei';
 }
 .li-objt{
   list-style: upper-roman;
@@ -733,4 +749,24 @@ textarea{
   background-color: purple;
   color: white;
   transition: .5s;
+}
+
+/* Carousel */
+
+#img-carousel{
+  height: 400px;
+}
+
+.h2{
+  color: rgb(43, 126, 250);
+}
+
+/* Formulario de Inserir Curso */
+
+.inserirCurso{
+  background-color: #05b36a;
+  padding: 4rem;
+  width: 500px;
+  height: 600px;
+  margin: 0 auto;
 }
