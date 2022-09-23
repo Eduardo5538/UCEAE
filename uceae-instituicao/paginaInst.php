@@ -202,11 +202,11 @@
   <center>
   <div class="wrapper">
     <div class="card">
-      <img src="img/graficos.png">
+      <img src="img/lapis.png">
       <div class="info">
-        <h1>Gráficos</h1>
-        <p>Veja quantos alunos visualizaram sua página nos últimos dias!</p>
-        <a href="#" class="btn">Veja Mais</a>
+        <h1>Editar Informações</h1>
+        <p>Adicione Informações para que seus visitantes saibam o que esperar!</p>
+        <a href="#area_texto" class="btn">Veja Mais</a>
       </div>
     </div>
      <div class="card">
@@ -214,7 +214,7 @@
       <div class="info">
         <h1>Avaliações</h1>
         <p>Veja o que outros usuários comentaram sobre sua instituição!</p>
-        <a href="#" class="btn">Veja Mais</a>
+        <a href="#link-interno" class="btn">Veja Mais</a>
       </div>
     </div>
      <div class="card">
@@ -222,7 +222,7 @@
       <div class="info">
         <h1>Adicionar Curso</h1>
         <p>Adicione cursos que estarão visíveis para seus visitantes!</p>
-        <a href="cursosAdicionar.php" class="btn">Veja Mais</a>
+        <a href="#" class="btn">Veja Mais</a>
       </div>
     </div>
     </div>
@@ -283,7 +283,7 @@
         </div>
       </div>
       </div>
-
+      <div id="link-interno"></div>
       <?php
             try{
               $Comando = $conexao->prepare("SELECT * from comentarios WHERE CNPJ = ?");
