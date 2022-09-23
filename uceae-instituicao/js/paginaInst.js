@@ -75,9 +75,12 @@ function consultaImg(){
             else{
                 bloco += "<div class='carousel-item'>"
             }
-            bloco += "<img src='" + Res[j]['imagem'] + "' class='d-block w-100' alt='...''>"
+            bloco += "<img src='" + Res[j]['imagem'] + "' class='d-block w-100' alt='" + Res[j]['cod_imagem'] + "''>"
+            bloco += '<div class="carousel-caption d-none d-md-block">'
+            bloco += '<h5></h5>'
+            bloco += "<p><a href='deletarImg.php?cod_imagem="+ Res[j]['cod_imagem'] +"' class='btn-apagaImg'>Apagar imagem</a><br></p>"
+            bloco += ' </div>'
             bloco += "</div>"
-            //bloco += "<a href='deletarImg.php?cod_imagem="+ Res[j]['cod_imagem'] +"' class='btn-apagaImg'>Apagar imagem</a><br>"
         }
         bloco += "<button class='carousel-control-prev' type='button' data-bs-target='#carouselExampleControls' data-bs-slide='prev'>"
         bloco += "<span class='carousel-control-prev-icon' aria-hidden='true'></span>"

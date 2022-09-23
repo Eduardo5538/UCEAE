@@ -1,4 +1,5 @@
 <?php
+    include "conection.php";
     $cod_imagem = $_GET['cod_imagem'];
     try
     {
