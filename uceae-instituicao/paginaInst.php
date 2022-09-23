@@ -235,8 +235,8 @@
   <hr width="50%" style="margin-left:25% ;">
       
       <div id="area_texto">
-      <h1>Edição de Informações</h1>
-      <h3>Escreva um pouco sobre a instituição!</h3>
+      <h1 class="titulos-paginaInst fonte-sensei">Edição de Informações</h1>
+      <h3 class="fonte-sensei">Escreva um pouco sobre a instituição!</h3>
       <br><br><br>
         <div id="area_desc_origem" class="meio">
           <label for="origem" class="lbl_textos">Origem</label>
@@ -271,19 +271,23 @@
         </ul>
         </div>
         <div class="meio div-imagens">
+          <h1 class="titulos-paginaInst fonte-sensei">Imagens da Instituição</h1>
+          <br><br><br>
           <form action="inserirImg.php" method="post" name="cadastroImg" id="frm_cadImg" enctype="multipart/form-data">
           <label for="imagens[]" class="label-imagens-input">
             <input type="file" name="imagensF[]" id='imagens[]' class="imagens-input" >
             Inserir Imagens
           </label>
-
           <input type="button" id='btn_img' value="Enviar Imagem" class='btn-enviar-img' onclick="insertImg()">
         </form>
           <div id="imagens_inst"></div>
         </div>
       </div>
       </div>
+      <br><br><br>
+      <br><br><br>
       <div id="link-interno"></div>
+      <h1 class="titulos-paginaInst fonte-sensei">Comentários</h1>
       <?php
             try{
               $Comando = $conexao->prepare("SELECT * from comentarios WHERE CNPJ = ?");
@@ -298,7 +302,7 @@
             }
             if($RetornoJSON1  == "[]")
             {
-                echo "<h1 id='retorno'>Nenhum comentário ainda</h1><br><br>";
+                echo "<h2 id='retorno' class='fonte-sensei'>Nenhum comentário ainda</h2><br><br>";
             }
             else
             {

@@ -75,7 +75,7 @@ function consultaImg(){
             else{
                 bloco += "<div class='carousel-item'>"
             }
-            bloco += "<img src='" + Res[j]['imagem'] + "' class='d-block w-100' alt='...''>"
+            bloco += "<img src='" + Res[j]['imagem'] + "' class='d-block w-100' alt='...' id='img-carousel'>"
             bloco += "</div>"
             //bloco += "<a href='deletarImg.php?cod_imagem="+ Res[j]['cod_imagem'] +"' class='btn-apagaImg'>Apagar imagem</a><br>"
         }
