@@ -529,9 +529,9 @@ textarea{
 }
 .btn-apagaImg{
   text-decoration: none;
-  background-color: transparent;
-  color: rgb(1, 52, 192);
-  border: 2px solid rgb(1, 52, 192);
+  background-color: rgb(143, 1, 1);
+  color: #fff;
+  border: 2px solid transparent;
   padding: 15px;
   transition: .5s;
   border-radius: .5rem;
@@ -540,8 +540,8 @@ textarea{
 
 .btn-apagaImg:hover{
   transition: .5s;
-  color: #fff;
-  background-color: rgb(1, 52, 192);
+  color: white;
+  background-color: rgb(161, 1, 1);
 }
 
 .btn-enviar-img{
