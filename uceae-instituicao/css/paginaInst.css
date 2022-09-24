@@ -765,8 +765,94 @@ textarea{
 
 .inserirCurso{
   background-color: #05b36a;
-  padding: 4rem;
+  padding: 3rem;
+  border-radius: .5rem .5rem 15rem 15rem;
   width: 500px;
   height: 600px;
   margin: 0 auto;
+  box-shadow: .7rem .5rem 15px #017e54ea;
+  text-align: center;
+}
+.linha-formulario{
+  display: flex;
+  flex-wrap: nowrap;
+  text-align: center;
+  margin-top: .1rem;
+  gap: 5%;
+}
+
+.label-item{
+  font-size: 25px;
+  color: whitesmoke;
+  padding-bottom: .5rem;
+}
+
+.label-item-cb{
+  font-size: 16px;
+  font-weight: bold;
+  color: whitesmoke;
+  padding-top: .5rem;
+}
+
+.input-form{
+  height: 50px;
+  border: none;
+  background-color: #037948a1;
+  color: white;
+  border-radius: .6rem;
+  box-shadow: .25rem .25rem 10px rgb(0, 75, 46);
+}
+.item-formulario{
+  text-align: left;
+}
+.item-botao{
+  width: 50%;
+  text-align: center;
+  height: 50px;
+  margin: 0 auto;
+  margin-top: 2rem;
+}
+
+.item-desc{
+  margin-left: 1rem;
+}
+
+.input-modalidade-curso{
+  width: 200px;
+}
+.area-checkbox, .area-radio{
+  background-color: #037948a1;
+  box-shadow: .25rem .25rem 10px rgb(0, 75, 46);
+  padding: .75rem;
+  border-radius: .6rem;
+}
+.cb-form{
+  width: 20px;
+  height: 20px;
+}
+
+.desc-curso{
+  height: 150px;
+  width: 250px;
+  border: none;
+  background-color: #037948a1;
+  color: white;
+  border-radius: .6rem;
+  box-shadow: .25rem .25rem 10px rgb(0, 75, 46);
+}
+.input-preco{
+  width: 100px;
+}
+
+.btn-inserirCurso{
+  border: none;
+  padding: 10px;
+  background-color: #037948a1;
+  box-shadow: .25rem .25rem 10px rgb(0, 75, 46);
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  width: 10rem;
+  height: 50px;
+  border-radius: .5rem;
 }

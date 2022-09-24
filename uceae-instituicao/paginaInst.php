@@ -276,7 +276,7 @@
           <form action="inserirImg.php" method="post" name="cadastroImg" id="frm_cadImg" enctype="multipart/form-data">
           <label for="imagens[]" class="label-imagens-input">
             <input type="file" name="imagensF[]" id='imagens[]' class="imagens-input" >
-            Inserir Imagens
+           Selecionar Imagem
           </label>
           <input type="button" id='btn_img' value="Enviar Imagem" class='btn-enviar-img' onclick="insertImg()">
         </form>
@@ -288,16 +288,80 @@
       <br><br><br>
   <!-- --------------------- Inserir Cursos --------------------- -->
 
-      <div class="div-inserirCurso" id="link-form-curso">
+      <h1 class="titulos-paginaInst fonte-sensei" id='link-form-curso'>Inserir Cursos</h1>
+      <br><br>
         <form action="" method="post" id="frm_inserirCurso" class="inserirCurso">
-          <input type="button" value="Cadastrar" class="btn-inserirCurso">
+          <div class="linha-formulario">
+            <div class="item-formulario">
+              <label for="Titulo-curso" class="label-item">Título</label>
+              <br>
+              <input type="text" name="Titulo-curso" id="txt_tituloCurso" class="input-form input-titulo-curso">
+            </div>
+            <div class="item-formulario">
+              <label for="Modalidade-curso" class="label-item">Modalidade</label>
+              <br>
+              <select name="Modalidade-curso" id="slc_modalidadeCurso" class="input-form input-modalidade-curso">
+                <option value="Presencial"></option>
+                <option value="Presencial">Presencial</option>
+                <option value="Online">Online</option>
+                <option value="Hibrido">Híbrido</option>
+              </select>
+            </div>
+          </div>
+          <br>
+          <div class="linha-formulario">
+            <div class="item-formulario">
+              <label for="Periodo-curso" class="label-item">Período</label>
+              <br>
+              <div class="area-checkbox">
+                <input type="checkbox" name="Periodo-Curso" id="cb_periodoCurso" value="M" class="cb-form">
+                <label for="Periodo-curso" class="label-item-cb">Manhã</label>
+                <br>
+                <input type="checkbox" name="Periodo-Curso" id="cb_periodoCurso" value="T" class="cb-form">
+                <label for="Periodo-curso" class="label-item-cb">Tarde</label>
+                <br>
+                <input type="checkbox" name="Periodo-Curso" id="cb_periodoCurso" value="N" class="cb-form">
+                <label for="Periodo-curso" class="label-item-cb">Noite</label>
+                <br>
+                <input type="checkbox" name="Periodo-Curso" id="cb_periodoCurso" value="I" class="cb-form">
+                <label for="Periodo-curso" class="label-item-cb">Integral</label>
+                <br>
+              </div>
+            </div>
+            <div class="item-formulario item-desc">
+              <label for="Desc-curso" class="label-item">Descrição</label>
+              <br>
+              <textarea name="Desc-curso" id="txt_descCurso" class="desc-curso"></textarea>
+            </div>
+          </div>
+          <div class="linha-formulario">
+            <div class="item-formulario">
+              <label for="Valor-curso" class="label-item">Preço</label>
+              <br>
+              <input type="number" name="Valor-curso" id="txt_vlrCurso" class="input-form input-preco" step="0.1">
+            </div>
+            <div class="item-formulario">
+              <label for="Acessibilidade-curso" class="label-item">Acessibilidade</label>
+              <br>
+              <div class="area-radio">
+                <label for="" class="label-item-cb">Adaptado</label>
+                <input type="radio" name="Acessibilidade-curso" id="txt_adapCurso" value="S">
+                <label for="" class="label-item-cb">Não Adaptado</label>
+                <input type="radio" name="Acessibilidade-curso" id="txt_adapCurso" value="N">
+               </div>
+            </div>
+          </div>
+          <div class="linha-formulario">
+            <div class="item-formulario item-botao">
+               <input type="button" value="Cadastrar" class="btn-inserirCurso">
+            </div>
+          </div>
         </form>
-      </div>
       <br><br><br>
       
   <!-- --------------------- Comentários --------------------- -->
-      <div id="link-interno"></div>
-      <h1 class="titulos-paginaInst fonte-sensei">Comentários</h1>
+  
+      <h1 class="titulos-paginaInst fonte-sensei" id="link-interno">Comentários</h1>
       <?php
             try{
               $Comando = $conexao->prepare("SELECT * from comentarios WHERE CNPJ = ?");
