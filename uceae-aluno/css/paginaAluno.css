@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+@font-face {
+	font-family: 'sensei';
+	src: url(font/sensei.woff);
+}
+
 *{
   box-sizing: border-box;
 }
@@ -17,20 +23,7 @@
 #input-file2{
   width: 100%;
 }
-#banner-foto{
-  background-color: #47525E;
-  width: 100%;
-  height: 450px;
-  text-align: center;
-  transition: .5s;
-  border-top:1px solid black;
-  border-bottom:1px solid black;
 
-}
-#alter_banner{
-  width: 100%;
-  height: 450px;
-}
 #foto_banner{
   height: 100%;
   width: 100%;
@@ -45,23 +38,14 @@
   visibility: hidden;
   width: 100%;
 }
+#alter_perfil{
+  width: 350px;
+  height: 350px;
+  margin: 0 auto;
+}
 #alter_perfil #file-input2{
   visibility: hidden;
-  width: 100%;
-}
-#banner-foto:hover{
- opacity: .7;
- transition: .5s;
-}
-#banner:hover #texto3{
-  color: white;
-  transition: .5s;
-}
-#texto2{
-  padding-top: 65px;
-  font-weight:bold;
-  color: transparent;
-  filter: invert(1);
+  width: 350px;
 }
 
 #foto{
@@ -85,55 +69,6 @@
   transition: .6s;
 }
 
-/* Form Alterar */
-
-#form_alt{
-	width: 50%;
-	text-align: center;
-	margin:0 auto;
-	border: 3px double #976DD0;
-	padding: 60px;
-	background-color: #fff;
-}
-
-#nav-alterar{
-	background-color: transparent;
-  border: 3px solid #47525E;
-	width: 100%;
-	height: 50px;
-  text-align: right;
-  padding-right: 20px;
-  transition: .5s;
-  margin-top: 10%;
-}
-#btn_salvar{
-	height: 70%;
-	width: 125px;
-  border-radius: .3rem;
-	margin-top: .4rem;
-	border: purple solid 3px;
-	background-color: transparent;
-  color: purple;
-  font-weight: bold;
-  transition: .5s;
-}
-
-#btn_salvar:hover{
-  background-color: purple;
-  color: white;
-  transition: .5s;
-}
-
-#lbl_salvar{
-  padding-left: 30px;
-}
-
-#salvar-icon{
-	height: 29px;
-	width: 29px;
-	margin-left: -8.5px;
-	margin-top: -4px;
-}
 
 /* Alterar Foto */
 
@@ -166,12 +101,12 @@
 	background-color: black;
 }
 #foto_perfil{
-	width: 250px;
-	height: 250px;
-  border-radius: 120px;
+	width: 350px;
+	height: 350px;
+  border-radius: 50%;
   border: 2px black solid;
-  margin-left: -9px;
-  margin-top: -10px;
+  background-color: white;
+  margin-top: 4rem;
   position: relative;
   transition: .45s;
 }
@@ -179,81 +114,15 @@
 	transition: .45s;
 	opacity: .7;
 }
-#linha{
-	width: 75%;
-	margin-left: 150px;
-	border: white 6px solid;
-}
-#inserir_img{
-	width: 100px;
-	height: 100px;
-	filter: invert(1);
-}
-#texto3{
-	color: transparent;
-  font-size: 100px;
-  font-weight: bold;
-  filter: invert(1);
-}
-#texto{
-  padding-top: 30px;
-  color: transparent;
-  font-size: 40px;
-  font-weight: bold;
-}
-#adicionar{
-	background-color: #47525E;
-	width: 50%;
-	height: 350px;
-	text-align: center;
-	padding-top:120px ;
-	transition: .6s;
-}
-#adicionar:hover{
-	cursor: pointer;
-	background-color: rgba(0, 0, 0, .5);
-	transition: .6s;
-}
-#adicionar:hover #texto{
-	transition: .6s;
-	color: white;
-}
-#formulario_Alter{
-	align-items:center;
-	padding-left: 235px;
-}
-#campo_formulario{
-	float: left;
-	padding: 10px;
-	padding-right: 60px;
-}
-#uf{
-	width: 90px;
-}
+
 #txt_desc{
 	width: 460px;
 	height: 90px;
 }
-#banner_perfil{
-	width: 100%;
-}
-#preto{
-	background-color: black;
-	width: 100%;
-	height: 350px;
-	transition: .5s;
-}
+
 #alt_Foto{
 	color: transparent;
 	transition: .5s;
-}
-#banner_inst{
-	height: 350px;
-	border-top: 6px solid black;
-	border-bottom: 6px solid black;
-	transition: .5s;
-	background-color: #47525E;
-	text-align: center;
 }
 #banner_inst:hover{
 	opacity: .7;
@@ -269,90 +138,14 @@
 body,html{
 padding: 0;
 margin: 0;
-height:250vh;
+height:100%;
 width: 100%;
 text-align: center;
 font-size: 16px;
 line-height: 1.43; 
-}
-.wrapper{
-  display: flex;
-  width: 70%;
-  justify-content: space-around;
-}
-.card{
-  width: 280px;
-  height: 280px;
-  padding:2rem 1rem;
-  background: #fff;
-  position: relative;
-  display: flex;
-  align-items: flex-end;
-  box-shadow: 0px 7px 10px rgba(0,0,0,0.5);
-  transition: 0.5s ease-in-out;
-}
-.card:hover{
-  transform: translateY(20px);
-}
-.card:before{
-  content:"";
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: block;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to bottom, rgba(0,20,150,0.5),rgba(0,100,200,1));
-  z-index: 2;
-  transform: 0.5s all;
-  opacity: 0; 
-}
-.card:hover:before{
-  opacity: 1;
-}
-.card img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-.card .info{
-  position: relative;
-  z-index: 3;
-  color: #fff;
-  opacity: 0;
-  transform: translateY(30px);
-  transition: 0.5s all;
-}
-.card:hover .info{
-  opacity: 1;
-  transform: translateY(0px);
-}
-.card .info h1{
-  margin:0;
-}
-.card .info p{
-  letter-spacing: 1px;
-  font-size: 15px;
-  margin-top: 8px;
-  margin-bottom: 20px;
-}
-.card .info .btn{
-  text-decoration: none;
-  padding: 0.5rem 1rem;
-  background: #fff;
-  color: #000;
-  font-size: 14px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: 0.4s ease-in-out;
+box-sizing: border-box;
 }
 
-.card .info .btn:hover{
-    box-shadow: 0px 7px 10px rgba(255,255,255,0.5);
-}
 .image-upload > input {
   visibility:hidden;
   width:0;
@@ -363,38 +156,59 @@ line-height: 1.43;
   width:0;
   height:0;
 }
-textarea{
-  background-color: #54616e;
-  border: 2px solid #47525E;
-  border-radius: 10px;
-  resize: none;
-  outline: none;
-  overflow: auto;
-  color: white;
-  font-family: arial;
-  padding: 10px;
+
+/* Formulário aluno */
+
+.form{
+  width: 90%;
+  height: 50vh;
+  box-shadow: 10px 9px 30px rgb(110, 110, 110);;
+  margin: 0 auto;
 }
-#txt_desc{
-  width: 500px;
-  height: 125px;
-  text-indent: 30px;
-}
-#txt_link{
-  width: 250px;
-  height: 50px;
-}
-#area_texto{
+.bloco-forms{
   width: 100%;
 }
-.esquerda{
-  text-align: left;
-  padding-left: 100px;
+.bloco-imagem{
+
 }
-.direita{
-  text-align: right;
-  padding-right: 100px;
+.linha-forms{
+  display: flex;
+  flex-wrap: nowrap;
+}
+.form-contatoAluno, .form-enderecoAluno{
+  width: 80%;
 }
 
+.form-aluno{
+  height: 600px;
+  width: 600px;
+  background-color: #fff;
+  box-shadow: 10px 9px 30px rgb(110, 110, 110);
+  position: relative;
+  margin-left: 28.4%;
+  margin-top: -15rem;
+  z-index: -1;
+}
+
+.titulo-forms{
+  text-align: left;
+  margin-left: 5rem;
+  font-size: 40px;
+  font-weight: bold;
+  font-family: 'sensei';
+}
+
+.form-infoAluno input{
+  border-radius: .5rem;
+  width:500px;
+  height: 50px;
+}
+
+.imagem_form{
+  width: 150px;
+  height: 150px;
+  background-color: white;
+}
 /* botao resposta */
 
 #resp1{

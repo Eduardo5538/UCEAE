@@ -75,24 +75,8 @@
   </div>
   </nav>
 
-  <!-- --------------------- Banner da Instituição --------------------- -->
+  <!-- --------------------- Área da Foto --------------------- -->
 
-  <div class="image-upload" id="banner-foto">
-  <label for="file-input" id="input-file">
-  <form method="post" id="alter_banner" action='alterarBanner.php' enctype="multipart/form-data">
-    <?php
-        echo "<img src='../uceae-login/".  $Res[0]['foto_aluno']  ."' id='foto_banner' name='foto_banner'>"
-      ?>
-    
-  </label>
-  <input id="file-input" name='foto-banner' type="file" onchange='alterar_foto()'>
-  <div id='resp1' class="btn btn-resp1"></div>
-  
-  </form>
-
-  </div>
-  <br><br><br>
-  <section id="foto">
   <div class="image-upload2">
   <label for="file-input2" id="input-file">
   <form method='post' id='alter_perfil' action='alterarFoto.php' enctype="multipart/form-data">
@@ -109,20 +93,68 @@
   
 </div>
 <br><br><br>
-  </section>
 
+ <!-- --------------------- Formulário do Aluno --------------------- -->
+
+<form action="" method="post" class="form-aluno" id="frm_aluno">
+
+</form>
+<br><br><br><br>
+<h1 class="titulo-forms">Informações Pessoais</h1>
+<form action="" method="post" class="form form-infoAluno" id="frm_infoAluno">
+  <div class="bloco-itens">
+    <label for="">Nome</label><br>
+    <input type="text" name="" id="">
+  </div>
+  <div class="bloco-itens">
+    <label for="">Sobrenome</label><br>
+    <input type="text" name="" id="">
+  </div>
+  <div class="bloco-itens">
+    <label for="">Data de Nascimento</label><br>
+    <input type="date" name="" id="">
+  </div>
+  <div class="bloco-itens">
+    <label for="">Email</label><br>
+    <input type="email" name="" id="">
+  </div>
+  <div class="bloco-itens bloco-imagem">
+    <label for="">Foto de Perfil</label><br>
+    <?php
+          echo "<img src='../uceae-login/".  $Res[0]['foto_aluno']  ."' id='foto_perfil_form' class='imagem_form'>"
+        ?>
+  </div>
+</form>
+<br><br>
+<div class="linha-forms">
+  <div class="bloco-forms">
+    <h1 class="titulo-forms">Contato</h1><br>
+    <form action="" method="post" class="form form-contatoAluno" id="frm_contatoAluno">
+      
+    </form>
+  </div>
+  <div class="bloco-forms">
+    <h1 class="titulo-forms">Endereço</h1><br>
+    <form action="" method="post" class="form form-enderecoAluno" id="frm_EnderecoAluno">
+      
+    </form>
+  </div>
+</div>
+<br><br>
+<h1>teste</h1>
+ <!-- --------------------- Modal --------------------- -->
 
   <div class="modal fade" id="ModalSair" tabindex="-1" aria-labelledby="ModalLabelSair" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header text-center">
-          <h5 class="modal-title entrar-titulo w-100" id="ModalLabelSair"><?php echo $Res[0]['nome_escola']; ?></h5>
+          <h5 class="modal-title entrar-titulo w-100" id="ModalLabelSair"><?php echo $Res[0]['nome_aluno']; ?></h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body" style="margin: 0 25% 0 25%;">
-           <?php echo "<img src='".  $Res[0]['foto_perfil']  ."' id='ft_perfil_modal'>"?><br><br>
-           <h3><?php echo $Res[0]['nome_escola']; ?></h3><br>
-           <label><?php echo $Res[0]['email_escola']; ?></label>
+           <?php echo "<img src='".  $Res[0]['foto_aluno']  ."' id='ft_perfil_modal'>"?><br><br>
+           <h3><?php echo $Res[0]['nome_aluno']; ?></h3><br>
+           <label><?php echo $Res[0]['email']; ?></label>
         </div>
               <div class="modal-footer justify-content-center">
               <a href='../uceae-login/unlogin.php' class='btn btn-danger' tabindex='-1' role='button' aria-disabled='true'>Sair</a>
