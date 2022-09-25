@@ -764,13 +764,13 @@ textarea{
 /* Formulario de Inserir Curso */
 
 .inserirCurso{
-  background-color: #05b36a;
+  background-color: #0247af;
   padding: 3rem;
-  border-radius: .5rem .5rem 15rem 15rem;
+  border-radius: .5rem 5rem .5rem 5rem;
   width: 500px;
   height: 600px;
   margin: 0 auto;
-  box-shadow: .7rem .5rem 15px #017e54ea;
+  box-shadow: 1rem .9rem 10px #151d92ea;
   text-align: center;
 }
 .linha-formulario{
@@ -797,11 +797,18 @@ textarea{
 .input-form{
   height: 50px;
   border: none;
-  background-color: #037948a1;
+  background-color: rgb(14, 24, 116);
   color: white;
   border-radius: .6rem;
-  box-shadow: .25rem .25rem 10px rgb(0, 75, 46);
+  box-shadow: .25rem .25rem 10px rgb(2, 15, 138);
+  transition: .5s;
 }
+
+.input-form:focus{
+  background-color: rgb(66, 81, 219);
+  transition: .5s;
+}
+
 .item-formulario{
   text-align: left;
 }
@@ -821,8 +828,8 @@ textarea{
   width: 200px;
 }
 .area-checkbox, .area-radio{
-  background-color: #037948a1;
-  box-shadow: .25rem .25rem 10px rgb(0, 75, 46);
+  background-color:  rgb(14, 24, 116);
+  box-shadow: .25rem .25rem 10px rgb(2, 15, 138);
   padding: .75rem;
   border-radius: .6rem;
 }
@@ -835,24 +842,43 @@ textarea{
   height: 150px;
   width: 250px;
   border: none;
-  background-color: #037948a1;
+  background-color: rgb(14, 24, 116);
   color: white;
   border-radius: .6rem;
-  box-shadow: .25rem .25rem 10px rgb(0, 75, 46);
+  box-shadow: .25rem .25rem 10px rgb(2, 15, 138);
+  transition: .5s;
 }
+
+.desc-curso:focus{
+  background-color: rgb(66, 81, 219);
+  transition: .5s;
+}
+
 .input-preco{
   width: 100px;
+  transition: .5s;
+}
+
+.input-preco:focus{
+  background-color: rgb(66, 81, 219);
+  transition: .5s;
 }
 
 .btn-inserirCurso{
   border: none;
   padding: 10px;
-  background-color: #037948a1;
-  box-shadow: .25rem .25rem 10px rgb(0, 75, 46);
+  background-color: rgb(14, 24, 116);
+  box-shadow: .25rem .25rem 10px rgb(2, 15, 138);
   color: white;
   font-size: 20px;
   font-weight: bold;
   width: 10rem;
   height: 50px;
   border-radius: .5rem;
+  transition: .5s;
+}
+
+.btn-inserirCurso:hover{
+  background-color: rgb(66, 81, 219);
+  transition: .5s;
 }
