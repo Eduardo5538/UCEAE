@@ -47,6 +47,10 @@
   visibility: hidden;
   width: 350px;
 }
+#alter_fotoForm #file-input2{
+  visibility: hidden;
+  width: 350px;
+}
 
 #foto{
   border-radius: 150px;
@@ -110,7 +114,18 @@
   position: relative;
   transition: .45s;
 }
-#foto_perfil:hover{
+#foto_perfilForm{
+	width: 400px;
+	height: 400px;
+  border-radius: 1rem;
+  box-shadow: 10px 10px 8px rgb(116, 116, 116);
+  border: 1px black solid;
+  background-color: white;
+  margin-top: 4rem;
+  position: relative;
+  transition: .45s;
+}
+#foto_perfil:hover, #foto_perfilForm:hover{
 	transition: .45s;
 	opacity: .7;
 }
@@ -151,6 +166,12 @@ box-sizing: border-box;
   width:0;
   height:0;
 }
+
+.image-upload2{
+  width: 35%;
+  height: 450px;
+  margin: 0 auto;
+}
 .image-upload2 > input {
   visibility:hidden;
   width:0;
@@ -161,22 +182,21 @@ box-sizing: border-box;
 
 .form{
   width: 90%;
-  height: 50vh;
+  height: 80vh;
   box-shadow: 10px 9px 30px rgb(110, 110, 110);;
   margin: 0 auto;
 }
 .bloco-forms{
   width: 100%;
 }
-.bloco-imagem{
 
-}
 .linha-forms{
   display: flex;
   flex-wrap: nowrap;
 }
 .form-contatoAluno, .form-enderecoAluno{
   width: 80%;
+  height: 60vh;
 }
 
 .form-aluno{
@@ -184,9 +204,9 @@ box-sizing: border-box;
   width: 600px;
   background-color: #fff;
   box-shadow: 10px 9px 30px rgb(110, 110, 110);
+  margin: 0 auto;
+  margin-top: -15%;
   position: relative;
-  margin-left: 28.4%;
-  margin-top: -15rem;
   z-index: -1;
 }
 
@@ -199,15 +219,42 @@ box-sizing: border-box;
 }
 
 .form-infoAluno input{
-  border-radius: .5rem;
+  border:none;
+  border-bottom: 2px solid rgb(212, 212, 212);
   width:500px;
   height: 50px;
 }
 
 .imagem_form{
-  width: 150px;
-  height: 150px;
+  width: 350px;
+  height: 350px;
   background-color: white;
+}
+
+.info-pessoal{
+  gap: 5%;
+  height: 75vh;
+}
+
+.bloco-info-pessoal{
+  padding: 5rem;
+  margin-top: 2rem;
+  margin-left: 6rem;
+  text-align: left;
+}
+
+.bloco-info-pessoal input{
+  margin-bottom: 2rem;
+}
+
+.bloco-imagem{
+  padding: 1rem;
+  width: 500px;
+  margin-top: 2rem;
+}
+
+.trocar-imagemForm{
+  visibility: hidden;
 }
 /* botao resposta */
 
@@ -255,4 +302,9 @@ box-sizing: border-box;
   background-color: purple;
   color: white;
   transition: .5s;
+}
+
+.btn-alterarFotoForm{
+  width: 60%;
+  height: 200px;
 }

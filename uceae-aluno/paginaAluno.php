@@ -29,6 +29,7 @@
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 	<link rel="stylesheet" type="text/css" href="css/paginaAluno.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="js/alt.js"></script>
 	<title><?php echo $Res[0]['nome_aluno']; ?></title>
 </head>
 <body>
@@ -85,10 +86,7 @@
           echo "<img src='../uceae-login/".  $Res[0]['foto_aluno']  ."' id='foto_perfil'>"
         ?>
     </label>
-    <div id='resp2' class="btn btn-resp2"></div>
-      
     <input id="file-input2" name='foto_perfil' type="file" / onchange='alterar_foto2()'>
-  
   </form>
   
 </div>
@@ -102,29 +100,45 @@
 <br><br><br><br>
 <h1 class="titulo-forms">Informações Pessoais</h1>
 <form action="" method="post" class="form form-infoAluno" id="frm_infoAluno">
-  <div class="bloco-itens">
-    <label for="">Nome</label><br>
-    <input type="text" name="" id="">
+<div class="linha-forms info-pessoal">
+   <!-- Bloco de Informações -->
+  <div class="bloco-info-pessoal">
+    <div class="bloco-itens">
+      <label for="">Nome</label><br>
+      <input type="text" name="" id="">
+    </div>
+    <div class="bloco-itens">
+      <label for="">Sobrenome</label><br>
+      <input type="text" name="" id="">
+    </div>
+    <div class="bloco-itens">
+      <label for="">Data de Nascimento</label><br>
+      <input type="date" name="" id="">
+    </div>
+    <div class="bloco-itens">
+      <label for="">Email</label><br>
+      <input type="email" name="" id="">
+    </div>
   </div>
-  <div class="bloco-itens">
-    <label for="">Sobrenome</label><br>
-    <input type="text" name="" id="">
-  </div>
-  <div class="bloco-itens">
-    <label for="">Data de Nascimento</label><br>
-    <input type="date" name="" id="">
-  </div>
-  <div class="bloco-itens">
-    <label for="">Email</label><br>
-    <input type="email" name="" id="">
-  </div>
-  <div class="bloco-itens bloco-imagem">
-    <label for="">Foto de Perfil</label><br>
-    <?php
-          echo "<img src='../uceae-login/".  $Res[0]['foto_aluno']  ."' id='foto_perfil_form' class='imagem_form'>"
-        ?>
-  </div>
+  <!-- Bloco de Imagem -->
 </form>
+<div class="image-upload2">
+  <label for="file-input2" id="input-file">
+  <form method='post' id='alter_fotoForm' action='alterarFoto.php' enctype="multipart/form-data">
+    <label for="file-input2">
+      <?php
+          echo "<img src='../uceae-login/".  $Res[0]['foto_aluno']  ."' id='foto_perfilForm'>"
+        ?>
+    </label>
+    <div id='resp2' class="btn btn-resp2"></div>
+      
+    <input id="file-input2" name='foto_perfil' type="file" / onchange='alterar_foto2()'>
+  
+  </form>
+  
+</div>
+</div>
+
 <br><br>
 <div class="linha-forms">
   <div class="bloco-forms">
