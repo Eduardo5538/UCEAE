@@ -16,6 +16,17 @@
     $ft_prop = $_FILES["foto_propaganda"];
     $comprovante = $_FILES["comprovante"];
     $mensalidade = $_POST['mensalidade'];
+    $desc = $_POST['desc'];
+    $acessibilidade = $_POST['acessibilidade'];
+    $modalidade = $_POST['modalidade'];
+    $acessibilidade_pauzinho = "";
+
+    if($acessibilidade == "SIM"){
+        $acessibilidade_pauzinho = "S";
+    }
+    if($acessibilidade == "NAO"){
+        $acessibilidade_pauzinho = "N";
+    }
 
   	if (!empty($ft_perfil["name"]))
   	{
@@ -66,7 +77,7 @@
 
     try
     {
-        $inserir = $conexao->prepare("insert into escolas (nome_escola, cnpj, rua_escola, email_escola, cep_escola, cidade_escola, bairro_escola, uf_escola, foto_perfil, foto_banner, foto_prop, telefone_escola, comprovante, mensalidade) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
+        $inserir = $conexao->prepare("insert into escolas (nome_escola, cnpj, rua_escola, email_escola, cep_escola, cidade_escola, bairro_escola, uf_escola, foto_perfil, foto_banner, foto_prop, telefone_escola, comprovante, mensalidade, acessibilidade, modalidade, acessibilidade_texto) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
         $inserir->bindParam(1,$nome);
         $inserir->bindParam(2,$cnpj);
         $inserir->bindParam(3,$rua_inst);
@@ -81,6 +92,10 @@
         $inserir->bindParam(12,$telefone);
         $inserir->bindParam(13,$caminho_arq);
         $inserir->bindParam(14,$mensalidade);
+        $inserir->bindParam(15,$acessibilidade_pauzinho);
+        $inserir->bindParam(16, $modalidade);
+        $inserir->bindParam(17, $desc);
+
 
 
         $inserir->execute();
