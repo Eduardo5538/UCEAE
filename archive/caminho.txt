@@ -1,0 +1,1 @@
+C:\xampp\apache\bin\curl-ca-bundle.crt
