@@ -279,7 +279,7 @@ html {
 }
 
 .topo {
-    background-color: rgb(80, 80, 255);
+    background-image: linear-gradient(to right,rgb(80, 80, 255),rgb(49, 49, 255));
     height: 500px;
     color: white;
     text-align: center;
