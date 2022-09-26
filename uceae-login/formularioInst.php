@@ -181,6 +181,39 @@
               </div>
             </div>
           </div>
+          <div class="form__row">
+            <div class="input">
+            <div class="input__container">
+              <label class="input__label">Acessibilidade<label style="color: red;">*</label></label>
+            </div>
+              <div class="radio-center">
+                <input type="radio" id="SIM" name="acessibilidade" value="SIM" onclick="radio()"/><label for="SIM">Sim</label>
+                <input type="radio" id="NAO" name="acessibilidade" value="NAO"/><label for="NAO">Não</label>
+              </div>
+            </div>
+          </div>
+          <div class="form__row none">
+            <div class="input">
+              <div class="input__container">
+                <input class="input__field" id="desc" name="desc" placeholder="Descrição" required type="text" /><label class="input__label" for="desc">Descrição</label>
+              </div>
+            </div>
+          </div>
+          <div class="form__row">
+            <div class="input">
+            <div class="input__container">
+              <label class="input__label">Modalidade<label style="color: red;">*</label></label>
+            </div>
+              <div class="radio-center">
+                <input type="radio" id="Presencial" name="modalidade" value="Presencial">
+                <label for="Presencial">Presencial</label><br>
+                <input type="radio" id="Online" name="modalidade" value="Online"> 
+                <label for="Online">Online</label><br>
+                <input type="radio" id="Hibrido" name="modalidade" value="Hibrido">
+                <label for=" Hibrido">Híbrido</label><br>
+              </div>
+            </div>
+          </div>
           <div class="botoes">
             <div class="form__row">
               <div class="component component--primary form__button">

@@ -5,7 +5,7 @@ function validarCNPJ() {
     var cnpj = document.getElementById('cnpj').value;
     cnpj = cnpj.replace(/[^\d]+/g,'');
  
-    if(cnpj == ''){ return false;}
+    if(cnpj == ''){ penis = false;}
 
 
     if (cnpj.length != 14){

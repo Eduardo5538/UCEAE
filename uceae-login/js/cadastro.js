@@ -1,3 +1,13 @@
+function radio(){
+    if($('input[name=acessibilidade]:checked')){
+        if(document.getElementById('SIM').checked){
+            $(".none").show('slow');
+        }
+        else if(document.getElementById('NAO').checked){
+            $(".none").hide('slow');
+        }
+    }
+}
 function mostraFormAluno(){
 	location.href="cadastroAluno.php";
 }
