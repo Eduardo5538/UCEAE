@@ -16,6 +16,12 @@
     }
     if(isset($_POST['acessibilidade'])){
         $acessibilidade = $_POST['acessibilidade'];
+        if($acessibilidade == 'SIM'){
+            $acessibilidade = 'S';
+        }
+        else{
+            $acessibilidade = "N";
+        }
     }
     else{
         $acessibilidade = null;

@@ -265,7 +265,7 @@
       <?php
         echo "<h1>" . $Res[0]['nome_escola']  . "</h1> ";
         echo "<p>" . $Res[0]['email_escola']  . "</p><br>";
-        echo "<a href='../uceae-login/". $Res[0]['comprovante'] ."' class='btn btn-warning' tabindex='-1' role='button' style='margin-right: 10px;' aria-disabled='true'>Verificar Acessibilidade</a><br>"
+        echo "<a href='../uceae-login/". $Res[0]['comprovante'] ."' class='btn btn-warning' tabindex='-1' role='button' style='margin-right: 10px;' aria-disabled='true'>Verificar Acessibilidade</a><br><Br>"
       ?>
     </div>
     <br>
@@ -276,6 +276,33 @@
         echo "<h5>" . $Res[0]['cidade_escola']  . "</h5> - ";
         echo "<h5>" . $Res[0]['uf_escola']  . "</h5>";
         echo "<a href='tel://". $Res[0]['telefone_escola'] ."'>" . $Res[0]['telefone_escola']  . "</a><br><br>";
+        if($Res[0]['modalidade'] == ""){
+          echo "<h5>Tipo de curso: Não informado</h5> <br>";
+        }
+        else{
+          echo "<h5>Tipo de curso: ". $Res[0]['modalidade'] ."</h5> <br>";
+        }
+        
+        if( $Res[0]['acessibilidade'] == "S"){
+          echo "<h5>Acessivel!</h5> <br>";
+        }
+        else{
+          echo "<h5>Não acessivel!</h5><br>";
+        }
+
+        if($Res[0]['acessibilidade_texto'] == ""){
+          echo "<h5>Não descreve sua acessibilidade!</h5><br>";
+        }
+        else{
+          echo "<h5>Tipo de acessibilidade: ". $Res[0]['acessibilidade_texto'] ."</h5><br>";
+        }
+        if($Res[0]['mensalidade'] == "" || $Res[0]['mensalidade'] == "0.00"){
+          echo "<h5>Mensalidade: Grátis!</h5>";
+        }
+        else{
+          echo "<h5>Mensalidade: R$" . $Res[0]['mensalidade']  . "</h5>";
+        }
+        
       ?>
     </div>
   </div><br>

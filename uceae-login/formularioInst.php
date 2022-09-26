@@ -26,7 +26,7 @@
           <a class="nav-link active" aria-current="page" href="../index.php">Portal</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Busca</a>
+          <a class="nav-link" href="../uceae-aluno/busca.php">Busca</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="../uceae-aluno/brazil.php">Mapa</a>
@@ -188,7 +188,7 @@
             </div>
               <div class="radio-center">
                 <input type="radio" id="SIM" name="acessibilidade" value="SIM" onclick="radio()"/><label for="SIM">Sim</label>
-                <input type="radio" id="NAO" name="acessibilidade" value="NAO"/><label for="NAO">Não</label>
+                <input type="radio" id="NAO" name="acessibilidade" value="NAO" onclick="radio()"/><label for="NAO">Não</label>
               </div>
             </div>
           </div>

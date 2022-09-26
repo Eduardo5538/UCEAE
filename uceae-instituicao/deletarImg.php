@@ -18,7 +18,7 @@
         $Comando->execute();
 
         if($Comando->rowCount() > 0){
-            echo "funfou";
+            header('Location: paginaInst.php');
         }
     }
 

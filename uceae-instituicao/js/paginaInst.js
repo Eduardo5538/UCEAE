@@ -52,6 +52,7 @@ function insertImg(){
     })
     .done(function(msg){
         alert("imagem inserida");
+        location.reload()
     })
     .fail(function(){
         alert("Falha ao inserir imagem")
