@@ -277,13 +277,13 @@ COMMIT;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 
 
-SELECT * FROM LOGIN;
-SELECT * FROM tab_alunos;
-SELECT * FROM comentarios;
-SELECT * FROM escolas;
+-- SELECT * FROM LOGIN;
+-- SELECT * FROM tab_alunos;
+-- SELECT * FROM comentarios;
+-- SELECT * FROM escolas;
 
-SELECT * from escolas WHERE nome_escola LIKE 'porra' AND mensalidade BETWEEN 123 AND 1323 and cidade_escola = 'SP' and uf_escola = 'São Paulo';
+-- SELECT * from escolas WHERE nome_escola LIKE 'porra' AND mensalidade BETWEEN 123 AND 1323 and cidade_escola = 'SP' and uf_escola = 'São Paulo';
 
-SELECT * from escolas WHERE nome_escola LIKE '%centro%' AND cidade_escola = ' Abadia de Goiás' AND uf_escola = 'GO';
+-- SELECT * from escolas WHERE nome_escola LIKE '%centro%' AND cidade_escola = ' Abadia de Goiás' AND uf_escola = 'GO';
 
-SELECT * from escolas WHERE mensalidade BETWEEN 0 AND 10000 AND uf_escola LIKE 'ES'
+-- SELECT * from escolas WHERE mensalidade BETWEEN 0 AND 10000 AND uf_escola LIKE 'ES'
