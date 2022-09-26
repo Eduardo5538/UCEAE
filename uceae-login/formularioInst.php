@@ -181,28 +181,30 @@
               </div>
             </div>
           </div>
-          <div class="form__row">
-            <div class="component component--primary form__button">
-            <label for="foto_banner" id='label_banner'>Foto do Banner</label>
-            <input type="file" name="foto_banner" id='foto_banner'><br><br>
+          <div class="botoes">
+            <div class="form__row">
+              <div class="component component--primary form__button">
+              <label for="foto_banner" id='label_banner'>Foto do Banner</label>
+              <input type="file" name="foto_banner" id='foto_banner'><br><br>
+              </div>
             </div>
-          </div>
-          <div class="form__row">
-            <div class="component component--primary form__button">
-            <label for="foto_perfil" id='label_perfil'>Foto de Perfil</label>
-            <input type="file" name="foto_perfil" id='foto_perfil'><br><br>
+            <div class="form__row">
+              <div class="component component--primary form__button">
+              <label for="foto_perfil" id='label_perfil'>Foto de Perfil</label>
+              <input type="file" name="foto_perfil" id='foto_perfil'><br><br>
+              </div>
             </div>
-          </div>
-          <div class="form__row">
-            <div class="component component--primary form__button">
-            <label for="foto_propaganda" id='label_propaganda'>Propaganda</label>
-            <input type="file" name="foto_propaganda" id='foto_propaganda'><br><br>
+            <div class="form__row">
+              <div class="component component--primary form__button">
+              <label for="foto_propaganda" id='label_propaganda'>Propaganda</label>
+              <input type="file" name="foto_propaganda" id='foto_propaganda'><br><br>
+              </div>
             </div>
-          </div>
-          <div class="form__row">
-            <div class="component component--primary form__button">
-            <label for="comprovante" id='label_comprovante'>Comprovante de Acessibilidade</label>
-            <input type="file" name="comprovante" id='comprovante'><br><br>
+            <div class="form__row">
+              <div class="component component--primary form__button">
+              <label for="comprovante" id='label_comprovante'>Comprovante de Acessibilidade</label>
+              <input type="file" name="comprovante" id='comprovante'><br><br>
+              </div>
             </div>
           </div>
           <div class="form__row">
