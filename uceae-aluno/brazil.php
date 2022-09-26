@@ -296,7 +296,7 @@
             for($i = 0; $i <= sizeof($Res) - 1; $i++)
             {
                echo "
-                  <div class='card mb-3' id='card' data-aos='fade-up'>
+                  <div class='card mb-3' id='card' data-aos='fade-up' data-aos-once='true'>
                     <img class='card-img-top' id='img-card' src='". $Res[$i]['foto_banner'] ."' alt='Card image cap'>
                     <div class='card-body'>
                       <h5 class='card-title'>".$Res[$i]['nome_escola']."</h5>
@@ -342,6 +342,21 @@
     </div>
   </div>
 </div>
+
+<footer>
+  <p id="rua-bottom">Rua Paçoca 131 - Prédio do Grande Soldador</p>
+
+  <p id="uceae-bottom">UCEAE - Todos direitos reservados®.</p>
+
+  <div id="sociais-bottom">
+    <p>Siga a gente nas redes sociais!</p>
+    <div id="botoes-bottom">
+      <a href="#"><i class="bi bi-twitter green grande"></i></a>
+      <a href="#"><i class="bi bi-instagram insta grande"></i></a>
+      <a href="#"><i class="bi bi-facebook blue grande"></i></a>
+    </div>
+  </div>
+</footer>
 </body>
 
 <!-- Script para animação em css e js -->

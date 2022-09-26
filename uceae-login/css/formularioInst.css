@@ -480,3 +480,9 @@ rgba(0, 0, 0, 0.25)
   text-decoration: none;
   font-size: 30px;
 }
+.botoes{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

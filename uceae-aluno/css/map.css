@@ -18,6 +18,15 @@ svg path:hover{
     transition: 0.6s;
     cursor: pointer;
 }
+footer{
+	background-color: black;
+	font-size: 20px;
+	color: white;
+	padding: 3% 3% 0 3%;
+	height: 250px;
+	display: flex;
+	justify-content: space-between;
+}
 #mapa-titulo{
 	display: flex;
 	clear: none;
@@ -51,6 +60,40 @@ svg path:hover{
 	color: white;
 	font-size: 10vw;
 	letter-spacing: 5vh;
+}
+#sociais-bottom{
+	white-space: nowrap;
+	font-size: 1.3vw;
+}
+#uceae-bottom{
+	align-self: flex-end;
+	margin-right: 15vh;
+	white-space: wrap;
+	font-size: 1.3vw;
+}
+#rua-bottom{
+	white-space: wrap;
+	font-size: 1.3vw;
+}
+#botoes-bottom{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+}
+.green{
+	color: #76CFFF;
+}
+.blue{
+	color: #3b5998;
+}
+.insta{
+	background:linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+  	-webkit-background-clip: text;
+  	-webkit-text-fill-color: transparent;
+}
+.grande{
+	font-size: 4.444444444444445vw;
 }
 .container{
 	width: 750px;

@@ -184,7 +184,7 @@
           <a class="nav-link" aria-current="page" href="../index.php">Portal</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="../uceae-aluno/brazil.php">Busca</a>
+          <a class="nav-link" href="../uceae-aluno/busca.php">Busca</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="brazil.php">Mapa</a>
