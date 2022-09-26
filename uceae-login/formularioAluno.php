@@ -60,18 +60,26 @@
             </div>
             <div class="input-group">
                 <label for="def" required>Possui Deficiência?</label>
-                <input type="radio" id="sim" name="op_def" value="S">
-                <label for="html">Sim</label><br>
-                <input type="radio" id="nao" name="op_def" value="N">
-                <label for="css">Não</label><br>
+                <div class="linha-form">
+                    <label for="html">Sim</label>
+                    <input type="radio" id="sim" name="op_def" value="S" onclick="mostraDef()" class="btn-radioSim">                
+                </div>
+                <div class="linha-form">
+                    <label for="css">Não</label>
+                    <input type="radio" id="nao" name="op_def" value="N" onclick="mostraDef()" class="btn-radioNao">
+                </div>
+                <br>
+                
+                <br>
             </div>
-            <div class="input-group">
-                <label for="nomeDefAluno">Nome da Deficiência</label>
-                <input type="text" name="nomeDefAluno" id="txt_nomeDefAluno">
+            <div class="input-group def-aluno" >
+                <label for="nomeDefAluno" >Nome da Deficiência</label>
+                <br>
+                <input type="text" name="nomeDefAluno" id="txt_nomeDefAluno" >
             </div>
-            <div class="input-group">
-                <label for="descDefAluno">Descrição da Deficiência</label>
-                <texarea name="descDefAluno" id="txt_descDefAluno">
+            <div class="input-group def-aluno">
+                <label for="descDefAluno">Descrição da Deficiência</label><br>
+                <textarea name="descDefAluno" id="txt_descDefAluno" class='descDefAluno'></textarea>
             </div>
             <div class="input-group">
                 <label for="foto">Foto de Perfil</label>

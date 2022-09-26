@@ -129,3 +129,21 @@ function cpfVerify(){
 }
 
 
+// mostrar itens
+
+function mostraDef()
+{
+    radio2 = document.querySelector('.btn-radioNao');
+    radio1 = document.querySelector('.btn-radioSim');
+    divDef = document.querySelectorAll('.def-aluno');
+    if(radio1.checked == true){
+        divDef.forEach(divDef => {
+            $(".def-aluno").show('slow');
+        })
+    }
+    if (radio2.checked == true){
+        divDef.forEach(divDef => {
+            $(".def-aluno").hide('slow');
+        })
+    }
+}
