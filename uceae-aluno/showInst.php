@@ -294,10 +294,15 @@
           echo "<h5>Não descreve sua acessibilidade!</h5><br>";
         }
         else{
-          echo "<h5>Tipo de acessibilidade: ". $Res[0]['acessibilidade_texto'] ."</h5>";
+          echo "<h5>Tipo de acessibilidade: ". $Res[0]['acessibilidade_texto'] ."</h5><br>";
+        }
+        if($Res[0]['mensalidade'] == "" || $Res[0]['mensalidade'] == "0.00"){
+          echo "<h5>Mensalidade: Grátis!</h5>";
+        }
+        else{
+          echo "<h5>Mensalidade: R$" . $Res[0]['mensalidade']  . "</h5>";
         }
         
-       
       ?>
     </div>
   </div><br>
