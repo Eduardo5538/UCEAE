@@ -152,7 +152,7 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body" style="margin: 0 25% 0 25%;">
-           <?php echo "<img src='".  $Res[0]['foto_aluno']  ."' id='ft_perfil_modal'>"?><br><br>
+           <?php echo "<img src='../uceae-login/".  $Res[0]['foto_aluno']  ."' id='ft_perfil_modal'>"?><br><br>
            <h3><?php echo $Res[0]['nome_aluno']; ?></h3><br>
            <label><?php echo $Res[0]['email']; ?></label>
         </div>
