@@ -104,19 +104,19 @@
    <!-- Bloco de Informações -->
   <div class="bloco-info-pessoal">
     <div class="bloco-itens">
-      <label for="">Nome</label><br>
+      <label for="" class="titulo-campo">Nome</label><br>
       <input type="text" name="" id="">
     </div>
     <div class="bloco-itens">
-      <label for="">Sobrenome</label><br>
+      <label for="" class="titulo-campo">Sobrenome</label><br>
       <input type="text" name="" id="">
     </div>
     <div class="bloco-itens">
-      <label for="">Data de Nascimento</label><br>
+      <label for="" class="titulo-campo">Data de Nascimento</label><br>
       <input type="date" name="" id="">
     </div>
     <div class="bloco-itens">
-      <label for="">Email</label><br>
+      <label for="" class="titulo-campo">Email</label><br>
       <input type="email" name="" id="">
     </div>
   </div>
