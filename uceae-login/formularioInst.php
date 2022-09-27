@@ -48,16 +48,16 @@
           session_start();
           if(!isset($_SESSION['CNPJ'])){
               echo "<button class='btn btn-outline-dark' type='button' style='margin-right: 10px;' data-bs-toggle='modal' data-bs-target='#ModalEntrar'>Entrar</button>";
-              echo "<a href='uceae-login/cadastroAluno.php' class='btn btn-dark' tabindex='-1' style='margin-right: 10px;' role='button' aria-disabled='true'>Cadastre-se!</a>";
-              echo "<a href='uceae-login/formularioInst.php' class='btn btn-warning' tabindex='-1' role='button' aria-disabled='true'>Cadastrar sua instituição!</a>";
+              echo "<a href='formularioAluno.php' class='btn btn-dark' tabindex='-1' style='margin-right: 10px;' role='button' aria-disabled='true'>Cadastre-se!</a>";
+              echo "<a href='formularioInst.php' class='btn btn-warning' tabindex='-1' role='button' aria-disabled='true'>Cadastrar sua instituição!</a>";
           }
         ?>
           <?php
             
             if(isset($_SESSION['CNPJ'])){
               if($_SESSION['CNPJ'] != ''){
-                echo "<a href='uceae-instituicao/paginaInst.php' class='btn btn-warning' tabindex='-1' role='button' style='margin-right: 10px;' aria-disabled='true'>Sua página!</a>";
-                echo "<a href='uceae-login/unlogin.php' class='btn btn-danger' tabindex='-1' role='button' aria-disabled='true'>Deslogar</a>";
+                echo "<a href='../uceae-instituicao/paginaInst.php' class='btn btn-warning' tabindex='-1' role='button' style='margin-right: 10px;' aria-disabled='true'>Sua página!</a>";
+                echo "<a href='unlogin.php' class='btn btn-danger' tabindex='-1' role='button' aria-disabled='true'>Deslogar</a>";
               
               }
             }
@@ -104,7 +104,7 @@
             <div class="input">
               <div class="input__container">
                 <input class="input__field" id="senha" name="senha" placeholder="Senha" required type="password" /><label class="input__label" for="senha">Senha</label>
-                <h5 class="txtSenha"></h5>
+                <h5 id="txtSenha"></h5>
               </div>
             </div>
           </div>
@@ -112,7 +112,7 @@
             <div class="input">
               <div class="input__container">
                 <input class="input__field" id="confirm_senha" name="confirm_senha" placeholder="Confirmar Senha" required type="password" /><label class="input__label" for="confirm_senha">Confirmar Senha</label>
-                <h5 class="txtConfSenha"></h5>              
+                <h5 id="txtConfSenha"></h5>
               </div>
             </div>
           </div>
@@ -197,7 +197,7 @@
           <div class="form__row none">
             <div class="input">
               <div class="input__container">
-                <input class="input__field" id="desc" name="desc" placeholder="Descrição" required type="text" /><label class="input__label" for="desc">Descrição</label>
+                <input class="input__field" id="desc" name="desc" placeholder="Descrição" type="text" /><label class="input__label" for="desc">Descrição</label>
               </div>
             </div>
           </div>
@@ -252,7 +252,7 @@
           
           <div class="form__row">
             <div class="component component--primary form__button">
-            <input type='submit' class="botao btn--regular" id="sign-up-button" tabindex="0" value='Cadastrar'><br><br>
+            <input type='submit' class="botao btn--regular" id="sign-up-button" tabindex="0" onclick="verificaSenha()" value='Cadastrar'><br><br>
               <a href="#" id="btn_criarConta">Já Possui uma conta? Entrar</a>
             </div>
           </div>

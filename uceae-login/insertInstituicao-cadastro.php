@@ -1,6 +1,5 @@
 <?php
     include 'conection.php';
-
     $nome = $_POST['nome_inst'];
     $telefone = $_POST['tel'];
     $email = $_POST['email'];
@@ -72,73 +71,77 @@
   		$caminho_arq = "../uceae-login/docs/".$nome_img;
   		move_uploaded_file($comprovante["tmp_name"], $caminho_arq);
   	}
-
-
-
-    try
-    {
-        $inserir = $conexao->prepare("insert into escolas (nome_escola, cnpj, rua_escola, email_escola, cep_escola, cidade_escola, bairro_escola, uf_escola, foto_perfil, foto_banner, foto_prop, telefone_escola, comprovante, mensalidade, acessibilidade, modalidade, acessibilidade_texto) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
-        $inserir->bindParam(1,$nome);
-        $inserir->bindParam(2,$cnpj);
-        $inserir->bindParam(3,$rua_inst);
-        $inserir->bindParam(4,$email);
-        $inserir->bindParam(5,$cep_inst);
-        $inserir->bindParam(6,$cidade_inst);
-        $inserir->bindParam(7,$bairro_inst);
-        $inserir->bindParam(8,$uf);
-        $inserir->bindParam(9,$caminho_img);
-        $inserir->bindParam(10,$caminho_img3);
-        $inserir->bindParam(11,$caminho_img2);
-        $inserir->bindParam(12,$telefone);
-        $inserir->bindParam(13,$caminho_arq);
-        $inserir->bindParam(14,$mensalidade);
-        $inserir->bindParam(15,$acessibilidade_pauzinho);
-        $inserir->bindParam(16, $modalidade);
-        $inserir->bindParam(17, $desc);
-
-
-
-        $inserir->execute();
-
-        $inserir = $conexao->prepare("insert into login(login, senha, cnpj, nome, imagem) values (?,?,?,?,?)");
-        $inserir->bindParam(1, $email);
-        $inserir->bindParam(2, $senha);
-        $inserir->bindParam(3,$cnpj);
-        $inserir->bindParam(4,$nome);
-        $inserir->bindParam(5,$caminho_img);
-        $inserir->execute();
-
-        if($inserir->rowCount() > 0)
+      if($_POST['senha'] != $_POST['confirm_senha'])
+      {
+          echo "<script>alert('Senhas Diferentes')</script>";
+          header('location:formularioInst.php');
+      }
+      else
+      {
+        try
         {
-            $nome = "";
-            $cnpj = "";
-            $email = "";
-            $senha= "";
-            $nascimento = "";
-            $cep_inst = "";
-            $rua_inst = "";
-            $bairro_inst = "";
-            $cidade_inst = "";
-            $uf = "";
-            $ft_perfil = "";
-            $ft_banner = "";
-            $ft_prop = "";
+            $inserir = $conexao->prepare("insert into escolas (nome_escola, cnpj, rua_escola, email_escola, cep_escola, cidade_escola, bairro_escola, uf_escola, foto_perfil, foto_banner, foto_prop, telefone_escola, comprovante, mensalidade, acessibilidade, modalidade, acessibilidade_texto) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
+            $inserir->bindParam(1,$nome);
+            $inserir->bindParam(2,$cnpj);
+            $inserir->bindParam(3,$rua_inst);
+            $inserir->bindParam(4,$email);
+            $inserir->bindParam(5,$cep_inst);
+            $inserir->bindParam(6,$cidade_inst);
+            $inserir->bindParam(7,$bairro_inst);
+            $inserir->bindParam(8,$uf);
+            $inserir->bindParam(9,$caminho_img);
+            $inserir->bindParam(10,$caminho_img3);
+            $inserir->bindParam(11,$caminho_img2);
+            $inserir->bindParam(12,$telefone);
+            $inserir->bindParam(13,$caminho_arq);
+            $inserir->bindParam(14,$mensalidade);
+            $inserir->bindParam(15,$acessibilidade_pauzinho);
+            $inserir->bindParam(16, $modalidade);
+            $inserir->bindParam(17, $desc);
 
-            $retorno = "<script>
-            location.href = '../uceae-instituicao/paginaInst.php'</script>";
 
+
+            $inserir->execute();
+
+            $inserir = $conexao->prepare("insert into login(login, senha, cnpj, nome, imagem) values (?,?,?,?,?)");
+            $inserir->bindParam(1, $email);
+            $inserir->bindParam(2, $senha);
+            $inserir->bindParam(3,$cnpj);
+            $inserir->bindParam(4,$nome);
+            $inserir->bindParam(5,$caminho_img);
+            $inserir->execute();
+
+            if($inserir->rowCount() > 0)
+            {
+                $nome = "";
+                $cnpj = "";
+                $email = "";
+                $senha= "";
+                $nascimento = "";
+                $cep_inst = "";
+                $rua_inst = "";
+                $bairro_inst = "";
+                $cidade_inst = "";
+                $uf = "";
+                $ft_perfil = "";
+                $ft_banner = "";
+                $ft_prop = "";
+
+                $retorno = "<script>
+                location.href = '../uceae-instituicao/paginaInst.php'</script>";
+
+            }
+    // capturando um possível erro durando a realização do código
+            else
+            {
+                $retorno = "falhou";
+            }
         }
-// capturando um possível erro durando a realização do código
-        else
+    // capturando uma possível excessão no código
+        catch(PDOException $erro)
         {
-            $retorno = "falhou";
+            $retorno = "$erro: ".$erro->getMessage();
         }
-    }
-// capturando uma possível excessão no código
-    catch(PDOException $erro)
-    {
-        $retorno = "$erro: ".$erro->getMessage();
-    }
-    echo $retorno;
-
+        echo $retorno;
+      }
 ?>

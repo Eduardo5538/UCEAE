@@ -128,30 +128,30 @@ tel.addEventListener('keypress', () => {
 
 function verificaSenha()
 {
-    senha = document.querySelector('#txt_senhaAluno');
-    confirmaSenha = document.querySelector('#txt_confSenhaAluno');
+    senha = document.querySelector('#senha');
+    confirmaSenha = document.querySelector('#confirm_senha');
     txtSenha = document.querySelector('.txtSenha');
     txtConfSenha = document.querySelector('.txtConfSenha');
 
     if(senha.value == '')
     {
-        txtSenha.value = 'Digite a senha!'
+        txtConfSenha.innerHTML = "Digite a senha"
     }
     else if(confirmaSenha.value == '')
     {
-        txtConfSenha.value = 'Confirme a Senha'
+        txtSenha.innerHTML = "Confirme a senha"
     }
     else
     {
         if(senha.value != confirmaSenha.value)
         {
-            txtSenha.value = 'Senhas Diferentes';
-            txtConfSenha.value = 'Senhas Diferentes';
+            txtSenha.innerHTML = "Senhas Diferentes"
+            document.getElementById('senha').value = "";
         }
         else
         {
-            txtSenha.value = 'Senhas Iguais';
-            txtConfSenha.value = 'Senhas Iguais';
+            txtSenha.innerHTML = "Senhas Iguais"
+            txtConfSenha.innerHTML = "Senhas Iguais"
         }
     }
 }

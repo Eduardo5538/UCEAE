@@ -134,17 +134,17 @@
         <div class="form-step">
             <div class="input-group">
                 <label for="senha">Senha</label>
-                <input type="password" name="senha" id="txt_senhaAluno" required>
+                <input type="password" name="senha" id="txt_senhaAluno"  onchange="verificaSenha()" required>
                 <h5 class="txtSenha"></h5>
             </div>
             <div class="input-group">
                 <label for="confSenha">Confirmar Senha</label>
-                <input type="password" name="confSenha" id="txt_confSenhaAluno" required>
+                <input type="password" name="confSenha" onchange="verificaSenha()" id="txt_confSenhaAluno" required>
                 <h5 class="txtConfSenha"></h5>
             </div>
             <div class="btns-group">
                 <a href="#" class="btn btn-prev">Anterior</a>
-                <input type="submit" value="Confirmar" onclick="verificaSenha()" class="btn" >
+                <input type="submit" value="Confirmar" class="btn" >
             </div>
         </div>
     </form>
