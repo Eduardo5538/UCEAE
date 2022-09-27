@@ -72,3 +72,59 @@ function validarCNPJ() {
 
     
 }
+
+function mostrar()
+{
+// --------------------- Máscaras ------------------------
+
+// mascara de cnpj
+
+const cnpj = document.querySelector('#cnpj');
+cnpj.addEventListener('keypress', () =>{
+    let cnpjlength = cnpj.value.length;
+
+    if (cnpjlength === 2 || cnpjlength === 6)
+    {
+        cnpj.value += '.';
+    }
+    else if(cnpjlength === 10)
+    {
+        cnpj.value += '/';
+    }
+    else if(cnpjlength === 15)
+    {
+        cnpj.value += '-';
+    }
+})
+
+// mascara de cep
+
+const cep = document.querySelector('#cep');
+cep.addEventListener('keypress', () => {
+    let ceplength = cep.value.length;
+
+    if(ceplength === 5)
+    {
+        cep.value += '-'
+    }
+})
+
+// mascara de telefone
+
+const tel = document.querySelector('#tel');
+tel.addEventListener('keypress', () => {
+    let tellength = tel.value.length;
+    if (tellength === 0)
+    {
+        tel.value += '('
+    }
+    else if(tellength === 3)
+    {
+        tel.value += ') '
+    }
+    else if(tellength === 9)
+    {
+        tel.value += '-'
+    }
+})  
+}

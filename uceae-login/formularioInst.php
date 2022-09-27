@@ -119,14 +119,14 @@
           <div class="form__row">
             <div class="input">
               <div class="input__container">
-                <input class="input__field" id="tel" name="tel" placeholder="Telefone" required type="text" /><label class="input__label" for="tel">Telefone</label>
+                <input class="input__field" id="tel" name="tel" maxlength="14" placeholder="Telefone" required type="text" /><label class="input__label" for="tel">Telefone</label>
               </div>
             </div>
           </div>
           <div class="form__row">
             <div class="input">
               <div class="input__container">
-                <input class="input__field" id="cep" name="cep" placeholder="CEP" required type="text" /><label class="input__label" for="cep">CEP</label>
+                <input class="input__field" id="cep" name="cep" maxlength="9" placeholder="CEP" required type="text" /><label class="input__label" for="cep">CEP</label>
               </div>
             </div>
           </div>
