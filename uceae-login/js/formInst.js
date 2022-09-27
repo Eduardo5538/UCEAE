@@ -67,10 +67,7 @@ function validarCNPJ() {
         bloco = "CNPJ INVÁLIDO";
         document.getElementById('cnpj').value = "";
     }
-
     $("#cnpj_peniano").append(bloco)
-
-    
 }
 
 function mostrar()
@@ -127,4 +124,34 @@ tel.addEventListener('keypress', () => {
         tel.value += '-'
     }
 })  
+}
+
+function verificaSenha()
+{
+    senha = document.querySelector('#txt_senhaAluno');
+    confirmaSenha = document.querySelector('#txt_confSenhaAluno');
+    txtSenha = document.querySelector('.txtSenha');
+    txtConfSenha = document.querySelector('.txtConfSenha');
+
+    if(senha.value == '')
+    {
+        txtSenha.value = 'Digite a senha!'
+    }
+    else if(confirmaSenha.value == '')
+    {
+        txtConfSenha.value = 'Confirme a Senha'
+    }
+    else
+    {
+        if(senha.value != confirmaSenha.value)
+        {
+            txtSenha.value = 'Senhas Diferentes';
+            txtConfSenha.value = 'Senhas Diferentes';
+        }
+        else
+        {
+            txtSenha.value = 'Senhas Iguais';
+            txtConfSenha.value = 'Senhas Iguais';
+        }
+    }
 }

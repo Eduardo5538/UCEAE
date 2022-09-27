@@ -150,7 +150,8 @@
   <div class="row">
     <div class="col">
       <label>CNPJ</label><br>
-      <input type="text" class="form-control" id="txt_cnpj" onfocus="ativaMascaras()" maxlength="18" placeholder="<?php echo $Res[0]['CNPJ']; ?>">
+      <input type="text" class="form-control" id="txt_cnpj" onchange="validarCNPJ()" onfocus="ativaMascaras()" maxlength="18" placeholder="<?php echo $Res[0]['CNPJ']; ?>">
+      <h3 id="div_cnpj"></h3>
     </div>
     <div class="col">
       <label>Cep</label><br>

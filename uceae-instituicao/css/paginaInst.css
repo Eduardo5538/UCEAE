@@ -102,6 +102,10 @@
 
 /* Form Alterar */
 
+
+#div_cnpj{
+  font-size: 15px;
+}
 #form_alt{
 	width: 50%;
 	text-align: center;

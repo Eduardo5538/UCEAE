@@ -147,3 +147,33 @@ function mostraDef()
         })
     }
 }
+
+function verificaSenha()
+{
+    senha = document.querySelector('#txt_senhaAluno');
+    confirmaSenha = document.querySelector('#txt_confSenhaAluno');
+    txtSenha = document.querySelector('.txtSenha');
+    txtConfSenha = document.querySelector('.txtConfSenha');
+
+    if(senha.value == '')
+    {
+        txtSenha.innerHTML = 'Digite a senha!';
+    }
+    else if(confirmaSenha.value == '')
+    {
+        txtConfSenha.innerHTML = 'Confirme a Senha';
+    }
+    else
+    {
+        if(senha.value != confirmaSenha.value)
+        {
+            txtSenha.innerHTML = 'Senhas Diferentes';
+            txtConfSenha.innerHTML = 'Senhas Diferentes';
+        }
+        else
+        {
+            txtSenha.innerHTML = 'Senhas Iguais';
+            txtConfSenha.innerHTML = 'Senhas Iguais';
+        }
+    }
+}

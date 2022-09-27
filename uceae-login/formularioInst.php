@@ -104,6 +104,7 @@
             <div class="input">
               <div class="input__container">
                 <input class="input__field" id="senha" name="senha" placeholder="Senha" required type="password" /><label class="input__label" for="senha">Senha</label>
+                <h5 class="txtSenha"></h5>
               </div>
             </div>
           </div>
@@ -111,6 +112,7 @@
             <div class="input">
               <div class="input__container">
                 <input class="input__field" id="confirm_senha" name="confirm_senha" placeholder="Confirmar Senha" required type="password" /><label class="input__label" for="confirm_senha">Confirmar Senha</label>
+                <h5 class="txtConfSenha"></h5>              
               </div>
             </div>
           </div>
