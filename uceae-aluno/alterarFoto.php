@@ -1,10 +1,9 @@
 <?php
     include "conection.php";
     session_start();
-    $ft_perfil = $_FILES["foto_perfil"];
-    if(isset($_FILES["foto_perfil"])){
-        echo "<script>alert('cheguei')</script> ";
+    $ft_perfil = $_FILES["foto_imagem"];
 
+    if(isset($_FILES["foto_imagem"])){
         if (!empty($ft_perfil["name"])){
             if (!preg_match("/^image\/(jpeg|jpg|png|gif|bmp|ico)$/", $ft_perfil["type"]))
             {
@@ -36,10 +35,10 @@
             
           
             if($Comando->rowCount() > 0){
-                echo "<script>window.location.href = '../uceae-aluno/paginaAluno.php'</script>";
+                header('Location: paginaAluno.php');
             }
             else{
-                echo "<script>window.location.href = '../uceae-aluno/paginaAluno.php'</script>";
+                "<script>window.location.href = '../uceae-aluno/paginaAluno.php'</script>";
             }
         }
 

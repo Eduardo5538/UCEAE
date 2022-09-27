@@ -79,15 +79,15 @@
   <!-- --------------------- Área da Foto --------------------- -->
 
   <div class="image-upload2">
-  <label for="file-input2" id="input-file">
-  <form method='post' id='alter_perfil' action='alterarFoto.php' enctype="multipart/form-data">
-    <label for="file-input2">
+  <label for="input2" id="file">
+  <!--<form method='post' id='alter_perfil' action='alterarFoto.php' enctype="multipart/form-data">-->
+    <label for="input2">
       <?php
           echo "<img src='../uceae-login/".  $Res[0]['foto_aluno']  ."' id='foto_perfil'>"
         ?>
     </label>
-    <input id="file-input2" name='foto_perfil' type="file" / onchange='alterar_foto2()'>
-  </form>
+    <!--<input id="file-input2" name='imagem_perfil' type="file" / onchange='alterar_foto2()'>-->
+  <!--</form>-->
   
 </div>
 <br><br><br>
@@ -132,7 +132,7 @@
     </label>
     <div id='resp2' class="btn btn-resp2"></div>
       
-    <input id="file-input2" name='foto_perfil' type="file" / onchange='alterar_foto2()'>
+    <input id="file-input2" name='foto_imagem' type="file" onchange='alterar_foto2()'>
   
   </form>
   
