@@ -6,6 +6,7 @@ function logar(){
         data: dados,
     })
     .done(function(msg){
+
         if(msg != "Registro Não Encontrado"){
             window.location.href = "../uceae/uceae-instituicao/paginaInst.php" 
         }
