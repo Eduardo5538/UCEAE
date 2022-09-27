@@ -177,7 +177,7 @@
           <div class="form__row">
             <div class="input">
               <div class="input__container">
-                <input class="input__field" id="mensalidade" name="mensalidade" placeholder="mensalidade" required type="number" /><label class="input__label" for="mensalidade">Mensalidade</label>
+                <input class="input__field" id="mensalidade" name="mensalidade" placeholder="mensalidade" required type="number" step="0.01" /><label class="input__label" for="mensalidade">Mensalidade</label>
               </div>
             </div>
           </div>
