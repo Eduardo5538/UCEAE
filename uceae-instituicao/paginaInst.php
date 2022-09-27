@@ -150,11 +150,11 @@
   <div class="row">
     <div class="col">
       <label>CNPJ</label><br>
-      <input type="text" class="form-control" id="txt_cnpj" placeholder="<?php echo $Res[0]['CNPJ']; ?>">
+      <input type="text" class="form-control" id="txt_cnpj" onfocus="ativaMascaras()" maxlength="18" placeholder="<?php echo $Res[0]['CNPJ']; ?>">
     </div>
     <div class="col">
       <label>Cep</label><br>
-      <input type="text" class="form-control" id="txt_cep" placeholder="<?php echo $Res[0]['cep_escola']; ?>">
+      <input type="text" class="form-control" id="txt_cep" onfocus="ativaMascaras()" maxlength="9" placeholder="<?php echo $Res[0]['cep_escola']; ?>">
     </div>
     <div class="col">
       <label>Mensalidade</label><br>
@@ -169,7 +169,7 @@
     </div>
     <div class="col">
       <label>Telefone</label><br>
-      <input type="text" class="form-control" id="txt_telefone" placeholder="<?php echo $Res[0]['telefone_escola']; ?>">
+      <input type="text" class="form-control" id="txt_telefone" onfocus="ativaMascaras()" maxlength="14" placeholder="<?php echo $Res[0]['telefone_escola']; ?>">
     </div>
   </div>
   <br>

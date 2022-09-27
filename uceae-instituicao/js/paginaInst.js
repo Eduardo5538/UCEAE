@@ -1,11 +1,13 @@
-function consulta(){
+function consulta()
+{
     $.ajax({
         url: 'consultaInstBackEnd2.php',
     })
     .done(function(msg){
         var Res = JSON.parse(msg);
         h = Res.length;
-        for(var j=0; j < h; j++){
+        for(var j=0; j < h; j++)
+        {
             document.getElementById("txt_nomeInst").placeholder = (Res[0].nome_escola)
             document.getElementById("txt_cnpj").placeholder = (Res[0].cnpj)
             document.getElementById("txt_cep").placeholder = (Res[0].cep_escola)
@@ -17,13 +19,69 @@ function consulta(){
             document.getElementById("txt_cidade").placeholder = (Res[0].cidade_escola)
             document.getElementById("txt_uf").placeholder = (Res[0].uf_escola)
         }
-
     })
     .fail(function(){
         alert("Falha na busca")
     })
-    return false;
+    return false; 
 }
+
+function ativaMascaras()
+{
+// --------------------- Máscaras ------------------------
+
+    // mascara de cnpj
+
+    const cnpj = document.querySelector('#txt_cnpj');
+    cnpj.addEventListener('keypress', () =>{
+        let cnpjlength = cnpj.value.length;
+
+        if (cnpjlength === 2 || cnpjlength === 6)
+        {
+            cnpj.value += '.';
+        }
+        else if(cnpjlength === 10)
+        {
+            cnpj.value += '/';
+        }
+        else if(cnpjlength === 15)
+        {
+            cnpj.value += '-';
+        }
+    })
+
+    // mascara de cep
+
+    const cep = document.querySelector('#txt_cep');
+    cep.addEventListener('keypress', () => {
+        let ceplength = cep.value.length;
+
+        if(ceplength === 5)
+        {
+            cep.value += '-'
+        }
+    })
+
+    // mascara de telefone
+
+    const tel = document.querySelector('#txt_telefone');
+    tel.addEventListener('keypress', () => {
+        let tellength = tel.value.length;
+        if (tellength === 0)
+        {
+            tel.value += '('
+        }
+        else if(tellength === 3)
+        {
+            tel.value += ') '
+        }
+        else if(tellength === 9)
+        {
+            tel.value += '-'
+        }
+    })  
+}
+
 function alterar(){
     let form = $("#form_alt").serialize();
     $.ajax({
