@@ -6,8 +6,14 @@ function logar(){
         data: dados,
     })
     .done(function(msg){
-       	alert("logado com sucesso!")
-        window.location.href = "../../uceae/uceae-instituicao/paginaInst.php"
+        if(msg == "Registro Não Encontrado")
+        {
+            alert("Email ou senha inválidos, verifique seus dados!")
+        } 
+        else
+        {
+            location.href = "../index.php"
+        }
     })
     .fail(function(){
         alert("Falha ao logar-se.")
