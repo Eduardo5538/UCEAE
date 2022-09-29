@@ -1,16 +1,16 @@
 function validarCNPJ() {
-    var penis = true;
-    document.getElementById('cnpj_peniano').innerHTML = ""
+    var real = true;
+    document.getElementById('validacao_cnpj').innerHTML = ""
     var bloco = "";
     var cnpj = document.getElementById('cnpj').value;
     cnpj = cnpj.replace(/[^\d]+/g,'');
  
-    if(cnpj == ''){ penis = false;}
+    if(cnpj == ''){ real = false;}
 
 
     if (cnpj.length != 14){
         return false
-        penis = false;
+        real = false;
 
     }
  
@@ -26,7 +26,7 @@ function validarCNPJ() {
         cnpj == "88888888888888" || 
         cnpj == "99999999999999"){
         bloco = "CNPJ INVÁLIDO"
-        penis = false;
+        real = false;
         }
 
          
@@ -44,7 +44,7 @@ function validarCNPJ() {
     resultado = soma % 11 < 2 ? 0 : 11 - soma % 11;
     if (resultado != digitos.charAt(0)){
         bloco = "CNPJ INVÁLIDO";
-        penis = false   
+        real = false   
     }
     tamanho = tamanho + 1;
     numeros = cnpj.substring(0,tamanho);
@@ -58,16 +58,16 @@ function validarCNPJ() {
     resultado = soma % 11 < 2 ? 0 : 11 - soma % 11;
     if (resultado != digitos.charAt(1)){
           bloco = "CNPJ INVÁLIDO";
-          penis = false;
+          real = false;
     }
-    if(penis == true){
+    if(real == true){
         bloco = "CNPJ VÁLIDO";
     }   
     else{
         bloco = "CNPJ INVÁLIDO";
         document.getElementById('cnpj').value = "";
     }
-    $("#cnpj_peniano").append(bloco)
+    $("#validacao_cnpj").append(bloco)
 }
 
 function mostrar()
