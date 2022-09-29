@@ -89,7 +89,7 @@
             <div class="input form__inline-input">
               <div class="input__container">
                 <input class="input__field " id="cnpj" autocomplete="off" maxlength="18" name="cnpj" placeholder="CNPJ" required type="text" onchange='validarCNPJ()' /><label class="input__label" for="cnpj">CNPJ</label>
-                <div id='cnpj_peniano'></div>
+                <div id='validacao_cnpj'></div>
               </div>
             </div>
           </div>

@@ -18,13 +18,13 @@
     $desc = $_POST['desc'];
     $acessibilidade = $_POST['acessibilidade'];
     $modalidade = $_POST['modalidade'];
-    $acessibilidade_pauzinho = "";
+    $acessibilidade_final = "";
 
     if($acessibilidade == "SIM"){
-        $acessibilidade_pauzinho = "S";
+        $acessibilidade_final = "S";
     }
     if($acessibilidade == "NAO"){
-        $acessibilidade_pauzinho = "N";
+        $acessibilidade_final = "N";
     }
 
   	if (!empty($ft_perfil["name"]))
@@ -95,7 +95,7 @@
             $inserir->bindParam(12,$telefone);
             $inserir->bindParam(13,$caminho_arq);
             $inserir->bindParam(14,$mensalidade);
-            $inserir->bindParam(15,$acessibilidade_pauzinho);
+            $inserir->bindParam(15,$acessibilidade_final);
             $inserir->bindParam(16, $modalidade);
             $inserir->bindParam(17, $desc);
 

@@ -56,20 +56,17 @@
             <div class="input-group">
                 <label for="cpf">CPF</label>
                 <input type="text" autocomplete="off" maxlength="14" name="cpf" id="txt_cpfAluno" class="cpf" onchange="cpfVerify()">
-                <div id='penis'></div>
+                <div id='validacao'></div>
             </div>
             <div class="input-group">
                 <label for="def" required>Possui Deficiência?</label>
-                <div class="linha-form">
+                <div class="linha-form linha-radio">
                     <label for="html">Sim</label>
                     <input type="radio" id="sim" name="op_def" value="S" onclick="mostraDef()" class="btn-radioSim">                
-                </div>
-                <div class="linha-form">
                     <label for="css">Não</label>
                     <input type="radio" id="nao" name="op_def" value="N" onclick="mostraDef()" class="btn-radioNao">
                 </div>
                 <br>
-                
                 <br>
             </div>
             <div class="input-group def-aluno" >

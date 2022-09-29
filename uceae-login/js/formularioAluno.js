@@ -116,13 +116,13 @@ function cpfVerify(){
         
         if(r != cpf.substring(j, j+1)) result = false;
     });
-    document.getElementById('penis').innerHTML = "";
+    document.getElementById('validacao').innerHTML = "";
     if(result == false){
-        $("#penis").append("Cpf invalido");
+        $("#validacao").append("Cpf invalido");
         document.getElementById('txt_cpfAluno').value = "";
     }
     else{
-        $("#penis").append("CPF válido");
+        $("#validacao").append("CPF válido");
     }
 
     
