@@ -177,3 +177,29 @@ function verificaSenha()
         }
     }
 }
+
+function atualizarCampos(){
+    var dados =document.getElementById('txt_cepAluno').value;
+    document.getElementById('txt_ruaAluno').value = "";
+    document.getElementById('txt_bairroAluno').value = "";
+    document.getElementById('txt_cidadeAluno').value = "";
+    document.getElementById('txt_ufAluno').value = "";
+    const selectElement = document.querySelector("#txt_ufAluno");
+    coisaimportante = dados.replace('"','');
+    alert(coisaimportante)
+    $.ajax({
+        url: 'https://viacep.com.br/ws/'+ coisaimportante + '/json/' 
+    })
+    .done(function(msg){
+        var desempacotado = JSON.parse(JSON.stringify(msg));
+        alert(desempacotado.logradouro)
+            document.getElementById('txt_ruaAluno').value = desempacotado.logradouro;
+            document.getElementById('txt_bairroAluno').value = desempacotado.bairro;
+            document.getElementById('txt_cidadeAluno').value = desempacotado.localidade;
+            selectElement.value = desempacotado.uf;
+    })
+    .fail(function(){
+        alert("Falha na busca")
+    })
+    return false;
+}

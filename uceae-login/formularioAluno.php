@@ -90,7 +90,7 @@
         <div class="form-step">
             <div class="input-group">
                 <label for="cep">CEP</label>
-                <input type="text" required name="cep" id="txt_cepAluno" class="cep" maxlength="9">
+                <input type="text" required name="cep" id="txt_cepAluno" class="cep" maxlength="9" onchange='atualizarCampos()'>
             </div>
             <div class="input-group">
                 <label for="rua">Rua</label>
