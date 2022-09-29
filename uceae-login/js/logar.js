@@ -7,14 +7,9 @@ function logar(){
     })
     .done(function(msg){
 
-        if(msg != "Registro Não Encontrado"){
-            window.location.href = "../uceae/uceae-instituicao/paginaInst.php" 
-        }
-        else{
+        if(msg == "Registro Não Encontrado"){
             alert("Email ou senha inválidos, verifique seus dados!")
-        }
-       	
-       
+        } 
     })
     .fail(function(){
         alert("Falha ao logar-se.")

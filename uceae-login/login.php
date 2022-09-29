@@ -30,6 +30,4 @@
          $RetornoJSON = "Erro: " . $erro->getMessage();
          echo $RetornoJSON;
      }
-     
-
 ?>
