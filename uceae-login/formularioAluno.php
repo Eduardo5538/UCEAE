@@ -138,6 +138,7 @@
                 <label for="confSenha">Confirmar Senha</label>
                 <input type="password" name="confSenha" onchange="verificaSenha()" id="txt_confSenhaAluno" required>
                 <h5 class="txtConfSenha"></h5>
+                <p>	Ao cadastrar-se, você automaticamente aceita o uso das suas informações.</p>
             </div>
             <div class="btns-group">
                 <a href="#" class="btn btn-prev">Anterior</a>

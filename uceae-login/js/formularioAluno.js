@@ -186,13 +186,11 @@ function atualizarCampos(){
     document.getElementById('txt_ufAluno').value = "";
     const selectElement = document.querySelector("#txt_ufAluno");
     coisaimportante = dados.replace('"','');
-    alert(coisaimportante)
     $.ajax({
         url: 'https://viacep.com.br/ws/'+ coisaimportante + '/json/' 
     })
     .done(function(msg){
         var desempacotado = JSON.parse(JSON.stringify(msg));
-        alert(desempacotado.logradouro)
             document.getElementById('txt_ruaAluno').value = desempacotado.logradouro;
             document.getElementById('txt_bairroAluno').value = desempacotado.bairro;
             document.getElementById('txt_cidadeAluno').value = desempacotado.localidade;
