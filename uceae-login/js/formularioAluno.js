@@ -191,10 +191,17 @@ function atualizarCampos(){
     })
     .done(function(msg){
         var desempacotado = JSON.parse(JSON.stringify(msg));
+        if(desempacotado.logradouro != null && desempacotado.bairro != null != desempacotado.localidade != null){
             document.getElementById('txt_ruaAluno').value = desempacotado.logradouro;
             document.getElementById('txt_bairroAluno').value = desempacotado.bairro;
             document.getElementById('txt_cidadeAluno').value = desempacotado.localidade;
             selectElement.value = desempacotado.uf;
+        }
+        else{
+            alert("CEP INVÁLIDO");
+            document.getElementById('txt_cepAluno').value = "";
+        }
+            
     })
     .fail(function(){
         alert("Falha na busca")
