@@ -88,7 +88,7 @@
             <div class="input form__inline-input">
               <div class="input__container">
                 <input class="input__field " id="cnpj" autocomplete="off" maxlength="18" name="cnpj" placeholder="CNPJ" required type="text" onchange='validarCNPJ()' /><label class="input__label" for="cnpj">CNPJ</label>
-                <div id='cnpj_peniano'></div>
+                <div id='validacao_cnpj'></div>
               </div>
             </div>
           </div>
@@ -127,7 +127,7 @@
           <div class="form__row">
             <div class="input">
               <div class="input__container">
-                <input class="input__field" id="cep" name="cep" maxlength="9" placeholder="CEP" required type="text" /><label class="input__label" for="cep">CEP</label>
+                <input class="input__field" id="cep" name="cep" maxlength="9" onchange='atualizarCampos()' placeholder="CEP" required type="text" /><label class="input__label" for="cep">CEP</label>
               </div>
             </div>
           </div>
@@ -251,6 +251,7 @@
           
           <div class="form__row">
             <div class="component component--primary form__button">
+              <p>	Não usamos seus dados com fins pessoais, ao cadastrar-se você automaticamente aceita o uso das suas informações.</p>
             <input type='submit' class="botao btn--regular" id="sign-up-button" tabindex="0" onclick="verificaSenha()" value='Cadastrar'><br><br>
               <a href="#" id="btn_criarConta">Já Possui uma conta? Entrar</a>
             </div>

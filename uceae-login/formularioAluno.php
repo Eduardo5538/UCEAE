@@ -56,20 +56,17 @@
             <div class="input-group">
                 <label for="cpf">CPF</label>
                 <input type="text" autocomplete="off" maxlength="14" name="cpf" id="txt_cpfAluno" class="cpf" onchange="cpfVerify()">
-                <div id='penis'></div>
+                <div id='validacao'></div>
             </div>
             <div class="input-group">
                 <label for="def" required>Possui Deficiência?</label>
-                <div class="linha-form">
+                <div class="linha-form linha-radio">
                     <label for="html">Sim</label>
                     <input type="radio" id="sim" name="op_def" value="S" onclick="mostraDef()" class="btn-radioSim">                
-                </div>
-                <div class="linha-form">
                     <label for="css">Não</label>
                     <input type="radio" id="nao" name="op_def" value="N" onclick="mostraDef()" class="btn-radioNao">
                 </div>
                 <br>
-                
                 <br>
             </div>
             <div class="input-group def-aluno" >
@@ -93,7 +90,7 @@
         <div class="form-step">
             <div class="input-group">
                 <label for="cep">CEP</label>
-                <input type="text" required name="cep" id="txt_cepAluno" class="cep" maxlength="9">
+                <input type="text" required name="cep" id="txt_cepAluno" class="cep" maxlength="9" onchange='atualizarCampos()'>
             </div>
             <div class="input-group">
                 <label for="rua">Rua</label>
@@ -141,6 +138,7 @@
                 <label for="confSenha">Confirmar Senha</label>
                 <input type="password" name="confSenha" onchange="verificaSenha()" id="txt_confSenhaAluno" required>
                 <h5 class="txtConfSenha"></h5>
+                <p>	Ao cadastrar-se, você automaticamente aceita o uso das suas informações.</p>
             </div>
             <div class="btns-group">
                 <a href="#" class="btn btn-prev">Anterior</a>
