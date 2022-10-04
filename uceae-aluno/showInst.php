@@ -26,7 +26,16 @@
     catch(PDOException $error){
       echo $error;
     }
-    
+    try{
+      $Comando = $conexao->prepare("SELECT * from tab_alunos WHERE CPF_aluno = ?");
+      $Comando->bindParam(1, $_SESSION['CPF']);
+      $Comando->execute();
+      $Res2 = $Comando->fetchAll();
+      $RetornoJSON1 = json_encode($Res2);
+    }
+    catch(PDOException $error){
+      echo $error;
+    }
 
 
     $tamanho = sizeof($Res1);
@@ -404,8 +413,18 @@
                       <div class='card-header'>
                         <img src='../uceae-login/". $Res1[$i]['imagem_comentario'] ."' class='card-foto'>
                         <p class='card-nome'>".$Res1[$i]['nome']."</p>
-                        
                         <h4 class='data'>".$NovaData."</h4>
+                        <select class='card-option'>";
+                        if($Res2[0]['nome_aluno'] == $Res1[$i]['nome'])
+                        {
+                          echo "<option>Editar</option>
+                                <option>Apagar</option>";
+                        }
+                        else
+                        {
+                          echo "<option>Denunciar</option>";
+                        }
+                         echo "</select>
                       </div>
                       <div class='card-content'>";
                         for($j = 0; $j < $Res1[$i]['nota']; $j++){

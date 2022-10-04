@@ -476,10 +476,23 @@ html {
 .cards-coments{
     width: 70%;
     margin-left: 5rem;
+    box-shadow: none;
+    transition: .5s;
 }
+.cards-coments:hover{
+   transition: .5s;
+   background-color: #d1d1d1;
+   box-shadow: 10px 10px 10px rgb(165, 165, 165);
+}
+.cards-coments:hover .card-header .card-option{
+    visibility: visible;
+    transition: .5s;
+ }
+ 
+
 .card-header{
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-columns: 1fr 2fr 1fr 1fr;
     align-items: center;
     background-color: transparent;
 }
@@ -498,6 +511,7 @@ html {
 .card-content{
     font-family: arial;
     padding-top: 1rem;
+    padding-bottom: 1rem;
     margin-left: 2rem;
     margin-top: .5rem;
 }
@@ -513,6 +527,11 @@ html {
     width: 50px;
     height: 50px;
     border-radius: 50%;
+}
+
+.card-option{
+    width: 60%;
+    visibility: hidden;
 }
 
 #resp1{
