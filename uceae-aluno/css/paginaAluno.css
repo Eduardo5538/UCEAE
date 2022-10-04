@@ -43,7 +43,7 @@
   height: 350px;
   margin: 0 auto;
 }
-#alter_perfil #file-input2{
+#frm_infoAluno #file-input2{
   visibility: hidden;
   width: 350px;
 }
@@ -182,7 +182,7 @@ box-sizing: border-box;
 
 .form{
   width: 90%;
-  height: 80vh;
+  height: 100vh;
   box-shadow: 10px 9px 30px rgb(110, 110, 110);;
   margin: 0 auto;
 }
@@ -190,13 +190,16 @@ box-sizing: border-box;
   width: 100%;
 }
 
-.linha-forms{
+.linha-forms, .linha-itens{
   display: flex;
   flex-wrap: nowrap;
+  gap: 20px;
 }
 .form-contatoAluno, .form-enderecoAluno{
   width: 80%;
-  height: 60vh;
+  height: 80vh;
+  padding: 50px;
+  text-align: left;
 }
 
 .form-aluno{
@@ -227,10 +230,69 @@ box-sizing: border-box;
 .form-infoAluno input{
   border:none;
   border-bottom: 2px solid rgb(212, 212, 212);
-  width:500px;
   height: 50px;
 }
+.form-infoAluno .input-nome{
+  width: 200px;
+}
+.form-infoAluno .input-sobrenome{
+  width: 350px;
+}
+.form-infoAluno .input-data{
+  width: 570px;
+}
+.form-infoAluno .textarea-desc{
+  width: 570px;
+  height: 200px;
+  resize: none;
+}
+.form-contatoAluno input{
+  width: 90%;
+  height: 50px;
+  border:none;
+  border-bottom: 1px solid rgb(212, 212, 212);
+}
+.form-enderecoAluno input{
+  width: 90%;
+  height: 50px;
+  border:none;
+  border-bottom: 1px solid rgb(212, 212, 212);
+}
+.form-enderecoAluno .input-cep{
+  width: 100%;
+}
+.form-enderecoAluno .select-uf{
+  width:  240px;
+  height: 50px;
+}
+.form-contatoAluno label{
+  margin-top: .5rem;
+}
+.form-enderecoAluno label{
+  margin-top: .5rem;
+}
+.button-salvar{
+  width: 90%;
+  border: none;
+  background-color: rgb(4, 133, 126);
+  box-shadow: 0 10px 10px rgb(2, 90, 86);
+  font-family: 'sensei';
+  color: white;
+  font-size: 20px;
+  transition: .5s;
+}
+.button-salvar:hover{
+  transition: .5s;
+  margin-top: .5rem;
+  background-color: rgb(3, 94, 89);
+  box-shadow: none;
+}
 
+.form-infoAluno .input-def, .label-radio{
+  margin-top: 20px;
+  width: 20px;
+  height: 20px;
+}
 .imagem_form{
   width: 350px;
   height: 350px;
