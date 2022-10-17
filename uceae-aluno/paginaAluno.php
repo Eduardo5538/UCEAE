@@ -103,25 +103,42 @@
 <div class="linha-forms info-pessoal">
    <!-- Bloco de Informações -->
   <div class="bloco-info-pessoal">
-    <div class="bloco-itens">
-      <label for="" class="titulo-campo">Nome</label><br>
-      <input type="text" name="" id="">
-    </div>
-    <div class="bloco-itens">
-      <label for="" class="titulo-campo">Sobrenome</label><br>
-      <input type="text" name="" id="">
+    <div class="linha-itens">
+      <div class="bloco-itens">
+        <label for="" class="titulo-campo">Nome</label><br>
+        <input type="text" name="" id="" class="input-nome">
+      </div>
+      <div class="bloco-itens">
+        <label for="" class="titulo-campo">Sobrenome</label><br>
+        <input type="text" name="" id="" class="input-sobrenome">
+      </div>
     </div>
     <div class="bloco-itens">
       <label for="" class="titulo-campo">Data de Nascimento</label><br>
-      <input type="date" name="" id="">
+      <input type="date" name="" id="" class="input-data">
     </div>
-    <div class="bloco-itens">
-      <label for="" class="titulo-campo">Email</label><br>
-      <input type="email" name="" id="">
+    <div class="linha-itens">
+      <div class="bloco-itens">
+        <label for="" class="titulo-campo">Possui Deficiência?</label><br>
+        <div class="linha-itens">
+          <label for="" class="label-radio">Sim</label><input type="radio" name="rd-def" id="" class="input-def">
+          <label for="" class="label-radio">Não</label><input type="radio" name="rd-def" id="" class="input-def">
+        </div>
+      </div>
+      <div class="bloco-itens">
+        <label for="" class="titulo-campo">Nome da Deficiência</label><br>
+        <input type="text" name="" id="" class="input-sobrenome">
+      </div>
+    </div>
+    <div class="linha-itens">
+      <div class="bloco-itens">
+        <label for="" class="titulo-campo">Descrição da Deficiência</label><br>
+        <textarea name="" id="" class="textarea-desc"></textarea>
+      </div>
     </div>
   </div>
   <!-- Bloco de Imagem -->
-</form>
+
 <div class="image-upload2">
   <label for="file-input2" id="input-file">
   <form method='post' id='alter_fotoForm' action='alterarFoto.php' enctype="multipart/form-data">
@@ -131,26 +148,74 @@
         ?>
     </label>
     <div id='resp2' class="btn btn-resp2"></div>
-      
     <input id="file-input2" name='foto_imagem' type="file" onchange='alterar_foto2()'>
-  
   </form>
-  
+
+  <div class="bloco-itens">
+    <input type="button" value="Salvar Alterações" class="button-salvar">
+  </div>
 </div>
+</form>
 </div>
 
 <br><br>
 <div class="linha-forms">
   <div class="bloco-forms">
-    <h1 class="titulo-forms">Contato</h1><br>
+    <h1 class="titulo-forms">Mais Informações</h1><br>
     <form action="" method="post" class="form form-contatoAluno" id="frm_contatoAluno">
-      
+    <div class="bloco-itens">
+      <label for="" class="titulo-campo">Email</label><br>
+      <input type="email" name="" id="" class="input-email">
+    </div>
+    <div class="bloco-itens">
+      <label for="" class="titulo-campo">Telefone</label><br>
+      <input type="tel" name="" id="">
+    </div>
+    <div class="bloco-itens">
+      <label for="" class="titulo-campo">CPF</label><br>
+      <input type="text" name="" id="">
+    </div>
+    <div class="bloco-itens">
+      <label for="" class="titulo-campo">Senha</label><br>
+      <input type="password" name="" id="">
+    </div>
+    <div class="bloco-tens">
+      <br>
+      <input type="button" value="Salvar Alterações" class="button-salvar">
+    </div>
     </form>
   </div>
   <div class="bloco-forms">
     <h1 class="titulo-forms">Endereço</h1><br>
     <form action="" method="post" class="form form-enderecoAluno" id="frm_EnderecoAluno">
-      
+    <div class="linha-itens">
+      <div class="bloco-itens">
+        <label for="" class="titulo-campo">CEP</label><br>
+        <input type="text" name="" id="" class="input-cep">
+      </div>
+      <div class="bloco-itens">
+        <label for="" class="titulo-campo">UF</label><br>
+        <select name="" id="" class="select-uf">
+          <option value="">Teste</option>
+        </select>
+      </div>
+    </div>  
+    <div class="bloco-itens">
+      <label for="" class="titulo-campo">Rua</label><br>
+      <input type="text" name="" id="">
+    </div>
+    <div class="bloco-itens">
+      <label for="" class="titulo-campo">Bairro</label><br>
+      <input type="text" name="" id="">
+    </div>
+    <div class="bloco-itens">
+      <label for="" class="titulo-campo">Cidade</label><br>
+      <input type="text" name="" id="">
+    </div>
+    <br>
+    <div class="bloco-tens">
+      <input type="button" value="Salvar Alterações" class="button-salvar">
+    </div>
     </form>
   </div>
 </div>
