@@ -21,7 +21,8 @@ body, html{
           rgb(0, 0, 0) 0%, 
           rgb(116, 2, 151) 30%, 
           rgb(13, 0, 128) 51%, 
-          rgb(53, 82, 252) 80%
+          rgb(53, 82, 252) 80%,
+          rgb(73, 100, 252) 30%
     );  
     animation: AnimateBG 20s ease infinite;
   }
@@ -89,7 +90,7 @@ body, html{
     background-image: linear-gradient(
      to right,
      #462523 0,
-            #cb9b51 22%, 
+    #cb9b51 22%, 
      #f6e27a 45%,
      #f6f2c0 50%,
      #f6e27a 55%,
