@@ -93,43 +93,39 @@
 <br><br><br>
 
  <!-- --------------------- Formulário do Aluno --------------------- -->
-
-<form action="" method="post" class="form-aluno" id="frm_aluno">
-
-</form>
 <br><br><br><br>
 <h1 class="titulo-forms">Informações Pessoais</h1>
-<form action="" method="post" class="form form-infoAluno" id="frm_infoAluno">
+<form action="alterarAluno.php" method="post" class="form form-infoAluno" id="frm_infoAluno">
 <div class="linha-forms info-pessoal">
    <!-- Bloco de Informações -->
   <div class="bloco-info-pessoal">
     <div class="linha-itens">
       <div class="bloco-itens">
         <label for="" class="titulo-campo">Nome</label><br>
-        <input type="text" name="" id="" class="input-nome" placeholder='<?php echo $Res[0]['nome_aluno'] ?>'>
+        <input type="text" name="Nome" id="Nome" class="input-nome" placeholder='<?php echo $Res[0]['nome_aluno'] ?>'>
       </div>
     </div>
     <div class="bloco-itens">
-      <label for="" class="titulo-campo">Data de Nascimento</label><br>
-      <input type="date" name="" id="" class="input-data">
+      <label for="nasc" class="titulo-campo">Data de Nascimento</label><br>
+      <input type="date" name="nasc" id="nasc" class="input-data">
     </div>
     <div class="linha-itens">
       <div class="bloco-itens">
-        <label for="" class="titulo-campo">Possui Deficiência?</label><br>
+        <label for="def" class="titulo-campo">Possui Deficiência?</label><br>
         <div class="linha-itens">
-          <label for="" class="label-radio">Sim</label><input type="radio" name="rd-def" id="" class="input-def">
-          <label for="" class="label-radio">Não</label><input type="radio" name="rd-def" id="" class="input-def">
+          <label for="def" class="label-radio">Sim</label><input type="radio" name="def" id="Possui" class="input-def" value='possui'>
+          <label for="def" class="label-radio">Não</label><input type="radio" name="def" id="Nao Possui" class="input-def" value='não possui'>
         </div>
       </div>
       <div class="bloco-itens">
-        <label for="" class="titulo-campo">Nome da Deficiência</label><br>
-        <input type="text" name="" id="" class="input-sobrenome" placeholder='<?php echo $Res[0]['deficiencia'] ?>'>
+        <label for="nomeDef" class="titulo-campo">Nome da Deficiência</label><br>
+        <input type="text" name="nomeDef" id="nomeDef" class="input-sobrenome" placeholder='<?php echo $Res[0]['deficiencia'] ?>'>
       </div>
     </div>
     <div class="linha-itens">
       <div class="bloco-itens">
-        <label for="" class="titulo-campo">Descrição da Deficiência</label><br>
-        <textarea name="" id="" class="textarea-desc" placeholder='<?php echo $Res[0]['nome_aluno'] ?>'></textarea>
+        <label for="descDef" class="titulo-campo">Descrição da Deficiência</label><br>
+        <textarea name="descDef" id="descDef" class="textarea-desc" placeholder='<?php echo $Res[0]['nome_aluno'] ?>'></textarea>
       </div>
     </div>
   </div>
@@ -140,7 +136,7 @@
   
 
   <div class="bloco-itens">
-    <input type="button" value="Salvar Alterações" class="button-salvar">
+    <input type="submit" value="Salvar Alterações" class="button-salvar">
   </div>
 </div>
 </form>
@@ -162,19 +158,19 @@
     <form action="" method="post" class="form form-contatoAluno" id="frm_contatoAluno">
     <div class="bloco-itens">
       <label for="" class="titulo-campo">Email</label><br>
-      <input type="email" name="" id="" class="input-email" placeholder='<?php echo $Res[0]['email'] ?>'>
+      <input type="email" name="Email" id="Email" class="input-email" placeholder='<?php echo $Res[0]['email'] ?>'>
     </div>
     <div class="bloco-itens">
       <label for="" class="titulo-campo">Telefone</label><br>
-      <input type="tel" name="" id="" placeholder='<?php echo $Res[0]['telefone_aluno'] ?>'>
+      <input type="tel" name="Telefone" id="Telefone" placeholder='<?php echo $Res[0]['telefone_aluno'] ?>'>
     </div>
     <div class="bloco-itens">
       <label for="" class="titulo-campo">CPF</label><br>
-      <input type="text" name="" id="" placeholder='<?php echo $Res[0]['CPF_aluno'] ?>'>
+      <input type="text" name="CPF" id="CPF" placeholder='<?php echo $Res[0]['CPF_aluno'] ?>'>
     </div>
     <div class="bloco-itens">
       <label for="" class="titulo-campo">Senha</label><br>
-      <input type="password" name="" id="">
+      <input type="password" name="Senha" id="Senha">
     </div>
     <div class="bloco-tens">
       <br>
@@ -188,11 +184,11 @@
     <div class="linha-itens">
       <div class="bloco-itens">
         <label for="" class="titulo-campo">CEP</label><br>
-        <input type="text" name="" id="" class="input-cep" placeholder='<?php echo $Res[0]['cep_aluno'] ?>'>
+        <input type="text" name="CEP" id="CEP" class="input-cep" placeholder='<?php echo $Res[0]['cep_aluno'] ?>'>
       </div>
       <div class="bloco-itens">
-        <label for="" class="titulo-campo">UF</label><br>
-        <select name="" id="" class="select-uf">
+        <label for="UF" class="titulo-campo">UF</label><br>
+        <select name="UF" id="UF" class="select-uf">
         <option value="AC" id="AC">AC</option><option value="AL" id="AL">AL</option>
                   <option value="AP" id="AP">AP</option><option value="AM" id="AM">AM</option>
                   <option value="BA" id="BA">BA</option><option value="CE" id="CE">CE</option>
@@ -212,15 +208,15 @@
     </div>  
     <div class="bloco-itens">
       <label for="" class="titulo-campo" >Rua</label><br>
-      <input type="text" name="" id="" placeholder='<?php echo $Res[0]['rua_aluno'] ?>'>
+      <input type="text" name="Rua" id="Rua" placeholder='<?php echo $Res[0]['rua_aluno'] ?>'>
     </div>
     <div class="bloco-itens">
       <label for="" class="titulo-campo" >Bairro</label><br>
-      <input type="text" name="" id="" placeholder='<?php echo $Res[0]['bairro_aluno'] ?>'>
+      <input type="text" name="Bairro" id="Bairro" placeholder='<?php echo $Res[0]['bairro_aluno'] ?>'>
     </div>
     <div class="bloco-itens">
       <label for="" class="titulo-campo">Cidade</label><br>
-      <input type="text" name="" id="" placeholder='<?php echo $Res[0]['cidade_aluno'] ?>'>
+      <input type="text" name="Cidade" id="Cidade" placeholder='<?php echo $Res[0]['cidade_aluno'] ?>'>
     </div>
     <br>
     <div class="bloco-tens">
