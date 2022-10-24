@@ -37,7 +37,7 @@
         <div class="form-step">
             <div class="input-group">
                 <label for="tel">Telefone</label>
-                <input type="text" required name="tel" id="txt_telAluno" class="tel" maxlength="14">
+                <input type="text" required name="tel" id="txt_telAluno" class="tel" maxlength="15">
             </div>
             <div class="input-group">
                 <label for="email">Email</label>
