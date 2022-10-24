@@ -346,24 +346,36 @@ h1 {
     border: 2px solid white;
     width: 50%;   
   }
-
+  .campo{
+    font-size: 20px;
+    padding-left: .5rem;
+  }
   #txt_nomeContato{
     width: 400px;
     height: 50px;
-    font-size: 20px;
   }
   #txt_emailContato{
     width: 300px;
     height: 50px;
-    font-size: 20px;
   }
   #txt_titulo{
     width: 400px;
     height: 50px;
-    font-size: 20px;
   }
   #txt_assuntoContato{
     width: 300px;
     height: 250px;
-    font-size: 20px;
+  }
+
+  .btn-enviarContato{
+    position: absolute;
+    margin-left:-23%;
+    margin-top:-10%;
+    width: 400px;
+    height: 50px;
+    font-size: 30px;
+    font-family: 'sensei';
+    background-image:linear-gradient(to right, rgb(63, 2, 143), rgb(59, 1, 151), rgb(75, 2, 211)) ;
+    color:rgb(255, 255, 255);
+    border: 1px solid white;
   }

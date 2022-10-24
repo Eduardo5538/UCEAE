@@ -131,18 +131,19 @@
             <span>Dúvidas? Reclamações? Envie-nos seu Feedback!</span>
         </h1>
     </div>
+    <br><br><br><br>
     <div class="div-formContato">
         <form action="" method="post" id="frm_formContato" class="form-contato" class="formContato">
             <div class="div-linhaForm linha1">
-                <input type="text" name="nomeContato" id="txt_nomeContato" placeholder="Nome Completo">
-                <input type="email" name="emailContato" id="txt_emailContato" placeholder="Seu Email">
+                <input type="text" name="nomeContato" id="txt_nomeContato" class="campo" placeholder="Nome Completo">
+                <input type="email" name="emailContato" id="txt_emailContato" class="campo "placeholder="Seu Email">
             </div>
             <br><br>
             <div class="div-linhaForm linha2">
-                <input type="text" name="tituloContato" id="txt_titulo" placeholder="Título"><br>
-                <textarea name="" id="txt_assuntoContato" class="assuntoContato" placeholder="Assunto"></textarea>
+                <input type="text" name="tituloContato" id="txt_titulo" class="campo" placeholder="Título"><br>
+                <textarea name="" id="txt_assuntoContato" class="campo assuntoContato" placeholder="Assunto"></textarea>
             </div>
-            <input type="button" value="Penis Curvado">
+            <input type="button" value="Enviar Feedback" class="btn-enviarContato" id="btn_contato">
         </form>
     </div>
 </body>
