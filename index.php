@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="uceae-login/js/logar.js"></script>
-  <link rel="icon" type="imagem/png" href="img/UCEAE3.png" />
+  <link rel="icon" type="imagem/png" href="img/UCEAE4.png" />
 	<title>UCEAE</title>
 
   <script>
