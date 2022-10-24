@@ -10,6 +10,10 @@ function logar(){
         if(msg == "Registro Não Encontrado"){
             alert("Email ou senha inválidos, verifique seus dados!")
         } 
+        else{
+            alert("funfou")
+            location.reload()
+        }
     })
     .fail(function(){
         alert("Falha ao logar-se.")
