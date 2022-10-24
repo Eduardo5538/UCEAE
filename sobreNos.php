@@ -125,6 +125,17 @@
             </div>
         </div>
     </div>
+    <br><br>
+    <div class="two">
+        <h1>Contato
+            <span>Dúvidas? Reclamações? Envie-nos seu Feedback!</span>
+        </h1>
+    </div>
+    <div class="div-formContato">
+        <form action="" method="post" id="frm_formContato" class="form-contato">
+            
+        </form>
+    </div>
 </body>
 
 <script>
