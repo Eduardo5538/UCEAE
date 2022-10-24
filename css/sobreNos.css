@@ -323,3 +323,47 @@ h1 {
     color: white;
     padding-bottom: 10px;
   }
+
+  /* Form Contato */
+
+  .div-formContato{
+  }
+
+  .div-linhaForm{
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  .linha1{
+    gap: 20px;
+  }
+  .linha2{
+    gap: 10px;
+  }
+
+  #frm_formContato{
+    padding: 40px;
+    margin: 0 auto;
+    border: 2px solid white;
+    width: 50%;   
+  }
+
+  #txt_nomeContato{
+    width: 400px;
+    height: 50px;
+    font-size: 20px;
+  }
+  #txt_emailContato{
+    width: 300px;
+    height: 50px;
+    font-size: 20px;
+  }
+  #txt_titulo{
+    width: 400px;
+    height: 50px;
+    font-size: 20px;
+  }
+  #txt_assuntoContato{
+    width: 300px;
+    height: 250px;
+    font-size: 20px;
+  }
