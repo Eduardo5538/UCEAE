@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Sobre Nós e Contato</title>
     <link rel="stylesheet" href="css/sobreNos.css">
     
 </head>
@@ -133,7 +133,7 @@
     </div>
     <br><br><br><br>
     <div class="div-formContato">
-        <form action="" method="post" id="frm_formContato" class="form-contato" class="formContato">
+        <form action="enviarEmail.php" method="post" id="frm_formContato" class="form-contato" class="formContato">
             <div class="div-linhaForm linha1">
                 <input type="text" name="nomeContato" id="txt_nomeContato" class="campo" placeholder="Nome Completo">
                 <input type="email" name="emailContato" id="txt_emailContato" class="campo "placeholder="Seu Email">
@@ -141,9 +141,9 @@
             <br><br>
             <div class="div-linhaForm linha2">
                 <input type="text" name="tituloContato" id="txt_titulo" class="campo" placeholder="Título"><br>
-                <textarea name="" id="txt_assuntoContato" class="campo assuntoContato" placeholder="Assunto"></textarea>
+                <textarea name="assuntoContato" id="txt_assuntoContato" class="campo assuntoContato" placeholder="Assunto"></textarea>
             </div>
-            <input type="button" value="Enviar Feedback" class="btn-enviarContato" id="btn_contato">
+            <input type="submit" value="Enviar Feedback" class="btn-enviarContato" id="btn_contato">
         </form>
     </div>
 </body>
