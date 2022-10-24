@@ -155,7 +155,7 @@
 <div class="linha-forms">
   <div class="bloco-forms">
     <h1 class="titulo-forms">Mais Informações</h1><br>
-    <form action="" method="post" class="form form-contatoAluno" id="frm_contatoAluno">
+    <form action="alterarAluno2.php" method="post" class="form form-contatoAluno" id="frm_contatoAluno">
     <div class="bloco-itens">
       <label for="" class="titulo-campo">Email</label><br>
       <input type="email" name="Email" id="Email" class="input-email" placeholder='<?php echo $Res[0]['email'] ?>'>
@@ -174,13 +174,13 @@
     </div>
     <div class="bloco-tens">
       <br>
-      <input type="button" value="Salvar Alterações" class="button-salvar">
+      <input type="submit" value="Salvar Alterações" class="button-salvar">
     </div>
     </form>
   </div>
   <div class="bloco-forms">
     <h1 class="titulo-forms">Endereço</h1><br>
-    <form action="" method="post" class="form form-enderecoAluno" id="frm_EnderecoAluno">
+    <form action="alterarAluno3.php" method="post" class="form form-enderecoAluno" id="frm_EnderecoAluno">
     <div class="linha-itens">
       <div class="bloco-itens">
         <label for="" class="titulo-campo">CEP</label><br>
@@ -220,7 +220,7 @@
     </div>
     <br>
     <div class="bloco-tens">
-      <input type="button" value="Salvar Alterações" class="button-salvar">
+      <input type="submit" value="Salvar Alterações" class="button-salvar">
     </div>
     </form>
   </div>
