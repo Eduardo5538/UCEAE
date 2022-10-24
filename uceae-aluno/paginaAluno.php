@@ -106,11 +106,7 @@
     <div class="linha-itens">
       <div class="bloco-itens">
         <label for="" class="titulo-campo">Nome</label><br>
-        <input type="text" name="" id="" class="input-nome">
-      </div>
-      <div class="bloco-itens">
-        <label for="" class="titulo-campo">Sobrenome</label><br>
-        <input type="text" name="" id="" class="input-sobrenome">
+        <input type="text" name="" id="" class="input-nome" placeholder='<?php echo $Res[0]['nome_aluno'] ?>'>
       </div>
     </div>
     <div class="bloco-itens">
@@ -127,13 +123,13 @@
       </div>
       <div class="bloco-itens">
         <label for="" class="titulo-campo">Nome da Deficiência</label><br>
-        <input type="text" name="" id="" class="input-sobrenome">
+        <input type="text" name="" id="" class="input-sobrenome" placeholder='<?php echo $Res[0]['deficiencia'] ?>'>
       </div>
     </div>
     <div class="linha-itens">
       <div class="bloco-itens">
         <label for="" class="titulo-campo">Descrição da Deficiência</label><br>
-        <textarea name="" id="" class="textarea-desc"></textarea>
+        <textarea name="" id="" class="textarea-desc" placeholder='<?php echo $Res[0]['nome_aluno'] ?>'></textarea>
       </div>
     </div>
   </div>
@@ -141,7 +137,14 @@
 
 <div class="image-upload2">
   <label for="file-input2" id="input-file">
-  <form method='post' id='alter_fotoForm' action='alterarFoto.php' enctype="multipart/form-data">
+  
+
+  <div class="bloco-itens">
+    <input type="button" value="Salvar Alterações" class="button-salvar">
+  </div>
+</div>
+</form>
+<form method='post' id='alter_fotoForm' action='alterarFoto.php' enctype="multipart/form-data">
     <label for="file-input2">
       <?php
           echo "<img src='../uceae-login/".  $Res[0]['foto_aluno']  ."' id='foto_perfilForm'>"
@@ -150,12 +153,6 @@
     <div id='resp2' class="btn btn-resp2"></div>
     <input id="file-input2" name='foto_imagem' type="file" onchange='alterar_foto2()'>
   </form>
-
-  <div class="bloco-itens">
-    <input type="button" value="Salvar Alterações" class="button-salvar">
-  </div>
-</div>
-</form>
 </div>
 
 <br><br>
@@ -165,15 +162,15 @@
     <form action="" method="post" class="form form-contatoAluno" id="frm_contatoAluno">
     <div class="bloco-itens">
       <label for="" class="titulo-campo">Email</label><br>
-      <input type="email" name="" id="" class="input-email">
+      <input type="email" name="" id="" class="input-email" placeholder='<?php echo $Res[0]['email'] ?>'>
     </div>
     <div class="bloco-itens">
       <label for="" class="titulo-campo">Telefone</label><br>
-      <input type="tel" name="" id="">
+      <input type="tel" name="" id="" placeholder='<?php echo $Res[0]['telefone_aluno'] ?>'>
     </div>
     <div class="bloco-itens">
       <label for="" class="titulo-campo">CPF</label><br>
-      <input type="text" name="" id="">
+      <input type="text" name="" id="" placeholder='<?php echo $Res[0]['CPF_aluno'] ?>'>
     </div>
     <div class="bloco-itens">
       <label for="" class="titulo-campo">Senha</label><br>
@@ -191,26 +188,39 @@
     <div class="linha-itens">
       <div class="bloco-itens">
         <label for="" class="titulo-campo">CEP</label><br>
-        <input type="text" name="" id="" class="input-cep">
+        <input type="text" name="" id="" class="input-cep" placeholder='<?php echo $Res[0]['cep_aluno'] ?>'>
       </div>
       <div class="bloco-itens">
         <label for="" class="titulo-campo">UF</label><br>
         <select name="" id="" class="select-uf">
-          <option value="">Teste</option>
+        <option value="AC" id="AC">AC</option><option value="AL" id="AL">AL</option>
+                  <option value="AP" id="AP">AP</option><option value="AM" id="AM">AM</option>
+                  <option value="BA" id="BA">BA</option><option value="CE" id="CE">CE</option>
+                  <option value="DF" id="DF">DF</option><option value="ES" id="ES">ES</option>
+                  <option value="GO" id="GO">GO</option><option value="MA" id="MA">MA</option>
+                  <option value="MT" id="MT">MT</option><option value="MS" id="MS">MS</option>
+                  <option value="MG" id="MG">MG</option><option value="PA" id="PA">PA</option>
+                  <option value="PB" id="PB">PB</option><option value="PR" id="PR">PR</option>
+                  <option value="PE" id="PE">PE</option><option value="PI" id="PI">PI</option>
+                  <option value="RJ" id="RJ">RJ</option><option value="RN" id="RN">RN</option>
+                  <option value="RS" id="RS">RS</option><option value="RO" id="RO">RO</option>
+                  <option value="RR" id="RR">RR</option><option value="SC" id="SC">SC</option>
+                  <option value="SP" id="SP">SP</option><option value="SE" id="SE">SE</option>
+                  <option value="TO" id="TO">TO</option>
         </select>
       </div>
     </div>  
     <div class="bloco-itens">
-      <label for="" class="titulo-campo">Rua</label><br>
-      <input type="text" name="" id="">
+      <label for="" class="titulo-campo" >Rua</label><br>
+      <input type="text" name="" id="" placeholder='<?php echo $Res[0]['rua_aluno'] ?>'>
     </div>
     <div class="bloco-itens">
-      <label for="" class="titulo-campo">Bairro</label><br>
-      <input type="text" name="" id="">
+      <label for="" class="titulo-campo" >Bairro</label><br>
+      <input type="text" name="" id="" placeholder='<?php echo $Res[0]['bairro_aluno'] ?>'>
     </div>
     <div class="bloco-itens">
       <label for="" class="titulo-campo">Cidade</label><br>
-      <input type="text" name="" id="">
+      <input type="text" name="" id="" placeholder='<?php echo $Res[0]['cidade_aluno'] ?>'>
     </div>
     <br>
     <div class="bloco-tens">
