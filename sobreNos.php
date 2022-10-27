@@ -203,16 +203,18 @@
     </div>
     <br><br><br><br>
     <div class="div-formContato">
-        <form action="enviarEmail.php" method="post" id="frm_formContato" class="form-contato" class="formContato">
+        <form action="https://api.staticforms.xyz/submit" method="post" id="frm_formContato" class="form-contato" class="formContato">
+          <input type="hidden" name="accessKey" value="439ca4fb-1e0c-4d39-b935-872c7323e422">
             <div class="div-linhaForm linha1">
-                <input type="text" name="nomeContato" id="txt_nomeContato" class="campo" placeholder="Nome Completo">
-                <input type="email" name="emailContato" id="txt_emailContato" class="campo "placeholder="Seu Email">
+                <input type="text" name="name" id="txt_nomeContato" class="campo" placeholder="Nome Completo">
+                <input type="email" name="email" id="txt_emailContato" class="campo "placeholder="Seu Email">
             </div>
             <br><br>
             <div class="div-linhaForm linha2">
-                <input type="text" name="tituloContato" id="txt_titulo" class="campo" placeholder="Título"><br>
-                <textarea name="assuntoContato" id="txt_assuntoContato" class="campo assuntoContato" placeholder="Assunto"></textarea>
+                <input type="text" name="subject" id="txt_titulo" class="campo" placeholder="Título"><br>
+                <textarea name="message" id="txt_assuntoContato" class="campo assuntoContato" placeholder="Assunto"></textarea>
             </div>
+            <input type="hidden" name="redirectTo" value="http://localhost/git/uceae/sobreNos.php">
             <input type="submit" value="Enviar Feedback" class="btn-enviarContato" id="btn_contato">
         </form>
     </div>
