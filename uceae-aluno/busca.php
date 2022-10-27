@@ -70,6 +70,9 @@
             <li><a class="dropdown-item" href="#">Privadas</a></li>
           </ul>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../sobreNos.php">Sobre Nós</a>
+        </li>
       </ul>
       <form class="d-flex">
       	<div style="margin-right: 20px;">

@@ -16,6 +16,16 @@ body, html{
     padding: 0;
     margin: 0;
 }
+#logo1{
+	position: absolute;
+	margin: 0 auto;
+	margin-bottom: 15px;
+	top: 4px;
+	left: 5px;
+}
+.barra{
+  width: 99vw;
+}
 .bg {
     width: 95%;
     height: 100%;
@@ -61,7 +71,7 @@ body, html{
     font-size: 80px;
     
 }
-.btn{
+.btns{
     width: 300px;
     height: 100px;
     font-size: 30px;
@@ -80,10 +90,9 @@ body, html{
 /* titulo animado */
 
 #container {
-    width: 90%;
+    width: 100%;
     text-align: left;
     filter: url(#threshold) blur(0.6px);
-    
 }
 
 #text1,
@@ -113,7 +122,7 @@ body, html{
 }
 
 .div-titulo{
-    width: 99%;
+    width: 100%;
     text-align: center;
 }
 
@@ -369,9 +378,9 @@ h1 {
 
   .btn-enviarContato{
     position: absolute;
-    margin-left:-23%;
+    margin-left:-21%;
     margin-top:-10%;
-    width: 400px;
+    width: 23%;
     height: 50px;
     font-size: 30px;
     font-family: 'sensei';
