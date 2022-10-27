@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+@font-face {
+	font-family: 'sensei';
+	src: url(font/sensei.woff);
+}
+
+body,html{
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: rgb(88, 18, 145);
+}
+
+h1{
+    font-size: 80px;
+    font-family: 'sensei';
+    margin-top: 15%;
+    color: white;
+}
+
+h2{
+    font-size: 35px;
+    font-family: 'sensei';
+    color: white;
+}
+
+h3{
+    font-size: 25px;
+    font-family: 'sensei';
+    color: white;
+}
+
+a{
+    color: white;
+}
