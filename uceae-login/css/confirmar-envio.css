@@ -34,3 +34,11 @@ h3{
 a{
     color: white;
 }
+
+#logo1{
+	position: absolute;
+	margin: 0 auto;
+	margin-bottom: 15px;
+	top: 4px;
+	left: 5px;
+}
