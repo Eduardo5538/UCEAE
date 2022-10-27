@@ -37,16 +37,6 @@
         <li class="nav-item">
           <a class="nav-link" href="uceae-aluno/brazil.php">Mapa</a>
         </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Instituições
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Públicas</a></li>
-            <li><a class="dropdown-item" href="#">Acessibilidade</a></li>
-            <li><a class="dropdown-item" href="#">Privadas</a></li>
-          </ul>
-        </li>
         <li class="nav-item">
           <a class="nav-link" href="../uceae/sobreNos.php">Sobre Nós</a>
         </li>
