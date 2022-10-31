@@ -141,7 +141,8 @@
 <br><br>
 <div class="linha-forms">
   <div class="bloco-forms form-contatoAluno form">
-    <h1 class="titulo-forms">Mais Informações</h1><br>
+    <div class="div-titulo"><h1 class="titulo-forms">Mais Informações</h1></div>
+    <br>
     <div class="bloco-itens">
       <label for="" class="titulo-campo">Email</label><br>
       <input type="email" name="Email" id="Email" class="input-email" placeholder='<?php echo $Res[0]['email'] ?>'>
@@ -161,7 +162,8 @@
   </div>
   <!-- Bloco mais Informações -->
   <div class="bloco-forms form-enderecoAluno form">
-    <h1 class="titulo-forms">Endereço</h1><br>
+    <div class="div-titulo"><h1 class="titulo-forms">Endereço</h1></div>
+    <br>
     <div class="linha-itens">
       <div class="bloco-itens">
         <label for="" class="titulo-campo">CEP</label><br>

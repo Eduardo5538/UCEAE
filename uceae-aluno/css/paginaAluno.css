@@ -209,10 +209,14 @@ box-sizing: border-box;
 
 .titulo-forms{
   text-align: center;
-  margin-left: 5rem;
   font-size: 40px;
   font-weight: bold;
   font-family: 'sensei';
+}
+
+.div-titulo{
+  width: 100%;
+  text-align: center;
 }
 
 .titulo-campo{
