@@ -127,11 +127,6 @@
 
 <div class="image-upload2">
   <label for="file-input2" id="input-file">
-  
-
-  <div class="bloco-itens">
-    <input type="submit" value="Salvar Alterações" class="button-salvar">
-  </div>
 </div>
 </form>
 <form method='post' id='alter_fotoForm' action='alterarFoto.php' enctype="multipart/form-data">
@@ -163,10 +158,6 @@
     <div class="bloco-itens">
       <label for="" class="titulo-campo">Senha</label><br>
       <input type="password" name="Senha" id="Senha">
-    </div>
-    <div class="bloco-tens">
-      <br>
-      <input type="submit" value="Salvar Alterações" class="button-salvar">
     </div>
   </div>
   <!-- Bloco mais Informações -->
@@ -210,9 +201,6 @@
       <input type="text" name="Cidade" id="Cidade" placeholder='<?php echo $Res[0]['cidade_aluno'] ?>'>
     </div>
     <br>
-    <div class="bloco-tens">
-      <input type="submit" value="Salvar Alterações" class="button-salvar">
-    </div>
     </form>
   </div>
 </div>
