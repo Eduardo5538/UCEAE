@@ -88,8 +88,8 @@
 
  <!-- --------------------- Formulário do Aluno --------------------- -->
 <br><br><br><br>
-<h1 class="titulo-forms">Informações Pessoais</h1>
 <form action="alterarAluno.php" method="post" class="form form-infoAluno" id="frm_infoAluno">
+<h1 class="titulo-forms">Informações Pessoais</h1>
 <div class="linha-forms info-pessoal">
    <!-- Bloco de Informações -->
   <div class="bloco-info-pessoal">
@@ -124,12 +124,11 @@
     </div>
   </div>
   <!-- Bloco de Imagem -->
-
 <div class="image-upload2">
   <label for="file-input2" id="input-file">
 </div>
 </form>
-<form method='post' id='alter_fotoForm' action='alterarFoto.php' enctype="multipart/form-data">
+<form method='post' id='alter_fotoForm' action='alterarFoto.php' enctype="multipart/form-data" class="form-img">
     <label for="file-input2">
       <?php
           echo "<img src='../uceae-login/".  $Res[0]['foto_aluno']  ."' id='foto_perfilForm'>"
@@ -201,9 +200,12 @@
       <input type="text" name="Cidade" id="Cidade" placeholder='<?php echo $Res[0]['cidade_aluno'] ?>'>
     </div>
     <br>
+    </div>
+    <br>
+    </div>
+    <div class="button-area"><input type="button" value="Confirmar Alterações" class="button-alterar" id="btn_alterar"></div>
     </form>
-  </div>
-</div>
+
 <br><br>
  <!-- --------------------- Modal --------------------- -->
 
