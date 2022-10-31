@@ -30,9 +30,10 @@
 	<link rel="stylesheet" type="text/css" href="css/paginaAluno.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="js/alt.js"></script>
+  <script src="js/paginaAluno.js"></script>
 	<title><?php echo $Res[0]['nome_aluno']; ?></title>
 </head>
-<body>
+<body onload="carregaPagina()">
 
 
   <!-- --------------------- Barra de Navegação --------------------- -->
@@ -141,25 +142,23 @@
     </label>
     <div id='resp2' class="btn btn-resp2"></div>
     <input id="file-input2" name='foto_imagem' type="file" onchange='alterar_foto2()'>
-  </form>
 </div>
-
+<!-- Bloco mais Informações -->
 <br><br>
 <div class="linha-forms">
-  <div class="bloco-forms">
+  <div class="bloco-forms form-contatoAluno form">
     <h1 class="titulo-forms">Mais Informações</h1><br>
-    <form action="alterarAluno2.php" method="post" class="form form-contatoAluno" id="frm_contatoAluno">
     <div class="bloco-itens">
       <label for="" class="titulo-campo">Email</label><br>
       <input type="email" name="Email" id="Email" class="input-email" placeholder='<?php echo $Res[0]['email'] ?>'>
     </div>
     <div class="bloco-itens">
       <label for="" class="titulo-campo">Telefone</label><br>
-      <input type="tel" name="Telefone" id="Telefone" placeholder='<?php echo $Res[0]['telefone_aluno'] ?>'>
+      <input type="tel" name="Telefone" id="Telefone" placeholder='<?php echo $Res[0]['telefone_aluno'] ?>' class="tel" maxlength="15">
     </div>
     <div class="bloco-itens">
       <label for="" class="titulo-campo">CPF</label><br>
-      <input type="text" name="CPF" id="CPF" placeholder='<?php echo $Res[0]['CPF_aluno'] ?>'>
+      <input type="text" name="CPF" id="CPF" placeholder='<?php echo $Res[0]['CPF_aluno'] ?>' class="cpf" maxlength="14">
     </div>
     <div class="bloco-itens">
       <label for="" class="titulo-campo">Senha</label><br>
@@ -169,15 +168,14 @@
       <br>
       <input type="submit" value="Salvar Alterações" class="button-salvar">
     </div>
-    </form>
   </div>
-  <div class="bloco-forms">
+  <!-- Bloco mais Informações -->
+  <div class="bloco-forms form-enderecoAluno form">
     <h1 class="titulo-forms">Endereço</h1><br>
-    <form action="alterarAluno3.php" method="post" class="form form-enderecoAluno" id="frm_EnderecoAluno">
     <div class="linha-itens">
       <div class="bloco-itens">
         <label for="" class="titulo-campo">CEP</label><br>
-        <input type="text" name="CEP" id="CEP" class="input-cep" placeholder='<?php echo $Res[0]['cep_aluno'] ?>'>
+        <input type="text" name="CEP" id="CEP" class="input-cep" placeholder='<?php echo $Res[0]['cep_aluno'] ?>' maxlength="9">
       </div>
       <div class="bloco-itens">
         <label for="UF" class="titulo-campo">UF</label><br>
@@ -219,7 +217,6 @@
   </div>
 </div>
 <br><br>
-<h1>teste</h1>
  <!-- --------------------- Modal --------------------- -->
 
   <div class="modal fade" id="ModalSair" tabindex="-1" aria-labelledby="ModalLabelSair" aria-hidden="true">
