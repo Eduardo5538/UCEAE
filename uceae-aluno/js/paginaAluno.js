@@ -79,3 +79,34 @@ function cpfVerify(){
 
     
 }
+
+function alterData(){
+    var dados = $('#frm_infoAluno').serialize();
+    $.ajax({
+            method: 'POST',
+            url: 'alterarAluno.php',
+            data: dados,
+        })
+        .done(function(msg) {
+            alert(msg)
+            location.reload()
+        })
+        .fail(function() {
+            alert("Falha ao inserir registro!")
+        })
+
+    var dados = $('#maisdados').serialize();
+    $.ajax({
+            method: 'POST',
+            url: 'alterarAluno.php',
+            data: dados,
+        })
+        .done(function(msg) {
+            alert(msg)
+            location.reload()
+        })
+        .fail(function() {
+            alert("Falha ao inserir registro!")
+        })
+    return false;
+}

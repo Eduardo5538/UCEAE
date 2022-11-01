@@ -137,8 +137,10 @@
     <div id='resp2' class="btn btn-resp2"></div>
     <input id="file-input2" name='foto_imagem' type="file" onchange='alterar_foto2()'>
 </div>
+    </form>
 <!-- Bloco mais Informações -->
 <br><br>
+<form method='post' id='maisdados' action='alterarFoto.php' enctype="multipart/form-data" class="form-img">
 <div class="linha-forms">
   <div class="bloco-forms form-contatoAluno form">
     <div class="div-titulo"><h1 class="titulo-forms">Mais Informações</h1></div>
@@ -205,7 +207,7 @@
     </div>
     <br>
     </div>
-    <div class="button-area"><input type="button" value="Confirmar Alterações" class="button-alterar" id="btn_alterar"></div>
+    <div class="button-area"><input type="button" value="Confirmar Alterações" class="button-alterar" id="btn_alterar" onclick='alterData()'></div>
     </form>
 
 <br><br>
