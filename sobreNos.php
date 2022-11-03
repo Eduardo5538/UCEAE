@@ -86,8 +86,8 @@
         <div class="bloco-nome">
             <h1 class="nome-uceae">Um Curso Especial para Alguém Excepcional</h1>
             <br>
-            <button class="btns btn-manual">Manual Do Usuário</button>
-            <button class="btns btn-doc">Documentação</button>
+            <a href="docs/ManualdoUsuário.pdf" tabindex='-1' role='button' style='margin-right: 10px;' aria-disabled='true'><button class="btns btn-manual">Manual do Usuário</button></a>
+            <a href="docs/Documentacao_UCEAE-1.pdf"  tabindex='-1' role='button' style='margin-right: 10px;' aria-disabled='true'><button class="btns btn-doc">Documentação</button></a>
         </div>
     </div>
     <br><br>
