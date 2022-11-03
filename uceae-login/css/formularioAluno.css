@@ -2,6 +2,13 @@
 	font-family: sensei;
 	src: url(font/sensei.woff);
 }
+body{
+	background-image: url("../img/fundo1.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
 
 :root{
 	--primary-color:rgb(11,78,179);
@@ -79,6 +86,8 @@ input{
 	border: 1px solid #ccc;
 	border-radius: 0.35rem;
 	padding: 1.5rem;
+	background-color: white;
+	opacity: 1;
 }
 
 .form-step{

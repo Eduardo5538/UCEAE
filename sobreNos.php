@@ -7,6 +7,9 @@
     <title>Sobre Nós e Contato</title>
     <link rel="stylesheet" href="css/sobreNos.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="uceae-login/js/logar.js"></script>
 </head>
 <body class="bg">
 
@@ -29,16 +32,6 @@
         </li>
         <li class="nav-item">
           <a class="nav-link" href="uceae-aluno/brazil.php">Mapa</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Instituições
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Públicas</a></li>
-            <li><a class="dropdown-item" href="#">Acessibilidade</a></li>
-            <li><a class="dropdown-item" href="#">Privadas</a></li>
-          </ul>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="../uceae/sobreNos.php">Sobre Nós</a>
@@ -219,6 +212,33 @@
         </form>
     </div>
     <br><br>
+    </div>
+teste
+    <!-- Modal -->
+<div class="modal fade" id="ModalEntrar" tabindex="-1" aria-labelledby="ModalLabelEntrar" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h5 class="modal-title entrar-titulo w-100" id="ModalLabelEntrar">Entrar</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" style="margin: 0 25% 0 25%;">
+        <form method="POST" name="loginform" id='loginform'>
+          <input class="form-control" type="text" placeholder="Login" name='login' id='login'>
+          <br>
+          <input class="form-control" type="password" placeholder="Senha" name='senha' id='senha'>
+      </div>
+      <div class="modal-footer justify-content-center">
+        <button type="button" class="btn btn-secondary btn-block" style="width: 50%;" onclick='logar();'>Entrar</button>
+      </div>
+      <center>
+      <a href="../uceae/uceae-login/alterar-senha.php">Esqueceu sua Senha?</a>
+      </center>
+        </form>
+    </div>
+  </div>
+</div>
+
 </body>
 
 <script>
