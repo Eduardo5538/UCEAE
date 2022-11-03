@@ -38,50 +38,50 @@
         echo $PDO;
     }
 
-    if(isset($_POST['Nome'])){
+    if(isset($_POST['Nome']) != false){
         $nome = $_POST['Nome'];
     }
-    if(isset($_POST['nasc'])){
+    if(isset($_POST['nasc'])!= false){
         $nasc = $_POST['nasc'];
     }
 
-    if(isset($_POST['nomeDef'])){
+    if(isset($_POST['nomeDef'])!= false){
         $deficiencia = $_POST['nomeDef'];
     }
 
-    if(isset($_POST['Email'])){
+    if(isset($_POST['Email'])!= false){
         $email = $_POST['Email'];
     }
 
-    if(isset($_POST['Telefone'])){
+    if(isset($_POST['Telefone'])!= false){
         $telefone = $_POST['Telefone'];
     }
     
-    if(isset($_POST['CPF'])){
+    if(isset($_POST['CPF'])!= false){
         $cpf = $_POST['CPF'];
     }
 
-    if(isset($_POST['Senha'])){
+    if(isset($_POST['Senha'])!= false){
         $senha  = $_POST['Senha'];
     }
 
-    if(isset($_POST['CEP'])){
+    if(isset($_POST['CEP'])!= false){
         $cep = $_POST['CEP'];
     }
 
-    if(isset($_POST['UF'])){
+    if(isset($_POST['UF'])!= false){
         $uf = $_POST['UF'];
     }
 
-    if(isset($_POST['Rua'])){
+    if(isset($_POST['Rua'])!= false){
         $rua = $_POST['Rua'];
     }
 
-    if(isset($_POST['Bairro'])){
+    if(isset($_POST['Bairro'])!= false){
         $bairro = $_POST['Bairro'];
     }
 
-    if(isset($_POST['Cidade'])){
+    if(isset($_POST['Cidade'])!= false){
         $cidade = $_POST['Cidade'];
     }
 
@@ -106,10 +106,11 @@
         $Comando->execute();
 
 
-        $Comando = $conexao->prepare("UPDATE login SET login = ?, senha = ? WHERE CPF = ?");
+        $Comando = $conexao->prepare("UPDATE login SET login = ?, senha = ?, CPF = ? WHERE CPF = ?");
         $Comando->bindParam(1, $email);
         $Comando->bindParam(2, $senha);
-        $Comando->bindParam(3, $_SESSION['CPF']);
+        $Comando->bindParam(3, $cpf);
+        $Comando->bindParam(4, $_SESSION['CPF']);
 
         $Comando->execute();
 
@@ -121,8 +122,7 @@
         
 
         if($Comando->rowCount() > 0){
-            echo "<script> Alert('funfou')
-            location.replace('paginaAluno.php')</script>";
+            echo $_SESSION['CPF'];
         }
     }
     catch(PDOException $penis){

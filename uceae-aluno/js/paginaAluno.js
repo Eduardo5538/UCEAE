@@ -88,8 +88,6 @@ function alterData(){
             data: dados,
         })
         .done(function(msg) {
-            alert(msg)
-            location.reload()
         })
         .fail(function() {
             alert("Falha ao inserir registro!")
@@ -102,7 +100,6 @@ function alterData(){
             data: dados,
         })
         .done(function(msg) {
-            alert(msg)
             location.reload()
         })
         .fail(function() {
