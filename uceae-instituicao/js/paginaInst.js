@@ -177,7 +177,7 @@ function consultaImg(){
 
 function validarCNPJ() {
     var penis = true;
-    document.getElementById('txt_cnpj').innerHTML = ""
+    document.getElementById('div_cnpj').innerHTML = ""
     var bloco = "";
     var cnpj = document.getElementById('txt_cnpj').value;
     cnpj = cnpj.replace(/[^\d]+/g,'');
@@ -244,5 +244,6 @@ function validarCNPJ() {
         bloco = "CNPJ INVÁLIDO";
         document.getElementById('txt_cnpj').value = "";
     }
+    $("#div_cnpj").textContent = "";
     $("#div_cnpj").append(bloco)
 }

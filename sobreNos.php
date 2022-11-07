@@ -207,7 +207,7 @@
                 <input type="text" name="subject" id="txt_titulo" class="campo" placeholder="Título"><br>
                 <textarea name="message" id="txt_assuntoContato" class="campo assuntoContato" placeholder="Assunto"></textarea>
             </div>
-            <input type="hidden" name="redirectTo" value="http://localhost/git/uceae/sobreNos.php">
+            <input type="hidden" name="redirectTo" value="http://localhost/uceae/sobreNos.php">
             <input type="submit" value="Enviar Feedback" class="btn-enviarContato" id="btn_contato">
         </form>
     </div>
