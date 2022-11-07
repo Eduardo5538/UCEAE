@@ -2,21 +2,21 @@
     session_start();
     include "../conection.php";
 
-    $nome = $_POST[''];
-    $rua = $_POST[''];
-    $mensalidade = $_POST[''];
-    $email = $_POST[''];
-    $bairro = $_POST[''];
-    $CNPJ = $_POST[''];
-    $telefone = $_POST[''];
-    $cidade = $_POST['']; 
-    $uf = $_POST[''];
-    $cep = $_POST[''];
+    $nome = $_POST['txt_nomeInst'];
+    $rua = $_POST['txt_rua'];
+    $mensalidade = $_POST['txt_mensalidade'];
+    $email = $_POST['txt_email'];
+    $bairro = $_POST['txt_bairro'];
+    $CNPJ = $_POST['txt_cnpj'];
+    $telefone = $_POST['txt_telefone'];
+    $cidade = $_POST['txt_cidade']; 
+    $uf = $_POST['txt_uf'];
+    $cep = $_POST['txt_cep'];
 
 
 
     try{
-        $Comando = $conexao->prepare("UPDATE escolas SET nome_escola = ?, rua_escola = ?, mensalidade = ?,Email = ?, bairro_escola = ?, CNPJ = ?, telefone_escola = ?, cidade_escola = ?, uf_escola = ?, cep_escola = ?  WHERE CNPJ = ?");
+        $Comando = $conexao->prepare("UPDATE escolas SET nome_escola = ?, rua_escola = ?, mensalidade = ?,email_escola = ?, bairro_escola = ?, CNPJ = ?, telefone_escola = ?, cidade_escola = ?, uf_escola = ?, cep_escola = ?  WHERE CNPJ = ?");
         $Comando->bindParam(1, $nome);
         $Comando->bindParam(2, $rua);
         $Comando->bindParam(3, $mensalidade);
@@ -35,8 +35,8 @@
 
         $Comando = $conexao->prepare("UPDATE login SET login = ?, CNPJ = ? WHERE CNPJ = ?");
         $Comando->bindParam(1, $email);
-        $Comando->bindParam(3, $CNPJ);
-        $Comando->bindParam(4, $_SESSION['CNPJ']);
+        $Comando->bindParam(2, $CNPJ);
+        $Comando->bindParam(3, $_SESSION['CNPJ']);
 
         $_SESSION['CNPJ'] = $CNPJ;
 
@@ -44,13 +44,9 @@
 
 
         
-        $_SESSION['CPF'] = $cpf;
-
-
-        
 
         if($Comando->rowCount() > 0){
-            echo $_SESSION['CPF'];
+            echo $_SESSION['CNPJ'];
         }
     }
     catch(PDOException $penis){

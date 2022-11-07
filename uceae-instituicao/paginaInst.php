@@ -131,7 +131,7 @@
 
 <!-- --------------------- Formulário de Consulta --------------------- -->
 
-<form name="frm_alt" method="POST" id="form_alt">
+<form name="frm_alt" method="POST" action='altInst.php' id="form_alt">
   <br>
   <div class="row">
     <div class="col">
