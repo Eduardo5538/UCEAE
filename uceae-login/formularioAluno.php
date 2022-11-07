@@ -21,6 +21,7 @@
             <div class="progress-step" data-title="Local"></div>
             <div class="progress-step" data-title="Senha"></div>
         </div>
+
         <div class="form-step form-step-active">
             <div class="input-group">
                 <label for="nome">Nome</label>
@@ -34,6 +35,7 @@
                 <a href="#" class="btn btn-next width-50 ml-auto">Próximo</a>
             </div>
         </div>
+
         <div class="form-step">
             <div class="input-group">
                 <label for="tel">Telefone</label>
@@ -48,6 +50,7 @@
                 <a href="#" class="btn btn-next">Próximo</a>
             </div>
         </div>
+
         <div class="form-step">
             <div class="input-group">
                 <label for="nasc">Data de Nascimento</label>
@@ -87,6 +90,7 @@
                 <a href="#" class="btn btn-next">Próximo</a>
             </div>
         </div>
+
         <div class="form-step">
             <div class="input-group">
                 <label for="cep">CEP</label>
@@ -128,6 +132,7 @@
                 <a href="#" class="btn btn-next">Próximo</a>
             </div>
         </div>
+        
         <div class="form-step">
             <div class="input-group">
                 <label for="senha">Senha</label>
