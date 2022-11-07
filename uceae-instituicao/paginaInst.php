@@ -261,7 +261,8 @@
         <ul name="lista-objetivos">
           <li class="li-objt"><input type="text" id="txt_objt1" class="objetivos"></li><br>
           <li class="li-objt"><input type="text" id="txt_objt2" class="objetivos"></li><br>
-          <li class="li-objt"><input type="text" id="txt_objt3" class="objetivos"></li>
+          <li class="li-objt"><input type="text" id="txt_objt3" class="objetivos"></li><br>
+          <li class="li-objt"><input type="text" id="txt_objt4" class="objetivos"></li>
         </ul>
         </div>
         <div class="meio div-imagens">

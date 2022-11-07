@@ -306,6 +306,72 @@
       echo "<iframe src='https://www.google.com.br/maps?q=" . $Res[0]['cep_escola'] . ",%20Brasil&output=embed' width='80%' height='750' style='border:0;' allowfullscreen='true' loading='lazy' referrerpolicy='no-referrer-when-downgrade'></iframe>";
     ?>
   </div>
+  <br><br><br>
+
+  <!-- ---------- Informações da instituição ---------- -->
+  <br><br>
+  <div class="main-container">
+  <div class="heading">
+    <h1 class="heading__title titulo-grande">Sobre a Instituição</h1>
+    <p class="heading__credits">Biografia e Informações</p>
+  </div>
+  <div class="cards">
+    <div class="card card-1">
+      <div class="card__icon"><i class="fas fa-bolt">Biografia</i></div>
+      <p class="card__exit"><i class="fas fa-times"></i></p>
+      <h2 class="card__title"></h2>
+    </div>
+    <div class="card card-2">
+      <div class="card__icon"><i class="fas fa-bolt">Acessibilidades</i></div>
+      <p class="card__exit"><i class="fas fa-times"></i></p>
+      <h2 class="card__title"></h2>
+    </div>
+    <div class="card card-3">
+      <div class="card__icon"><i class="fas fa-bolt">Informações Extras</i></div>
+      <p class="card__exit"><i class="fas fa-times"></i></p>
+      <h2 class="card__title"></h2>
+    </div>
+    <div class="card card-4">
+      <div class="card__icon"><i class="fas fa-bolt">Link do Site</i></div>
+      <p class="card__exit"><i class="fas fa-times"></i></p>
+      <h2 class="card__title">Para acessar nosso site, clique no link abaixo:</h2>
+      <p class="card__apply">
+        <a class="card__link" href="">Site Oficial<i class="fas fa-arrow-right"></i></a>
+      </p>
+    </div>
+  </div>
+</div>
+
+  <!-- Card Metas -->
+  <br><br>
+  <h1 class="titulo-grande">Nossos Objetivos</h1>
+  <br><br>
+  <div class="row1-container">
+    <div class="box box-down cyan">
+      <h2>Objetivo 2</h2>
+      <p></p>
+      <img src="https://assets.codepen.io/2301174/icon-supervisor.svg" alt="">
+    </div>
+
+    <div class="box red">
+      <h2>Objetivo 1</h2>
+      <p></p>
+      <img src="https://assets.codepen.io/2301174/icon-team-builder.svg" alt="">
+    </div>
+
+    <div class="box box-down blue">
+      <h2>Objetivo 3</h2>
+      <p></p>
+      <img src="https://assets.codepen.io/2301174/icon-calculator.svg" alt="">
+    </div>
+  </div>
+  <div class="row2-container">
+    <div class="box orange">
+      <h2>Objetivo 4</h2>
+      <p></p>
+      <img src="https://assets.codepen.io/2301174/icon-karma.svg" alt="">
+    </div>
+  </div>
 
   <!-- ---------- Comentários ---------- -->
 
