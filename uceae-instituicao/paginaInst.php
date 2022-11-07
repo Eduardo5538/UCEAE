@@ -136,57 +136,57 @@
   <div class="row">
     <div class="col">
       <label>Nome Instituição</label><br>
-      <input type="text" class="form-control" id="txt_nomeInst" placeholder="<?php echo $Res[0]['nome_escola']; ?>">
+      <input type="text" class="form-control" id="txt_nomeInst" name="txt_nomeInst" placeholder="<?php echo $Res[0]['nome_escola']; ?>">
     </div>
   </div>
   <br>
   <div class="row">
     <div class="col">
       <label>CNPJ</label><br>
-      <input type="text" class="form-control" id="txt_cnpj" onchange="validarCNPJ()" onfocus="ativaMascaras()" maxlength="18" placeholder="<?php echo $Res[0]['CNPJ']; ?>">
+      <input type="text" class="form-control" id="txt_cnpj" name="txt_cnpj" onchange="validarCNPJ()" onfocus="ativaMascaras()" maxlength="18" placeholder="<?php echo $Res[0]['CNPJ']; ?>">
       <h3 id="div_cnpj"></h3>
     </div>
     <div class="col">
       <label>Cep</label><br>
-      <input type="text" class="form-control" id="txt_cep" onfocus="ativaMascaras()" maxlength="9" placeholder="<?php echo $Res[0]['cep_escola']; ?>">
+      <input type="text" class="form-control" id="txt_cep" name="txt_cep" onfocus="ativaMascaras()" maxlength="9" placeholder="<?php echo $Res[0]['cep_escola']; ?>">
     </div>
     <div class="col">
       <label>Mensalidade</label><br>
-      <input type="text" class="form-control" id="txt_mensalidade" placeholder="<?php echo $Res[0]['mensalidade']; ?>">
+      <input type="text" class="form-control" id="txt_mensalidade" id="txt_mensalidade" name="txt_mensalidade" placeholder="<?php echo $Res[0]['mensalidade']; ?>">
     </div>
   </div>
   <br>
   <div class="row">
     <div class="col">
       <label>Email</label><br>
-      <input type="text" class="form-control" id="txt_email" placeholder="<?php echo $Res[0]['email_escola']; ?>">
+      <input type="text" class="form-control" id="txt_email" name="txt_email" placeholder="<?php echo $Res[0]['email_escola']; ?>">
     </div>
     <div class="col">
       <label>Telefone</label><br>
-      <input type="text" class="form-control" id="txt_telefone" onfocus="ativaMascaras()" maxlength="14" placeholder="<?php echo $Res[0]['telefone_escola']; ?>">
+      <input type="text" class="form-control" id="txt_telefone" name="txt_telefone" onfocus="ativaMascaras()" maxlength="14" placeholder="<?php echo $Res[0]['telefone_escola']; ?>">
     </div>
   </div>
   <br>
   <div class="row">
     <div class="col">
       <label>Rua</label><br>
-      <input type="text" class="form-control" id="txt_rua" placeholder="<?php echo $Res[0]['rua_escola']; ?>">
+      <input type="text" class="form-control" id="txt_rua" name="txt_rua" placeholder="<?php echo $Res[0]['rua_escola']; ?>">
     </div>
     <div class="col">
       <label>Bairro</label><br>
-      <input type="text" class="form-control" id="txt_bairro" placeholder="<?php echo $Res[0]['bairro_escola']; ?>">
+      <input type="text" class="form-control" id="txt_bairro" name="txt_bairro" placeholder="<?php echo $Res[0]['bairro_escola']; ?>">
     </div>
     <div class="col">
       <label>Cidade</label><br>
-      <input type="text" class="form-control" id="txt_cidade" placeholder="<?php echo $Res[0]['cidade_escola']; ?>">
+      <input type="text" class="form-control" id="txt_cidade"  name="txt_cidade" placeholder="<?php echo $Res[0]['cidade_escola']; ?>">
     </div>
       <div class="col">
       <label>UF</label><br>
-      <input type="text" class="form-control" id="txt_uf" placeholder="<?php echo $Res[0]['uf_escola']; ?>">
+      <input type="text" class="form-control" id="txt_uf" name="txt_uf" placeholder="<?php echo $Res[0]['uf_escola']; ?>">
     </div>
   </div>
   <div id="nav-alterar">
-    <button id="btn_salvar"><img src="img/salvar.png" id="salvar-icon"><label id="lbl_salvar">Salvar</label></button>
+    <input type='submit' id="btn_salvar" value='Alterar'>
   </div>
 </form>
 
