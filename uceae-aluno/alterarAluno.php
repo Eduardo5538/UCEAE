@@ -2,41 +2,6 @@
     session_start();
     include "../conection.php";
 
-    try
-    {
-        $Comando = $conexao->prepare("SELECT * FROM tab_alunos WHERE cpf_aluno = ?");
-
-        $Comando->bindParam(1, $_SESSION['CPF']);
-
-        $Comando->execute();
-        $Res = $Comando->fetchAll();
-
-        $nome = $Res[0]['nome_aluno'];
-        $nasc = $Res[0]['datanasc_aluno'];
-        $deficiencia = $Res[0]['deficiencia'];
-        $email = $Res[0]['email'];
-        $telefone = $Res[0]['telefone_aluno'];
-        $cpf = $Res[0]["CPF_aluno"];
-        $cep = $Res[0]['cep_aluno'];
-        $rua = $Res[0]['rua_aluno'];
-        $bairro = $Res[0]['bairro_aluno'];
-        $cidade = $Res[0]['cidade_aluno'];
-        $uf = $Res[0]['uf_aluno'];
-
-
-        $Comando = $conexao->prepare("SELECT * FROM login WHERE cpf = ?");
-
-        $Comando->bindParam(1, $_SESSION['CPF']);
-
-        $Comando->execute();
-        $Res1 = $Comando->fetchAll();
-
-        $senha = $Res1[0]['senha'];
-        
-    }
-    catch(PDOException $PDO){
-        echo $PDO;
-    }
 
     if(isset($_POST['Nome']) != false){
         $nome = $_POST['Nome'];
@@ -45,8 +10,8 @@
         $nasc = $_POST['nasc'];
     }
 
-    if(isset($_POST['nomeDef'])!= false){
-        $deficiencia = $_POST['nomeDef'];
+    if(isset($_POST['desc'])!= false){
+        $deficiencia = $_POST['desc'];
     }
 
     if(isset($_POST['Email'])!= false){

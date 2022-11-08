@@ -89,76 +89,81 @@
   <!-- Area Formulario Alteração de Dados -->
 
   <div class="div-form">
-    <form action="POST" name="form_alterar" id="frm_alt" class="form">
+    <form action="alterarAluno.php" method='POST' name="form_alterar" id="frm_alt" class="form">
       <div class="bloco-form div-info">
         <div class="bloco-itens">
           <label for="">Nome</label><br>
-          <input type="text" name="" id="">
+          <input type="text" name="Nome" id="">
         </div>
         <div class="bloco-itens">
           <label for="">CPF</label><br>
-          <input type="text" name="" id="">
+          <input type="text" name="CPF" id="">
         </div>
         <div class="bloco-itens">
           <label for="">Data de Nascimento</label><br>
-          <input type="date" name="" id="">
+          <input type="date" name="nasc" id="">
         </div>
         <div class="bloco-itens">
           <label for="">Sexo</label><br>
-          <input type="radio" name="radio" id="btn_masc" value="M">
+          <input type="radio" name="Sexo" id="btn_masc" value="M">
           <label for="">Masculino</label>
-          <input type="radio" name="radio" id="btn_fem" value="F">
+          <input type="radio" name="Sexo" id="btn_fem" value="F">
           <label for="">Feminino</label>
-          <input type="radio" name="radio" id="btn_naoinforma" value="NA">
+          <input type="radio" name="Sexo" id="btn_naoinforma" value="NA">
           <label for="">Não Informado</label>
         </div> 
         <div class="bloco-itens">
           <label for="">Possui Deficiência?</label><br>
-          <input type="radio" name="radio" id="btn_sim" value="S">
+          <input type="radio" name="def" id="btn_sim" value="S">
           <label for="">Sim</label>
-          <input type="radio" name="radio" id="btn_nao" value="N">
+          <input type="radio" name="def" id="btn_nao" value="N">
           <label for="">Não</label>
         </div>
         <div class="bloco-itens">
-          <label for="">Descrição da Deficiência</label><br>
-          <textarea name="" id="" cols="30" rows="10"></textarea>
+          <label for="desc">Descrição da Deficiência</label><br>
+          <textarea name="desc" id="desc" cols="30" rows="10"></textarea>
         </div>
       </div>
       <br><br>
       <div class="linha-blocos">
         <div class="bloco-form div-contato">
           <div class="bloco-itens">
-            <label for="">Telefone</label><br>
-            <input type="tel" name="" id="">
+            <label for="Telefone">Telefone</label><br>
+            <input type="tel" name="Telefone" id="">
           </div>
           <div class="bloco-itens">
             <label for="">Email</label><br>
-            <input type="email" name="" id="">
+            <input type="email" name="Email" id="Email">
+          </div>
+          <div class="bloco-itens">
+            <label for="">Senha</label><br>
+            <input type="password" name="Senha" id="Senha">
           </div>
         </div>
         <div class="bloco-form div-endereco">
           <div class="bloco-itens">
             <label for="">CEP</label><br>
-            <input type="text" name="" id="">
+            <input type="text" name="CEP" id="CEP">
           </div>
           <div class="bloco-itens">
             <label for="">Rua</label><br>
-            <input type="text" name="" id="">
+            <input type="text" name="Rua" id="Rua">
           </div>
           <div class="bloco-itens">
             <label for="">Bairro</label><br>
-            <input type="text" name="" id="">
+            <input type="text" name="Bairro" id="Bairro">
           </div>
           <div class="bloco-itens">
             <label for="">Cidade</label><br>
-            <input type="text" name="" id="">
+            <input type="text" name="Cidade" id="Cidade">
           </div>
           <div class="bloco-itens">
             <label for="">UF</label><br>
-            <input type="text" name="" id="">
+            <input type="text" name="UF" id="UF">
           </div>
         </div>
       </div>
+      <input type="submit" value="Pau fofo">
     </form>
   </div>
 </body>
