@@ -93,11 +93,12 @@
       <div class="bloco-form div-info">
         <div class="bloco-itens">
           <label for="">Nome</label><br>
-          <input type="text" name="Nome" id="">
+          <input type="text" name="Nome" id="" placeholder='<?php echo $Res[0]['nome_aluno']  ?>'>
         </div>
         <div class="bloco-itens">
           <label for="">CPF</label><br>
-          <input type="text" name="CPF" id="">
+          <input type="text" name="CPF" id="txt_cpfAluno" maxlength='14' class='CPF' onchange="cpfVerify()" placeholder='<?php echo $Res[0]['CPF_aluno']  ?>'>
+          <div id="validacao"></div>
         </div>
         <div class="bloco-itens">
           <label for="">Data de Nascimento</label><br>
@@ -121,7 +122,7 @@
         </div>
         <div class="bloco-itens">
           <label for="desc">Descrição da Deficiência</label><br>
-          <textarea name="desc" id="desc" cols="30" rows="10"></textarea>
+          <textarea name="desc" id="desc" cols="30" rows="10" placeholder='<?php echo $Res[0]['deficiencia']  ?>'></textarea>
         </div>
       </div>
       <br><br>
@@ -129,11 +130,11 @@
         <div class="bloco-form div-contato">
           <div class="bloco-itens">
             <label for="Telefone">Telefone</label><br>
-            <input type="tel" name="Telefone" id="">
+            <input type="text" name="Telefone" id="tel" class='tel' maxlength='15' placeholder='<?php echo $Res[0]['telefone_aluno']  ?>'>
           </div>
           <div class="bloco-itens">
             <label for="">Email</label><br>
-            <input type="email" name="Email" id="Email">
+            <input type="email" name="Email" id="Email" placeholder='<?php echo $Res[0]['email']  ?>'>
           </div>
           <div class="bloco-itens">
             <label for="">Senha</label><br>
@@ -143,27 +144,45 @@
         <div class="bloco-form div-endereco">
           <div class="bloco-itens">
             <label for="">CEP</label><br>
-            <input type="text" name="CEP" id="CEP">
+            <input type="text" name="CEP" id="CEP" class='input-cep' maxlength='9' onchange='atualizarCampos()' placeholder='<?php echo $Res[0]['cep_aluno']  ?>'>
           </div>
           <div class="bloco-itens">
             <label for="">Rua</label><br>
-            <input type="text" name="Rua" id="Rua">
+            <input type="text" name="Rua" id="Rua" placeholder='<?php echo $Res[0]['rua_aluno']  ?>'>
           </div>
           <div class="bloco-itens">
             <label for="">Bairro</label><br>
-            <input type="text" name="Bairro" id="Bairro">
+            <input type="text" name="Bairro" id="Bairro" placeholder='<?php echo $Res[0]['bairro_aluno']  ?>'>
           </div>
           <div class="bloco-itens">
             <label for="">Cidade</label><br>
-            <input type="text" name="Cidade" id="Cidade">
+            <input type="text" name="Cidade" id="Cidade" placeholder='<?php echo $Res[0]['cidade_aluno']  ?>'>
           </div>
-          <div class="bloco-itens">
-            <label for="">UF</label><br>
-            <input type="text" name="UF" id="UF">
-          </div>
+          <div class="input-group">
+                <label for="uf">Unidade Federativa</label>
+                <select class="estado" name='UF' id="UF" required>
+                  <option value="AC" id="AC">AC</option><option value="AL" id="AL">AL</option>
+                  <option value="AP" id="AP">AP</option><option value="AM" id="AM">AM</option>
+                  <option value="BA" id="BA">BA</option><option value="CE" id="CE">CE</option>
+                  <option value="DF" id="DF">DF</option><option value="ES" id="ES">ES</option>
+                  <option value="GO" id="GO">GO</option><option value="MA" id="MA">MA</option>
+                  <option value="MT" id="MT">MT</option><option value="MS" id="MS">MS</option>
+                  <option value="MG" id="MG">MG</option><option value="PA" id="PA">PA</option>
+                  <option value="PB" id="PB">PB</option><option value="PR" id="PR">PR</option>
+                  <option value="PE" id="PE">PE</option><option value="PI" id="PI">PI</option>
+                  <option value="RJ" id="RJ">RJ</option><option value="RN" id="RN">RN</option>
+                  <option value="RS" id="RS">RS</option><option value="RO" id="RO">RO</option>
+                  <option value="RR" id="RR">RR</option><option value="SC" id="SC">SC</option>
+                  <option value="SP" id="SP">SP</option><option value="SE" id="SE">SE</option>
+                  <option value="TO" id="TO">TO</option>
+                </select>
+            </div>
         </div>
       </div>
+      <center>
       <input type="submit" value="Pau fofo">
+      </center>
+      cenm
     </form>
   </div>
 </body>

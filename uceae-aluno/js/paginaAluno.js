@@ -4,7 +4,7 @@ function carregaPagina()
 
 // mascara de cpf
 
-const cpf = document.querySelector('.cpf');
+const cpf = document.querySelector('.CPF');
 
 cpf.addEventListener('keypress', () => {
     let cpflength = cpf.value.length;
@@ -80,30 +80,27 @@ function cpfVerify(){
     
 }
 
-function alterData(){
-    var dados = $('#frm_infoAluno').serialize();
-    $.ajax({
-            method: 'POST',
-            url: 'alterarAluno.php',
-            data: dados,
-        })
-        .done(function(msg) {
-        })
-        .fail(function() {
-            alert("Falha ao inserir registro!")
-        })
 
-    var dados = $('#maisdados').serialize();
+function atualizarCampos(){
+    var dados =document.getElementById('CEP').value;
+    document.getElementById('Rua').value = "";
+    document.getElementById('Bairro').value = "";
+    document.getElementById('Cidade').value = "";
+    document.getElementById('UF').value = "";
+    const selectElement = document.querySelector("#UF");
+    coisaimportante = dados.replace('"','');
     $.ajax({
-            method: 'POST',
-            url: 'alterarAluno.php',
-            data: dados,
-        })
-        .done(function(msg) {
-            location.reload()
-        })
-        .fail(function() {
-            alert("Falha ao inserir registro!")
-        })
+        url: 'https://viacep.com.br/ws/'+ coisaimportante + '/json/' 
+    })
+    .done(function(msg){
+        var desempacotado = JSON.parse(JSON.stringify(msg));
+            document.getElementById('Rua').value = desempacotado.logradouro;
+            document.getElementById('Bairro').value = desempacotado.bairro;
+            document.getElementById('Cidade').value = desempacotado.localidade;
+            selectElement.value = desempacotado.uf;
+    })
+    .fail(function(){
+        alert("Falha na busca")
+    })
     return false;
 }
