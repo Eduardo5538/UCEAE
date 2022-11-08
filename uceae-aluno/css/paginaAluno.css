@@ -25,6 +25,7 @@
 	padding-right: 15px;
 	font-size: 17px;
 	font-family: sans-serif;
+	color: black;
 }
 #ft_perfil{
 	border: 2px black solid;
@@ -45,11 +46,12 @@
   border: 1px solid black;
   margin: 0 auto;
   box-shadow: 10px 10px 5px #868686;
+  width: 90%;
 }
 
 /* linha-blocos */
 
-.linha-blocos{
+.linha-blocos, .linha-itens{
   display: flex;
   margin: 0 auto;
   flex-wrap: nowrap;
@@ -57,16 +59,85 @@
   width: 1200px;
 }
 
+.bloco-itens{
+	margin-bottom: 2rem;
+}
+
 /* div-info */
 
 .div-info{
-  width: 1200px;
-  height: 600px;
+  box-shadow: 10px 10px 5px #868686;
+  border: 1px solid black;
+  padding: 20px;
+  width: 710px;
+  height: 1120px;
+  border-radius: 2rem;
 }
 
 /* div-contato e div-endereco */
 
 .div-contato,.div-endereco{
-  width: 45%;
-  height: 400px;
+  box-shadow: 10px 10px 5px #868686;
+  border: 1px solid black;
+  padding: 20px;
+  width: 800px;
+  border-radius: 2rem;
+}
+
+/* direita e esquerda */
+
+.div-esquerda{
+	margin-right: 20rem;
+	margin-left: -20%;
+}
+.div-direita{
+	margin-left: -20%;
+}
+
+/* inputs e labels*/
+
+input,select{
+	width: 300px;
+	height: 50px;
+
+}
+
+input[type="radio"]{
+	width: 20px;
+	height: 20px;
+}
+
+label{
+	color:rgb(2, 155, 155);
+	font-family: 'sensei';
+	font-size: 30px;
+	margin-right: 2rem;
+}
+
+.label-radio{
+	color: black;
+	font-size: 25px;
+}
+
+textarea{
+	width: 600px;
+
+}
+
+/* botao */
+
+.div-botao{
+	margin-top: 5rem;
+	width: 100%;
+	text-align: center;
+}
+.div-botao .btn-alt{
+	width: 700px;
+	height: 70px;
+	background-color: rgb(6, 138, 138);
+	color: white;
+	font-family: 'sensei';
+	border: none;
+	border-radius: .5rem;
+	font-size: 35px;
 }
