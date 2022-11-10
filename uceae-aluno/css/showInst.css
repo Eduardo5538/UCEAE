@@ -286,6 +286,13 @@ html {
     font-family: arial;
 }
 
+.retorno{
+    font-size: 50px;
+    margin-left: 3rem;
+    font-family: 'sensei';
+    margin-top: 2rem;
+}
+
 .topo {
     background-image: linear-gradient(to right,rgb(80, 80, 255),rgb(49, 49, 255));
     height: 500px;
@@ -324,6 +331,8 @@ html {
 .titulo2 {
     margin-top: 20%;
     text-align: center;
+    font-size: 70px;
+    font-family: 'sensei';
 }
 
 .comentarios {
@@ -411,6 +420,8 @@ html {
     margin-top: 28%;
     margin-left: 3%;
     padding-bottom: 5%;
+    font-size: 50px;
+    font-family: 'sensei';
 }
 
 #div-graficos-barra {

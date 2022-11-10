@@ -69,6 +69,7 @@
     echo "<input type='hidden' id='nota4' name='nota4' value='".$nota4."'>";
     echo "<input type='hidden' id='nota5' name='nota5' value='".$nota5."'>";
     echo "<input type='hidden' id='tamanho' name='nota5' value='".$tamanho."'>";
+    echo "<input type='hidden' id='cnpj' name='cnpj' value='".$_GET['cnpj']."'>";
 
 ?>
 
@@ -376,26 +377,51 @@
 
   <!-- Carousel de Imagens -->
 
-  <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img class="d-block w-100" src=".../800x400?auto=yes&bg=777&fg=555&text=Primeiro Slide" alt="Primeiro Slide">
-    </div>
-    <div class="carousel-item">
-      <img class="d-block w-100" src=".../800x400?auto=yes&bg=666&fg=444&text=Segundo Slide" alt="Segundo Slide">
-    </div>
-    <div class="carousel-item">
-      <img class="d-block w-100" src=".../800x400?auto=yes&bg=555&fg=333&text=Terceiro Slide" alt="Terceiro Slide">
-    </div>
-  </div>
-  <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Anterior</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Próximo</span>
-  </a>
+  <div id='imagens_inst' onload='consultaImg()'>
+        <?php
+
+            try
+            {
+                $Comando = $conexao->prepare("SELECT * from imagens_instituicao WHERE cnpj = ?");
+                $Comando->bindParam(1, $_GET['cnpj']);
+                $Comando->execute();
+                $Res = $Comando->fetchAll();
+                $RetornoJSON = json_encode($Res);
+                
+
+            }
+
+            catch(PDOException $erro){
+                $RetornoJSON = "Erro: " . $erro->getMessage();
+                echo $RetornoJSON;
+            }
+
+
+            if (count($Res) > 0){
+                echo "<div id='carouselExampleControls' class='carousel slide' data-bs-ride='carousel' style='height:20%'>";
+                echo "<div class='carousel-inner'>";
+                for($j = 0; $j < count($Res); $j++){
+                    if($j == 0){
+                        echo  "<div class='carousel-item active'>";
+                    }
+                    else{
+                        echo "<div class='carousel-item'>";
+                    }
+                    echo "<img src='" . $Res[$j]['imagem'] . "' class='d-block w-100' alt='" . $Res[$j]['cod_imagem'] . "' id='img-carousel'>";
+                    echo "</div>";
+
+                }
+                echo "<button class='carousel-control-prev' type='button' data-bs-target='#carouselExampleControls' data-bs-slide='prev'>";
+                echo "<span class='carousel-control-prev-icon' aria-hidden='true'></span>";
+                echo "<span class='visually-hidden'>Previous</span>";
+                echo "</button>";
+                echo "<button class='carousel-control-next' type='button' data-bs-target='#carouselExampleControls' data-bs-slide='next'>";
+                echo "<span class='carousel-control-next-icon' aria-hidden='true'></span>";
+                echo "<span class='visually-hidden'>Next</span>";
+                echo "</button>";
+                echo "</div>";
+            }
+        ?>
 </div>
 
   <!-- ---------- Comentários ---------- -->
@@ -405,7 +431,7 @@
    <!-- Área de Gráficos -->
 
    <div class="topo">
-    <h1 class="h1">Comentários e Avaliações</h1>
+    <label class="h1">Comentários e Avaliações</label>
     <h3 class="h3">Veja o que outros usuários acharam sobre essa Instituição</h3>
     <div class="conteudo">
         <div class="info" id = "div-graficos-rosca">
@@ -423,7 +449,7 @@
         if(!isset($_SESSION['CNPJ']) && isset($_SESSION['CPF'])){
           if($_SESSION['CPF'] != ''){
             echo "<br><br><br>";
-            echo "<h1 id='h1' class='h1-titulo'>Inserir Comentário</h1>
+            echo "<label id='h1' class='h1-titulo'>Inserir Comentário</label>
             <div class ='formulario'>
               <form id='form_comentario' method='post'> 
                 <div class ='div-titulo-coment'>
@@ -451,7 +477,7 @@
           }
         }
         else{
-          echo "<h1 id='mensagem'>Logue-se para comentar</h1>";
+          echo "<label id='mensagem' class='mensagem'>Logue-se para comentar</label>";
         }
       ?>
     </div>
@@ -460,7 +486,7 @@
     
    <div class="comentarios">
     <br><br><br><br>
-    <h1 class="titulo2">Comentários</h1>
+    <label class="titulo2">Comentários</label>
     <div class="barra-filtro">
         <select name="filtro" id="filtro_tempo" class="tipo">
             <option value="todos">Todos</option>
@@ -474,7 +500,7 @@
             
             if($RetornoJSON1  == "[]")
             {
-                echo "<h1 id='retorno'>Nenhum comentário ainda</h1><br><br>";
+                echo "<label id='retorno' class='retorno'>Nenhum comentário ainda</label><br><br>";
             }
             else
             {
