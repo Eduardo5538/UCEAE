@@ -95,16 +95,16 @@
           <div class="div-info">
             <div class="bloco-itens">
               <label for="">Nome</label><br>
-              <input type="text" name="Nome" id="" placeholder='<?php echo $Res[0]['nome_aluno']  ?>'>
+              <input type="text" name="Nome" id="" required  placeholder='<?php echo $Res[0]['nome_aluno']  ?>'>
             </div>
             <div class="bloco-itens">
               <label for="">CPF</label><br>
-              <input type="text" name="CPF" id="txt_cpfAluno" maxlength='14' class='CPF' onchange="cpfVerify()" placeholder='<?php echo $Res[0]['CPF_aluno']  ?>'>
+              <input type="text" name="CPF" id="txt_cpfAluno" maxlength='14' class='CPF' onchange="cpfVerify()"  placeholder='<?php echo $Res[0]['CPF_aluno']  ?>'>
               <div id="validacao"></div>
             </div>
             <div class="bloco-itens">
               <label for="">Data de Nascimento</label><br>
-              <input type="date" name="nasc" id="">
+              <input type="date" name="nasc" required id="">
             </div>
             <div class="bloco-itens">
               <label for="">Sexo</label><br>
@@ -124,7 +124,7 @@
             </div>
             <div class="bloco-itens">
               <label for="desc">Descrição da Deficiência</label><br>
-              <textarea name="desc" id="desc" cols="30" rows="10" placeholder='<?php echo $Res[0]['deficiencia']  ?>'></textarea>
+              <textarea name="desc" id="desc" cols="30" required placeholder='<?php echo $Res[0]['deficiencia']  ?>'></textarea>
             </div>
           </div>
         </div>
@@ -133,38 +133,38 @@
           <div class="div-contato">
             <div class="bloco-itens">
               <label for="Telefone">Telefone</label><br>
-              <input type="text" name="Telefone" id="tel" class='tel' maxlength='15' placeholder='<?php echo $Res[0]['telefone_aluno']  ?>'>
+              <input type="text" name="Telefone" id="tel" class='tel' maxlength='15' required placeholder='<?php echo $Res[0]['telefone_aluno']  ?>'>
             </div>
             <div class="bloco-itens">
               <label for="">Email</label><br>
-              <input type="email" name="Email" id="Email" placeholder='<?php echo $Res[0]['email']  ?>'>
+              <input type="email" name="Email" id="Email" required placeholder='<?php echo $Res[0]['email']  ?>'>
             </div>
             <div class="bloco-itens">
               <label for="">Senha</label><br>
-              <input type="password" name="Senha" id="Senha">
+              <input type="password" name="Senha" id="Senha" required>
             </div>
           </div>
           <br>
           <div class="div-endereco">
             <div class="bloco-itens">
               <label for="">CEP</label><br>
-              <input type="text" name="CEP" id="CEP" class='input-cep' maxlength='9' onchange='atualizarCampos()' placeholder='<?php echo $Res[0]['cep_aluno']  ?>'>
+              <input type="text" name="CEP" id="CEP" class='input-cep' required maxlength='9' onchange='atualizarCampos()' placeholder='<?php echo $Res[0]['cep_aluno']  ?>'>
             </div>
             <div class="bloco-itens">
               <label for="">Rua</label><br>
-              <input type="text" name="Rua" id="Rua" placeholder='<?php echo $Res[0]['rua_aluno']  ?>'>
+              <input type="text" name="Rua" id="Rua" required placeholder='<?php echo $Res[0]['rua_aluno']  ?>'>
             </div>
             <div class="bloco-itens">
               <label for="">Bairro</label><br>
-              <input type="text" name="Bairro" id="Bairro" placeholder='<?php echo $Res[0]['bairro_aluno']  ?>'>
+              <input type="text" name="Bairro" id="Bairro" required  placeholder='<?php echo $Res[0]['bairro_aluno']  ?>'>
             </div>
             <div class="bloco-itens">
               <label for="">Cidade</label><br>
-              <input type="text" name="Cidade" id="Cidade" placeholder='<?php echo $Res[0]['cidade_aluno']  ?>'>
+              <input type="text" name="Cidade" id="Cidade" required  placeholder='<?php echo $Res[0]['cidade_aluno']  ?>'>
             </div>
             <div class="bloco-itens">
                   <label for="uf">Unidade Federativa</label><br>
-                  <select class="estado" name='UF' id="UF" required>
+                  <select class="estado" required name='UF' id="UF" required>
                     <option value="AC" id="AC">AC</option><option value="AL" id="AL">AL</option>
                     <option value="AP" id="AP">AP</option><option value="AM" id="AM">AM</option>
                     <option value="BA" id="BA">BA</option><option value="CE" id="CE">CE</option>

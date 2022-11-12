@@ -87,7 +87,7 @@
         
 
         if($Comando->rowCount() > 0){
-            echo $_SESSION['CPF'];
+            header("location: paginaAluno.php");
         }
     }
     catch(PDOException $penis){

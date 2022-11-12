@@ -191,10 +191,16 @@ function atualizarCampos(){
     })
     .done(function(msg){
         var desempacotado = JSON.parse(JSON.stringify(msg));
+        if(desempacotado.logradouro != null){
             document.getElementById('txt_ruaAluno').value = desempacotado.logradouro;
             document.getElementById('txt_bairroAluno').value = desempacotado.bairro;
             document.getElementById('txt_cidadeAluno').value = desempacotado.localidade;
             selectElement.value = desempacotado.uf;
+        }
+        else{
+            alert("CEP indefinido")
+        }
+            
     })
     .fail(function(){
         alert("Falha na busca")

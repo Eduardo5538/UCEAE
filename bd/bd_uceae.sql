@@ -6,6 +6,7 @@
 -- Tempo de geração: 27-Set-2022 às 01:07
 -- Versão do servidor: 10.4.24-MariaDB
 -- versão do PHP: 8.1.4
+
 CREATE DATABASE BD_UCEAE;
 USE BD_UCEAE;
 
@@ -214,6 +215,18 @@ INSERT INTO `login` (`cod_login`, `CNPJ`, `CPF`, `login`, `senha`, `nome`, `imag
 -- Estrutura da tabela `tab_alunos`
 --
 
+CREATE TABLE `cursos` (
+  `cod_curso` int(11) NOT NULL,
+  `CNPJ` varchar(21) NOT NULL,
+  `titulo` varchar(50) DEFAULT NULL,
+  `modalidade` varchar(60) DEFAULT NULL,
+  `periodo` varchar(20) DEFAULT NULL,
+  `desc` varchar(100) DEFAULT NULL,
+  `preco` date DEFAULT NULL,
+  `acessibilidade` varchar(25) DEFAULT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+
 CREATE TABLE `tab_alunos` (
   `cod_aluno` int(11) NOT NULL,
   `CPF_aluno` varchar(21) NOT NULL,
@@ -230,6 +243,7 @@ CREATE TABLE `tab_alunos` (
   `foto_aluno` varchar(120) DEFAULT NULL,
   `telefone_aluno` varchar(30) DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
 
 --
 -- Índices para tabelas despejadas
@@ -260,6 +274,9 @@ ALTER TABLE `login`
   ADD KEY `cpf_aluno` (`CPF`),
   ADD KEY `CPNJ` (`CNPJ`);
 
+ALTER TABLE `cursos`
+  ADD PRIMARY KEY (`cod_curso`),
+  ADD UNIQUE KEY `CNPJ` (`CNPJ`);
 --
 -- Índices para tabela `tab_alunos`
 --
@@ -296,4 +313,6 @@ COMMIT;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 
 
-select * from escolas;
+select * from tab_alunos;
+select * from login;
+SELECT * FROM CURSOS;
