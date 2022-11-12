@@ -285,7 +285,7 @@
 
       <h1 class="titulos-paginaInst fonte-sensei" id='link-form-curso'>Inserir Cursos</h1>
       <br><br>
-        <form action="" method="post" id="frm_inserirCurso" class="inserirCurso">
+        <form action="addCurso.php" method="post" id="frm_inserirCurso" class="inserirCurso">
           <div class="linha-formulario">
             <div class="item-formulario">
               <label for="Titulo-curso" class="label-item">Título</label>
@@ -348,7 +348,7 @@
           </div>
           <div class="linha-formulario">
             <div class="item-formulario item-botao">
-               <input type="button" value="Cadastrar" class="btn-inserirCurso">
+               <input type="submit" value="Cadastrar" class="btn-inserirCurso">
             </div>
           </div>
         </form>

@@ -221,8 +221,8 @@ CREATE TABLE `cursos` (
   `titulo` varchar(50) DEFAULT NULL,
   `modalidade` varchar(60) DEFAULT NULL,
   `periodo` varchar(20) DEFAULT NULL,
-  `desc` varchar(100) DEFAULT NULL,
-  `preco` date DEFAULT NULL,
+  `descr` varchar(100) DEFAULT NULL,
+  `preco` decimal(6,2) DEFAULT NULL,
   `acessibilidade` varchar(25) DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
@@ -275,8 +275,7 @@ ALTER TABLE `login`
   ADD KEY `CPNJ` (`CNPJ`);
 
 ALTER TABLE `cursos`
-  ADD PRIMARY KEY (`cod_curso`),
-  ADD UNIQUE KEY `CNPJ` (`CNPJ`);
+  ADD PRIMARY KEY (`cod_curso`);
 --
 -- Índices para tabela `tab_alunos`
 --
@@ -300,6 +299,9 @@ ALTER TABLE `imagens_instituicao`
 --
 ALTER TABLE `login`
   MODIFY `cod_login` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=60;
+  
+  ALTER TABLE `cursos`
+  MODIFY `cod_curso` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=60;
 
 --
 -- AUTO_INCREMENT de tabela `tab_alunos`
@@ -316,3 +318,6 @@ COMMIT;
 select * from tab_alunos;
 select * from login;
 SELECT * FROM CURSOS;
+
+
+
