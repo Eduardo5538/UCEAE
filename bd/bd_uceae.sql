@@ -324,6 +324,9 @@ ALTER TABLE `login`
   ALTER TABLE `cursos`
   MODIFY `cod_curso` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=60;
 
+  ALTER TABLE `objetivos`
+  MODIFY `cod_obj` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=60;
+
 --
 -- AUTO_INCREMENT de tabela `tab_alunos`
 --

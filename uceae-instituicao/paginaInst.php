@@ -232,7 +232,7 @@
       <h1 class="titulos-paginaInst fonte-sensei">Edição de Informações</h1>
       <h3 class="fonte-sensei">Escreva um pouco sobre a instituição!</h3>
       <br><br><br>
-      <form action="POST" id="frm_infoExtra" class="form-alteração">
+      <form action="addObjetivos.php" method="POST" id="frm_infoExtra" class="form-alteração">
         <div id="area_desc_origem" class="meio">
           <label for="origem" class="lbl_textos">Origem</label>
           <br>
@@ -260,13 +260,13 @@
         <div class="meio div-objetivos">
         <label for="lista-objetivos" class="titulos-paginaInst fonte-sensei">Objetivos</label>
         <ul name="lista-objetivos">
-          <li class="li-objt"><input type="text" id="txt_objt1" class="objetivos"></li><br>
-          <li class="li-objt"><input type="text" id="txt_objt2" class="objetivos"></li><br>
-          <li class="li-objt"><input type="text" id="txt_objt3" class="objetivos"></li><br>
-          <li class="li-objt"><input type="text" id="txt_objt4" class="objetivos"></li>
+          <li class="li-objt"><input type="text" name='obj' id="txt_objt1" class="objetivos"></li><br>
+          <li class="li-objt"><input type="text" name='obj1' id="txt_objt2" class="objetivos"></li><br>
+          <li class="li-objt"><input type="text" name='obj2' id="txt_objt3" class="objetivos"></li><br>
+          <li class="li-objt"><input type="text" name='obj3' id="txt_objt4" class="objetivos"></li>
         </ul>
         </div>
-        <input type="submit" value="penis">
+        <button type="submit">Enviar</button>
       </form>
         <div class="meio div-imagens">
           <h1 class="titulos-paginaInst fonte-sensei">Imagens da Instituição</h1>
@@ -282,7 +282,6 @@
         </div>
       </div>
       </div>
-      </form>
       <br><br><br>
       <br><br><br>
   <!-- --------------------- Inserir Cursos --------------------- -->
