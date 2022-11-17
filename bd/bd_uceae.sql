@@ -64,6 +64,10 @@ CREATE TABLE `escolas` (
   `comprovante` varchar(120) DEFAULT NULL,
   `mensalidade` decimal(7,2) DEFAULT NULL,
   `modalidade` varchar(10) DEFAULT NULL,
+  `origem` varchar(30) DEFAULT NULL,
+  `descAcess` varchar(100) DEFAULT NULL,
+  `informacoes` varchar(120) DEFAULT NULL,
+  `link` varchar(130) DEFAULT NULL,
   `foto_prop` varchar(120) DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
@@ -227,6 +231,17 @@ CREATE TABLE `cursos` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 
+CREATE TABLE `objetivos` (
+  `cod_obj` int(11) NOT NULL,
+  `CNPJ` varchar(21) NOT NULL,
+  `obj1` varchar(100) DEFAULT NULL,
+  `obj2` varchar(100) DEFAULT NULL,
+  `obj3` varchar(100) DEFAULT NULL,
+  `obj4` varchar(100) DEFAULT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+
+
 CREATE TABLE `tab_alunos` (
   `cod_aluno` int(11) NOT NULL,
   `CPF_aluno` varchar(21) NOT NULL,
@@ -279,6 +294,12 @@ ALTER TABLE `cursos`
 --
 -- Índices para tabela `tab_alunos`
 --
+ALTER TABLE `objetivos`
+  ADD PRIMARY KEY (`cod_obj`);
+--
+
+-- Índices para tabela `tab_alunos`
+--
 ALTER TABLE `tab_alunos`
   ADD PRIMARY KEY (`cod_aluno`),
   ADD UNIQUE KEY `CPF_aluno` (`CPF_aluno`),
@@ -318,6 +339,8 @@ COMMIT;
 select * from tab_alunos;
 select * from login;
 SELECT * FROM CURSOS;
+SELECT * FROM objetivos;
+SELECT * FROM escolas;
 
 
 
