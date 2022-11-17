@@ -232,6 +232,7 @@
       <h1 class="titulos-paginaInst fonte-sensei">Edição de Informações</h1>
       <h3 class="fonte-sensei">Escreva um pouco sobre a instituição!</h3>
       <br><br><br>
+      <form action="POST" id="frm_infoExtra" class="form-alteração">
         <div id="area_desc_origem" class="meio">
           <label for="origem" class="lbl_textos">Origem</label>
           <br>
@@ -279,6 +280,7 @@
         </div>
       </div>
       </div>
+      </form>
       <br><br><br>
       <br><br><br>
   <!-- --------------------- Inserir Cursos --------------------- -->
