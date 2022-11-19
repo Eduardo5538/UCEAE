@@ -34,6 +34,15 @@
         $RetornoJSON = "Erro: " . $erro->getMessage();
         echo $RetornoJSON;
       }
+      try{
+        $Comando = $conexao->prepare("SELECT * from cursos WHERE CNPJ = ?");
+        $Comando->bindParam(1, $_SESSION['CNPJ']);
+        $Comando->execute();
+        $Res4 = $Comando->fetchAll();
+      }
+      catch(PDOException $error){
+          echo $error;
+      }
     ?>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -361,54 +370,43 @@
       <!-- Tabela de Cursos -->
   <div id="tabela_cursos">
 
-    <div id="card_curso">
-      <h3><b>Técnico em chupar bolas</b></h3>
-      <hr>
-      <h5>Modalidade: EAD</h5>
-      <h5>Período: Integral</h5>
-      <hr>
-      <p>Esse curso é ótimo para quem adora alessandro e peruzinho</p>
-      <hr>
-      <p>Curso Adaptado</p>
-      <p>Mensalidade: </p><p><b>R$: 0,50</b></p>
-    </div>
+  <?php
+  if(isset($Res4)){
+    for($i = 0; $i <= sizeof($Res4) - 1; $i++){
+      echo "<div id='card_curso'>";
+      echo "<h3><b>". $Res4[$i]['titulo'] ."</b></h3>";
+      echo "<hr>";
+      
+      echo "<h5>Modalidade: ". $Res4[$i]['modalidade'] . "</h5>";
+      if($Res4[$i]['periodo'] == "N"){
+        echo "<h5>Período Noturno</h5>";
+      }
+      elseif($Res4[$i]['periodo'] == "M"){
+        echo "<h5>Período Manhã</h5>";
+      }
+      elseif($Res4[$i]['periodo'] == "T"){
+        echo "<h5>Período Tarde</h5>";
+      }
+      else{
+        echo "<h5>Período Integral</h5>";
+      }
+      
+      echo "<hr>";
+      echo "<p>" . $Res4[$i]['descr'] ."</p>";
+      echo "<hr>";
+      if($Res4[$i]['acessibilidade'] == "S"){
+        echo "<p>Curso Adaptado</p>";
+      }
+      else{
+        echo "<p>Curso não Adaptado</p>";
+      }
+     
+      echo "<p>Mensalidade: </p><p><b>R$: " . $Res4[$i]['preco']  . "</b></p>";
+      echo "</div>";
+    }
+  }
 
-    <div id="card_curso">
-      <h3><b>Técnico em chupar bolas</b></h3>
-      <hr>
-      <h5>Modalidade: EAD</h5>
-      <h5>Período: Integral</h5>
-      <hr>
-      <p>Esse curso é ótimo para quem adora alessandro e peruzinho</p>
-      <hr>
-      <p>Curso Adaptado</p>
-      <p>Mensalidade: </p><p><b>R$: 0,50</b></p>
-    </div>
-
-    <div id="card_curso">
-      <h3><b>Técnico em chupar bolas</b></h3>
-      <hr>
-      <h5>Modalidade: EAD</h5>
-      <h5>Período: Integral</h5>
-      <hr>
-      <p>Esse curso é ótimo para quem adora alessandro e peruzinho</p>
-      <hr>
-      <p>Curso Adaptado</p>
-      <p>Mensalidade: </p><p><b>R$: 0,50</b></p>
-    </div>
-
-    <div id="card_curso">
-      <h3><b>Técnico em chupar bolas</b></h3>
-      <hr>
-      <h5>Modalidade: EAD</h5>
-      <h5>Período: Integral</h5>
-      <hr>
-      <p>Esse curso é ótimo para quem adora alessandro e peruzinho</p>
-      <hr>
-      <p>Curso Adaptado</p>
-      <p>Mensalidade: </p><p><b>R$: 0,50</b></p>
-    </div>
-
+  ?>
 </div>
       
   <!-- --------------------- Comentários --------------------- -->

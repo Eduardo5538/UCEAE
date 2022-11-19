@@ -26,7 +26,26 @@
     catch(PDOException $error){
       echo $error;
     }
-    
+    try{
+      $Comando = $conexao->prepare("SELECT * from objetivos WHERE CNPJ = ?");
+      $Comando->bindParam(1, $cnpj);
+      $Comando->execute();
+      $Res3 = $Comando->fetchAll();
+      $RetornoJSON = json_encode($Res);
+    }
+    catch(PDOException $error){
+        echo $error;
+    }
+    try{
+      $Comando = $conexao->prepare("SELECT * from cursos WHERE CNPJ = ?");
+      $Comando->bindParam(1, $cnpj);
+      $Comando->execute();
+      $Res4 = $Comando->fetchAll();
+    }
+    catch(PDOException $error){
+        echo $error;
+    }
+
 
 
     $tamanho = sizeof($Res1);
@@ -317,30 +336,43 @@
     <p class="heading__credits">Biografia e Informações</p>
   </div>
   <div class="cards">
-    <div class="card card-1">
-      <div class="card__icon"><i class="fas fa-bolt">Biografia</i></div>
-      <p class="card__exit"><i class="fas fa-times"></i></p>
-      <h2 class="card__title"></h2>
-    </div>
-    <div class="card card-2">
-      <div class="card__icon"><i class="fas fa-bolt">Acessibilidades</i></div>
-      <p class="card__exit"><i class="fas fa-times"></i></p>
-      <h2 class="card__title"></h2>
-    </div>
-    <div class="card card-3">
-      <div class="card__icon"><i class="fas fa-bolt">Informações Extras</i></div>
-      <p class="card__exit"><i class="fas fa-times"></i></p>
-      <h2 class="card__title"></h2>
-    </div>
-    <div class="card card-4">
-      <div class="card__icon"><i class="fas fa-bolt">Link do Site</i></div>
-      <p class="card__exit"><i class="fas fa-times"></i></p>
-      <h2 class="card__title">Para acessar nosso site, clique no link abaixo:</h2>
-      <p class="card__apply">
-        <a class="card__link" href="">Site Oficial<i class="fas fa-arrow-right"></i></a>
-      </p>
-    </div>
-  </div>
+    <?php 
+    if(isset($Res[0]['origem'])){
+            echo "<div class='card card-1'>
+              <div class='card__icon'><i class='fas fa-bolt'>Biografia</i></div>
+              <p class='card__exit'><i class='fas fa-times'></i></p>
+              <h2 class='card__title'>" . $Res[0]['origem'] . "</h2>
+            </div>";
+    }
+    if(isset($Res[0]['descAcess'])){
+        echo "<div class='card card-2'>
+          <div class='card__icon'><i class='fas fa-bolt'>Acessibilidades</i></div>
+          <p class='card__exit'><i class='fas fa-times'></i></p>
+          <h2 class='card__title'>". $Res[0]['descAcess'] ."</h2>
+        </div>";
+    }
+    if(isset($Res[0]['informacoes'])){
+        echo "<div class='card card-3'>
+          <div class='card__icon'><i class='fas fa-bolt'>Informações Extras</i></div>
+          <p class='card__exit'><i class='fas fa-times'></i></p>
+          <h2 class='card__title'>". $Res[0]['informacoes'] ."</h2>
+        </div>";
+    }
+    if(isset($Res[0]['informacoes'])){
+       echo " <div class='card card-4'>
+          <div class='card__icon'><i class='fas fa-bolt'>Link do Site</i></div>
+          <p class='card__exit'><i class='fas fa-times'></i></p>
+          <h2 class='card__title'>Para acessar nosso site, clique no link abaixo:</h2>
+          <p class='card__apply'>
+            <a class='card__link' href='https://" . $Res[0]['link'] . "'>Site Oficial<i class='fas fa-arrow-right'></i></a>
+          </p>
+        </div>
+      </div>";
+    }
+    else{
+      echo "<center><h3 id='infoBiografia'>Dados extras não informados</h3></center>";
+    }
+    ?>
 </div>
 
   <!-- Card Metas -->
@@ -350,26 +382,26 @@
   <div class="row1-container">
     <div class="box box-down cyan">
       <h2>Objetivo 2</h2>
-      <p></p>
+      <p><?php if(isset($Res3[0])){echo $Res3[0]['obj1'];} ?></p>
       <img src="https://assets.codepen.io/2301174/icon-supervisor.svg" alt="">
     </div>
 
     <div class="box red">
       <h2>Objetivo 1</h2>
-      <p></p>
+      <p><?php if(isset($Res3[0])){echo $Res3[0]['obj1'];} ?></p>
       <img src="https://assets.codepen.io/2301174/icon-team-builder.svg" alt="">
     </div>
 
     <div class="box box-down blue">
       <h2>Objetivo 3</h2>
-      <p></p>
+      <p><?php if(isset($Res3[0])){echo $Res3[0]['obj1'];} ?></p>
       <img src="https://assets.codepen.io/2301174/icon-calculator.svg" alt="">
     </div>
   </div>
   <div class="row2-container">
     <div class="box orange">
       <h2>Objetivo 4</h2>
-      <p></p>
+      <p><?php if(isset($Res3[0])){echo $Res3[0]['obj1'];} ?></p>
       <img src="https://assets.codepen.io/2301174/icon-karma.svg" alt="">
     </div>
   </div>
@@ -426,53 +458,46 @@
   <!-- Tabela de Cursos -->
   <div id="tabela_cursos">
 
-    <div id="card_curso">
-      <h3><b>Técnico em chupar bolas</b></h3>
-      <hr>
-      <h5>Modalidade: EAD</h5>
-      <h5>Período: Integral</h5>
-      <hr>
-      <p>Esse curso é ótimo para quem adora alessandro e peruzinho</p>
-      <hr>
-      <p>Curso Adaptado</p>
-      <p>Mensalidade: </p><p><b>R$: 0,50</b></p>
-    </div>
+  
+    
 
-    <div id="card_curso">
-      <h3><b>Técnico em chupar bolas</b></h3>
-      <hr>
-      <h5>Modalidade: EAD</h5>
-      <h5>Período: Integral</h5>
-      <hr>
-      <p>Esse curso é ótimo para quem adora alessandro e peruzinho</p>
-      <hr>
-      <p>Curso Adaptado</p>
-      <p>Mensalidade: </p><p><b>R$: 0,50</b></p>
-    </div>
+  <?php
+  if(isset($Res4)){
+    for($i = 0; $i <= sizeof($Res4) - 1; $i++){
+      echo "<div id='card_curso'>";
+      echo "<h3><b>". $Res4[$i]['titulo'] ."</b></h3>";
+      echo "<hr>";
+      
+      echo "<h5>Modalidade: ". $Res4[$i]['modalidade'] . "</h5>";
+      if($Res4[$i]['periodo'] == "N"){
+        echo "<h5>Período Noturno</h5>";
+      }
+      elseif($Res4[$i]['periodo'] == "M"){
+        echo "<h5>Período Manhã</h5>";
+      }
+      elseif($Res4[$i]['periodo'] == "T"){
+        echo "<h5>Período Tarde</h5>";
+      }
+      else{
+        echo "<h5>Período Integral</h5>";
+      }
+      
+      echo "<hr>";
+      echo "<p>" . $Res4[$i]['descr'] ."</p>";
+      echo "<hr>";
+      if($Res4[$i]['acessibilidade'] == "S"){
+        echo "<p>Curso Adaptado</p>";
+      }
+      else{
+        echo "<p>Curso não Adaptado</p>";
+      }
+     
+      echo "<p>Mensalidade: </p><p><b>R$: " . $Res4[$i]['preco']  . "</b></p>";
+      echo "</div>";
+    }
+  }
 
-    <div id="card_curso">
-      <h3><b>Técnico em chupar bolas</b></h3>
-      <hr>
-      <h5>Modalidade: EAD</h5>
-      <h5>Período: Integral</h5>
-      <hr>
-      <p>Esse curso é ótimo para quem adora alessandro e peruzinho</p>
-      <hr>
-      <p>Curso Adaptado</p>
-      <p>Mensalidade: </p><p><b>R$: 0,50</b></p>
-    </div>
-
-    <div id="card_curso">
-      <h3><b>Técnico em chupar bolas</b></h3>
-      <hr>
-      <h5>Modalidade: EAD</h5>
-      <h5>Período: Integral</h5>
-      <hr>
-      <p>Esse curso é ótimo para quem adora alessandro e peruzinho</p>
-      <hr>
-      <p>Curso Adaptado</p>
-      <p>Mensalidade: </p><p><b>R$: 0,50</b></p>
-    </div>
+  ?>
 
   </div>
 
