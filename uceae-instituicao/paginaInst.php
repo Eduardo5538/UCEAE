@@ -285,80 +285,134 @@
       <br><br><br>
       <br><br><br>
   <!-- --------------------- Inserir Cursos --------------------- -->
-
-      <h1 class="titulos-paginaInst fonte-sensei" id='link-form-curso'>Inserir Cursos</h1>
-      <br><br>
-        <form action="addCurso.php" method="post" id="frm_inserirCurso" class="inserirCurso">
-          <div class="linha-formulario">
-            <div class="item-formulario">
-              <label for="Titulo-curso" class="label-item">Título</label>
-              <br>
-              <input type="text" name="Titulo-curso" id="txt_tituloCurso" class="input-form input-titulo-curso">
-            </div>
-            <div class="item-formulario">
-              <label for="Modalidade-curso" class="label-item">Modalidade</label>
-              <br>
-              <select name="Modalidade-curso" id="slc_modalidadeCurso" class="input-form input-modalidade-curso">
-                <option value="Presencial"></option>
-                <option value="Presencial">Presencial</option>
-                <option value="Online">Online</option>
-                <option value="Hibrido">Híbrido</option>
-              </select>
-            </div>
-          </div>
-          <br>
-          <div class="linha-formulario">
-            <div class="item-formulario">
-              <label for="Periodo-curso" class="label-item">Período</label>
-              <br>
-              <div class="area-checkbox">
-                <input type="checkbox" name="Periodo-Curso" id="cb_periodoCurso" value="M" class="cb-form">
-                <label for="Periodo-curso" class="label-item-cb">Manhã</label>
+      <div style="text-align: center;">
+        <h1 class="titulos-paginaInst fonte-sensei" id='link-form-curso'>Inserir Cursos</h1>
+        <br><br>
+          <form action="addCurso.php" method="post" id="frm_inserirCurso" class="inserirCurso">
+            <div class="linha-formulario">
+              <div class="item-formulario">
+                <label for="Titulo-curso" class="label-item">Título</label>
                 <br>
-                <input type="checkbox" name="Periodo-Curso" id="cb_periodoCurso" value="T" class="cb-form">
-                <label for="Periodo-curso" class="label-item-cb">Tarde</label>
+                <input type="text" name="Titulo-curso" id="txt_tituloCurso" class="input-form input-titulo-curso">
+              </div>
+              <div class="item-formulario">
+                <label for="Modalidade-curso" class="label-item">Modalidade</label>
                 <br>
-                <input type="checkbox" name="Periodo-Curso" id="cb_periodoCurso" value="N" class="cb-form">
-                <label for="Periodo-curso" class="label-item-cb">Noite</label>
-                <br>
-                <input type="checkbox" name="Periodo-Curso" id="cb_periodoCurso" value="I" class="cb-form">
-                <label for="Periodo-curso" class="label-item-cb">Integral</label>
-                <br>
+                <select name="Modalidade-curso" id="slc_modalidadeCurso" class="input-form input-modalidade-curso">
+                  <option value="Presencial"></option>
+                  <option value="Presencial">Presencial</option>
+                  <option value="Online">Online</option>
+                  <option value="Hibrido">Híbrido</option>
+                </select>
               </div>
             </div>
-            <div class="item-formulario item-desc">
-              <label for="Desc-curso" class="label-item">Descrição</label>
-              <br>
-              <textarea name="Desc-curso" id="txt_descCurso" class="desc-curso"></textarea>
+            <br>
+            <div class="linha-formulario">
+              <div class="item-formulario">
+                <label for="Periodo-curso" class="label-item">Período</label>
+                <br>
+                <div class="area-checkbox">
+                  <input type="checkbox" name="Periodo-Curso" id="cb_periodoCurso" value="M" class="cb-form">
+                  <label for="Periodo-curso" class="label-item-cb">Manhã</label>
+                  <br>
+                  <input type="checkbox" name="Periodo-Curso" id="cb_periodoCurso" value="T" class="cb-form">
+                  <label for="Periodo-curso" class="label-item-cb">Tarde</label>
+                  <br>
+                  <input type="checkbox" name="Periodo-Curso" id="cb_periodoCurso" value="N" class="cb-form">
+                  <label for="Periodo-curso" class="label-item-cb">Noite</label>
+                  <br>
+                  <input type="checkbox" name="Periodo-Curso" id="cb_periodoCurso" value="I" class="cb-form">
+                  <label for="Periodo-curso" class="label-item-cb">Integral</label>
+                  <br>
+                </div>
+              </div>
+              <div class="item-formulario item-desc">
+                <label for="Desc-curso" class="label-item">Descrição</label>
+                <br>
+                <textarea name="Desc-curso" id="txt_descCurso" class="desc-curso"></textarea>
+              </div>
             </div>
-          </div>
-          <div class="linha-formulario">
-            <div class="item-formulario">
-              <label for="Valor-curso" class="label-item">Preço</label>
-              <br>
-              <input type="number" name="Valor-curso" id="txt_vlrCurso" class="input-form input-preco" step="0.1">
+            <div class="linha-formulario">
+              <div class="item-formulario">
+                <label for="Valor-curso" class="label-item">Preço</label>
+                <br>
+                <input type="number" name="Valor-curso" id="txt_vlrCurso" class="input-form input-preco" step="0.1">
+              </div>
+              <div class="item-formulario">
+                <label for="Acessibilidade-curso" class="label-item">Acessibilidade</label>
+                <br>
+                <div class="area-radio">
+                  <label for="" class="label-item-cb">Adaptado</label>
+                  <input type="radio" name="Acessibilidade-curso" id="txt_adapCurso" value="S">
+                  <label for="" class="label-item-cb">Não Adaptado</label>
+                  <input type="radio" name="Acessibilidade-curso" id="txt_adapCurso" value="N">
+                </div>
+              </div>
             </div>
-            <div class="item-formulario">
-              <label for="Acessibilidade-curso" class="label-item">Acessibilidade</label>
-              <br>
-              <div class="area-radio">
-                <label for="" class="label-item-cb">Adaptado</label>
-                <input type="radio" name="Acessibilidade-curso" id="txt_adapCurso" value="S">
-                <label for="" class="label-item-cb">Não Adaptado</label>
-                <input type="radio" name="Acessibilidade-curso" id="txt_adapCurso" value="N">
-               </div>
+            <div class="linha-formulario">
+              <div class="item-formulario item-botao">
+                <input type="submit" value="Cadastrar" class="btn-inserirCurso">
+              </div>
             </div>
-          </div>
-          <div class="linha-formulario">
-            <div class="item-formulario item-botao">
-               <input type="submit" value="Cadastrar" class="btn-inserirCurso">
-            </div>
-          </div>
-        </form>
-      <br><br><br>
+          </form>
+        <br><br><br>
+      </div>
+
+      <!-- Tabela de Cursos -->
+  <div id="tabela_cursos">
+
+    <div id="card_curso">
+      <h3><b>Técnico em chupar bolas</b></h3>
+      <hr>
+      <h5>Modalidade: EAD</h5>
+      <h5>Período: Integral</h5>
+      <hr>
+      <p>Esse curso é ótimo para quem adora alessandro e peruzinho</p>
+      <hr>
+      <p>Curso Adaptado</p>
+      <p>Mensalidade: </p><p><b>R$: 0,50</b></p>
+    </div>
+
+    <div id="card_curso">
+      <h3><b>Técnico em chupar bolas</b></h3>
+      <hr>
+      <h5>Modalidade: EAD</h5>
+      <h5>Período: Integral</h5>
+      <hr>
+      <p>Esse curso é ótimo para quem adora alessandro e peruzinho</p>
+      <hr>
+      <p>Curso Adaptado</p>
+      <p>Mensalidade: </p><p><b>R$: 0,50</b></p>
+    </div>
+
+    <div id="card_curso">
+      <h3><b>Técnico em chupar bolas</b></h3>
+      <hr>
+      <h5>Modalidade: EAD</h5>
+      <h5>Período: Integral</h5>
+      <hr>
+      <p>Esse curso é ótimo para quem adora alessandro e peruzinho</p>
+      <hr>
+      <p>Curso Adaptado</p>
+      <p>Mensalidade: </p><p><b>R$: 0,50</b></p>
+    </div>
+
+    <div id="card_curso">
+      <h3><b>Técnico em chupar bolas</b></h3>
+      <hr>
+      <h5>Modalidade: EAD</h5>
+      <h5>Período: Integral</h5>
+      <hr>
+      <p>Esse curso é ótimo para quem adora alessandro e peruzinho</p>
+      <hr>
+      <p>Curso Adaptado</p>
+      <p>Mensalidade: </p><p><b>R$: 0,50</b></p>
+    </div>
+
+</div>
       
   <!-- --------------------- Comentários --------------------- -->
-  
+    <div style="text-align:center;">
       <h1 class="titulos-paginaInst fonte-sensei" id="link-interno">Comentários</h1>
       <?php
             try{
@@ -407,6 +461,7 @@
                 
             }
         ?>
+    </div>
 
    <!-- Modal -->
 

@@ -4,6 +4,19 @@
 	src: url(font/sensei.woff);
 }
 
+:root {
+  --red: hsl(0, 78%, 62%);
+  --cyan: hsl(180, 62%, 55%);
+  --orange: hsl(34, 97%, 64%);
+  --blue: hsl(212, 86%, 64%);
+  --varyDarkBlue: hsl(234, 12%, 34%);
+  --grayishBlue: hsl(229, 6%, 66%);
+  --veryLightGray: hsl(0, 0%, 98%);
+  --weight1: 200;
+  --weight2: 400;
+  --weight3: 600;
+}
+
 *{
   box-sizing: border-box;
 }
@@ -285,12 +298,51 @@
 #alterar_foto{
 	color: transparent;
 }
+#tabela_cursos{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 30px;
+  gap: 20px;
+}
+#card_curso{
+  border: black;
+  min-width: 200px;
+  width: 20vw;
+  padding: 15px;
+  border: 3px var(--cyan) solid;
+  background-color: var(--cyan);
+  border-radius: 15px;
+  box-shadow: 0px 30px 30px -20px var(--grayishBlue);
+  transition: all 0.2s;
+}
+#card_curso:hover{
+  box-shadow: 0px 30px 30px -20px rgba(0, 0, 0, 0.4);
+  transform: scale(1.01);
+}
+#card_curso hr{
+  height: 2px;
+}
+#card_curso h3{
+  text-align: center;
+  font-family: 'sensei';
+}
+#card_curso :nth-child(6){
+  text-align: center;
+}
+#card_curso :nth-child(9){
+  display:inline-block;
+}
+#card_curso :nth-child(10){
+  display:inline-block;
+  float: right;
+}
+
 body,html{
 padding: 0;
 margin: 0;
 height:250vh;
 width: 100%;
-text-align: center;
 font-size: 16px;
 line-height: 1.43; 
 }
