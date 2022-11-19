@@ -423,6 +423,58 @@
             }
         ?>
 </div>
+  <!-- Tabela de Cursos -->
+  <div id="tabela_cursos">
+
+    <div id="card_curso">
+      <h3><b>Técnico em chupar bolas</b></h3>
+      <hr>
+      <h5>Modalidade: EAD</h5>
+      <h5>Período: Integral</h5>
+      <hr>
+      <p>Esse curso é ótimo para quem adora alessandro e peruzinho</p>
+      <hr>
+      <p>Curso Adaptado</p>
+      <p>Mensalidade: </p><p><b>R$: 0,50</b></p>
+    </div>
+
+    <div id="card_curso">
+      <h3><b>Técnico em chupar bolas</b></h3>
+      <hr>
+      <h5>Modalidade: EAD</h5>
+      <h5>Período: Integral</h5>
+      <hr>
+      <p>Esse curso é ótimo para quem adora alessandro e peruzinho</p>
+      <hr>
+      <p>Curso Adaptado</p>
+      <p>Mensalidade: </p><p><b>R$: 0,50</b></p>
+    </div>
+
+    <div id="card_curso">
+      <h3><b>Técnico em chupar bolas</b></h3>
+      <hr>
+      <h5>Modalidade: EAD</h5>
+      <h5>Período: Integral</h5>
+      <hr>
+      <p>Esse curso é ótimo para quem adora alessandro e peruzinho</p>
+      <hr>
+      <p>Curso Adaptado</p>
+      <p>Mensalidade: </p><p><b>R$: 0,50</b></p>
+    </div>
+
+    <div id="card_curso">
+      <h3><b>Técnico em chupar bolas</b></h3>
+      <hr>
+      <h5>Modalidade: EAD</h5>
+      <h5>Período: Integral</h5>
+      <hr>
+      <p>Esse curso é ótimo para quem adora alessandro e peruzinho</p>
+      <hr>
+      <p>Curso Adaptado</p>
+      <p>Mensalidade: </p><p><b>R$: 0,50</b></p>
+    </div>
+
+  </div>
 
   <!-- ---------- Comentários ---------- -->
 
