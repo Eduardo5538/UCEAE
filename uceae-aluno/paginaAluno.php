@@ -74,17 +74,16 @@
 
   <!-- Area Foto e Boas Vindas -->
 
-  <div class="div-header">
-    <div class="linha-blocos">
-      <div class="div-foto">
-        <img src="" alt="">
-      </div>
-      <div class="div-titulo">
-        <h1>Boas Vindas!</h1>
-        <p>Sinta-se à vontade para editar seus dados!</p>
-      </div>
+  <div class="centralizado">
+        <div class="bloco-foto">
+            <img src="img/aluno.png" alt="" class="foto-aluno">
+        </div>
+        <div class="bloco-boasVindas">
+            <h1 class="titulo">Boas Vindas!</h1>
+            <br>
+            <h2 class="subtitulo">Fique a vontade para alterar seus dados!</h2>
+        </div>
     </div>
-  </div>
 
   <!-- Area Formulario Alteração de Dados -->
 
@@ -124,7 +123,7 @@
             </div>
             <div class="bloco-itens">
               <label for="desc">Descrição da Deficiência</label><br>
-              <textarea name="desc" id="desc" cols="30" required placeholder='<?php echo $Res[0]['deficiencia']  ?>'></textarea>
+              <textarea name="desc" id="desc" class="textarea-desc" cols="30" required placeholder='<?php echo $Res[0]['deficiencia']  ?>'></textarea>
             </div>
           </div>
         </div>

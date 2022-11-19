@@ -79,8 +79,9 @@
 .div-contato,.div-endereco{
   box-shadow: 10px 10px 5px #868686;
   border: 1px solid black;
+  margin-left: 5rem;
   padding: 20px;
-  width: 800px;
+  width: 400px;
   border-radius: 2rem;
 }
 
@@ -88,10 +89,12 @@
 
 .div-esquerda{
 	margin-right: 20rem;
-	margin-left: -20%;
+	width: 50%;
+	margin-left: 20px;
 }
 .div-direita{
 	margin-left: -20%;
+	width: 50%;
 }
 
 /* inputs e labels*/
@@ -119,10 +122,11 @@ label{
 	font-size: 25px;
 }
 
-textarea{
-	width: 600px;
-
+.textarea-desc{
+    width: 600px;
+	height: 400px;
 }
+
 
 /* botao */
 
@@ -140,4 +144,37 @@ textarea{
 	border: none;
 	border-radius: .5rem;
 	font-size: 35px;
+}
+
+/* Div de Titulo */
+
+.centralizado{
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 50px;
+    margin-top: 3rem;
+	margin-bottom: 5%;
+	margin-left: 5%;
+}
+
+.bloco-foto{
+    margin-left: 2rem;
+    background-color: white;
+    border-radius: .5rem;
+    box-shadow: 10px 10px 10px rgb(119, 119, 119)
+}
+.bloco-boasVindas{
+    margin-left: 3rem;
+    color: rgb(6, 138, 138);
+    font-family: 'sensei';
+}
+.titulo{
+    font-size: 80px;
+}
+.subtitulo{
+	font-size: 40px;
+}
+.foto-aluno{
+	width: 300px;
+	height: 300px;
 }
