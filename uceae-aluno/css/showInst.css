@@ -884,7 +884,17 @@ h2 {
     }
     
 }
-
+.entrar-titulo{
+	font-family: sensei;
+	font-size: 40px;
+	color: #77D353;
+}
+.modal-footer{
+	float: center;
+}
+.btn-secondary{
+	background-color: #47525E;
+}
 /* Carousel imagens */
 
 .carousel{
