@@ -76,7 +76,7 @@
 
   <div class="centralizado">
         <div class="bloco-foto">
-            <img src="img/aluno.png" alt="" class="foto-aluno">
+            <img src="<?php echo "<img src='../uceae-login/".  $Res[0]['foto_aluno']  .; ?>" alt="" class="foto-aluno">
         </div>
         <div class="bloco-boasVindas">
             <h1 class="titulo">Boas Vindas!</h1>
