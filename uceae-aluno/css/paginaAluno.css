@@ -167,6 +167,7 @@ label{
     margin-left: 3rem;
     color: rgb(6, 138, 138);
     font-family: 'sensei';
+	float: right;
 }
 .titulo{
     font-size: 80px;
@@ -185,3 +186,9 @@ label{
 	visibility: hidden;
 	width: 100%;
   }
+
+.bloco-foto{
+	margin-top: 5rem;
+	margin-left: 5rem;
+	width: 30%;
+}
