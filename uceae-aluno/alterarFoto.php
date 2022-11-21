@@ -1,9 +1,9 @@
 <?php
     include "conection.php";
     session_start();
-    $ft_perfil = $_FILES["foto_imagem"];
+    $ft_perfil = $_FILES["foto-banner"];
 
-    if(isset($_FILES["foto_imagem"])){
+    if(isset($_FILES["foto-banner"])){
         if (!empty($ft_perfil["name"])){
             if (!preg_match("/^image\/(jpeg|jpg|png|gif|bmp|ico)$/", $ft_perfil["type"]))
             {
