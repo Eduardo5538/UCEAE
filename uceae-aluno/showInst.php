@@ -441,7 +441,7 @@
                     else{
                         echo "<div class='carousel-item'>";
                     }
-                    echo "<img src='" . $Res[$j]['imagem'] . "' class='d-block w-100' alt='" . $Res[$j]['cod_imagem'] . "' id='img-carousel'>";
+                    echo "<img src='" . $Res[$j]['imagem'] . "' class='d-block w-100 imagem-carousel' alt='" . $Res[$j]['cod_imagem'] . "' id='img-carousel'>";
                     echo "</div>";
 
                 }
@@ -504,7 +504,7 @@
   </div>
 
   <!-- ---------- Comentários ---------- -->
-
+  <br><br><br><br>
   <hr>
   
    <!-- Área de Gráficos -->
