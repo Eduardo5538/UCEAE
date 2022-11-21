@@ -101,6 +101,7 @@
 	<link rel="stylesheet" type="text/css" href="css/showInst.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="js/comentario.js"></script>
+  <script src="js/logar.js"></script>
 	<title><?php echo $Res[0]['nome_escola']; ?></title>
 
   <!-- Definindo Gráfico Horizontal -->
@@ -613,5 +614,30 @@
             }
         ?>
 </main>
+
+<!-- Modal -->
+<div class="modal fade" id="ModalEntrar" tabindex="-1" aria-labelledby="ModalLabelEntrar" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h5 class="modal-title entrar-titulo w-100" id="ModalLabelEntrar">Entrar</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" style="margin: 0 25% 0 25%;">
+        <form method="POST" name="loginform" id='loginform'>
+          <input class="form-control" type="text" placeholder="Login" name='login' id='login'>
+          <br>
+          <input class="form-control" type="password" placeholder="Senha" name='senha' id='senha'>
+      </div>
+      <div class="modal-footer justify-content-center">
+        <button type="button" class="btn btn-secondary btn-block" style="width: 50%;" onclick='logar();'>Entrar</button>
+      </div>
+      <center>
+      <a href="../../uceae/uceae-login/alterar-senha.php">Esqueceu sua Senha?</a>
+      </center>
+        </form>
+    </div>
+  </div>
+</div>
 </body>
 </html>
