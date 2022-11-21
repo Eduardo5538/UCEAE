@@ -390,20 +390,20 @@
 
     <div class="box red">
       <h2>Objetivo 1</h2>
-      <p><?php if(isset($Res3[0])){echo $Res3[0]['obj1'];} ?></p>
+      <p><?php if(isset($Res3[0])){echo $Res3[0]['obj2'];} ?></p>
       <img src="https://assets.codepen.io/2301174/icon-team-builder.svg" alt="">
     </div>
 
     <div class="box box-down blue">
       <h2>Objetivo 3</h2>
-      <p><?php if(isset($Res3[0])){echo $Res3[0]['obj1'];} ?></p>
+      <p><?php if(isset($Res3[0])){echo $Res3[0]['obj3'];} ?></p>
       <img src="https://assets.codepen.io/2301174/icon-calculator.svg" alt="">
     </div>
   </div>
   <div class="row2-container">
     <div class="box orange">
       <h2>Objetivo 4</h2>
-      <p><?php if(isset($Res3[0])){echo $Res3[0]['obj1'];} ?></p>
+      <p><?php if(isset($Res3[0])){echo $Res3[0]['obj4'];} ?></p>
       <img src="https://assets.codepen.io/2301174/icon-karma.svg" alt="">
     </div>
   </div>
