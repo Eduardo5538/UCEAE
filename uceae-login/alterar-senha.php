@@ -22,7 +22,7 @@
                 <input type="text" name="subject" value="Nova Senha" class="inv">
             </div>
             <div class="">
-                <input type="hidden" name="redirectTo" value="http://localhost/git/uceae/uceae-login/confirma-envio.php">
+                <input type="hidden" name="redirectTo" value="http://localhost/uceae/uceae-login/confirma-envio.php">
                 <input type="submit" value="Confirmar" class="btn" >
             </div>
         </div>

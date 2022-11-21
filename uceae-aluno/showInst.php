@@ -458,12 +458,12 @@
             }
         ?>
 </div>
+<br><br><br><br>
   <!-- Tabela de Cursos -->
+  <br><br><br><br>
+  <h1 class="titulo-grande">Cursos Oferecidos</h1>
+  <br><br><br>
   <div id="tabela_cursos">
-
-  
-    
-
   <?php
   if(isset($Res4)){
     for($i = 0; $i <= sizeof($Res4) - 1; $i++){
