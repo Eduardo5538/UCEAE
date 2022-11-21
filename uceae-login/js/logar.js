@@ -11,7 +11,7 @@ function logar(){
             alert("Email ou senha inválidos, verifique seus dados!")
         } 
         else{
-            alert("funfou")
+            alert("Login efetuado com sucesso!")
             location.reload()
         }
     })
