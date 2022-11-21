@@ -203,13 +203,16 @@
       </div>
       <div class="modal-body" style="margin: 0 25% 0 25%;">
         <form method="POST" name="loginform" id='loginform'>
-            <input class="form-control" type="text" placeholder="Login" name='login' id='login'>
-            <br>
-            <input class="form-control" type="password" placeholder="Senha" name='senha' id='senha'>
+          <input class="form-control" type="text" placeholder="Login" name='login' id='login'>
+          <br>
+          <input class="form-control" type="password" placeholder="Senha" name='senha' id='senha'>
       </div>
-            <div class="modal-footer justify-content-center">
-              <button type="button" class="btn btn-secondary btn-block" style="width: 50%;" onclick='logar();'>Entrar</button>
-            </div>
+      <div class="modal-footer justify-content-center">
+        <button type="button" class="btn btn-secondary btn-block" style="width: 50%;" onclick='logar();'>Entrar</button>
+      </div>
+      <center>
+      <a href="../../uceae/uceae-login/alterar-senha.php">Esqueceu sua Senha?</a>
+      </center>
         </form>
     </div>
   </div>
