@@ -75,9 +75,9 @@
   <!-- Area Foto e Boas Vindas -->
 
   <div class="" id="banner-foto">
-      <label for="file-input" id='input-file' class="label-foto">
+    <div class="linha-blocos linha-forms">
+    <label for="file-input" id='input-file' class="label-foto">
     <form method="post" id="alter_perfil" action='alterarFoto.php' enctype="multipart/form-data">
-    <div class="linha-blocos">
         <div class="bloco-foto">
             <img src="<?php echo "../uceae-login/".  $Res[0]['foto_aluno']; ?>" alt="" class="foto-aluno">
         </div>
@@ -91,12 +91,11 @@
             <h2 class="subtitulo">Fique a vontade para alterar seus dados!</h2>
     </div>
   </div>
-
   <!-- Area Formulario Alteração de Dados -->
 
   <div class="div-form">
     <form action="alterarAluno.php" method='POST' name="form_alterar" id="frm_alt" class="form">
-      <div class="linha-blocos linha-forms">
+      <div class="linha-blocos">
         <div class="div-esquerda">
           <div class="div-info">
             <div class="bloco-itens">

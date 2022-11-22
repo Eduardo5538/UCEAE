@@ -109,7 +109,7 @@
     <div class="box">
       <div class="card">
         <div class="imgBx">
-            <img src="img/davi.png" alt="images">
+            <img src="img/davi2.jpg" alt="images">
         </div>
         <div class="details">
             <h2>Davi Alexandre<br><span>Programador</span></h2>

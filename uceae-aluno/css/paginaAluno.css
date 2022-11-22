@@ -11,7 +11,7 @@
 	left: 5px;
 }
 body{
-	overflow-x: hidden;
+	
 }
 /* Foto Navbar */
 
@@ -21,7 +21,7 @@ body{
 	cursor: pointer;
 	border: none;
 	padding-right: 50px;
-  background-color: transparent;
+    background-color: transparent;
 }
 #nome_perfil{
 	padding-right: 15px;
@@ -60,9 +60,11 @@ body{
   gap: 20px;
   width: 1200px;
   margin-bottom: 5rem;
+  margin-left: -1rem;
 }
 .linha-forms{
-	margin-left: 4rem;
+	width: 100%;
+	margin-bottom: 7rem;
 }
 
 .bloco-itens{
@@ -70,6 +72,11 @@ body{
 }
 
 /* div-info */
+
+
+.div-form{
+	margin-left: 4rem;
+}
 
 .div-info{
   box-shadow: 10px 10px 5px #868686;
@@ -167,11 +174,14 @@ label{
     margin-left: 2rem;
     background-color: white;
     border-radius: .5rem;
-    box-shadow: 10px 10px 10px rgb(119, 119, 119)
+}
+
+.bloco-foto img{
+	box-shadow: 10px 10px 10px rgb(95, 95, 95);
 }
 .bloco-boasVindas{
-    margin-left: -75rem;
-	margin-top: 6rem;
+	margin-right: -55rem;
+	margin-top: -20rem;
     color: rgb(6, 138, 138);
     font-family: 'sensei';
 	float: right;
@@ -195,7 +205,6 @@ label{
 	margin-top: 5rem;
 	margin-left: 5rem;
 	height: 300px;
-	outline: green 2px solid;
 }
 
 .label-foto{
