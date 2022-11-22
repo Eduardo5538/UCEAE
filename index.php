@@ -163,7 +163,7 @@
           <div>
             <h4>Públicas</h4>
             <p>Escolas públicas com acessibilidade.</p>
-            <a href="#"><h6>Procurar</h6></a>
+            <a href="uceae-aluno/busca.php"><h6>Procurar</h6></a>
           </div>
         </div>
 
@@ -172,7 +172,7 @@
           <div>
             <h4>Particulares</h4>
             <p>Escolas particulares com acessibilidade.</p>
-            <a href="#"><h6>Procurar</h6></a>
+            <a href="uceae-aluno/busca.php"><h6>Procurar</h6></a>
           </div>
         </div>
 
@@ -181,7 +181,7 @@
           <div>
             <h4>Acessibilidade</h4>
             <p>Escolas especializadas em acessibilidade.</p>
-            <a href="#"><h6>Procurar</h6></a>
+            <a href="uceae-aluno/busca.php"><h6>Procurar</h6></a>
           </div>
         </div>
 
