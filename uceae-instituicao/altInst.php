@@ -46,11 +46,11 @@
         
 
         if($Comando->rowCount() > 0){
-            echo $_SESSION['CNPJ'];
+            header('Location: paginaInst.php');
         }
     }
-    catch(PDOException $penis){
-        echo $penis;
+    catch(PDOException $pdo){
+        echo $pdo;
     }
 
 

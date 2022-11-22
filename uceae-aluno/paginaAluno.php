@@ -83,8 +83,9 @@
         </div>
     </label>
     <input id="file-input" name='foto-banner' type="file" onchange='alterar_foto()'>
-    </form>
     <div id='resp1' class="btn btn-resp1"></div>
+    </form>
+    
         <div class="bloco-boasVindas">
             <h1 class="titulo">Boas Vindas!</h1>
             <br>

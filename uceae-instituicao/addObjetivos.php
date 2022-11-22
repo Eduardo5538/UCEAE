@@ -41,6 +41,7 @@ include 'conection.php';
             $acessibilidade = "";   
             $retorno = "funfou";
 
+            header('Location: paginaInst.php');
         }
         
 // capturando um possível erro durando a realização do código
