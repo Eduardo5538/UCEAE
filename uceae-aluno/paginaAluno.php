@@ -75,7 +75,7 @@
   <!-- Area Foto e Boas Vindas -->
 
   <div class="" id="banner-foto">
-      <label for="file-input" id='input-file'>
+      <label for="file-input" id='input-file' class="label-foto">
     <form method="post" id="alter_perfil" action='alterarFoto.php' enctype="multipart/form-data">
     <div class="linha-blocos">
         <div class="bloco-foto">
@@ -96,7 +96,7 @@
 
   <div class="div-form">
     <form action="alterarAluno.php" method='POST' name="form_alterar" id="frm_alt" class="form">
-      <div class="linha-blocos">
+      <div class="linha-blocos linha-forms">
         <div class="div-esquerda">
           <div class="div-info">
             <div class="bloco-itens">
