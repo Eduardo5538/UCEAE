@@ -510,7 +510,7 @@ html {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 40% 60%;
-    grid-gap: 2%;
+    grid-gap: 5rem;
     margin-bottom: -3%;
 }
 /* Botões */

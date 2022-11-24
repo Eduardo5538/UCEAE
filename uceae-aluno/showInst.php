@@ -572,10 +572,9 @@
             <option value="todos">Todos</option>
             <option value="recentes">Mais Recentes Primeiro</option>
         </select>
-       
     </div>
    </div>
-   
+   <br><br><br>
    <?php
             
             if($RetornoJSON1  == "[]")
