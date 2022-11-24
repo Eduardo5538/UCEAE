@@ -267,15 +267,15 @@
           <br><br>
         </div>
         <div class="meio div-objetivos">
-        <label for="lista-objetivos" class="titulos-paginaInst fonte-sensei">Objetivos</label>
-        <ul name="lista-objetivos">
-          <li class="li-objt"><input type="text" name='obj' id="txt_objt1" class="objetivos"></li><br>
-          <li class="li-objt"><input type="text" name='obj1' id="txt_objt2" class="objetivos"></li><br>
-          <li class="li-objt"><input type="text" name='obj2' id="txt_objt3" class="objetivos"></li><br>
-          <li class="li-objt"><input type="text" name='obj3' id="txt_objt4" class="objetivos"></li>
-        </ul>
+        <label for="lista-objetivos" class="titulos-paginaInst fonte-sensei h1-obj">Objetivos</label><br>
+          <input type="text" name='obj' id="txt_objt1" class="objetivos" placeholder="1º: "><br><br>
+          <input type="text" name='obj1' id="txt_objt2" class="objetivos" placeholder="2º: "><br><br>
+          <input type="text" name='obj2' id="txt_objt3" class="objetivos" placeholder="3º: "><br><br>
+          <input type="text" name='obj3' id="txt_objt4" class="objetivos" placeholder="4º: ">
         </div>
-        <button type="submit">Enviar</button>
+        <br><br><br>
+        <button type="submit" class="btn-objetivos">Enviar</button>
+        <br><br><br>
       </form>
         <div class="meio div-imagens">
           <h1 class="titulos-paginaInst fonte-sensei">Imagens da Instituição</h1>

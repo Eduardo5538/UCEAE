@@ -82,8 +82,8 @@ body{
   box-shadow: 10px 10px 5px #868686;
   border: 1px solid black;
   padding: 20px;
-  width: 710px;
-  height: 1150px;
+  width: 710vw;
+  height: 1150vh;
   border-radius: 2rem;
 }
 
@@ -94,7 +94,7 @@ body{
   border: 1px solid black;
   margin-left: 5rem;
   padding: 20px;
-  width: 400px;
+  width: 400vw;
   border-radius: 2rem;
 }
 

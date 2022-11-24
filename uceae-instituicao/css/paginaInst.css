@@ -482,11 +482,14 @@ textarea{
   margin: 0 auto;
   padding: 3rem;
   border-radius: .5rem;
-  width: 30%;
-  height: 20%;
+  width: 100vw;
+  height: 30%;
+  background-color: #976DD0;
+  padding: 30px;
+
 }
 .objetivos{
-  border: 5px dotted rgb(0, 73, 184);
+  border: 5px solid white;
   border-radius: .5rem;
   padding: 10px;
   width: 25rem;
@@ -504,6 +507,10 @@ textarea{
   margin-bottom: 2rem;
   font-size: 60px;
   font-family: 'sensei';
+}
+
+.h1-obj{
+  color: white;
 }
 .li-objt{
   list-style: upper-roman;
@@ -744,7 +751,7 @@ textarea{
 .card-content{
   font-family: arial;
   padding-top: 1rem;
-  margin-left: 2rem;
+  text-align: left;
   margin-top: .5rem;
 }
 
@@ -937,4 +944,19 @@ textarea{
 .btn-inserirCurso:hover{
   background-color: rgb(66, 81, 219);
   transition: .5s;
+}
+
+.btn-objetivos{
+  width: 300px;
+  background-color: transparent;
+  border: 2px solid #976DD0;
+  color: #976DD0;
+  font-size: 25px;
+  height: 60px;
+  transition: .5s ease all;
+}
+.btn-objetivos:hover{
+  background-color: #976DD0;
+  color: white;
+  transition: .5s ease all;
 }
